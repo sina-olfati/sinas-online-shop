@@ -1,7 +1,6 @@
-import Image from "next/image";
+import Link from "next/link";
 
 // Components
-import MainPage from "./pages/mainPage";
 import Header from "./components/index/header";
 
 export default function Home() {
@@ -9,8 +8,8 @@ export default function Home() {
     <div className="">
       <Header />
       Hi there!
-      <MainPage />
-      
+      <br />
+      <Link href={"/pages/secondPage"}>Link to pages/secondPage</Link>
     </div>
   );
 }
