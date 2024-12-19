@@ -1,4 +1,4 @@
-import styles from './page.module.css'
+// import styles from './page.module.css'
 
 interface User {
   id: number;
@@ -28,7 +28,7 @@ const SecondPage = async () => {
       <h3>Users:</h3>
       <p>{new Date().toLocaleTimeString()}</p>
 
-      <ul className={styles.users}>
+      <ul className='p-5 my-5 bg-sky-400 text-white text-xl hover:bg-sky-600'>
         {users.map((user) => (
           <li key={user.id}>{user.name}</li>
         ))}
