@@ -1,3 +1,4 @@
+import styles from './page.module.css'
 
 interface User {
   id: number;
@@ -27,7 +28,7 @@ const SecondPage = async () => {
       <h3>Users:</h3>
       <p>{new Date().toLocaleTimeString()}</p>
 
-      <ul>
+      <ul className={styles.users}>
         {users.map((user) => (
           <li key={user.id}>{user.name}</li>
         ))}
