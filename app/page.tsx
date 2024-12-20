@@ -1,13 +1,15 @@
 import Link from "next/link";
+import { ThemeModeToggle } from "./components/theme-mode-toggle";
+import { ThemeColorToggle } from "./components/theme-color-toggle";
 
 // Components
-import Header from "./components/index/header";
 
 export default function Home() {
   return (
     <div className="">
-      <Header />
       Hi there!
+      {/* <ThemeModeToggle /> */}
+      <ThemeColorToggle />
       <br />
       <Link href={"/pages/secondPage"}>Link to pages/secondPage</Link>
     </div>
