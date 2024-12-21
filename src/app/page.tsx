@@ -2,12 +2,18 @@ import Link from "next/link";
 import { ThemeModeToggle } from "./components/theme-mode-toggle";
 import { ThemeColorToggle } from "./components/theme-color-toggle";
 
-// Components
+// Next-intl
+import {useTranslations} from 'next-intl';
+
 
 export default function Home() {
+
+  // Next-intl
+  const t = useTranslations('HomePage');
+
   return (
     <div className="">
-      Hi there!
+      {t('title')}
       <ThemeModeToggle />
       <ThemeColorToggle />
       <br />
