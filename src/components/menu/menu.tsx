@@ -13,7 +13,8 @@ import { ThemeModeToggle } from './buttons/theme-mode-toggle'
 const Menu = () => {
   return (
     <div>
-        <div className='border border-fuchsia-600 flex flex-row flex-shrink-0 w-w-full'>
+        <div className='border border-fuchsia-600 h-12 w-full
+        flex items-center bg-muted'>
             <div id='personal'>
                 <ShoppingCartButton />
                 <ProfileButton />
