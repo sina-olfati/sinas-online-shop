@@ -13,16 +13,16 @@ import { ThemeModeToggle } from './buttons/theme-mode-toggle'
 const Menu = () => {
   return (
     <div>
-        <div className='border border-fuchsia-600 h-12 w-full
+        <div className='h-12 w-full
         flex items-center bg-muted'>
-            <div id='personal'>
+            <div id='personal' className='mx-2 flex flex-shrink-0'>
                 <ShoppingCartButton />
                 <ProfileButton />
                 <LikedButton />
             </div>
 
 
-            <div id='toggles' className='border border-primary flex flex-row flex-shrink-0 w-fit'>
+            <div id='toggles' className='mr-2 flex flex-shrink-0'>
                 <LangToggle />
                 <ThemeModeToggle />
                 <ThemeColorToggle />
