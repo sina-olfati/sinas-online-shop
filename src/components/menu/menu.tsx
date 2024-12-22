@@ -1,19 +1,23 @@
 import React from 'react'
 
 // personal
-import { ProfileButton } from './profile-b'
+import { ShoppingCartButton } from './buttons/shoppingCartButton'
+import { ProfileButton } from './buttons/profileButton'
+import { LikedButton } from './buttons/likedButton'
 
 // toggles
-import { LangToggle } from './lang-toggle'
-import { ThemeColorToggle } from './theme-color-toggle'
-import { ThemeModeToggle } from './theme-mode-toggle'
+import { LangToggle } from './buttons/lang-toggle'
+import { ThemeColorToggle } from './buttons/theme-color-toggle'
+import { ThemeModeToggle } from './buttons/theme-mode-toggle'
 
 const Menu = () => {
   return (
     <div>
         <div className='border border-fuchsia-600 flex flex-row flex-shrink-0 w-w-full'>
             <div id='personal'>
+                <ShoppingCartButton />
                 <ProfileButton />
+                <LikedButton />
             </div>
 
 

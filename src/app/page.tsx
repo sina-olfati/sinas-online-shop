@@ -12,10 +12,9 @@ export default function Home() {
 
   return (
     <div className="">
-      {t('title')}
+      {/* {t('title')} */}
       <Menu />
-      <br />
-      <Link href={"/pages/secondPage"} className="text-primary">Link to pages/secondPage</Link>
+      {/* <Link href={"/pages/secondPage"} className="text-primary">Link to pages/secondPage</Link> */}
     </div>
   );
 }
