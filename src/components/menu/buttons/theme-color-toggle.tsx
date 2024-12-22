@@ -29,12 +29,13 @@ export function ThemeColorToggle() {
   const createSelectItems = () => {
     return availableThemeColors.map(({ name, light, dark }) => (
       <SelectItem key={name} value={name}>
-        <div className="flex item-center space-x-3">
+        <div className="flex flex-shrink-0 item-center space-x-3">
           <div
             className={cn(
               "rounded-full",
               "w-[20px]",
               "h-[20px]",
+              "flex flex-shrink-0",
               theme === "light" ? light : dark,
             )}
           ></div>
@@ -49,7 +50,7 @@ export function ThemeColorToggle() {
       onValueChange={(value) => setThemeColor(value as ThemeColors)}
       defaultValue={themeColor}
     >
-      <SelectTrigger className="w-[120px] hover:bg-[#00000010] dark:hover:bg-[#ffffff10] ring-offset-transparent focus:ring-transparent transition-all">
+      <SelectTrigger className="w-[60px] hover:w-[125px] open:w-[125px] hover:bg-[#00000010] dark:hover:bg-[#ffffff10] ring-offset-transparent focus:ring-transparent border-0 transition-all">
         <SelectValue placeholder="select Color" />
         <SelectContent className="border-muted">
           {createSelectItems()}
