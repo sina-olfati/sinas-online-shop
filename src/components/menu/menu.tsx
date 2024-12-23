@@ -4,15 +4,16 @@ import React from 'react'
 import { ShoppingCartButton } from './buttons/shoppingCartButton'
 import { ProfileButton } from './buttons/profileButton'
 import { LikedButton } from './buttons/likedButton'
-
 // toggles
 import { LangToggle } from './buttons/lang-toggle'
 import { ThemeColorToggle } from './buttons/theme-color-toggle'
 import { ThemeModeToggle } from './buttons/theme-mode-toggle'
-
+// search 
 import { SearchInput } from './search'
-
+// logo
 import { Logo } from '../logo'
+// bottom section
+import { BottomSection } from './bottomSection'
 
 const Menu = () => {
   return (
@@ -39,8 +40,10 @@ const Menu = () => {
               <Logo />
             </div>
 
-            <div id='drop'></div>
+        </div>
 
+        <div id='drop' className='border border-primary h-9 w-full'>
+            <BottomSection />
         </div>
     </div>
   )
