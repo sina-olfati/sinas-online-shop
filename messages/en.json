@@ -1,4 +1,7 @@
 {
+    "Menu": {
+      "logo": "Online Shop"
+    },
     "HomePage": {
       "title": "Hello world!"
     }

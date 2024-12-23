@@ -1,6 +1,9 @@
 import Link from "next/link"
+import { useTranslations } from "next-intl";
 
 export function Logo() {
+
+    const t = useTranslations('Menu');
 
     return (
         <Link href={"./"}>
@@ -10,7 +13,7 @@ export function Logo() {
                 </h1>
 
                 <div className="font-bold text-[9px] text-center absolute top-6 w-full">
-                    Online Shop
+                    {t("logo")}
                 </div>
             </div>
         </Link>

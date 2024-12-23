@@ -16,9 +16,8 @@ import { Logo } from '../logo'
 
 const Menu = () => {
   return (
-    <div>
-        <div className='h-12 w-full
-        flex items-center bg-muted'>
+    <div className='w-full flex flex-col bg-accent'>
+        <div className='h-12 w-full flex items-center'>
             <div id='personal' className='mx-2 flex flex-shrink-0'>
                 <ShoppingCartButton />
                 <ProfileButton />
