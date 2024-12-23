@@ -12,6 +12,8 @@ import { ThemeModeToggle } from './buttons/theme-mode-toggle'
 
 import { SearchInput } from './search'
 
+import { Logo } from '../logo'
+
 const Menu = () => {
   return (
     <div>
@@ -34,7 +36,9 @@ const Menu = () => {
                 <SearchInput />
             </div>
 
-            <div id='logo'></div>
+            <div id='logo' className='h-full'>
+              <Logo />
+            </div>
 
             <div id='drop'></div>
 
