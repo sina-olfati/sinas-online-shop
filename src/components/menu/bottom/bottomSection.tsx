@@ -4,13 +4,24 @@ import { DropDownButton } from "./dropDownButton";
 
 const normalButtons = ["Questions", "Articles", "About Us"];
 
+const seasonsData = {
+    name: "Seasons",
+    headers: ["Spring", "Summer", "Fall", "Winter"],
+    items: [
+        ["Shorts", "Swim suits", "T-shirts", "Light jackets"], // Spring items
+        ["Hats", "Sunglasses", "Flip flops", "Beach towels"], // Summer items
+        ["Sweaters", "Scarves", "Boots", "Pumpkin spice lattes"], // Fall items
+        ["Coats", "Gloves", "Beanies", "Hot chocolate"] // Winter items
+    ],
+}
+
 export function BottomSection() {
   return (
     <div className="h-full w-full">
       <div className="flex flex-shrink-0 h-full w-full">
 
         <div>
-            <DropDownButton />
+            <DropDownButton data={seasonsData} />
         </div>
 
         <div className="flex items-center justify-center gap-2 h-full w-full">
