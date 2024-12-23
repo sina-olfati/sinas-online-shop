@@ -10,6 +10,8 @@ import { LangToggle } from './buttons/lang-toggle'
 import { ThemeColorToggle } from './buttons/theme-color-toggle'
 import { ThemeModeToggle } from './buttons/theme-mode-toggle'
 
+import { SearchInput } from './search'
+
 const Menu = () => {
   return (
     <div>
@@ -28,7 +30,9 @@ const Menu = () => {
                 <ThemeColorToggle />
             </div>
 
-            <div id='search'></div>
+            <div id='search' className='w-full'>
+                <SearchInput />
+            </div>
 
             <div id='logo'></div>
 

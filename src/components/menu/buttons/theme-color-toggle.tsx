@@ -50,7 +50,7 @@ export function ThemeColorToggle() {
       onValueChange={(value) => setThemeColor(value as ThemeColors)}
       defaultValue={themeColor}
     >
-      <SelectTrigger className="w-[60px] hover:w-[125px] open:w-[125px] hover:bg-[#00000010] dark:hover:bg-[#ffffff10] ring-offset-transparent focus:ring-transparent border-0 transition-all">
+      <SelectTrigger className="w-[60px] hover:w-[125px] open:w-[125px] hover:bg-[#00000010] dark:hover:bg-[#ffffff10] ring-offset-transparent focus:ring-transparent focus:outline-0 border-0 transition-all">
         <SelectValue placeholder="select Color" />
         <SelectContent className="border-muted">
           {createSelectItems()}
