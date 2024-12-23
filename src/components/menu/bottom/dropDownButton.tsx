@@ -4,13 +4,13 @@ import { Button } from "../../ui/button";
 
 export function DropDownButton() {
 
-    const [isOver, setIsOver] = useState(false)
+    const [isOver, setIsOver] = useState(true)
 
     return (
         <div>
             <div className="border border-primary relative transition-all"
-            onMouseOver={() => setIsOver(true)}
-            onMouseLeave={() => setIsOver(false)}
+            // onMouseOver={() => setIsOver(true)}
+            // onMouseLeave={() => setIsOver(false)}
             >
 
                 <Button
@@ -21,8 +21,13 @@ export function DropDownButton() {
                     Name
                 </Button>
 
-                <div className={`border border-primary absolute left-0 transition-all ${isOver ? "opacity-100" : "opacity-0"}`}>
-                    a lot of things
+
+
+                <div className={`border border-primary absolute left-0 bg-primary-foreground shadow-md rounded-md py-2 px-4 text-xs max-h-48 max-w-96 ${isOver ? "flex" : "hidden"} flex-col`}>
+
+                    <h1>Data</h1>
+                    <p className="flex flex-shrink-0">a lot of things</p>
+                    
                 </div>
 
             </div>

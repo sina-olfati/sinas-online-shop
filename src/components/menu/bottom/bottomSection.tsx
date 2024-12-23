@@ -8,6 +8,11 @@ export function BottomSection() {
   return (
     <div className="h-full w-full">
       <div className="flex flex-shrink-0 h-full w-full">
+
+        <div>
+            <DropDownButton />
+        </div>
+
         <div className="flex items-center justify-center gap-2 h-full w-full">
           {normalButtons.map((name) => (
             <Button
@@ -21,9 +26,6 @@ export function BottomSection() {
           ))}
         </div>
 
-        <div>
-            <DropDownButton />
-        </div>
       </div>
     </div>
   );
