@@ -25,7 +25,7 @@ export function DropDownButton({ name, headers, items }: data) {
 
                 <Button variant="ghost" className="hover:bg-[#00000010] dark:hover:bg-[#ffffff10] hover:shadow-sm transition-all text-xs">
                     {name}
-                    <ChevronDown />
+                    <ChevronDown className={`${isOver ? "text-primary" : null} transition-all`} />
                 </Button>
 
 
