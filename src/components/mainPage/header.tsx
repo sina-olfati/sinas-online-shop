@@ -13,13 +13,13 @@ export function Header() {
     }
 
     useEffect(() => {
-        setTimeout(changeTurn, turn < 4 ? 2000 : 200)
+        setTimeout(changeTurn, turn < 4 ? 3000 : 200)
     }, [turn])
     // const interval = setInterval(changeTurn, 1000)
 
     return (
         // <div className="border border-primary w-full overflow-hidden">
-        <div className="w-full overflow-x-hidden relative">
+        <div className="w-full overflow-x-hidden relative mt-24">
 
             <div className="flex flex-shrink-0 h-52 w-[400vw]">
 
@@ -40,10 +40,10 @@ export function Header() {
 
             </div>
 
-            <div about="buttons" className="border border-primary absolute bottom-0 w-full flex justify-center gap-2 mb-2" >
-                <Button variant="ghost" className={`w-2 h-2 p-0 rounded-full transition-all bg-accent hover:bg-primary ${turn === 1 || turn === 4 ? 'bg-primary w-7' : null}`}></Button>
-                <Button variant="ghost" className={`w-2 h-2 p-0 rounded-full transition-all bg-accent hover:bg-primary ${turn === 2 ? 'bg-primary w-7' : null}`}></Button>
-                <Button variant="ghost" className={`w-2 h-2 p-0 rounded-full transition-all bg-accent hover:bg-primary ${turn === 3 ? 'bg-primary w-7' : null}`}></Button>
+            <div about="buttons" className="absolute bottom-0 w-full flex justify-center gap-2 mb-2" >
+                <Button variant="ghost" onClick={() => setTurn(1)} className={`w-2 h-2 p-0 rounded-full transition-all bg-accent hover:bg-primary ${turn === 1 || turn === 4 ? 'bg-primary w-7' : null}`}></Button>
+                <Button variant="ghost" onClick={() => setTurn(2)} className={`w-2 h-2 p-0 rounded-full transition-all bg-accent hover:bg-primary ${turn === 2 ? 'bg-primary w-7' : null}`}></Button>
+                <Button variant="ghost" onClick={() => setTurn(3)} className={`w-2 h-2 p-0 rounded-full transition-all bg-accent hover:bg-primary ${turn === 3 ? 'bg-primary w-7' : null}`}></Button>
             </div>
 
         </div>
