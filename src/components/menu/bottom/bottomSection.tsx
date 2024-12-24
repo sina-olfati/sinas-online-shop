@@ -95,7 +95,7 @@ export function BottomSection() {
 
         </div>
 
-        <div about="phone" className="">
+        <div about="phone">
             <Link href="tel:+98 994 166 9736">
                 <Button variant={"ghost"} className="group hover:bg-[#00000010] dark:hover:bg-[#ffffff10] hover:shadow-sm transition-all text-xs">
                     <Phone className="group-hover:text-primary" />

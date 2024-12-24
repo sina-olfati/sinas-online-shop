@@ -11,13 +11,13 @@ import { ThemeModeToggle } from "./buttons/theme-mode-toggle";
 // search
 import { SearchInput } from "./search";
 // logo
-import { Logo } from "../logo";
+import { Logo } from "./logo";
 // bottom section
 import { BottomSection } from "./bottom/bottomSection";
 
 const Menu = () => {
   return (
-    <div className="w-full flex flex-col bg-accent">
+    <div className="w-full flex flex-col bg-accent fixed">
       <div className="h-12 w-full flex items-center">
         <div id="personal" className="mx-2 flex flex-shrink-0">
           <ShoppingCartButton />
