@@ -25,7 +25,8 @@ export function GrabScroll({ children }: any) {
         if (!isDragging) return;
         e.preventDefault();
         const x = e.pageX - scrollRef.current?.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust scroll speed here
+        // const walk = (x - startX) * 2; // Adjust scroll speed here
+        const walk = (x - startX); // Adjust scroll speed here
         scrollRef.current.scrollLeft = scrollLeft - walk;
     };
 
@@ -80,7 +81,7 @@ export function GrabScroll({ children }: any) {
     return (
         <div
             ref={scrollRef}
-            className={`relative mt-28 select-none w-[100vw] overflow-hidden whitespace-nowrap ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+            className={`relative select-none w-[100vw] overflow-hidden whitespace-nowrap ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         >
 
             <div className="w-fit flex gap-2 scroll-smooth snap-mandatory px-3">

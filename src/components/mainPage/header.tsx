@@ -80,7 +80,7 @@ export function Header() {
     }, [turn]);
 
     return (
-        <div className="w-full overflow-x-hidden relative mt-24">
+        <div className="w-full overflow-x-hidden relative">
             <div className="flex flex-shrink-0 h-96 w-[400vw]">
                 <div className={`${turn === 1 ? "translate-x-[0vw] !transition-none" :
                     turn === 2 ? "translate-x-[-100vw]" :

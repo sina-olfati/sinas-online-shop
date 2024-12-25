@@ -2,7 +2,6 @@ import Link from "next/link";
 // components
 import Menu from "../components/menu/menu";
 import { Header } from "../components/mainPage/header";
-import { GrabScroll } from "../components/grabScroll";
 import { Categories } from "../components/mainPage/categories";
 // Next-intl
 import {useTranslations} from 'next-intl';
@@ -14,23 +13,10 @@ export default function Home() {
   // const t = useTranslations('HomePage');
 
   return (
-    <div className="">
+    <div className="mt-24">
       {/* {t('title')} */}
       <Menu />
-      {/* <Header /> */}
-      {/* <GrabScroll>
-        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
-        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
-        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
-        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
-        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
-        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
-        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
-        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
-        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
-        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
-        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
-      </GrabScroll> */}
+      <Header />
       <Categories />
     </div>
   );
