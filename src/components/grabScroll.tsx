@@ -2,7 +2,7 @@
 import { useRef, useState } from "react";
 
 
-export function CategoryScroll ({children}: any) {
+export function GrabScroll ({children}: any) {
 
     const scrollRef = useRef<any>(null);
     const [isDragging, setIsDragging] = useState<any>(false);
@@ -34,7 +34,7 @@ export function CategoryScroll ({children}: any) {
     return (
       <div
         ref={scrollRef}
-        className={`w-[100vw] overflow-hidden whitespace-nowrap ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+        className={`mt-28 select-none w-[100vw] overflow-hidden whitespace-nowrap ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         onMouseDown={onMouseDown}
         onMouseLeave={onMouseLeave}
         onMouseUp={onMouseUp}

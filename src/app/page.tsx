@@ -2,7 +2,8 @@ import Link from "next/link";
 // components
 import Menu from "../components/menu/menu";
 import { Header } from "../components/mainPage/header";
-import { CategoryScroll } from "../components/mainPage/categoryScroll";
+import { GrabScroll } from "../components/grabScroll";
+import { Categories } from "../components/mainPage/categories";
 // Next-intl
 import {useTranslations} from 'next-intl';
 
@@ -15,9 +16,9 @@ export default function Home() {
   return (
     <div className="">
       {/* {t('title')} */}
-      {/* <Menu /> */}
+      <Menu />
       {/* <Header /> */}
-      <CategoryScroll>
+      {/* <GrabScroll>
         <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
         <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
         <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
@@ -29,7 +30,8 @@ export default function Home() {
         <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
         <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
         <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
-      </CategoryScroll>
+      </GrabScroll> */}
+      <Categories />
     </div>
   );
 }
