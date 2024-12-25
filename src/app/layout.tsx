@@ -33,7 +33,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning className="selection:bg-primary">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
