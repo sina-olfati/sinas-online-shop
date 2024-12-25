@@ -47,7 +47,8 @@ export function GrabScroll({ children }: any) {
         e.preventDefault(); // Prevent default to avoid scrolling
         const touch = e.touches[0]; // Get the first touch point
         const x = touch.pageX - scrollRef.current?.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust scroll speed here
+        // const walk = (x - startX) * 2; // Adjust scroll speed here
+        const walk = (x - startX) * 1.5; // Adjust scroll speed here
         scrollRef.current.scrollLeft = scrollLeft - walk;
     };
 
