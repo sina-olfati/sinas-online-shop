@@ -34,18 +34,13 @@ export function CategoryScroll ({children}: any) {
     return (
       <div
         ref={scrollRef}
-        className="flex w-[100vw] overflow-hidden"
+        className={`w-[100vw] overflow-hidden whitespace-nowrap ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         onMouseDown={onMouseDown}
         onMouseLeave={onMouseLeave}
         onMouseUp={onMouseUp}
         onMouseMove={onMouseMove}
-        style={{
-          overflow: 'hidden',
-          cursor: isDragging ? 'grabbing' : 'grab',
-          whiteSpace: 'nowrap',
-        }}
       >
-        <div className="w-fit flex">
+        <div className="w-fit flex gap-5 overflow-x-auto scroll-smooth snap-mandatory">
             {children}
         </div>
       </div>

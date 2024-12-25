@@ -18,11 +18,17 @@ export default function Home() {
       {/* <Menu /> */}
       {/* <Header /> */}
       <CategoryScroll>
-        <div style={{ width: '300px', height: '100%', background: 'lightblue' }}>Item 1</div>
-        <div style={{ width: '300px', height: '100%', background: 'lightcoral' }}>Item 2</div>
-        <div style={{ width: '300px', height: '100%', background: 'lightgreen' }}>Item 3</div>
-        <div style={{ width: '300px', height: '100%', background: 'lightyellow' }}>Item 4</div>
-        <div style={{ width: '300px', height: '100%', background: 'lightpink' }}>Item 5</div>
+        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
+        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
+        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
+        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
+        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
+        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
+        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
+        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
+        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
+        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
+        <div className="w-56 h-16 rounded-full bg-primary flex justify-center items-center snap-center">Item 1</div>
       </CategoryScroll>
     </div>
   );
