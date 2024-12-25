@@ -34,7 +34,7 @@ export function CategoryScroll ({children}: any) {
     return (
       <div
         ref={scrollRef}
-        className="flex w-fit"
+        className="flex w-[100vw] overflow-hidden"
         onMouseDown={onMouseDown}
         onMouseLeave={onMouseLeave}
         onMouseUp={onMouseUp}
@@ -45,7 +45,9 @@ export function CategoryScroll ({children}: any) {
           whiteSpace: 'nowrap',
         }}
       >
-        {children}
+        <div className="w-fit flex">
+            {children}
+        </div>
       </div>
     )
 }

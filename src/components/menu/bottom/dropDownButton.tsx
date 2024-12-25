@@ -29,7 +29,7 @@ export function DropDownButton({ name, headers, items }: data) {
                 </Button>
 
 
-                <div className={`absolute left-2 top-[110%] bg-primary-foreground shadow-md rounded-md py-2 px-4 text-xs min-h-64 min-w-[500px] ${isOver ? "flex" : "hidden"} flex-col`}>
+                <div className={`absolute left-2 top-[110%] bg-primary-foreground shadow-md rounded-md py-2 px-4 text-xs min-h-64 w-[500px] ${isOver ? "flex" : "hidden"} flex-col`}>
                     {headers?.map((header) => 
                         <div className="flex flex-col" key={header}>
                             <h1 className="text-primary font-bold mt-4">{header}</h1>
