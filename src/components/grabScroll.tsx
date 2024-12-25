@@ -32,17 +32,31 @@ export function GrabScroll ({children}: any) {
     };
   
     return (
-      <div
-        ref={scrollRef}
-        className={`mt-28 select-none w-[100vw] overflow-hidden whitespace-nowrap ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
-        onMouseDown={onMouseDown}
-        onMouseLeave={onMouseLeave}
-        onMouseUp={onMouseUp}
-        onMouseMove={onMouseMove}
-      >
-        <div className="w-fit flex gap-5 overflow-x-auto scroll-smooth snap-mandatory">
-            {children}
+        <div
+          ref={scrollRef}
+          onMouseDown={onMouseDown}
+          onMouseLeave={onMouseLeave}
+          onMouseUp={onMouseUp}
+          onMouseMove={onMouseMove}
+          className={`mt-28 select-none w-[100vw] overflow-hidden whitespace-nowrap ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}
+          `}
+          >
+          
+          {/* with before and after */}
+          {/* before:absolute before:bg-red-600 before:w-10 before:h-full before */}
+          {/* <div className="border border-primary w-[100vw] absolute left-0 h-full z-100
+          before:absolute before:bg-gradient-to-r before:from-blue-500 before:to-transparent before:w-10 before:h-full before"
+          ></div> */}
+
+          {/* with divs */}
+          {/* <div className="w-full absolute h-full z-10">
+            <div className="absolute bg-gradient-to-r from-primary to-transparent w-5 h-full left-0"></div>
+          </div> */}
+
+          <div className="w-fit flex gap-2 overflow-x-auto scroll-smooth snap-mandatory px-3 z-1">
+              {children}
+          </div>
+
         </div>
-      </div>
     )
 }

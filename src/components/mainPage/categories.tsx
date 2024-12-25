@@ -20,7 +20,7 @@ export function Categories () {
                             onMouseDown={() => setIsDown(item)}
                             onMouseUp={() => setIsDown(false)}
                             onMouseLeave={() => setIsDown(false)}
-                            className={`${isDown === item ? "scale-90" : "scale-100"} w-16 h-16 rounded-full shadow-md transition-all`}
+                            className={`${isDown === item ? "scale-90" : "scale-100"} w-16 h-16 rounded-full shadow-md my-3 transition-all`}
                         >
                             {/* {item} */}
                         </Button>
