@@ -1,11 +1,15 @@
-import { ScanLine } from "lucide-react"
+interface HeadingData {
+    name: string;
+    icon: any;
+}
 
-export function SectionHeading () {
+
+export function SectionHeading ({name, icon}: HeadingData) {
 
     return (
-        <div className="w-full p-7 pb-2 font-bold text-lg flex gap-2">
-            <ScanLine className="text-primary" />
-            <h1>categories</h1>
+        <div className="w-full p-7 pb-2 font-bold text-lg flex gap-2 text-primary">
+            {icon}
+            <h1 className="text-secondary-foreground">{name}</h1>
         </div>
     )
 }

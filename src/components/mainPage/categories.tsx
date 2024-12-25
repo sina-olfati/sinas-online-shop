@@ -5,6 +5,8 @@ import { Button } from "../ui/button";
 import { useRouter } from "next/navigation";
 // compoents
 import { SectionHeading } from "../sectionHeading";
+// icon
+import { ScanLine } from "lucide-react";
 
 const category = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'];
 
@@ -50,8 +52,10 @@ export function Categories() {
     };
 
     return (
-        <div className="">
-            <SectionHeading />
+        <div className="mt-5">
+
+            <SectionHeading name='Categories' icon={<ScanLine />}/>
+
             <GrabScroll>
                 {category.map((item) => (
                     <div 
