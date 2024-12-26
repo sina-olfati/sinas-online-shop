@@ -1,0 +1,110 @@
+[
+    {
+        "name": "Classic Denim Jacket",
+        "images": [
+            "https://example.com/images/denim_jacket_1.jpg",
+            "https://example.com/images/denim_jacket_2.jpg"
+        ],
+        "category": "Jackets",
+        "original_price": 79.99,
+        "discounted_price": 59.99,
+        "ratings": 4.5,
+        "reviews": {
+            "summary": "Great jacket for casual wear.",
+            "pros": [
+                "Stylish design",
+                "Durable fabric",
+                "Versatile for different outfits"
+            ],
+            "cons": [
+                "A bit tight around the shoulders",
+                "Color fades after several washes"
+            ]
+        },
+        "sales_count": 150,
+        "brand": "Denim Co.",
+        "fabric_type": "Cotton Blend",
+        "color": "Blue"
+    },
+    {
+        "name": "Summer Floral Dress",
+        "images": [
+            "https://example.com/images/floral_dress_1.jpg",
+            "https://example.com/images/floral_dress_2.jpg"
+        ],
+        "category": "Dresses",
+        "original_price": 49.99,
+        "discounted_price": 39.99,
+        "ratings": 4.7,
+        "reviews": {
+            "summary": "Perfect for summer outings.",
+            "pros": [
+                "Lightweight and breathable",
+                "Beautiful floral pattern",
+                "Comfortable fit"
+            ],
+            "cons": [
+                "Runs slightly large",
+                "Needs ironing after washing"
+            ]
+        },
+        "sales_count": 200,
+        "brand": "Summer Vibes",
+        "fabric_type": "Polyester",
+        "color": "Pink"
+    },
+    {
+        "name": "Sporty Jogger Pants",
+        "images": [
+            "https://example.com/images/jogger_pants_1.jpg",
+            "https://example.com/images/jogger_pants_2.jpg"
+        ],
+        "category": "Pants",
+        "original_price": 39.99,
+        "discounted_price": 29.99,
+        "ratings": 4.3,
+        "reviews": {
+            "summary": "Great for workouts and lounging.",
+            "pros": [
+                "Comfortable elastic waistband",
+                "Good for both gym and casual wear",
+                "Multiple pockets"
+            ],
+            "cons": [
+                "Fabric can pill after a few washes",
+                "Limited color options"
+            ]
+        },
+        "sales_count": 300,
+        "brand": "ActiveWear",
+        "fabric_type": "Cotton Blend",
+        "color": "Black"
+    },
+    {
+        "name": "Elegant Evening Blouse",
+        "images": [
+            "https://example.com/images/evening_blouse_1.jpg",
+            "https://example.com/images/evening_blouse_2.jpg"
+        ],
+        "category": "Tops",
+        "original_price": 69.99,
+        "discounted_price": 49.99,
+        "ratings": 4.8,
+        "reviews": {
+            "summary": "Perfect for formal occasions.",
+            "pros": [
+                "Sophisticated design",
+                "Soft and luxurious feel",
+                "Fits true to size"
+            ],
+            "cons": [
+                "Dry clean only",
+                "Sleeves can be a bit long"
+            ]
+        },
+        "sales_count": 100,
+        "brand": "Chic Fashion",
+        "fabric_type": "Silk",
+        "color": "Black"
+    }
+]
