@@ -70,7 +70,7 @@
         ],
         "category": "Pants",
         "original_price": 39.99,
-        "discounted_price": 29.99,
+        "discounted_price": 39.99,
         "ratings": 4.3,
         "reviews": {
             "summary": "Great for workouts and lounging.",
@@ -100,7 +100,7 @@
         ],
         "category": "Tops",
         "original_price": 69.99,
-        "discounted_price": 49.99,
+        "discounted_price": 69.99,
         "ratings": 4.8,
         "reviews": {
             "summary": "Perfect for formal occasions.",
@@ -220,7 +220,7 @@
         ],
         "category": "Shoes",
         "original_price": 59.99,
-        "discounted_price": 49.99,
+        "discounted_price": 59.99,
         "ratings": 4.7,
         "reviews": {
             "summary": "Comfortable and stylish.",
@@ -280,7 +280,7 @@
         ],
         "category": "Pants",
         "original_price": 49.99,
-        "discounted_price": 39.99,
+        "discounted_price": 49.99,
         "ratings": 4.6,
         "reviews": {
             "summary": "Flattering fit for all body types.",
@@ -310,7 +310,7 @@
         ],
         "category": "Footwear",
         "original_price": 29.99,
-        "discounted_price": 24.99,
+        "discounted_price": 29.99,
         "ratings": 4.4,
         "reviews": {
             "summary": "Perfect for summer days.",
@@ -430,7 +430,7 @@
         ],
         "category": "Jackets",
         "original_price": 59.99,
-        "discounted_price": 49.99,
+        "discounted_price": 59.99,
         "ratings": 4.6,
         "reviews": {
             "summary": "Warm and soft for winter.",
@@ -520,7 +520,7 @@
         ],
         "category": "Jackets",
         "original_price": 49.99,
-        "discounted_price": 39.99,
+        "discounted_price": 49.99,
         "ratings": 4.5,
         "reviews": {
             "summary": "Perfect for unexpected showers.",
@@ -550,7 +550,7 @@
         ],
         "category": "Shorts",
         "original_price": 34.99,
-        "discounted_price": 24.99,
+        "discounted_price": 34.99,
         "ratings": 4.6,
         "reviews": {
             "summary": "Stylish and comfortable for summer.",

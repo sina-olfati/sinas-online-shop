@@ -94,47 +94,47 @@ export function ProductsScroll ({name, icon, products}: Data) {
             <SectionHeading name={name} icon={icon}/>
 
             <GrabScroll>
+
                 {products.map((item) => (
                     
-                    // <div 
-                    //     key={item.id}
-                    //     onMouseDown={(e) => onMouseDown(item, e)}
-                    //     onMouseUp={() => onMouseUp(item)}
-                    //     onMouseLeave={onMouseLeave}
-                    //     onMouseMove={onMouseMove}
-                    //     className="flex flex-col items-center justify-center gap-3 group"
-                    // >
                         <Card 
                             key={item.id}
                             onMouseDown={(e) => onMouseDown(item, e)}
                             onMouseUp={() => onMouseUp(item)}
                             onMouseLeave={onMouseLeave}
                             onMouseMove={onMouseMove}
-                            className="py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/10" 
-                            // isPressable
+                            className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/10 ${isDown === item ? "scale-95" : "scale-100"}`} 
                         >
                             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                                 <Image
                                 alt="Card background"
                                 className="object-cover rounded-xl"
-                                // src="https://nextui.org/images/hero-card-complete.jpeg"
                                 src={item.images[0]}
                                 width={300}
                                 onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
                                 />
                             </CardHeader>
                             <CardBody className="overflow-visible py-2">
+
                                 <p className="text-tiny uppercase font-bold truncate">{item.name}</p>
-                                <div>
-                                    {locale === "en" ? <DollarSign /> : <JapaneseYen />}
-                                    <small className="text-default-500">12 Tracks</small>
+
+                                <div className="flex items-end my-2">
+                                    {locale === "en" ? <DollarSign className="w-5" /> : <JapaneseYen />}
+                                    <div className=" flex flex-col justify-end items-start h-7 relative pl-1">
+                                        {item.discounted_price !== item.original_price ? 
+                                        <small className=" p-0 m-0 text-xs text-secondary-foreground/60 line-through absolute bottom-4">{item.original_price}</small> 
+                                        : null}
+                                        <p className={`text- uppercase font-bold p-0 m-0 ${item.discounted_price !== item.original_price ? "text-primary" : ""} `}>{item.discounted_price}</p>
+                                    </div>
                                 </div>
+
                                 <h4 className="font-bold text-large">Frontend Radio</h4>
+
                             </CardBody>
                         </Card>
-                        // {item.images}
-                    // </div>
+
                 ))}
+
             </GrabScroll>
         </div>
     )
