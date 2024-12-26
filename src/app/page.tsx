@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="mt-24">
       {/* {t('title')} */}
-      {/* <Menu /> */}
+      <Menu />
       {/* <Header /> */}
       <Categories />
       <ProductsScroll name="Most Selling" icon={<Sparkles />} products={Products} />

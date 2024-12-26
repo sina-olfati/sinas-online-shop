@@ -4,6 +4,11 @@ import { GrabScroll } from "./grabScroll";
 import { useRouter } from "next/navigation";
 // compoents
 import { SectionHeading } from "./sectionHeading";
+import { Card, CardBody, CardHeader, Image } from "@nextui-org/react";
+// icons
+import { DollarSign } from "lucide-react";
+import { JapaneseYen } from "lucide-react";
+import { useLocale } from "next-intl";
 
 // Define the structure of the reviews
 interface Review {
@@ -78,6 +83,11 @@ export function ProductsScroll ({name, icon, products}: Data) {
         }
     };
 
+
+    // Lang
+    const locale = useLocale()
+    
+
     return (
         <div className=' w-[100vw] flex flex-col mt-5 py-3 overflow-hidden'>
 
@@ -86,32 +96,43 @@ export function ProductsScroll ({name, icon, products}: Data) {
             <GrabScroll>
                 {products.map((item) => (
                     
-                    <div 
-                        key={item.id}
-                        onMouseDown={(e) => onMouseDown(item, e)}
-                        onMouseUp={() => onMouseUp(item)}
-                        onMouseLeave={onMouseLeave}
-                        onMouseMove={onMouseMove}
-                        className="flex flex-col items-center justify-center gap-3 group"
-                    >
-                        {item.images}
-                    </div>
-
                     // <div 
-                    //     key={item}
+                    //     key={item.id}
                     //     onMouseDown={(e) => onMouseDown(item, e)}
                     //     onMouseUp={() => onMouseUp(item)}
                     //     onMouseLeave={onMouseLeave}
                     //     onMouseMove={onMouseMove}
                     //     className="flex flex-col items-center justify-center gap-3 group"
                     // >
-                    //     <Button 
-                    //         variant={"default"} 
-                    //         className={`${isDown === item ? "scale-90" : "scale-100"} w-20 h-20 rounded-full shadow-md mt-3 transition-all`}
-                    //     >
-                    //         {item}
-                    //     </Button>
-                    //     <p className="font-bold group-hover:text-primary">{item}</p>
+                        <Card 
+                            key={item.id}
+                            onMouseDown={(e) => onMouseDown(item, e)}
+                            onMouseUp={() => onMouseUp(item)}
+                            onMouseLeave={onMouseLeave}
+                            onMouseMove={onMouseMove}
+                            className="py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/10" 
+                            // isPressable
+                        >
+                            <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+                                <Image
+                                alt="Card background"
+                                className="object-cover rounded-xl"
+                                // src="https://nextui.org/images/hero-card-complete.jpeg"
+                                src={item.images[0]}
+                                width={300}
+                                onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
+                                />
+                            </CardHeader>
+                            <CardBody className="overflow-visible py-2">
+                                <p className="text-tiny uppercase font-bold truncate">{item.name}</p>
+                                <div>
+                                    {locale === "en" ? <DollarSign /> : <JapaneseYen />}
+                                    <small className="text-default-500">12 Tracks</small>
+                                </div>
+                                <h4 className="font-bold text-large">Frontend Radio</h4>
+                            </CardBody>
+                        </Card>
+                        // {item.images}
                     // </div>
                 ))}
             </GrabScroll>
