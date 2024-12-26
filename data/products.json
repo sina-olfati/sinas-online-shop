@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Classic Denim Jacket",
         "images": [
             "https://example.com/images/denim_jacket_1.jpg",
@@ -27,6 +28,7 @@
         "color": "Blue"
     },
     {
+        "id": 2,
         "name": "Summer Floral Dress",
         "images": [
             "https://example.com/images/floral_dress_1.jpg",
@@ -54,6 +56,7 @@
         "color": "Pink"
     },
     {
+        "id": 3,
         "name": "Sporty Jogger Pants",
         "images": [
             "https://example.com/images/jogger_pants_1.jpg",
@@ -81,6 +84,7 @@
         "color": "Black"
     },
     {
+        "id": 4,
         "name": "Elegant Evening Blouse",
         "images": [
             "https://example.com/images/evening_blouse_1.jpg",
@@ -106,5 +110,453 @@
         "brand": "Chic Fashion",
         "fabric_type": "Silk",
         "color": "Black"
+    },
+    {
+        "id": 5,
+        "name": "Casual Graphic T-Shirt",
+        "images": [
+            "https://example.com/images/graphic_tshirt_1.jpg",
+            "https://example.com/images/graphic_tshirt_2.jpg"
+        ],
+        "category": "T-Shirts",
+        "original_price": 24.99,
+        "discounted_price": 19.99,
+        "ratings": 4.6,
+        "reviews": {
+            "summary": "Fun and comfortable.",
+            "pros": [
+                "Soft fabric",
+                "Unique designs",
+                "Great for casual outings"
+            ],
+            "cons": [
+                "Sizes run small",
+                "Print can fade over time"
+            ]
+        },
+        "sales_count": 250,
+        "brand": "Graphic Tees",
+        "fabric_type": "Cotton",
+        "color": "White"
+    },
+    {
+        "id": 6,
+        "name": "Lightweight Hoodie",
+        "images": [
+            "https://example.com/images/lightweight_hoodie_1.jpg",
+            "https://example.com/images/lightweight_hoodie_2.jpg"
+        ],
+        "category": "Hoodies",
+        "original_price": 49.99,
+        "discounted_price": 39.99,
+        "ratings": 4.4,
+        "reviews": {
+            "summary": "Perfect for chilly evenings.",
+            "pros": [
+                "Lightweight and breathable",
+                "Stylish fit",
+                "Good for layering"
+            ],
+            "cons": [
+                "Not very warm",
+                "Limited color options"
+            ]
+        },
+        "sales_count": 180,
+        "brand": "CozyWear",
+        "fabric_type": "Polyester",
+        "color": "Gray"
+    },
+    {
+        "id": 7,
+        "name": "Chic Midi Skirt",
+        "images": [
+            "https://example.com/images/midi_skirt_1.jpg",
+            "https://example.com/images/midi_skirt_2.jpg"
+        ],
+        "category": "Skirts",
+        "original_price": 39.99,
+        "discounted_price": 29.99,
+        "ratings": 4.5,
+        "reviews": {
+            "summary": "Stylish and versatile.",
+            "pros": [
+                "Great for both casual and formal wear",
+                "Comfortable fit",
+                "High-quality fabric"
+            ],
+            "cons": [
+                "Can be a bit long for shorter individuals",
+                "Wrinkles easily"
+            ]
+        },
+        "sales_count": 90,
+        "brand": "Fashionista",
+        "fabric_type": "Cotton Blend",
+        "color": "Navy"
+    },
+    {
+        "id": 8,
+        "name": "Classic White Sneakers",
+        "images": [
+            "https://example.com/images/white_sneakers_1.jpg",
+            "https://example.com/images/white_sneakers_2.jpg"
+        ],
+        "category": "Shoes",
+        "original_price": 59.99,
+        "discounted_price": 49.99,
+        "ratings": 4.7,
+        "reviews": {
+            "summary": "Comfortable and stylish.",
+            "pros": [
+                "Goes with everything",
+                "Comfortable for all-day wear",
+                "Easy to clean"
+            ],
+            "cons": [
+                "May scuff easily",
+                "Limited arch support"
+            ]
+        },
+        "sales_count": 300,
+        "brand": "Sneaker Co.",
+        "fabric_type": "Leather",
+        "color": "White"
+    },
+    {
+        "id": 9,
+        "name": "Trendy Oversized Sweater",
+        "images": [
+            "https://example.com/images/oversized_sweater_1.jpg",
+            "https://example.com/images/oversized_sweater_2.jpg"
+        ],
+        "category": "Sweaters",
+        "original_price": 69.99,
+        "discounted_price": 54.99,
+        "ratings": 4.8,
+        "reviews": {
+            "summary": "Super cozy for winter.",
+            "pros": [
+                "Very warm",
+                "Stylish oversized fit",
+                "Soft material"
+            ],
+            "cons": [
+                "Can be too bulky for some",
+                "Requires special care when washing"
+            ]
+        },
+        "sales_count": 150,
+        "brand": "WarmWear",
+        "fabric_type": "Acrylic",
+        "color": "Beige"
+    },
+    {
+        "id": 10,
+        "name": "High-Waisted Jeans",
+        "images": [
+            "https://example.com/images/high_waisted_jeans_1.jpg",
+            "https://example.com/images/high_waisted_jeans_2.jpg"
+        ],
+        "category": "Pants",
+        "original_price": 49.99,
+        "discounted_price": 39.99,
+        "ratings": 4.6,
+        "reviews": {
+            "summary": "Flattering fit for all body types.",
+            "pros": [
+                "Comfortable stretch",
+                "Stylish high-waisted design",
+                "Great for pairing with crop tops"
+            ],
+            "cons": [
+                "Can be tight around the waist",
+                "Limited color options"
+            ]
+        },
+        "sales_count": 220,
+        "brand": "Denim Co.",
+        "fabric_type": "Denim",
+        "color": "Dark Blue"
+    },
+    {
+        "id": 11,
+        "name": "Casual Slip-On Sandals",
+        "images": [
+            "https://example.com/images/slip_on_sandals_1.jpg",
+            "https://example.com/images/slip_on_sandals_2.jpg"
+        ],
+        "category": "Footwear",
+        "original_price": 29.99,
+        "discounted_price": 24.99,
+        "ratings": 4.4,
+        "reviews": {
+            "summary": "Perfect for summer days.",
+            "pros": [
+                "Easy to wear",
+                "Comfortable sole",
+                "Lightweight"
+            ],
+            "cons": [
+                "Not suitable for long walks",
+                "Limited support"
+            ]
+        },
+        "sales_count": 180,
+        "brand": "Summer Feet",
+        "fabric_type": "Synthetic",
+        "color": "Tan"
+    },
+    {
+        "id": 12,
+        "name": "Sporty Tank Top",
+        "images": [
+            "https://example.com/images/sporty_tank_top_1.jpg",
+            "https://example.com/images/sporty_tank_top_2.jpg"
+        ],
+        "category": "Tops",
+        "original_price": 19.99,
+        "discounted_price": 14.99,
+        "ratings": 4.5,
+        "reviews": {
+            "summary": "Great for workouts.",
+            "pros": [
+                "Breathable fabric",
+                "Good fit",
+                "Affordable price"
+            ],
+            "cons": [
+                "Limited color options",
+                "Fabric can cling when wet"
+            ]
+        },
+        "sales_count": 300,
+        "brand": "ActiveWear",
+        "fabric_type": "Polyester",
+        "color": "Red"
+    },
+    {
+        "id": 13,
+        "name": "Stylish Blazer",
+        "images": [
+            "https://example.com/images/stylish_blazer_1.jpg",
+            "https://example.com/images/stylish_blazer_2.jpg"
+        ],
+        "category": "Blazers",
+        "original_price": 89.99,
+        "discounted_price": 69.99,
+        "ratings": 4.7,
+        "reviews": {
+            "summary": "Perfect for office wear.",
+            "pros": [
+                "Tailored fit",
+                "High-quality fabric",
+                "Versatile for different occasions"
+            ],
+            "cons": [
+                "Dry clean only",
+                "Can be too formal for casual settings"
+            ]
+        },
+        "sales_count": 75,
+        "brand": "Business Attire",
+        "fabric_type": "Wool Blend",
+        "color": "Charcoal"
+    },
+    {
+        "id": 14,
+        "name": "Comfortable Leggings",
+        "images": [
+            "https://example.com/images/comfortable_leggings_1.jpg",
+            "https://example.com/images/comfortable_leggings_2.jpg"
+        ],
+        "category": "Leggings",
+        "original_price": 29.99,
+        "discounted_price": 19.99,
+        "ratings": 4.8,
+        "reviews": {
+            "summary": "Perfect for yoga and lounging.",
+            "pros": [
+                "Stretchy and comfortable",
+                "Good for layering",
+                "Available in multiple colors"
+            ],
+            "cons": [
+                "Can be see-through if not careful",
+                "May pill after several washes"
+            ]
+        },
+        "sales_count": 400,
+        "brand": "YogaWear",
+        "fabric_type": "Spandex",
+        "color": "Black"
+    },
+    {
+        "id": 15,
+        "name": "Cozy Fleece Jacket",
+        "images": [
+            "https://example.com/images/cozy_fleece_jacket_1.jpg",
+            "https://example.com/images/cozy_fleece_jacket_2.jpg"
+        ],
+        "category": "Jackets",
+        "original_price": 59.99,
+        "discounted_price": 49.99,
+        "ratings": 4.6,
+        "reviews": {
+            "summary": "Warm and soft for winter.",
+            "pros": [
+                "Very warm",
+                "Soft fleece material",
+                "Good for outdoor activities"
+            ],
+            "cons": [
+                "Can shed lint",
+                "Limited pockets"
+            ]
+        },
+        "sales_count": 130,
+        "brand": "Winter Gear",
+        "fabric_type": "Fleece",
+        "color": "Green"
+    },
+    {
+        "id": 16,
+        "name": "Stylish Sunglasses",
+        "images": [
+            "https://example.com/images/stylish_sunglasses_1.jpg",
+            "https://example.com/images/stylish_sunglasses_2.jpg"
+        ],
+        "category": "Accessories",
+        "original_price": 29.99,
+        "discounted_price": 19.99,
+        "ratings": 4.5,
+        "reviews": {
+            "summary": "Great for sunny days.",
+            "pros": [
+                "UV protection",
+                "Stylish design",
+                "Lightweight"
+            ],
+            "cons": [
+                "Can scratch easily",
+                "Limited fit for larger heads"
+            ]
+        },
+        "sales_count": 200,
+        "brand": "Sunny Days",
+        "fabric_type": "Plastic",
+        "color": "Black"
+    },
+    {
+        "id": 17,
+        "name": "Classic Leather Belt",
+        "images": [
+            "https://example.com/images/classic_leather_belt_1.jpg",
+            "https://example.com/images/classic_leather_belt_2.jpg"
+        ],
+        "category": "Accessories",
+        "original_price": 34.99,
+        "discounted_price": 24.99,
+        "ratings": 4.6,
+        "reviews": {
+            "summary": "A must-have accessory.",
+            "pros": [
+                "High-quality leather",
+                "Durable",
+                "Classic design"
+            ],
+            "cons": [
+                "Can be stiff at first",
+                "Limited color options"
+            ]
+        },
+        "sales_count": 150,
+        "brand": "Belt Co.",
+        "fabric_type": "Leather",
+        "color": "Brown"
+    },
+    {
+        "id": 18,
+        "name": "Lightweight Rain Jacket",
+        "images": [
+            "https://example.com/images/lightweight_rain_jacket_1.jpg",
+            "https://example.com/images/lightweight_rain_jacket_2.jpg"
+        ],
+        "category": "Jackets",
+        "original_price": 49.99,
+        "discounted_price": 39.99,
+        "ratings": 4.5,
+        "reviews": {
+            "summary": "Perfect for unexpected showers.",
+            "pros": [
+                "Water-resistant",
+                "Lightweight",
+                "Packable design"
+            ],
+            "cons": [
+                "Not very warm",
+                "Limited pockets"
+            ]
+        },
+        "sales_count": 90,
+        "brand": "Rain Gear",
+        "fabric_type": "Nylon",
+        "color": "Yellow"
+    },
+    {
+        "id": 19,
+        "name": "Vintage High-Waisted Shorts",
+        "images": [
+            "https://example.com/images/vintage_shorts_1.jpg",
+            "https://example.com/images/vintage_shorts_2.jpg"
+        ],
+        "category": "Shorts",
+        "original_price": 34.99,
+        "discounted_price": 24.99,
+        "ratings": 4.6,
+        "reviews": {
+            "summary": "Stylish and comfortable for summer.",
+            "pros": [
+                "Great fit",
+                "Unique vintage style",
+                "Comfortable fabric"
+            ],
+            "cons": [
+                "Can be too short for some",
+                "Limited size options"
+            ]
+        },
+        "sales_count": 120,
+        "brand": "Vintage Style",
+        "fabric_type": "Cotton",
+        "color": "Light Blue"
+    },
+    {
+        "id": 20,
+        "name": "Elegant Evening Gown",
+        "images": [
+            "https://example.com/images/evening_gown_1.jpg",
+            "https://example.com/images/evening_gown_2.jpg"
+        ],
+        "category": "Dresses",
+        "original_price": 129.99,
+        "discounted_price": 99.99,
+        "ratings": 4.9,
+        "reviews": {
+            "summary": "Perfect for formal events.",
+            "pros": [
+                "Stunning design",
+                "High-quality fabric",
+                "Comfortable fit"
+            ],
+            "cons": [
+                "Dry clean only",
+                "Can be expensive"
+            ]
+        },
+        "sales_count": 50,
+        "brand": "Gown Co.",
+        "fabric_type": "Silk Blend",
+        "color": "Red"
     }
 ]
