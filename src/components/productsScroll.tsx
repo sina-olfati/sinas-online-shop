@@ -1,8 +1,6 @@
 'use client';
-import Products from '../../data/products.json'
 import { useState } from "react";
 import { GrabScroll } from "./grabScroll";
-import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
 // compoents
 import { SectionHeading } from "./sectionHeading";
@@ -40,15 +38,62 @@ interface Data {
 
 export function ProductsScroll ({name, icon, products}: Data) {
 
+    const router = useRouter();
+    const [isDown, setIsDown] = useState<Product | null>(null);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [clickThreshold] = useState(5); // Distance to determine a drag
+
+    const handleNavigate = (path: string) => {
+        // Navigate only if not dragging
+        if (!isDragging) {
+            router.push(path);
+        }
+    };
+
+    const onMouseDown = (item: Product, e: React.MouseEvent) => {
+        setIsDown(item);
+        setIsDragging(false); // Reset dragging state
+        setStartX(e.clientX); // Store the initial position
+    };
+
+    const onMouseUp = (item: Product) => {
+        if (!isDragging && isDown === item) {
+            handleNavigate('./sss'); // Navigate only if not dragging
+        }
+        setIsDown(null); // Reset state
+    };
+
+    const onMouseLeave = () => {
+        setIsDown(null); // Reset state on mouse leave
+        setIsDragging(false); // Reset dragging state
+    };
+
+    const onMouseMove = (e: React.MouseEvent) => {
+        if (isDown) {
+            const dx = e.clientX - startX; // Calculate distance moved
+            if (Math.abs(dx) > clickThreshold) {
+                setIsDragging(true); // Set dragging state if moved beyond threshold
+            }
+        }
+    };
+
     return (
-        <div className='border border-primary w-full flex flex-col mt-5 py-3'>
+        <div className=' w-[100vw] flex flex-col mt-5 py-3 overflow-hidden'>
 
             <SectionHeading name={name} icon={icon}/>
 
             <GrabScroll>
                 {products.map((item) => (
                     
-                    <div>
+                    <div 
+                        key={item.id}
+                        onMouseDown={(e) => onMouseDown(item, e)}
+                        onMouseUp={() => onMouseUp(item)}
+                        onMouseLeave={onMouseLeave}
+                        onMouseMove={onMouseMove}
+                        className="flex flex-col items-center justify-center gap-3 group"
+                    >
                         {item.images}
                     </div>
 

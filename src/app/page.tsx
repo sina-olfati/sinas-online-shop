@@ -20,8 +20,8 @@ export default function Home() {
   return (
     <div className="mt-24">
       {/* {t('title')} */}
-      <Menu />
-      <Header />
+      {/* <Menu /> */}
+      {/* <Header /> */}
       <Categories />
       <ProductsScroll name="Most Selling" icon={<Sparkles />} products={Products} />
       {/* <Image src={"/productImages/hoody1.webp"} width={100} height={100} alt="comeon" /> */}
