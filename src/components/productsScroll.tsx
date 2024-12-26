@@ -4,9 +4,9 @@ import { GrabScroll } from "./grabScroll";
 import { useRouter } from "next/navigation";
 // compoents
 import { SectionHeading } from "./sectionHeading";
-import { Card, CardBody, CardHeader, Image } from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Chip, Image } from "@nextui-org/react";
 // icons
-import { DollarSign } from "lucide-react";
+import { DollarSign, Percent } from "lucide-react";
 import { JapaneseYen } from "lucide-react";
 import { useLocale } from "next-intl";
 
@@ -103,12 +103,12 @@ export function ProductsScroll ({name, icon, products}: Data) {
                             onMouseUp={() => onMouseUp(item)}
                             onMouseLeave={onMouseLeave}
                             onMouseMove={onMouseMove}
-                            className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/10 ${isDown === item ? "scale-95" : "scale-100"}`} 
+                            className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/15 relative ${isDown === item ? "scale-95" : "scale-100"}`} 
                         >
-                            <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+                            <CardHeader className="pb-0 pt-2 px-4 flex-col items-start z-2">
                                 <Image
                                 alt="Card background"
-                                className="object-cover rounded-xl"
+                                className="object-cover rounded-xl z-3"
                                 src={item.images[0]}
                                 width={300}
                                 onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
@@ -122,15 +122,22 @@ export function ProductsScroll ({name, icon, products}: Data) {
                                     {locale === "en" ? <DollarSign className="w-5" /> : <JapaneseYen />}
                                     <div className=" flex flex-col justify-end items-start h-7 relative pl-1">
                                         {item.discounted_price !== item.original_price ? 
-                                        <small className=" p-0 m-0 text-xs text-secondary-foreground/60 line-through absolute bottom-4">{item.original_price}</small> 
+                                        <small className=" p-0 m-0 text-xs text-secondary-foreground/60 line-through absolute bottom-4">{locale === "en" ? item.original_price : Math.round(item.original_price*100)}</small> 
                                         : null}
-                                        <p className={`text- uppercase font-bold p-0 m-0 ${item.discounted_price !== item.original_price ? "text-primary" : ""} `}>{item.discounted_price}</p>
+                                        <p className={`text- uppercase font-bold p-0 m-0 ${item.discounted_price !== item.original_price ? "text-primary" : ""} `}>{locale === "en" ? item.discounted_price : Math.round(item.discounted_price*100)}</p>
                                     </div>
                                 </div>
 
                                 <h4 className="font-bold text-large">Frontend Radio</h4>
 
                             </CardBody>
+
+                            {item.original_price !== item.discounted_price ? 
+                                <Chip color="primary" variant="shadow" endContent={<Percent width={24} />} className="absolute top-2 right-0 scale-50 px-2 py-4 font-bold text-2xl z-5">
+                                    {Math.round((item.original_price-item.discounted_price)/item.original_price*100)}
+                                </Chip>
+                             : null}
+
                         </Card>
 
                 ))}
