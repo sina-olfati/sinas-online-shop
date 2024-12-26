@@ -3,8 +3,10 @@
         "id": 1,
         "name": "Classic Denim Jacket",
         "images": [
-            "https://example.com/images/denim_jacket_1.jpg",
-            "https://example.com/images/denim_jacket_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Jackets",
         "original_price": 79.99,
@@ -31,8 +33,10 @@
         "id": 2,
         "name": "Summer Floral Dress",
         "images": [
-            "https://example.com/images/floral_dress_1.jpg",
-            "https://example.com/images/floral_dress_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Dresses",
         "original_price": 49.99,
@@ -59,8 +63,10 @@
         "id": 3,
         "name": "Sporty Jogger Pants",
         "images": [
-            "https://example.com/images/jogger_pants_1.jpg",
-            "https://example.com/images/jogger_pants_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Pants",
         "original_price": 39.99,
@@ -87,8 +93,10 @@
         "id": 4,
         "name": "Elegant Evening Blouse",
         "images": [
-            "https://example.com/images/evening_blouse_1.jpg",
-            "https://example.com/images/evening_blouse_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Tops",
         "original_price": 69.99,
@@ -115,8 +123,10 @@
         "id": 5,
         "name": "Casual Graphic T-Shirt",
         "images": [
-            "https://example.com/images/graphic_tshirt_1.jpg",
-            "https://example.com/images/graphic_tshirt_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "T-Shirts",
         "original_price": 24.99,
@@ -143,8 +153,10 @@
         "id": 6,
         "name": "Lightweight Hoodie",
         "images": [
-            "https://example.com/images/lightweight_hoodie_1.jpg",
-            "https://example.com/images/lightweight_hoodie_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Hoodies",
         "original_price": 49.99,
@@ -171,8 +183,10 @@
         "id": 7,
         "name": "Chic Midi Skirt",
         "images": [
-            "https://example.com/images/midi_skirt_1.jpg",
-            "https://example.com/images/midi_skirt_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"       
         ],
         "category": "Skirts",
         "original_price": 39.99,
@@ -199,8 +213,10 @@
         "id": 8,
         "name": "Classic White Sneakers",
         "images": [
-            "https://example.com/images/white_sneakers_1.jpg",
-            "https://example.com/images/white_sneakers_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Shoes",
         "original_price": 59.99,
@@ -227,8 +243,10 @@
         "id": 9,
         "name": "Trendy Oversized Sweater",
         "images": [
-            "https://example.com/images/oversized_sweater_1.jpg",
-            "https://example.com/images/oversized_sweater_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Sweaters",
         "original_price": 69.99,
@@ -255,8 +273,10 @@
         "id": 10,
         "name": "High-Waisted Jeans",
         "images": [
-            "https://example.com/images/high_waisted_jeans_1.jpg",
-            "https://example.com/images/high_waisted_jeans_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Pants",
         "original_price": 49.99,
@@ -283,8 +303,10 @@
         "id": 11,
         "name": "Casual Slip-On Sandals",
         "images": [
-            "https://example.com/images/slip_on_sandals_1.jpg",
-            "https://example.com/images/slip_on_sandals_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Footwear",
         "original_price": 29.99,
@@ -311,8 +333,10 @@
         "id": 12,
         "name": "Sporty Tank Top",
         "images": [
-            "https://example.com/images/sporty_tank_top_1.jpg",
-            "https://example.com/images/sporty_tank_top_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Tops",
         "original_price": 19.99,
@@ -339,8 +363,10 @@
         "id": 13,
         "name": "Stylish Blazer",
         "images": [
-            "https://example.com/images/stylish_blazer_1.jpg",
-            "https://example.com/images/stylish_blazer_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Blazers",
         "original_price": 89.99,
@@ -367,8 +393,10 @@
         "id": 14,
         "name": "Comfortable Leggings",
         "images": [
-            "https://example.com/images/comfortable_leggings_1.jpg",
-            "https://example.com/images/comfortable_leggings_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Leggings",
         "original_price": 29.99,
@@ -395,8 +423,10 @@
         "id": 15,
         "name": "Cozy Fleece Jacket",
         "images": [
-            "https://example.com/images/cozy_fleece_jacket_1.jpg",
-            "https://example.com/images/cozy_fleece_jacket_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Jackets",
         "original_price": 59.99,
@@ -423,8 +453,10 @@
         "id": 16,
         "name": "Stylish Sunglasses",
         "images": [
-            "https://example.com/images/stylish_sunglasses_1.jpg",
-            "https://example.com/images/stylish_sunglasses_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Accessories",
         "original_price": 29.99,
@@ -451,8 +483,10 @@
         "id": 17,
         "name": "Classic Leather Belt",
         "images": [
-            "https://example.com/images/classic_leather_belt_1.jpg",
-            "https://example.com/images/classic_leather_belt_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Accessories",
         "original_price": 34.99,
@@ -479,8 +513,10 @@
         "id": 18,
         "name": "Lightweight Rain Jacket",
         "images": [
-            "https://example.com/images/lightweight_rain_jacket_1.jpg",
-            "https://example.com/images/lightweight_rain_jacket_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Jackets",
         "original_price": 49.99,
@@ -507,8 +543,10 @@
         "id": 19,
         "name": "Vintage High-Waisted Shorts",
         "images": [
-            "https://example.com/images/vintage_shorts_1.jpg",
-            "https://example.com/images/vintage_shorts_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Shorts",
         "original_price": 34.99,
@@ -535,8 +573,10 @@
         "id": 20,
         "name": "Elegant Evening Gown",
         "images": [
-            "https://example.com/images/evening_gown_1.jpg",
-            "https://example.com/images/evening_gown_2.jpg"
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
         ],
         "category": "Dresses",
         "original_price": 129.99,

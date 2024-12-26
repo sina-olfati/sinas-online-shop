@@ -5,6 +5,7 @@ import { Header } from "../components/mainPage/header";
 import { Categories } from "../components/mainPage/categories";
 // Next-intl
 import {useTranslations} from 'next-intl';
+import Image from "next/image";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Menu />
       <Header />
       <Categories />
+      <Image src={"/productImages/hoody1.webp"} width={100} height={100} alt="comeon" />
     </div>
   );
 }
