@@ -17,7 +17,7 @@ import { BottomSection } from "./bottom/bottomSection";
 
 const Menu = () => {
   return (
-    <div className="w-full flex flex-col bg-accent/90 fixed top-0 z-50">
+    <div className="w-[100vw] flex flex-col bg-accent/90 fixed top-0 z-50">
 
       <div className="h-12 w-full flex items-center">
         <div id="personal" className="mx-2 flex flex-shrink-0">

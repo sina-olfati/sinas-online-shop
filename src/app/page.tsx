@@ -18,9 +18,9 @@ export default function Home() {
   // const t = useTranslations('HomePage');
 
   return (
-    <div className="mt-24">
+    <div className="mt-24 w-full overflow-hidden px-5">
       {/* {t('title')} */}
-      <Menu />
+      {/* <Menu /> */}
       {/* <Header /> */}
       <Categories />
       <ProductsScroll name="Most Selling" icon={<Sparkles />} products={Products} />

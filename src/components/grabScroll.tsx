@@ -85,7 +85,7 @@ export function GrabScroll({ children }: any) {
             className={`relative bg-transparent select-none w-[100vw] overflow-hidden whitespace-nowrap ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         >
 
-            <div className="w-fit bg-transparent p-3 flex gap-2 scroll-smooth snap-mandatory px-3">
+            <div className="w-fit bg-transparent p-3 flex gap-2 scroll-smooth snap-mandatory pl-10 pr-20">
                 {children}
             </div>
 

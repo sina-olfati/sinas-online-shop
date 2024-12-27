@@ -89,7 +89,7 @@ export function ProductsScroll ({name, icon, products}: Data) {
     
 
     return (
-        <div className=' w-[100vw] flex flex-col mt-5 py-3 overflow-hidden'>
+        <div className='border border-primary w-full flex flex-col mt-5 py-3 overflow-hidden'>
 
             <SectionHeading name={name} icon={icon}/>
 
@@ -124,7 +124,7 @@ export function ProductsScroll ({name, icon, products}: Data) {
                                 </div>
 
                                 <div className="flex items-end mt-1">
-                                    {locale === "en" ? <DollarSign className="w-5" /> : <JapaneseYen />}
+                                    {locale === "en" ? <DollarSign className="w-5" /> : <JapaneseYen className="w-5" />}
                                     <div className=" flex flex-col justify-end items-start h-7 relative pl-1">
                                         {item.discounted_price !== item.original_price ? 
                                         <small className=" p-0 m-0 text-xs text-secondary-foreground/60 line-through absolute bottom-4">{locale === "en" ? item.original_price : Math.round(item.original_price*100)}</small> 
