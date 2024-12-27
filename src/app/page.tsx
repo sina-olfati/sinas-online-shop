@@ -19,24 +19,24 @@ export default function Home() {
     <div className="mt-24 w-full overflow-hidden">
 
       <Menu />
-      {/* <BannerScroller /> */}
+      <BannerScroller />
 
       <div className="px-10">
         {/* {t('title')} */}
-        {/* <Categories /> */}
+        <Categories />
 
-        {/* <ProductsScroll
+        <ProductsScroll
           name="Most Selling"
           icon={<Sparkles />}
           products={Products}
-        /> */}
-        {/* <ProductsScroll
+        />
+        <ProductsScroll
           name="Discounts"
           icon={<BadgePercent />}
           products={Products}
-        /> */}
+        />
 
-        {/* <BannerScroller/> */}
+        <BannerScroller/>
         <BannerCard />
       </div>
 
