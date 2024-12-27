@@ -18,13 +18,16 @@ export default function Home() {
   // const t = useTranslations('HomePage');
 
   return (
-    <div className="mt-24 w-full overflow-hidden px-5">
-      {/* {t('title')} */}
+    <div className="mt-24 w-full overflow-hidden">
+
       <Menu />
+      <div className="px-10">
+      {/* {t('title')} */}
       {/* <Header /> */}
       <Categories />
       <ProductsScroll name="Most Selling" icon={<Sparkles />} products={Products} />
       {/* <Image src={"/productImages/hoody1.webp"} width={100} height={100} alt="comeon" /> */}
+      </div>
     </div>
   );
 }

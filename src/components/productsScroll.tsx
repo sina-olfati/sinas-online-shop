@@ -103,7 +103,7 @@ export function ProductsScroll ({name, icon, products}: Data) {
                             onMouseUp={() => onMouseUp(item)}
                             onMouseLeave={onMouseLeave}
                             onMouseMove={onMouseMove}
-                            className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/15 border dark:border-primary/30 relative transition-all ${isDown === item ? "scale-95" : "scale-100"}`} 
+                            className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/15 dark:bg-primary/30 relative transition-all ${isDown === item ? "scale-95" : "scale-100"}`} 
                         >
                             <CardHeader className="pt-0 px-2 flex-col items-start z-2">
                                 <Image

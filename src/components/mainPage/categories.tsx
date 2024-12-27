@@ -52,7 +52,7 @@ export function Categories() {
     };
 
     return (
-        <div className="border border-primary w-full overflow-hidden">
+        <div className="w-full overflow-hidden">
 
             <SectionHeading name='Categories' icon={<ScanLine />}/>
 
