@@ -5,9 +5,8 @@ import { useRouter } from "next/navigation";
 import { Card, CardBody, CardHeader, Chip, Image } from "@nextui-org/react";
 // compoents
 import { SectionHeading } from "./sectionHeading";
-import { AddToCartButton } from "./addToCartButton";
 // icons
-import { DollarSign, Percent } from "lucide-react";
+import { DollarSign, Percent, Star } from "lucide-react";
 import { JapaneseYen } from "lucide-react";
 import { useLocale } from "next-intl";
 
@@ -106,7 +105,7 @@ export function ProductsScroll ({name, icon, products}: Data) {
                             onMouseMove={onMouseMove}
                             className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/15 relative ${isDown === item ? "scale-95" : "scale-100"}`} 
                         >
-                            <CardHeader className="pb-0 pt-2 px-4 flex-col items-start z-2">
+                            <CardHeader className="pt-0 px-2 flex-col items-start z-2">
                                 <Image
                                 alt="Card background"
                                 className="object-cover rounded-xl z-3"
@@ -115,9 +114,14 @@ export function ProductsScroll ({name, icon, products}: Data) {
                                 onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
                                 />
                             </CardHeader>
-                            <CardBody className="overflow-visible py-2">
+                            <CardBody className="overflow-visible pt-2 pb-0">
 
-                                <p className="text-tiny uppercase font-bold truncate">{item.name}</p>
+                                <p className="text-xs uppercase font-bold truncate">{item.name}</p>
+
+                                <div className="flex gap-2 justify-start items-center mt-2">
+                                    <Star fill="#F4BB44" className="text-[#F4BB44] w-5"/>
+                                    <p>{item.ratings}</p>
+                                </div>
 
                                 <div className="flex items-end my-2">
                                     {locale === "en" ? <DollarSign className="w-5" /> : <JapaneseYen />}
@@ -129,12 +133,10 @@ export function ProductsScroll ({name, icon, products}: Data) {
                                     </div>
                                 </div>
 
-                                <AddToCartButton />
-
                             </CardBody>
 
                             {item.original_price !== item.discounted_price ? 
-                                <Chip color="primary" variant="shadow" endContent={<Percent width={24} />} className="absolute top-2 right-0 scale-50 px-2 py-4 font-bold text-2xl z-5">
+                                <Chip color="primary" variant="shadow" endContent={<Percent width={24} />} className="absolute top-0 right-[-10px] scale-50 px-2 py-4 font-bold text-2xl z-5">
                                     {Math.round((item.original_price-item.discounted_price)/item.original_price*100)}
                                 </Chip>
                              : null}
