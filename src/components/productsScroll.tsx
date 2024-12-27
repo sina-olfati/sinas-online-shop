@@ -2,9 +2,10 @@
 import { useState } from "react";
 import { GrabScroll } from "./grabScroll";
 import { useRouter } from "next/navigation";
+import { Card, CardBody, CardHeader, Chip, Image } from "@nextui-org/react";
 // compoents
 import { SectionHeading } from "./sectionHeading";
-import { Card, CardBody, CardHeader, Chip, Image } from "@nextui-org/react";
+import { AddToCartButton } from "./addToCartButton";
 // icons
 import { DollarSign, Percent } from "lucide-react";
 import { JapaneseYen } from "lucide-react";
@@ -128,7 +129,7 @@ export function ProductsScroll ({name, icon, products}: Data) {
                                     </div>
                                 </div>
 
-                                <h4 className="font-bold text-large">Frontend Radio</h4>
+                                <AddToCartButton />
 
                             </CardBody>
 
