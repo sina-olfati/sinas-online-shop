@@ -107,11 +107,11 @@ export function ProductsScroll ({name, icon, products}: Data) {
                         >
                             <CardHeader className="pt-0 px-2 flex-col items-start z-2">
                                 <Image
-                                alt="Card background"
-                                className="object-cover rounded-xl z-3"
-                                src={item.images[0]}
-                                width={300}
-                                onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
+                                    alt="Card background"
+                                    className="object-cover rounded-xl z-3"
+                                    src={item.images[0]}
+                                    width={300}
+                                    onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
                                 />
                             </CardHeader>
                             <CardBody className="overflow-visible pt-0 pb-0">

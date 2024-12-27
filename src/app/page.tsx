@@ -1,19 +1,17 @@
 import Link from "next/link";
 // components
 import Menu from "../components/menu/menu";
-import { Header } from "../components/mainPage/header";
+import { BannerScroller } from "../components/bannerScroller";
 import { Categories } from "../components/mainPage/categories";
 import { ProductsScroll } from "../components/productsScroll";
+import { BannerCard } from "../components/bannerCard";
 // products (for ProductScroll) | icon
-import Products from "../../data/products.json"
-import { Sparkles } from "lucide-react";
+import Products from "../../data/products.json";
+import { Sparkles, BadgePercent } from "lucide-react";
 // Next-intl
-import {useTranslations} from 'next-intl';
-import Image from "next/image";
-
+// import { useTranslations } from "next-intl";
 
 export default function Home() {
-
   // Next-intl
   // const t = useTranslations('HomePage');
 
@@ -21,13 +19,27 @@ export default function Home() {
     <div className="mt-24 w-full overflow-hidden">
 
       <Menu />
-      <Header />
+      {/* <BannerScroller /> */}
+
       <div className="px-10">
-      {/* {t('title')} */}
-      <Categories />
-      <ProductsScroll name="Most Selling" icon={<Sparkles />} products={Products} />
-      {/* <Image src={"/productImages/hoody1.webp"} width={100} height={100} alt="comeon" /> */}
+        {/* {t('title')} */}
+        {/* <Categories /> */}
+
+        {/* <ProductsScroll
+          name="Most Selling"
+          icon={<Sparkles />}
+          products={Products}
+        /> */}
+        {/* <ProductsScroll
+          name="Discounts"
+          icon={<BadgePercent />}
+          products={Products}
+        /> */}
+
+        {/* <BannerScroller/> */}
+        <BannerCard />
       </div>
+
     </div>
   );
 }
