@@ -89,7 +89,7 @@ export function ProductsScroll ({name, icon, products}: Data) {
     
 
     return (
-        <div className='border border-primary w-full flex flex-col mt-5 py-3 overflow-hidden'>
+        <div className='w-full flex flex-col mt-5 py-3 overflow-hidden'>
 
             <SectionHeading name={name} icon={icon}/>
 
@@ -103,7 +103,7 @@ export function ProductsScroll ({name, icon, products}: Data) {
                             onMouseUp={() => onMouseUp(item)}
                             onMouseLeave={onMouseLeave}
                             onMouseMove={onMouseMove}
-                            className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/15 border dark:border-primary/30 relative ${isDown === item ? "scale-95" : "scale-100"}`} 
+                            className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/15 border dark:border-primary/30 relative transition-all ${isDown === item ? "scale-95" : "scale-100"}`} 
                         >
                             <CardHeader className="pt-0 px-2 flex-col items-start z-2">
                                 <Image
@@ -114,22 +114,23 @@ export function ProductsScroll ({name, icon, products}: Data) {
                                 onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
                                 />
                             </CardHeader>
-                            <CardBody className="overflow-visible pt-2 pb-0">
+                            <CardBody className="overflow-visible pt-0 pb-0">
 
-                                <p className="text-xs uppercase font-bold truncate">{item.name}</p>
+                                <h3 className="text-xs font-bold truncate">{item.name}</h3>
 
-                                <div className="flex gap-2 justify-start items-center mt-2">
-                                    <Star fill="#F4BB44" className="text-[#F4BB44] w-5"/>
+                                <div className="flex gap-1 justify-start items-center mt-0 mb-2 text-xs">
+                                    <Star fill="#F4BB44" className="text-[#F4BB44] w-3"/>
                                     <p>{item.ratings}</p>
                                 </div>
 
-                                <div className="flex items-end mt-1">
-                                    {locale === "en" ? <DollarSign className="w-5" /> : <JapaneseYen className="w-5" />}
-                                    <div className=" flex flex-col justify-end items-start h-7 relative pl-1">
+                                <div className="flex items-end mt-0">
+                                    {locale === "en" ? <DollarSign className="w-4" /> : <JapaneseYen className="w-4" />}
+                                    <div className="flex flex-row justify-center items-center gap-2 h-7 relative">
+                                        <p className={`font-bold p-0 m-0 ${item.discounted_price !== item.original_price ? "text-primary" : ""} `}>{locale === "en" ? item.discounted_price : Math.round(item.discounted_price*100)}</p>
                                         {item.discounted_price !== item.original_price ? 
-                                        <small className=" p-0 m-0 text-xs text-secondary-foreground/60 line-through absolute bottom-4">{locale === "en" ? item.original_price : Math.round(item.original_price*100)}</small> 
+                                            <small className=" p-0 m-0 text-xs text-secondary-foreground/50 line-through relative top-[1px]">{locale === "en" ? item.original_price : Math.round(item.original_price*100)}</small> 
+                                            // <small className=" p-0 m-0 text-xs text-secondary-foreground/60 line-through relative bottom-1 right-[-80%]">{locale === "en" ? item.original_price : Math.round(item.original_price*100)}</small> 
                                         : null}
-                                        <p className={`text- uppercase font-bold p-0 m-0 ${item.discounted_price !== item.original_price ? "text-primary" : ""} `}>{locale === "en" ? item.discounted_price : Math.round(item.discounted_price*100)}</p>
                                     </div>
                                 </div>
 
