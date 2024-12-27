@@ -2,7 +2,7 @@
 import Image from "next/image"
 import { Button } from "@nextui-org/react"
 import Link from "next/link"
-import { inherits } from "util"
+// import { Logo } from "./menu/logo"
 
 
 const data = [
@@ -42,8 +42,15 @@ export function BannerCard () {
                     <Link href={'./ss'}>
                         <Button variant="shadow" color="primary" className="font-bold px-6">Start Shopping</Button>
                     </Link>
+
+                    {/* <div className="absolute right-8 bottom-6">
+                        <Logo />
+                    </div> */}
+
                 </div>
             )}
+
+            
 
         </div>
     )
