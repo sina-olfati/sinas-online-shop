@@ -16,7 +16,7 @@ export default function Home() {
   // const t = useTranslations('HomePage');
 
   return (
-    <div className="mt-24 w-full overflow-hidden">
+    <div className="mt- w-full overflow-hidden">
 
       <Menu />
       <BannerScroller />
