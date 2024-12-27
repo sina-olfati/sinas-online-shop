@@ -103,7 +103,7 @@ export function ProductsScroll ({name, icon, products}: Data) {
                             onMouseUp={() => onMouseUp(item)}
                             onMouseLeave={onMouseLeave}
                             onMouseMove={onMouseMove}
-                            className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/15 relative ${isDown === item ? "scale-95" : "scale-100"}`} 
+                            className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/15 border dark:border-primary/30 relative ${isDown === item ? "scale-95" : "scale-100"}`} 
                         >
                             <CardHeader className="pt-0 px-2 flex-col items-start z-2">
                                 <Image
@@ -123,7 +123,7 @@ export function ProductsScroll ({name, icon, products}: Data) {
                                     <p>{item.ratings}</p>
                                 </div>
 
-                                <div className="flex items-end my-2">
+                                <div className="flex items-end mt-1">
                                     {locale === "en" ? <DollarSign className="w-5" /> : <JapaneseYen />}
                                     <div className=" flex flex-col justify-end items-start h-7 relative pl-1">
                                         {item.discounted_price !== item.original_price ? 
