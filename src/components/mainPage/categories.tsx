@@ -52,9 +52,12 @@ export function Categories() {
     };
 
     return (
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden relative">
 
             <SectionHeading name='Categories' icon={<ScanLine />}/>
+
+            {/* <div className="w-1 bg-gradient-to-r from-background h-full absolute z-10"></div> 
+            <div className="w-1 bg-gradient-to-l from-background h-full absolute z-10 right-0"></div>  */}
 
             <GrabScroll>
                 {category.map((item) => (
@@ -72,58 +75,11 @@ export function Categories() {
                         >
                             {item}
                         </Button>
-                        <p className="font-bold group-hover:text-primary">{item}</p>
+                        <p className="font-bold group-hover:text-primary transition-all">{item}</p>
                     </div>
                 ))}
             </GrabScroll>
         </div>
     );
 }
-
-// OLD ONE
-// 'use client'
-// import { useState } from "react"
-// import { GrabScroll } from "../grabScroll"
-// import { Button } from "../ui/button"
-// import { useRouter } from "next/navigation"
-
-// const category = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']
-
-// export function Categories () {
-
-//     const router = useRouter();
-//     const [isDown, setIsDown] = useState<any>(false)
-
-//     const handleNavigate = (path: string) => {
-//         if (isDown) {
-//             router.push(path);
-//         }
-//     };
-
-//     return (
-//         <div className="">
-//             <GrabScroll>
-
-//                 {category.map((item) => 
-//                         <div 
-//                         key={item}
-//                         onClick={() => handleNavigate('./sss')}
-//                         onMouseDown={() => setIsDown(item)}
-//                         onMouseUp={() => setIsDown(false)}
-//                         onMouseLeave={() => setIsDown(false)}
-//                         className="flex flex-col items-center justify-center gap-3 group">
-
-//                             <Button variant={"default"} className={`${isDown === item ? "scale-90" : "scale-100"} w-20 h-20 rounded-full shadow-md mt-3 transition-all`}>
-//                                 {item}
-//                             </Button>
-
-//                             <p className="font-bold group-hover:text-primary">{item}</p>
-
-//                         </div>
-//                 )}
-
-//             </GrabScroll>
-//         </div>
-//     )
-// }
 

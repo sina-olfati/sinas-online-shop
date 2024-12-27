@@ -21,9 +21,9 @@ export default function Home() {
     <div className="mt-24 w-full overflow-hidden">
 
       <Menu />
+      <Header />
       <div className="px-10">
       {/* {t('title')} */}
-      {/* <Header /> */}
       <Categories />
       <ProductsScroll name="Most Selling" icon={<Sparkles />} products={Products} />
       {/* <Image src={"/productImages/hoody1.webp"} width={100} height={100} alt="comeon" /> */}
