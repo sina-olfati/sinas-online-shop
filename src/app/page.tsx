@@ -20,14 +20,14 @@ export default function Home() {
     <div className="mt- w-full overflow-hidden">
 
       <Menu />
-      <BannerScroller />
+      {/* <BannerScroller /> */}
 
       <div className="px-20">
         {/* {t('title')} */}
 
         <Categories />
 
-        <ProductsScroll
+        {/* <ProductsScroll
           name="Most Selling"
           icon={<Sparkles />}
           products={Products}
@@ -36,9 +36,9 @@ export default function Home() {
           name="Discounts"
           icon={<BadgePercent />}
           products={Products}
-        />
+        /> */}
 
-        <BannerScroller/>
+        {/* <BannerScroller/> */}
         <BannerCard />
       </div>
 
