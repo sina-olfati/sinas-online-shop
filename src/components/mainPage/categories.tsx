@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { SectionHeading } from "../sectionHeading";
 // icon
 import { ScanLine } from "lucide-react";
+import { Edge } from "../edge";
 
 const category = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20'];
 
@@ -59,26 +60,31 @@ export function Categories() {
             {/* <div className="w-1 bg-gradient-to-r from-background h-full absolute z-10"></div> 
             <div className="w-1 bg-gradient-to-l from-background h-full absolute z-10 right-0"></div>  */}
 
-            <GrabScroll>
-                {category.map((item) => (
-                    <div 
-                        key={item}
-                        onMouseDown={(e) => onMouseDown(item, e)}
-                        onMouseUp={() => onMouseUp(item)}
-                        onMouseLeave={onMouseLeave}
-                        onMouseMove={onMouseMove}
-                        className="flex flex-col items-center justify-center gap-3 group"
-                    >
-                        <Button 
-                            variant={"default"} 
-                            className={`${isDown === item ? "scale-90" : "scale-100"} w-20 h-20 rounded-full shadow-md mt-3 transition-all`}
+            <Edge>
+
+                <GrabScroll>
+                    {category.map((item) => (
+                        <div 
+                            key={item}
+                            onMouseDown={(e) => onMouseDown(item, e)}
+                            onMouseUp={() => onMouseUp(item)}
+                            onMouseLeave={onMouseLeave}
+                            onMouseMove={onMouseMove}
+                            className="flex flex-col items-center justify-center gap-3 group"
                         >
-                            {item}
-                        </Button>
-                        <p className="font-bold group-hover:text-primary transition-all">{item}</p>
-                    </div>
-                ))}
-            </GrabScroll>
+                            <Button 
+                                variant={"default"} 
+                                className={`${isDown === item ? "scale-90" : "scale-100"} w-20 h-20 rounded-full shadow-md mt-3 transition-all`}
+                            >
+                                {item}
+                            </Button>
+                            <p className="font-bold group-hover:text-primary transition-all">{item}</p>
+                        </div>
+                    ))}
+                </GrabScroll>
+
+            </Edge>
+            
         </div>
     );
 }

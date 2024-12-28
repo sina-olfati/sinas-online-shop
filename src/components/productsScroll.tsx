@@ -96,60 +96,61 @@ export function ProductsScroll ({name, icon, products}: Data) {
 
             <Edge>
 
-            <GrabScroll>
+                <GrabScroll>
 
-                {products.map((item) => (
-                    
-                        <Card 
-                            key={item.id}
-                            onMouseDown={(e) => onMouseDown(item, e)}
-                            onMouseUp={() => onMouseUp(item)}
-                            onMouseLeave={onMouseLeave}
-                            onMouseMove={onMouseMove}
-                            className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/15 dark:bg-primary/30 relative transition-all ${isDown === item ? "scale-95" : "scale-100"}`} 
-                        >
-                            <CardHeader className="pt-0 px-2 flex-col items-start z-2">
-                                <Image
-                                    alt="Card background"
-                                    className="object-cover rounded-xl z-3"
-                                    src={item.images[0]}
-                                    width={300}
-                                    onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
-                                />
-                            </CardHeader>
-                            <CardBody className="overflow-visible pt-0 pb-0">
+                    {products.map((item) => (
+                        
+                            <Card 
+                                key={item.id}
+                                onMouseDown={(e) => onMouseDown(item, e)}
+                                onMouseUp={() => onMouseUp(item)}
+                                onMouseLeave={onMouseLeave}
+                                onMouseMove={onMouseMove}
+                                className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-primary/15 dark:bg-primary/30 relative transition-all ${isDown === item ? "scale-95" : "scale-100"}`} 
+                            >
+                                <CardHeader className="pt-0 px-2 flex-col items-start z-2">
+                                    <Image
+                                        alt="Card background"
+                                        className="object-cover rounded-xl z-3"
+                                        src={item.images[0]}
+                                        width={300}
+                                        onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
+                                    />
+                                </CardHeader>
+                                <CardBody className="overflow-visible pt-0 pb-0">
 
-                                <h3 className="text-xs font-bold truncate">{item.name}</h3>
+                                    <h3 className="text-xs font-bold truncate">{item.name}</h3>
 
-                                <div className="flex gap-1 justify-start items-center mt-0 mb-2 text-xs">
-                                    <Star fill="#F4BB44" className="text-[#F4BB44] w-3"/>
-                                    <p>{item.ratings}</p>
-                                </div>
-
-                                <div className="flex items-end mt-0">
-                                    {locale === "en" ? <DollarSign className="w-4" /> : <JapaneseYen className="w-4" />}
-                                    <div className="flex flex-row justify-center items-center gap-2 h-7 relative">
-                                        <p className={`font-bold p-0 m-0 ${item.discounted_price !== item.original_price ? "text-primary" : ""} `}>{locale === "en" ? item.discounted_price : Math.round(item.discounted_price*100)}</p>
-                                        {item.discounted_price !== item.original_price ? 
-                                            <small className=" p-0 m-0 text-xs text-secondary-foreground/50 line-through relative top-[1px]">{locale === "en" ? item.original_price : Math.round(item.original_price*100)}</small> 
-                                            // <small className=" p-0 m-0 text-xs text-secondary-foreground/60 line-through relative bottom-1 right-[-80%]">{locale === "en" ? item.original_price : Math.round(item.original_price*100)}</small> 
-                                        : null}
+                                    <div className="flex gap-1 justify-start items-center mt-0 mb-2 text-xs">
+                                        <Star fill="#F4BB44" className="text-[#F4BB44] w-3"/>
+                                        <p>{item.ratings}</p>
                                     </div>
-                                </div>
 
-                            </CardBody>
+                                    <div className="flex items-end mt-0">
+                                        {locale === "en" ? <DollarSign className="w-4" /> : <JapaneseYen className="w-4" />}
+                                        <div className="flex flex-row justify-center items-center gap-2 h-7 relative">
+                                            <p className={`font-bold p-0 m-0 ${item.discounted_price !== item.original_price ? "text-primary" : ""} `}>{locale === "en" ? item.discounted_price : Math.round(item.discounted_price*100)}</p>
+                                            {item.discounted_price !== item.original_price ? 
+                                                <small className=" p-0 m-0 text-xs text-secondary-foreground/50 line-through relative top-[1px]">{locale === "en" ? item.original_price : Math.round(item.original_price*100)}</small> 
+                                                // <small className=" p-0 m-0 text-xs text-secondary-foreground/60 line-through relative bottom-1 right-[-80%]">{locale === "en" ? item.original_price : Math.round(item.original_price*100)}</small> 
+                                            : null}
+                                        </div>
+                                    </div>
 
-                            {item.original_price !== item.discounted_price ? 
-                                <Chip color="primary" variant="shadow" endContent={<Percent width={24} />} className="absolute top-0 right-[-10px] scale-50 px-2 py-4 font-bold text-2xl z-5">
-                                    {Math.round((item.original_price-item.discounted_price)/item.original_price*100)}
-                                </Chip>
-                             : null}
+                                </CardBody>
 
-                        </Card>
+                                {item.original_price !== item.discounted_price ? 
+                                    <Chip color="primary" variant="shadow" endContent={<Percent width={24} />} className="absolute top-0 right-[-10px] scale-50 px-2 py-4 font-bold text-2xl z-5">
+                                        {Math.round((item.original_price-item.discounted_price)/item.original_price*100)}
+                                    </Chip>
+                                : null}
 
-                ))}
+                            </Card>
 
-            </GrabScroll>
+                    ))}
+
+                </GrabScroll>
+
             </Edge>
 
         </div>
