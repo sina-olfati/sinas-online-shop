@@ -5,6 +5,7 @@ import { BannerScroller } from "../components/bannerScroller";
 import { Categories } from "../components/mainPage/categories";
 import { ProductsScroll } from "../components/productsScroll";
 import { BannerCard } from "../components/bannerCard";
+import { Footer } from "../components/footer";
 // products (for ProductScroll) | icon
 import Products from "../../data/products.json";
 import { Sparkles, BadgePercent } from "lucide-react";
@@ -41,6 +42,7 @@ export default function Home() {
         <BannerCard />
       </div>
 
+        <Footer />
     </div>
   );
 }
