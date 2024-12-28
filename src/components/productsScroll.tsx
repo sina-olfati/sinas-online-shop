@@ -9,6 +9,7 @@ import { SectionHeading } from "./sectionHeading";
 import { DollarSign, Percent, Star } from "lucide-react";
 import { JapaneseYen } from "lucide-react";
 import { useLocale } from "next-intl";
+import { Edge } from "./edge";
 
 // Define the structure of the reviews
 interface Review {
@@ -93,6 +94,8 @@ export function ProductsScroll ({name, icon, products}: Data) {
 
             <SectionHeading name={name} icon={icon}/>
 
+            <Edge>
+
             <GrabScroll>
 
                 {products.map((item) => (
@@ -147,6 +150,8 @@ export function ProductsScroll ({name, icon, products}: Data) {
                 ))}
 
             </GrabScroll>
+            </Edge>
+
         </div>
     )
 }

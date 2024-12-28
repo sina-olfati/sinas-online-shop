@@ -21,15 +21,16 @@ export default function Home() {
       <Menu />
       <BannerScroller />
 
-      <div className="px-10">
+      <div className="px-20">
         {/* {t('title')} */}
+
         <Categories />
 
         <ProductsScroll
           name="Most Selling"
           icon={<Sparkles />}
           products={Products}
-        />
+          />
         <ProductsScroll
           name="Discounts"
           icon={<BadgePercent />}
