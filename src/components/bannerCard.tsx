@@ -37,10 +37,10 @@ export function BannerCard () {
                             className="w-[100%] h-auto"
                         />
                     </div>
-                    <h2 className="font-bold text-xl text-background z-10">{card.name}</h2>
+                    <h2 className="font-bold text-xl text-white z-10">{card.name}</h2>
 
                     <Link href={'./ss'}>
-                        <Button variant="shadow" color="primary" className="font-bold px-6">Start Shopping</Button>
+                        <Button variant="shadow" color="primary" className="font-bold px-6 text-white">Start Shopping</Button>
                     </Link>
 
                     {/* <div className="absolute right-8 bottom-6">

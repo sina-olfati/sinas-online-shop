@@ -36,7 +36,7 @@ const Menu = () => {
           <SearchInput />
         </div>
 
-        <div id="logo" className="h-full">
+        <div id="logo" className="h-full pr-1">
           <Logo />
         </div>
       </div>
