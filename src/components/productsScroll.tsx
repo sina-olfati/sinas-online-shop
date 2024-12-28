@@ -129,10 +129,10 @@ export function ProductsScroll ({name, icon, products}: Data) {
 
                                     <div className="flex items-end mt-0">
                                         {locale === "en" ? <DollarSign className="w-4" /> : <JapaneseYen className="w-4" />}
-                                        <div className="flex flex-row justify-center items-center gap-2 h-7 relative">
-                                            <p className={`font-bold p-0 m-0 ${item.discounted_price !== item.original_price ? "text-primary" : ""} `}>{locale === "en" ? item.discounted_price : Math.round(item.discounted_price*100)}</p>
+                                        <div className="flex flex-row justify-center items-end gap-2 h-7 relative">
+                                            <p className={`font-bold text-lg p-0 m-0 relative top-[1px] ${item.discounted_price !== item.original_price ? "text-primary" : ""} `}>{locale === "en" ? item.discounted_price : Math.round(item.discounted_price*100)}</p>
                                             {item.discounted_price !== item.original_price ? 
-                                                <small className=" p-0 m-0 text-xs text-secondary-foreground/50 line-through relative top-[1px]">{locale === "en" ? item.original_price : Math.round(item.original_price*100)}</small> 
+                                                <small className=" p-0 m-0 text-xs text-secondary-foreground/50 line-through relative bottom-[3px]">{locale === "en" ? item.original_price : Math.round(item.original_price*100)}</small> 
                                                 // <small className=" p-0 m-0 text-xs text-secondary-foreground/60 line-through relative bottom-1 right-[-80%]">{locale === "en" ? item.original_price : Math.round(item.original_price*100)}</small> 
                                             : null}
                                         </div>
