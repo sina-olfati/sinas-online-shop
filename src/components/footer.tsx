@@ -1,7 +1,7 @@
 'use client'
 import Link from "next/link";
 import { Logo } from "./menu/logo";
-import { Diamond } from "lucide-react";
+import { Diamond, Sparkles } from "lucide-react";
 // icons
 import { Send, Phone, Linkedin, Mail, Github } from "lucide-react";
 import Image from "next/image";
@@ -62,16 +62,20 @@ export function Footer () {
 
     return (
         // <div className="bg-secondary-foreground/90">
-        <div className="bg-primary/30 relative mt-80 flex flex-col items-center">
+        <div className="bg-primary/30 relative mt-96 flex flex-col items-center">
 
             <div about="top" className="rounded-3xl flex px-10 w-[80%] aspect-[40/10] absolute bottom-[80%] bg-secondary shadow-lg">
-                <div className="border border-primary w-[30%] h-full">
-                    <Image src={'/footer/clothes.png'} className="w-full" alt="footer" width={0}  height={0} sizes="100vw" />
+                <div className="w-[40%] h-full relative">
+                    <Image src={'/footer/clothes.png'} className="w-full scale-125 relative bottom-[50%] drop-shadow-[-10px_10px_5px_rgba(0,0,0,0.25)]" alt="footer" width={0}  height={0} sizes="100vw" />
                 </div>
-                <div className="w-[70%] flex flex-col items-start justify-center px-10">
-                    <h2>Buy from us</h2>
-                    <p>We're the best I swear to baby grunk</p>
-                    <Button variant="shadow" color="primary" >Start Buying</Button>
+                <div className="w-[60%] flex flex-col items-start justify-center gap-3 pl-20">
+                    <h2 className="font-bold text-primary">Expert Styling Advice – Find Your Signature Look!</h2>
+                    <p className="text-sm pb-5">Let our professional stylists guide you to outfits that bring out your best. With quick and personalized styling tips, shop confidently and create a wardrobe that truly reflects your style. We're here to help you make the perfect choice!</p>
+                    <Button variant="shadow" color="primary" className="font-bold">
+                        <Sparkles />
+                        {/* Book Your Consultation */}
+                        Get Styling Tips
+                    </Button>
                 </div>
             </div>
 
