@@ -31,6 +31,9 @@ export function BannerScroller() {
   return (
     <div className="w-full overflow-x-hidden relative shadow-md">
 
+      {/* darkener */}
+      <div className="absolute inset-0 bg-black/15 z-10"></div>
+
       <div className="flex flex-shrink-0 aspect-[88/10] w-[400vw]">
         <div
           className={`${
@@ -61,7 +64,7 @@ export function BannerScroller() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 w-full flex justify-center gap-2 mb-2">
+      <div className="absolute bottom-0 w-full flex justify-center gap-2 mb-2 z-20">
         <Button
           variant="ghost"
           onClick={() => setTurn(1)}
