@@ -62,13 +62,14 @@ export function Footer () {
 
     return (
         // <div className="bg-secondary-foreground/90">
-        <div className="bg-primary/30 relative mt-96 flex flex-col items-center">
+        // <div className="bg-primary/30 relative mt-96 flex flex-col items-center">
+        <div className="bg-secondary-foreground/90 dark:bg-secondary/70 text-white relative mt-96 flex flex-col items-center">
 
             <div about="top" className="rounded-3xl flex px-10 w-[80%] aspect-[40/10] absolute bottom-[80%] bg-secondary shadow-lg">
                 <div className="w-[40%] h-full relative">
                     <Image src={'/footer/clothes.png'} className="w-full scale-125 relative bottom-[50%] drop-shadow-[-10px_10px_5px_rgba(0,0,0,0.25)]" alt="footer" width={0}  height={0} sizes="100vw" />
                 </div>
-                <div className="w-[60%] flex flex-col items-start justify-center gap-3 pl-20">
+                <div className="w-[60%] flex flex-col items-start justify-center gap-3 pl-20 text-secondary-foreground">
                     <h2 className="font-bold text-primary">Expert Styling Advice – Find Your Signature Look!</h2>
                     <p className="text-sm pb-5">Let our professional stylists guide you to outfits that bring out your best. With quick and personalized styling tips, shop confidently and create a wardrobe that truly reflects your style. We're here to help you make the perfect choice!</p>
                     <Button variant="shadow" color="primary" className="font-bold">
