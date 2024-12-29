@@ -52,14 +52,11 @@ export function BannerScroller() {
             <Image width={0} height={0} sizes="100vw" src={'/banners/lady5.jpg'} alt="banner card" className="w-[100vw] h-auto"/>
           </div>
           <div className="w-[100vw] h-full overflow-hidden flex items-start justify-center">
-            <Image width={0} height={0} sizes="100vw" src={'/banners/baby1.jpg'} alt="banner card" className="w-[100vw] h-auto"/>
+            <Image width={0} height={0} sizes="100vw" src={'/banners/lady10.jpg'} alt="banner card" className="w-[100vw] h-auto"/>
           </div>
           <div className="w-[100vw] h-full overflow-hidden flex items-start justify-center">
             <Image width={0} height={0} sizes="100vw" src={'/banners/man4.jpg'} alt="banner card" className="w-[100vw] h-auto"/>
           </div>
-          {/* <div className="bg-red-500 w-[100vw] h-full"></div>
-          <div className="bg-green-500 w-[100vw] h-full"></div>
-          <div className="bg-sky-500 w-[100vw] h-full"></div> */}
 
         </div>
       </div>

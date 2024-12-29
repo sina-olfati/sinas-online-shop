@@ -17,15 +17,15 @@ export default function Home() {
   // const t = useTranslations('HomePage');
 
   return (
-    <div className="mt- w-full overflow-hidden">
+    <div className="w-full overflow-hidden">
 
       <Menu />
       <BannerScroller />
 
-      <div className="px-20">
+      <div className="px-32">
         {/* {t('title')} */}
 
-        {/* <Categories /> */}
+        <Categories />
 
         <ProductsScroll
           name="Most Selling"

@@ -25,7 +25,7 @@ export function BannerCard () {
 
             {data.map((card) => 
                 // <div key={card.id} className="bg-['./productImages/hoody1.webp'] bg-cover bg-center">
-                <div key={card.id} className="bg-muted-foreground w-full aspect-[20/9]  rounded-lg flex flex-col justify-between items-start px-8 py-6 relative overflow-hidden"> 
+                <div key={card.id} className="bg-muted-foreground w-full aspect-[20/9]  rounded-lg flex flex-col justify-between items-start px-8 py-9 relative overflow-hidden"> 
                     <div className="absolute top-0 left-0 w-full h-full overflow-hidden flex items-center justify-center">
                         <Image 
                             width={0}
@@ -40,7 +40,7 @@ export function BannerCard () {
                     <h2 className="font-bold text-xl text-white z-10">{card.name}</h2>
 
                     <Link href={'./ss'}>
-                        <Button variant="shadow" color="primary" className="font-bold px-6 text-white">Start Shopping</Button>
+                        <Button variant="shadow" color="primary" className="font-bold px-6">Start Shopping</Button>
                     </Link>
 
                     {/* <div className="absolute right-8 bottom-6">
