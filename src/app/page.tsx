@@ -20,7 +20,7 @@ export default function Home() {
     <div className="mt- w-full overflow-hidden">
 
       <Menu />
-      {/* <BannerScroller /> */}
+      <BannerScroller />
 
       <div className="px-20">
         {/* {t('title')} */}
@@ -38,7 +38,10 @@ export default function Home() {
           products={Products}
         />
 
-        <BannerScroller/>
+        <div className="rounded-3xl overflow-hidden shadow-md scale-[0.8]">
+          <BannerScroller/>
+        </div>
+
         <BannerCard />
       </div>
 
