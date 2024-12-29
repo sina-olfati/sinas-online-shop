@@ -1,8 +1,11 @@
+'use client'
 import Link from "next/link";
 import { Logo } from "./menu/logo";
 import { Diamond } from "lucide-react";
 // icons
 import { Send, Phone, Linkedin, Mail, Github } from "lucide-react";
+import Image from "next/image";
+import { Button } from "@nextui-org/react";
 
 
 const socials = [
@@ -59,13 +62,22 @@ export function Footer () {
 
     return (
         // <div className="bg-secondary-foreground/90">
-        <div className="bg-primary/30">
+        <div className="bg-primary/30 relative mt-80 flex flex-col items-center">
 
-            <div about="top">
-
+            <div about="top" className="rounded-3xl flex px-10 w-[80%] aspect-[40/10] absolute bottom-[80%] bg-secondary shadow-lg">
+                <div className="border border-primary w-[30%] h-full">
+                    <Image src={'/footer/clothes.png'} className="w-full" alt="footer" width={0}  height={0} sizes="100vw" />
+                </div>
+                <div className="w-[70%] flex flex-col items-start justify-center px-10">
+                    <h2>Buy from us</h2>
+                    <p>We're the best I swear to baby grunk</p>
+                    <Button variant="shadow" color="primary" >Start Buying</Button>
+                </div>
             </div>
 
-            <div about="main" className="flex items-start gap-20 p-16 pt-32">
+
+            <div about="main" className="flex items-start gap-20 p-16 pt-52">
+            {/* <div about="main" className="flex items-start gap-20 p-16 h-[500px]"> */}
 
                 {/* Logo and Tagline */}
                 <div className="w-[31%] pr-10 h-full flex flex-col items-start justify-start gap-4">

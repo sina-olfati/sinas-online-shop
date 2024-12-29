@@ -25,7 +25,7 @@ export default function Home() {
       <div className="px-20">
         {/* {t('title')} */}
 
-        <Categories />
+        {/* <Categories /> */}
 
         {/* <ProductsScroll
           name="Most Selling"
@@ -38,7 +38,7 @@ export default function Home() {
           products={Products}
         /> */}
 
-        {/* <BannerScroller/> */}
+        <BannerScroller/>
         <BannerCard />
       </div>
 
