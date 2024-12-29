@@ -1,8 +1,10 @@
 'use client';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GrabScroll } from "./grabScroll";
 import { useRouter } from "next/navigation";
-import { Card, CardBody, CardHeader, Chip, Image } from "@nextui-org/react";
+// import { Card, CardBody, CardHeader, Chip, Image } from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Chip } from "@nextui-org/react";
+import Image from "next/image";
 // compoents
 import { SectionHeading } from "./sectionHeading";
 // icons
@@ -49,6 +51,7 @@ export function ProductsScroll ({name, icon, products}: Data) {
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);
     const [clickThreshold] = useState(5); // Distance to determine a drag
+    const [hover, setHover] = useState<Product | null>(null)
 
     const handleNavigate = (path: string) => {
         // Navigate only if not dragging
@@ -73,6 +76,7 @@ export function ProductsScroll ({name, icon, products}: Data) {
     const onMouseLeave = () => {
         setIsDown(null); // Reset state on mouse leave
         setIsDragging(false); // Reset dragging state
+        setHover(null)
     };
 
     const onMouseMove = (e: React.MouseEvent) => {
@@ -87,6 +91,17 @@ export function ProductsScroll ({name, icon, products}: Data) {
 
     // Lang
     const locale = useLocale()
+
+
+    // images - preloading?
+    useEffect(() => {
+        products.forEach((product) => {
+            product.images.forEach((url) => {
+                const img = new window.Image();
+                img.src = url;
+            });
+        });
+    }, [products]);
     
 
     return (
@@ -107,14 +122,24 @@ export function ProductsScroll ({name, icon, products}: Data) {
                                 onMouseLeave={onMouseLeave}
                                 onMouseMove={onMouseMove}
                                 className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-secondary-foreground/10 dark:bg-secondary-foreground/20 relative transition-all ${isDown === item ? "scale-95" : "scale-100"}`} 
+                                onMouseOver={() => setHover(item)}
                                 // className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-secondary-foreground/20 relative transition-all ${isDown === item ? "scale-95" : "scale-100"}`} 
                             >
                                 <CardHeader className="pt-0 px-2 flex-col items-start z-2">
+                                    {/* <Image
+                                        alt="Card background"
+                                        className="object-cover rounded-xl z-3 transition-all"
+                                        src={hover === item ? item.images[1] : item.images[0]}
+                                        width={300}
+                                        onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
+                                        onError={() => {}}
+                                    /> */}
                                     <Image
                                         alt="Card background"
                                         className="object-cover rounded-xl z-3"
-                                        src={item.images[0]}
+                                        src={hover === item ? item.images[1] : item.images[0]}
                                         width={300}
+                                        height={300}
                                         onDragStart={(e) => e.preventDefault()} // Prevent default drag behavior
                                     />
                                 </CardHeader>

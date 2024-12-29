@@ -32,15 +32,16 @@ export default function Home() {
           icon={<Sparkles />}
           products={Products}
           />
+
+        <div className="rounded-3xl overflow-hidden shadow-md scale-[0.9]">
+          <BannerScroller/>
+        </div>
+
         <ProductsScroll
           name="Discounts"
           icon={<BadgePercent />}
           products={Products}
         />
-
-        <div className="rounded-3xl overflow-hidden shadow-md scale-[0.8]">
-          <BannerScroller/>
-        </div>
 
         <BannerCard />
       </div>
