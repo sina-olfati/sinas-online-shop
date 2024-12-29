@@ -27,7 +27,7 @@ export default function Home() {
 
         {/* <Categories /> */}
 
-        {/* <ProductsScroll
+        <ProductsScroll
           name="Most Selling"
           icon={<Sparkles />}
           products={Products}
@@ -36,7 +36,7 @@ export default function Home() {
           name="Discounts"
           icon={<BadgePercent />}
           products={Products}
-        /> */}
+        />
 
         <BannerScroller/>
         <BannerCard />
