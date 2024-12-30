@@ -3,6 +3,16 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
 
+
+const pics = [
+  '/banners/man4.jpg',
+  '/banners/lady5.jpg',
+  '/banners/lady10.jpg',
+  '/banners/man4.jpg'
+]
+
+const buttons = [1, 2, 3]
+
 export function BannerScroller() {
   const [turn, setTurn] = useState(1);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null); // Ref to store the timeout ID
@@ -34,6 +44,7 @@ export function BannerScroller() {
       {/* darkener */}
       <div className="absolute inset-0 bg-black/15 z-10"></div>
 
+      {/* scroller */}
       <div className="flex flex-shrink-0 aspect-[88/10] w-[400vw]">
         <div
           className={`${
@@ -47,42 +58,34 @@ export function BannerScroller() {
             } w-[400vw] h-full flex flex-shrink-0 relative transition-transform`}
         >
 
-          {/* <div className="absolute top-0 left-0 w-full h-full overflow-hidden flex items-center justify-center"> */}
-          <div className="w-[100vw] h-full overflow-hidden flex items-start justify-center">
-            <Image width={0} height={0} sizes="100vw" src={'/banners/man4.jpg'} alt="banner card" className="w-[100vw] h-auto"/>
-          </div>
-          <div className="w-[100vw] h-full overflow-hidden flex items-start justify-center">
-            <Image width={0} height={0} sizes="100vw" src={'/banners/lady5.jpg'} alt="banner card" className="w-[100vw] h-auto"/>
-          </div>
-          <div className="w-[100vw] h-full overflow-hidden flex items-start justify-center">
-            <Image width={0} height={0} sizes="100vw" src={'/banners/lady10.jpg'} alt="banner card" className="w-[100vw] h-auto"/>
-          </div>
-          <div className="w-[100vw] h-full overflow-hidden flex items-start justify-center">
-            <Image width={0} height={0} sizes="100vw" src={'/banners/man4.jpg'} alt="banner card" className="w-[100vw] h-auto"/>
-          </div>
+          {/* card */}
+          {pics.map((pic) => 
+            <div className="w-[100vw] h-full overflow-hidden flex items-center justify-center relative">
+              <Image width={0} height={0} sizes="100vw" src={pic} alt="banner card" className="w-[100vw] h-auto"/>
+
+              <div></div>
+            </div>
+          )}
 
         </div>
       </div>
 
+      {/* buttons */}
       <div className="absolute bottom-0 w-full flex justify-center gap-2 mb-2 z-20">
-        <Button
-          variant="ghost"
-          onClick={() => setTurn(1)}
-          className={`w-2 h-2 p-0 rounded-full transition-all bg-accent hover:bg-primary
-            ${turn === 1 || turn === 4 ? "bg-primary w-7" : ""}`}
-        ></Button>
-        <Button
-          variant="ghost"
-          onClick={() => setTurn(2)}
-          className={`w-2 h-2 p-0 rounded-full transition-all bg-accent hover:bg-primary
-            ${turn === 2 ? "bg-primary w-7" : ""}`}
-        ></Button>
-        <Button
-          variant="ghost"
-          onClick={() => setTurn(3)}
-          className={`w-2 h-2 p-0 rounded-full transition-all bg-accent hover:bg-primary
-            ${turn === 3 ? "bg-primary w-7" : ""}`}
-        ></Button>
+
+        {buttons.map((button) => 
+          <Button
+            key={button}
+            variant="ghost"
+            onClick={() => setTurn(button)}
+            className={`w-2 h-2 p-0 rounded-full transition-all bg-accent hover:bg-primary
+              ${button === 1 
+                ? (turn === 1 || turn === 4 ? "bg-primary w-7" : "") 
+                : (turn === button ? "bg-primary w-7" : "")}
+              `}
+          ></Button>
+        )}
+
       </div>
     </div>
   );
