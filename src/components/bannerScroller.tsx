@@ -4,11 +4,27 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 
 
-const pics = [
-  '/banners/man4.jpg',
-  '/banners/lady5.jpg',
-  '/banners/lady10.jpg',
-  '/banners/man4.jpg'
+const cards = [
+  {
+    pic: '/banners/man4.jpg',
+    text: "Unleash Your Inner Warrior",
+    buttonText: "Shop Gentlemen's Wear"
+  },
+  {
+    pic: '/banners/lady5.jpg',
+    text: "Elegance Meets Strength",
+    buttonText: "Shop Ladies' Wear"
+  },
+  {
+    pic: '/banners/lady10.jpg',
+    text: "Stay Stylish Every Season",
+    buttonText: "Explore Seasonal Collections"
+  },
+  {
+    pic: '/banners/man4.jpg',
+    text: "Unleash Your Inner Warrior",
+    buttonText: "Shop Gentlemen's Wear"
+  }
 ]
 
 const buttons = [1, 2, 3]
@@ -42,7 +58,7 @@ export function BannerScroller() {
     <div className="w-full overflow-x-hidden relative shadow-md">
 
       {/* darkener */}
-      <div className="absolute inset-0 bg-black/15 z-10"></div>
+      {/* <div className="absolute inset-0 bg-black/15 !z-[1]"></div> */}
 
       {/* scroller */}
       <div className="flex flex-shrink-0 aspect-[88/10] w-[400vw]">
@@ -59,11 +75,14 @@ export function BannerScroller() {
         >
 
           {/* card */}
-          {pics.map((pic) => 
-            <div className="w-[100vw] h-full overflow-hidden flex items-center justify-center relative">
-              <Image width={0} height={0} sizes="100vw" src={pic} alt="banner card" className="w-[100vw] h-auto"/>
+          {cards.map((card, index) => 
+            <div key={index} className="w-[100vw] h-full overflow-hidden flex items-center justify-center relative">
+              <Image width={0} height={0} sizes="100vw" src={card.pic} alt="banner card" className="w-[100vw] h-auto brightness-90"/>
 
-              <div></div>
+              <div className="absolute left-10 flex flex-col gap-3 !z-30">
+                <h2>{card.text}</h2>
+                <Button className="!z-40">{card.buttonText}</Button>
+              </div>
             </div>
           )}
 
