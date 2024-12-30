@@ -57,9 +57,6 @@ export function BannerScroller() {
   return (
     <div className="w-full overflow-x-hidden relative shadow-md">
 
-      {/* darkener */}
-      {/* <div className="absolute inset-0 bg-black/15 !z-[1]"></div> */}
-
       {/* scroller */}
       <div className="flex flex-shrink-0 aspect-[88/10] w-[400vw]">
         <div
@@ -74,17 +71,18 @@ export function BannerScroller() {
             } w-[400vw] h-full flex flex-shrink-0 relative transition-transform`}
         >
 
-          {/* card */}
-          {cards.map((card, index) => 
-            <div key={index} className="w-[100vw] h-full overflow-hidden flex items-center justify-center relative">
-              <Image width={0} height={0} sizes="100vw" src={card.pic} alt="banner card" className="w-[100vw] h-auto brightness-90"/>
+        {/* card */}
+        {cards.map((card, index) => 
+          <div key={index} className="w-[100vw] h-full overflow-hidden flex items-center justify-center relative">
+            <Image width={0} height={0} sizes="100vw" src={card.pic} alt="banner card" className="w-[100vw] h-auto brightness-90"/>
 
-              <div className="absolute left-10 flex flex-col gap-3 !z-30">
-                <h2>{card.text}</h2>
-                <Button className="!z-40">{card.buttonText}</Button>
-              </div>
+            <div className="absolute left-10 flex flex-col gap-10 text-4xl p-10  bg-gradient-to-r from-primary/0">
+              <div className="h-full w-1 bg-primary absolute left-0 top-0 rounded-full"></div>
+              <h2 className="drop-shadow-md">{card.text}</h2>
+              <Button className="w-fit text-white">{card.buttonText}</Button>
             </div>
-          )}
+          </div>
+        )}
 
         </div>
       </div>
