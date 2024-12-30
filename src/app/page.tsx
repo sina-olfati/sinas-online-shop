@@ -18,14 +18,14 @@ export default function Home() {
 
   return (
     <div className="w-full overflow-hidden">
-
-      <Menu />
-      <BannerScroller />
-
-      <div className="px-32">
         {/* {t('title')} */}
 
-        <Categories />
+      <Menu />
+      {/* <BannerScroller /> */}
+
+      <div className="px-32">
+
+        {/* <Categories />
 
         <ProductsScroll
           name="Most Selling"
@@ -43,7 +43,7 @@ export default function Home() {
           products={Products}
         />
 
-        <BannerCard />
+        <BannerCard /> */}
       </div>
 
         <Footer />
