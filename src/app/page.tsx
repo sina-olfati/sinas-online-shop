@@ -21,11 +21,11 @@ export default function Home() {
         {/* {t('title')} */}
 
       <Menu />
-      {/* <BannerScroller /> */}
+      <BannerScroller />
 
       <div className="px-32">
 
-        {/* <Categories />
+        <Categories />
 
         <ProductsScroll
           name="Most Selling"
@@ -43,7 +43,7 @@ export default function Home() {
           products={Products}
         />
 
-        <BannerCard /> */}
+        <BannerCard />
       </div>
 
         <Footer />
