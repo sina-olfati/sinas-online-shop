@@ -6,7 +6,7 @@ import { useLocale } from "next-intl";
 import { SectionHeading } from "./sectionHeading";
 import { GrabScroll } from "./grabScroll";
 import { Edge } from "./edge";
-import ProductCard from "./productCard";
+import { ProductCard } from "./productCard";
 
 // Define the structure of the reviews
 interface Review {
@@ -89,14 +89,14 @@ export function ProductsScroll ({name, icon, products}: Data) {
 
 
     // images - preloading?
-    useEffect(() => {
-        products.forEach((product) => {
-            product.images.forEach((url) => {
-                const img = new window.Image();
-                img.src = url;
-            });
-        });
-    }, [products]);
+    // useEffect(() => {
+    //     products.forEach((product) => {
+    //         product.images.forEach((url) => {
+    //             const img = new window.Image();
+    //             img.src = url;
+    //         });
+    //     });
+    // }, [products]);
     
 
     return (

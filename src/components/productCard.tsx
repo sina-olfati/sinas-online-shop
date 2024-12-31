@@ -1,8 +1,9 @@
-import { useState } from "react";
+'use client'
 import { Card, CardBody, CardHeader, Chip } from "@nextui-org/react";
 import Image from "next/image";
 import { DollarSign, Percent, Star } from "lucide-react";
 import { JapaneseYen } from "lucide-react";
+import { useState } from "react";
 
 interface Product {
   id: number;
@@ -21,13 +22,13 @@ interface Product {
 
 interface ProductCardProps {
   item: Product;
-  onMouseDown: (item: Product, e: React.MouseEvent) => void;
-  onMouseUp: (item: Product) => void;
-  onMouseLeave: () => void;
-  onMouseMove: (e: React.MouseEvent) => void;
-  setHover: (item: Product | null) => void;
-  hover: Product | null;
-  locale: string;
+  onMouseDown?: (item: Product, e: React.MouseEvent) => void;
+  onMouseUp?: (item: Product) => void;
+  onMouseLeave?: () => void;
+  onMouseMove?: (e: React.MouseEvent) => void;
+  setHover?: (item: Product | null) => void;
+  hover?: Product | null;
+  locale?: string;
 }
 
 export function ProductCard({ item, onMouseDown, onMouseUp, onMouseLeave, onMouseMove, setHover, hover, locale }: ProductCardProps) {
@@ -35,21 +36,29 @@ export function ProductCard({ item, onMouseDown, onMouseUp, onMouseLeave, onMous
 
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDown(true);
-    onMouseDown(item, e);
+    if (onMouseDown) {
+      onMouseDown(item, e); // Call only if onMouseDown is defined
+    }
   };
-
+  
   const handleMouseUp = () => {
     setIsDown(false);
-    onMouseUp(item);
+    if (onMouseUp) {
+      onMouseUp(item); // Call only if onMouseUp is defined
+    }
   };
-
+  
   const handleMouseLeave = () => {
     setIsDown(false);
-    onMouseLeave();
+    if (onMouseLeave) {
+      onMouseLeave(); // Call only if onMouseLeave is defined
+    }
   };
-
+  
   const handleMouseMove = (e: React.MouseEvent) => {
-    onMouseMove(e);
+    if (onMouseMove) {
+      onMouseMove(e); // Call only if onMouseMove is defined
+    }
   };
 
   return (
@@ -58,10 +67,10 @@ export function ProductCard({ item, onMouseDown, onMouseUp, onMouseLeave, onMous
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
-      className={`py-4 px-2 mx-1 cursor-pointer shadow-sm bg-secondary-foreground/10 dark:bg-secondary-foreground/20 relative transition-all ${
+      className={`w-40 py-4 px-2 mx-1 cursor-pointer shadow-sm bg-secondary-foreground/10 dark:bg-secondary-foreground/20 relative transition-all ${
         isDown ? "scale-95" : "scale-100"
       }`}
-      onMouseOver={() => setHover(item)}
+      onMouseOver={() => setHover ? setHover(item) : null}
     >
       <CardHeader className="pt-0 px-2 flex-col items-start z-2">
         <Image
@@ -113,10 +122,6 @@ export function ProductCard({ item, onMouseDown, onMouseUp, onMouseLeave, onMous
     </Card>
   );
 }
-
-export default ProductCard;
-
-
 
 
 

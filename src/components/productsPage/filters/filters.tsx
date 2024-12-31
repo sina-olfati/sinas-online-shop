@@ -40,7 +40,7 @@ export function Filters() {
   console.log(anythingNew); // Logs updated state value
 
   return (
-    <div className="bg-accent shadow-md p-5 pt-0 flex flex-col gap-3 rounded-2xl">
+    <div className="bg-secondary shadow-md p-5 pt-0 flex flex-col gap-5 rounded-2xl w-full">
       <SectionHeading name="Filters" icon={<SlidersHorizontal />} />
 
       <MultiSelect
