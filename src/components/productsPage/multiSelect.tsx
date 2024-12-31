@@ -49,8 +49,8 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
 
   // Set in the main Filters component on selection change  
   useEffect(() => {
-    setSelected(selectedOptions)
-  }, [selectedOptions]);
+    setSelected(selectedOptions);
+  }, [selectedOptions, setSelected]);
 
   return (
     <div className="relative" ref={dropdownRef}>
