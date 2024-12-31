@@ -1,24 +1,21 @@
 import { useState, useEffect, useRef } from "react";
 
-// const options = [
-//   { key: "electronics", label: "Electronics" },
-//   { key: "clothing", label: "Clothing" },
-//   { key: "appliances", label: "Home Appliances" },
-//   { key: "books", label: "Books" },
-// ];
+interface Option {
+  key: string;
+  label: string;
+}
 
-interface Data {
-    options: { key: string; label: string; }[],
-    selected: string[],
-    setSelected: React.Dispatch<React.SetStateAction<string[]>>; // Type of setSelectedOptions
+interface SingleSelectProps {
+  options: Option[];
+  selected: string | undefined;
+  setSelected: React.Dispatch<React.SetStateAction<string | undefined>>; // Type of setSelected for single select
 }
 
 
 
 
-
-export default function MultiSelect({options, selected, setSelected}: Data) {
-  const [selectedOptions, setSelectedOptions] = useState<string[]>(selected);
+export default function SingleSelect({ options, selected, setSelected }: SingleSelectProps) {
+  const [selectedOption, setSelectedOption] = useState<string | undefined>(selected); // Initialize with the selected prop
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -27,11 +24,9 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
 
   // Handle selection
   const handleSelection = (key: string) => {
-    setSelectedOptions((prev) =>
-      prev.includes(key)
-        ? prev.filter((option) => option !== key) // Remove if already selected
-        : [...prev, key] // Add if not selected
-    );
+    setSelectedOption(key); // Set the selected option
+    setSelected(key); // Update the parent component state
+    setIsDropdownOpen(false); // Close the dropdown after selection
   };
 
   // Close dropdown when clicking outside
@@ -47,11 +42,6 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Set in the main Filters component on selection change  
-  useEffect(() => {
-    setSelected(selectedOptions);
-  }, [selectedOptions, setSelected]);
-
   return (
     <div className="relative" ref={dropdownRef}>
       {/* Trigger Button */}
@@ -59,11 +49,7 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
         onClick={toggleDropdown}
         className="bg-blue-500 text-white px-4 py-2 rounded w-full text-left"
       >
-        {selectedOptions.length > 0
-          ? selectedOptions
-              .map((key) => options.find((o) => o.key === key)?.label)
-              .join(", ")
-          : "Select Categories"}
+        {selectedOption ? options.find((o) => o.key === selectedOption)?.label : "Select Category"}
       </button>
 
       {/* Dropdown Menu */}
@@ -74,12 +60,12 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
               key={option.key}
               onClick={() => handleSelection(option.key)}
               className={`px-4 py-2 cursor-pointer hover:bg-gray-200 ${
-                selectedOptions.includes(option.key) ? "bg-gray-100" : ""
+                selectedOption === option.key ? "bg-gray-100" : ""
               }`}
             >
               <input
-                type="checkbox"
-                checked={selectedOptions.includes(option.key)}
+                type="radio" // Radio button for single select
+                checked={selectedOption === option.key}
                 onChange={() => handleSelection(option.key)}
                 className="mr-2"
               />

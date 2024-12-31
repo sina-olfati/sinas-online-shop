@@ -3,8 +3,16 @@ import { SlidersHorizontal } from "lucide-react";
 import { SectionHeading } from "../sectionHeading";
 import { useState } from "react";
 import MultiSelect from "./multiSelect";
+import SingleSelect from "./singleSelect";
 
-const options = [
+const multiOptions = [
+  { key: "electronics", label: "Electronics" },
+  { key: "clothing", label: "Clothing" },
+  { key: "appliances", label: "Home Appliances" },
+  { key: "books", label: "Books" },
+];
+
+const singleOptions = [
   { key: "electronics", label: "Electronics" },
   { key: "clothing", label: "Clothing" },
   { key: "appliances", label: "Home Appliances" },
@@ -15,15 +23,18 @@ const options = [
 
 export function Filters () {
 
-  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
-  console.log(selectedOptions)
-  
+  const [multiSelected, setMultiSelected] = useState<string[]>([]);
+  const [singleSelected, setSingleSelected] = useState<string>();
+  console.log(singleSelected)
+
 
     return (
-        <div className="bg-accent shadow-md p-5 pt-0">
+        <div className="bg-accent shadow-md p-5 pt-0 flex flex-col gap-3 rounded-2xl">
             <SectionHeading name="Filters" icon={<SlidersHorizontal />} />
 
-            <MultiSelect options={options} selected={selectedOptions} setSelected={setSelectedOptions} />
+            <MultiSelect options={multiOptions} selected={multiSelected} setSelected={setMultiSelected} />
+
+            <SingleSelect options={singleOptions} selected={singleSelected} setSelected={setSingleSelected} />
         </div>
 
     )
