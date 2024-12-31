@@ -1,13 +1,23 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
-const options = [
-  { key: "electronics", label: "Electronics" },
-  { key: "clothing", label: "Clothing" },
-  { key: "appliances", label: "Home Appliances" },
-  { key: "books", label: "Books" },
-];
+// const options = [
+//   { key: "electronics", label: "Electronics" },
+//   { key: "clothing", label: "Clothing" },
+//   { key: "appliances", label: "Home Appliances" },
+//   { key: "books", label: "Books" },
+// ];
 
-export default function MultiSelect() {
+interface Data {
+    options: { key: string; label: string; }[],
+    selected: string[],
+    setSelected: React.Dispatch<React.SetStateAction<string[]>>; // Type of setSelectedOptions
+}
+
+
+
+
+
+export default function MultiSelect({options, selected, setSelected}: Data) {
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -31,11 +41,16 @@ export default function MultiSelect() {
     }
   };
 
-  // Add event listener for outside click
-  useState(() => {
+  // Add event listener for outside click using useEffect
+  useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  // Set in the main Filters component on selection change  
+  useEffect(() => {
+    setSelected(selectedOptions)
+  }, [selectedOptions]);
 
   return (
     <div className="relative" ref={dropdownRef}>
