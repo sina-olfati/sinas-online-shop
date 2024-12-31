@@ -68,7 +68,8 @@ export function ProductCard({ item, onMouseDown, onMouseUp, onMouseLeave, onMous
       onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
       onMouseOver={() => setHover ? setHover(item) : null}
-      className={`w-40 py-4 px-2 mx-1 cursor-pointer shadow-sm bg-secondary-foreground/10 dark:bg-secondary-foreground/20 relative transition-all ${
+      className={`w-40 py-4 px-2 mx-1 cursor-pointer shadow-sm bg-secondary brightness-[0.98] relative transition-all ${
+      // className={`w-40 py-4 px-2 mx-1 cursor-pointer shadow-sm bg-secondary-foreground/10 dark:bg-secondary-foreground/20 relative transition-all ${
         isDown ? "scale-95" : "scale-100"
       }`}
     >
