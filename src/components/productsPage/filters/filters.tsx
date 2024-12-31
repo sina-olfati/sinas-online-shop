@@ -37,10 +37,10 @@ export function Filters() {
     setAnythingNew(isNew); // Update state
   }, [multiSelected, singleSelected, sliderValue, discount]);
 
-  console.log(anythingNew); // Logs updated state value
+  // console.log(anythingNew); // Logs updated state value
 
   return (
-    <div className="bg-secondary shadow-md p-5 pt-0 flex flex-col gap-5 rounded-2xl w-full">
+    <div className="bg-secondary shadow-md p-5 pt-0 mt-5 flex flex-col gap-5 rounded-2xl w-full">
       <SectionHeading name="Filters" icon={<SlidersHorizontal />} />
 
       <MultiSelect

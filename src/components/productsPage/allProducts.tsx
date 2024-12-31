@@ -4,6 +4,9 @@ import Products from "../../../data/products.json";
 import { ProductCard } from "../productCard";
 import { useLocale } from "next-intl";
 import { useState } from "react";
+import { Select, SelectItem } from "@nextui-org/react";
+// icons
+import { Filter, ArrowDownNarrowWide, ArrowDownWideNarrow } from "lucide-react";
 
 
 interface Product {
@@ -25,6 +28,13 @@ interface Product {
 
 export function AllProducts () {
 
+    const [priceFilter, setPriceFilter] = useState<string>("")
+
+    const animals = [
+        {key: "cheap", label: "cheap"},
+        {key: "expensive", label: "expensive"},
+      ];
+
     // Lang
     const locale = useLocale()
 
@@ -33,26 +43,55 @@ export function AllProducts () {
     const onMouseLeave = () => {
         setHover(null)
     };
-    
+
 
     return (
-        <div className={`p-5 flex flex-wrap gap-2 items-start justify-around`}>
-            {Products.map((item) => (
-            
-                <Link key={item.id} href={'/'} className="pb-2">
-                    <ProductCard
-                        item={item}
-                        // onMouseDown={}
-                        // onMouseUp={}
-                        onMouseLeave={onMouseLeave}
-                        // onMouseMove={}
-                        setHover={setHover}
-                        hover={hover}
-                        locale={locale}
-                    />
-                </Link>
+        <div className="flex flex-col gap-5 p-5">
+
+            <div>
+                <Select
+                    disableSelectorIconRotation
+                    value={priceFilter}
+                    onChange={(e) => setPriceFilter(e.target.value)}
+                    className="w-36"
+                    // useLabel.ts:56 If you do not provide a visible label, you must specify an aria-label or aria-labelledby attribute for accessibility
+                    label=""
+                    aria-label="sina"
+                    labelPlacement="outside"
+                    placeholder="Default"
+                    selectorIcon={
+                        priceFilter === "" ? <Filter /> :
+                        priceFilter === "cheap" ? <ArrowDownNarrowWide /> : <ArrowDownWideNarrow />
+                    }
+                >
+                    {animals.map((animal) => (
+                        <SelectItem key={animal.key}>{animal.label}</SelectItem>
+                    ))}
+                </Select>
+            </div>
+
+
+
+            <div className="flex flex-wrap gap-4 items-start justify-start">
+
+                {Products.map((item) => (
+                
+                    <Link key={item.id} href={'/'} className="mb-">
+                        <ProductCard
+                            item={item}
+                            // onMouseDown={}
+                            // onMouseUp={}
+                            onMouseLeave={onMouseLeave}
+                            // onMouseMove={}
+                            setHover={setHover}
+                            hover={hover}
+                            locale={locale}
+                        />
+                    </Link>
                                     
-            ))}
+                ))}
+
+            </div>
         </div>
     )
 }
