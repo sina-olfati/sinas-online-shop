@@ -1,7 +1,7 @@
-export function Filters () {
+export function AllProducts () {
 
     return (
-        <div>
+        <div className="bg-secondary">
             All Products
         </div>
     )
