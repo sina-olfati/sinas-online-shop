@@ -1,10 +1,13 @@
 "use client";
-import { SlidersHorizontal } from "lucide-react";
+import { SlidersHorizontal, BadgePercent, Ban } from "lucide-react";
 import { SectionHeading } from "../../sectionHeading";
 import { useState } from "react";
 import MultiSelect from "./multiSelect";
 import SingleSelect from "./singleSelect";
 import { PriceSlider } from "./priceSlider";
+import { Divider, Switch } from "@nextui-org/react";
+// icons
+// import { BadgePercent } from "lucide-react";
 
 const multiOptions = [
   { key: "electronics", label: "Electronics" },
@@ -43,6 +46,23 @@ export function Filters() {
       />
 
       <PriceSlider sliderValue={sliderValue} setSliderValue={setSliderValue} />
+
+      <Divider />
+
+      <div className="flex items-center gap-3">
+        <p>Only Discounted</p>
+        <Switch
+          defaultSelected
+          color="primary"
+          endContent={<Ban />}
+          size="sm"
+          startContent={<BadgePercent />}
+        ></Switch>
+      </div>
+
+      <Divider />
+
+      
 
     </div>
   );
