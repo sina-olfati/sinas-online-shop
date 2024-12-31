@@ -67,10 +67,10 @@ export function ProductCard({ item, onMouseDown, onMouseUp, onMouseLeave, onMous
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseLeave}
       onMouseMove={handleMouseMove}
+      onMouseOver={() => setHover ? setHover(item) : null}
       className={`w-40 py-4 px-2 mx-1 cursor-pointer shadow-sm bg-secondary-foreground/10 dark:bg-secondary-foreground/20 relative transition-all ${
         isDown ? "scale-95" : "scale-100"
       }`}
-      onMouseOver={() => setHover ? setHover(item) : null}
     >
       <CardHeader className="pt-0 px-2 flex-col items-start z-2">
         <Image
