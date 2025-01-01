@@ -1,5 +1,5 @@
 import { Checkbox } from "@nextui-org/react";
-import { X } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 interface Option {
@@ -53,11 +53,9 @@ export default function SingleSelect({ options, selected, setSelected }: SingleS
         className={`bg-primary text-accent text-sm ${selectedOption === undefined ? "text-accent/70" : null } px-4 py-3 rounded w-full text-left truncate transition-all flex items-center justify-between`}
       >
         {selectedOption ? options.find((o) => o.key === selectedOption)?.label : "Gender"}
-        {selectedOption ? 
-          <div onClick={(e) => { e.stopPropagation(); setSelectedOption(undefined); setSelected(undefined); }}>
-            <X size={20} />
-          </div> : null
-        }
+        <div onClick={(e) => { e.stopPropagation(); setSelectedOption(undefined); setSelected(undefined); }}>
+            {!selectedOption ? <ChevronDown size={20} /> : <X size={20} /> }
+        </div>
       </button>
 
       {/* Dropdown Menu */}
@@ -70,16 +68,8 @@ export default function SingleSelect({ options, selected, setSelected }: SingleS
               className={`px-4 py-2 cursor-pointer hover:bg-secondary-foreground/10 ${
                 selectedOption === option.key ? "bg-secondary-foreground/5" : ""
               }`}
-              // className={`px-4 py-2 cursor-pointer hover:bg-gray-200 ${
-              //   selectedOption === option.key ? "bg-gray-100" : ""
-              // }`}
             >
-              {/* <input
-                type="radio" // Radio button for single select
-                checked={selectedOption === option.key}
-                onChange={() => handleSelection(option.key)}
-                className="mr-2"
-              /> */}
+              
               <Checkbox
                 isSelected={selectedOption === option.key}
                 onChange={() => handleSelection(option.key)}

@@ -1,5 +1,5 @@
 import { Checkbox } from "@nextui-org/react";
-import { X } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 // const options = [
@@ -70,13 +70,11 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
             : "Select Categories"}
         </div>
 
-        {selectedOptions.length > 0 && (
-          <div 
-            onClick={(e) => { e.stopPropagation(); setSelectedOptions([]); }}
-          >
-            <X className="" size={20} />
-          </div>
-        )}
+        <div 
+          onClick={(e) => { e.stopPropagation(); setSelectedOptions([]); }}
+        >
+          {selectedOptions.length === 0 ? <ChevronDown size={20} /> : <X size={20} /> }
+        </div>
       </button>
 
       {/* Dropdown Menu */}
@@ -89,9 +87,6 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
               className={`px-4 py-2 cursor-pointer hover:bg-secondary-foreground/10 ${
                 selectedOptions.includes(option.key) ? "bg-secondary-foreground/5" : ""
               }`}
-              // className={`px-4 py-2 cursor-pointer hover:bg-gray-200 ${
-              //   selectedOptions.includes(option.key) ? "bg-gray-100" : ""
-              // }`}
             >
               <Checkbox
                 isSelected={selectedOptions.includes(option.key)}
@@ -100,14 +95,6 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
                 {option.label}
               </Checkbox>
             </div>
-            //   <input
-            //     type="checkbox"
-            //     checked={selectedOptions.includes(option.key)}
-            //     onChange={() => handleSelection(option.key)}
-            //     className="mr-2"
-            //   />
-            //   {option.label}
-            // </div>
           ))}
         </div>
       )}
