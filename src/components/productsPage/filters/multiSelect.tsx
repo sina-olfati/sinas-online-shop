@@ -1,3 +1,4 @@
+import { Checkbox } from "@nextui-org/react";
 import { X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
@@ -80,23 +81,34 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
 
       {/* Dropdown Menu */}
       {isDropdownOpen && (
-        <div className="absolute mt-2 bg-white border rounded shadow w-full z-10">
+        <div className="absolute mt-2 bg-background border rounded shadow w-full z-10 transition-all">
           {options.map((option) => (
             <div
               key={option.key}
-              onClick={() => handleSelection(option.key)}
-              className={`px-4 py-2 cursor-pointer hover:bg-gray-200 ${
-                selectedOptions.includes(option.key) ? "bg-gray-100" : ""
+              onClick={(e) => {e.stopPropagation(); handleSelection(option.key); }}
+              className={`px-4 py-2 cursor-pointer hover:bg-secondary-foreground/10 ${
+                selectedOptions.includes(option.key) ? "bg-secondary-foreground/5" : ""
               }`}
+              // className={`px-4 py-2 cursor-pointer hover:bg-gray-200 ${
+              //   selectedOptions.includes(option.key) ? "bg-gray-100" : ""
+              // }`}
             >
-              <input
-                type="checkbox"
-                checked={selectedOptions.includes(option.key)}
+              <Checkbox
+                isSelected={selectedOptions.includes(option.key)}
                 onChange={() => handleSelection(option.key)}
-                className="mr-2"
-              />
-              {option.label}
+              >
+                {option.label}
+              </Checkbox>
+              
             </div>
+            //   <input
+            //     type="checkbox"
+            //     checked={selectedOptions.includes(option.key)}
+            //     onChange={() => handleSelection(option.key)}
+            //     className="mr-2"
+            //   />
+            //   {option.label}
+            // </div>
           ))}
         </div>
       )}
