@@ -30,7 +30,7 @@ export function AllProducts () {
 
     const [priceFilter, setPriceFilter] = useState<string>("")
 
-    const animals = [
+    const filters = [
         {key: "cheap", label: "cheap"},
         {key: "expensive", label: "expensive"},
       ];
@@ -64,8 +64,8 @@ export function AllProducts () {
                         priceFilter === "cheap" ? <ArrowDownNarrowWide /> : <ArrowDownWideNarrow />
                     }
                 >
-                    {animals.map((animal) => (
-                        <SelectItem key={animal.key}>{animal.label}</SelectItem>
+                    {filters.map((filter) => (
+                        <SelectItem key={filter.key}>{filter.label}</SelectItem>
                     ))}
                 </Select>
             </div>

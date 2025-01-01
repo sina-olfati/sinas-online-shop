@@ -1,3 +1,4 @@
+import { X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 interface Option {
@@ -48,9 +49,14 @@ export default function SingleSelect({ options, selected, setSelected }: SingleS
       <button
         onClick={toggleDropdown}
         // className={`bg-primary text-accent ${selectedOption === undefined ? " bg-primary/75" : null } px-4 py-2 rounded w-full text-left truncate transition-all`}
-        className={`bg-primary text-accent ${selectedOption === undefined ? "text-accent/70" : null } px-4 py-2 rounded w-full text-left truncate transition-all`}
+        className={`bg-primary text-accent text-sm ${selectedOption === undefined ? "text-accent/70" : null } px-4 py-3 rounded w-full text-left truncate transition-all flex items-center justify-between`}
       >
-        {selectedOption ? options.find((o) => o.key === selectedOption)?.label : "Select Category"}
+        {selectedOption ? options.find((o) => o.key === selectedOption)?.label : "Gender"}
+        {selectedOption ? 
+          <div onClick={(e) => { e.stopPropagation(); setSelectedOption(undefined); setSelected(undefined); }}>
+            <X size={20} />
+          </div> : null
+        }
       </button>
 
       {/* Dropdown Menu */}

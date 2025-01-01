@@ -1,3 +1,4 @@
+import { X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
 // const options = [
@@ -21,7 +22,7 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
   const [selectedOptions, setSelectedOptions] = useState<string[]>(selected);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-
+  console.log(selectedOptions)
   // Toggle dropdown visibility
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
@@ -58,13 +59,23 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
       <button
         onClick={toggleDropdown}
         // className={`bg-primary text-accent ${selectedOptions.length === 0 ? " bg-primary/75" : null } px-4 py-2 rounded w-full text-left truncate transition-all`}
-        className={`bg-primary text-accent ${selectedOptions.length === 0 ? "text-accent/70" : null } px-4 py-2 rounded w-full text-left truncate transition-all`}
+        className={`bg-primary text-accent text-sm ${selectedOptions.length === 0 ? "text-accent/70" : null } px-4 py-3 rounded w-full text-left transition-all flex items-center justify-between`}
       >
-        {selectedOptions.length > 0
-          ? selectedOptions
-              .map((key) => options.find((o) => o.key === key)?.label)
-              .join(", ")
-          : "Select Categories"}
+        <div className="w-full truncate">
+          {selectedOptions.length > 0
+            ? selectedOptions
+                .map((key) => options.find((o) => o.key === key)?.label)
+                .join(", ")
+            : "Select Categories"}
+        </div>
+
+        {selectedOptions.length > 0 && (
+          <div 
+            onClick={(e) => { e.stopPropagation(); setSelectedOptions([]); }}
+          >
+            <X className="" size={20} />
+          </div>
+        )}
       </button>
 
       {/* Dropdown Menu */}

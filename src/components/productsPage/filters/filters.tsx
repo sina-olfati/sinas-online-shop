@@ -17,10 +17,8 @@ const multiOptions = [
 ];
 
 const singleOptions = [
-  { key: "electronics", label: "Electronics" },
-  { key: "clothing", label: "Clothing" },
-  { key: "appliances", label: "Home Appliances" },
-  { key: "books", label: "Books" },
+  { key: "men", label: "Men" },
+  { key: "women", label: "Women" },
 ];
 
 export function Filters() {
