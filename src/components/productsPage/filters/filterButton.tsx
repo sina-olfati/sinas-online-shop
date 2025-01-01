@@ -37,6 +37,7 @@ export function FilterButton({ filters }: FilterButtonProps) {
 
   // Function to check if current filters match the query parameters
   const areFiltersSameAsQuery = (): boolean => {
+    // Retrieve query parameters
     const categoriesInQuery = parseQueryParam(searchParams.get("categories"));
     const seasonsInQuery = parseQueryParam(searchParams.get("seasons"));
     const genderInQuery = searchParams.get("gender");
@@ -45,13 +46,22 @@ export function FilterButton({ filters }: FilterButtonProps) {
       : defaultPriceRange;
     const discountInQuery = searchParams.get("discount") === "true";
 
-    const categoriesMatch = compareArrays(categoriesInQuery, filters.categories);
-    const seasonsMatch = compareArrays(seasonsInQuery, filters.seasons);
-    const genderMatch = genderInQuery === filters.gender;
-    const priceMatch =
-      JSON.stringify(priceInQuery) === JSON.stringify(filters.price || defaultPriceRange);
+    // Handle empty filter arrays and compare with query
+    const categoriesMatch = filters.categories.length === 0
+      ? categoriesInQuery.length === 0
+      : compareArrays(categoriesInQuery, filters.categories);
+
+    const seasonsMatch = filters.seasons.length === 0
+      ? seasonsInQuery.length === 0
+      : compareArrays(seasonsInQuery, filters.seasons);
+
+    const genderMatch = filters.gender ? genderInQuery === filters.gender : genderInQuery === null;
+
+    const priceMatch = JSON.stringify(priceInQuery) === JSON.stringify(filters.price || defaultPriceRange);
+
     const discountMatch = discountInQuery === filters.discount;
 
+    // Return true if all filters are the same as the query params
     return (
       categoriesMatch &&
       seasonsMatch &&
@@ -64,7 +74,7 @@ export function FilterButton({ filters }: FilterButtonProps) {
   // Update button state when filters or search parameters change
   useEffect(() => {
     const isSame = areFiltersSameAsQuery();
-    setIsButtonDisabled(isSame);
+    setIsButtonDisabled(isSame); // Disable button if filters match query
   }, [filters, searchParams]);
 
   const applyFilters = () => {
