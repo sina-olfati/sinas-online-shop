@@ -47,7 +47,8 @@ export default function SingleSelect({ options, selected, setSelected }: SingleS
       {/* Trigger Button */}
       <button
         onClick={toggleDropdown}
-        className="bg-blue-500 text-white px-4 py-2 rounded w-full text-left"
+        // className={`bg-primary text-accent ${selectedOption === undefined ? " bg-primary/75" : null } px-4 py-2 rounded w-full text-left truncate transition-all`}
+        className={`bg-primary text-accent ${selectedOption === undefined ? "text-accent/70" : null } px-4 py-2 rounded w-full text-left truncate transition-all`}
       >
         {selectedOption ? options.find((o) => o.key === selectedOption)?.label : "Select Category"}
       </button>

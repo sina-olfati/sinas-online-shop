@@ -57,7 +57,8 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
       {/* Trigger Button */}
       <button
         onClick={toggleDropdown}
-        className="bg-blue-500 text-white px-4 py-2 rounded w-full text-left"
+        // className={`bg-primary text-accent ${selectedOptions.length === 0 ? " bg-primary/75" : null } px-4 py-2 rounded w-full text-left truncate transition-all`}
+        className={`bg-primary text-accent ${selectedOptions.length === 0 ? "text-accent/70" : null } px-4 py-2 rounded w-full text-left truncate transition-all`}
       >
         {selectedOptions.length > 0
           ? selectedOptions
