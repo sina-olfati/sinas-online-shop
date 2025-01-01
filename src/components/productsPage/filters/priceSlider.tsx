@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { Slider } from "@nextui-org/react";
+import { useLocale } from "next-intl";
 
 
 interface Data { 
@@ -10,6 +11,9 @@ interface Data {
 
 
 export function PriceSlider({sliderValue, setSliderValue}: Data) {
+
+  const lang = useLocale()
+
   const [priceRange, setPriceRange] = useState<number[] | undefined>(sliderValue); // Using an array of numbers
   // const [used, setUsed] = useState<boolean>(false)
   // console.log(priceRange)
@@ -33,11 +37,11 @@ export function PriceSlider({sliderValue, setSliderValue}: Data) {
       // className="max-w-md"
       value={priceRange} // Controlled value of the slider
       onChange={handleSliderChange} // Update state when the slider value changes
-      formatOptions={{ style: "currency", currency: "USD" }}
+      formatOptions={{ style: "currency", currency: lang === "en" ? "USD" : "JPY" }}
       label="Price Range"
-      maxValue={1000}
+      maxValue={200}
       minValue={0}
-      step={50}
+      step={5}
       // range // Ensures it's a range slider
     />
   );
