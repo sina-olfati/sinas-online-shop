@@ -1,4 +1,5 @@
-import { useState } from "react";
+'use client'
+import { useEffect, useState } from "react";
 import { Slider } from "@nextui-org/react";
 
 
@@ -9,15 +10,20 @@ interface Data {
 
 
 export function PriceSlider({sliderValue, setSliderValue}: Data) {
-  const [priceRange, setPriceRange] = useState<number[]>([100, 500]); // Using an array of numbers
-  const [used, setUsed] = useState<boolean>(false)
-  console.log(priceRange)
+  const [priceRange, setPriceRange] = useState<number[] | undefined>(sliderValue); // Using an array of numbers
+  // const [used, setUsed] = useState<boolean>(false)
+  // console.log(priceRange)
+
+  // Sync selectedOptions with the selected prop from the parent
+  useEffect(() => {
+    setPriceRange(sliderValue);
+  }, [sliderValue]); // This ensures selectedOptions is updated whenever the selected prop changes
 
   const handleSliderChange = (value: number | number[]) => {
     if (Array.isArray(value)) {
       setPriceRange(value); // Update the state with the new slider range
       setSliderValue(value)
-      setUsed(true)
+      // setUsed(true)
     }
   };
 

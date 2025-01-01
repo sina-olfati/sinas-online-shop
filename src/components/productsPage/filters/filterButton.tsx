@@ -1,7 +1,8 @@
 'use client';
 
 import { Button } from "@nextui-org/react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
 interface FilterButtonProps {
   filters: {
@@ -15,6 +16,56 @@ interface FilterButtonProps {
 
 export function FilterButton({ filters }: FilterButtonProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+  // Default price range to be considered "unset"
+  const defaultPriceRange = [0, 1000];
+
+  // Helper function to parse a query parameter as an array
+  const parseQueryParam = (param: string | null): string[] => {
+    return param ? param.split(",") : [];
+  };
+
+  // Helper function to compare two arrays
+  const compareArrays = (array1: string[], array2: string[]): boolean => {
+    return (
+      array1.length === array2.length &&
+      array1.every((item) => array2.includes(item))
+    );
+  };
+
+  // Function to check if current filters match the query parameters
+  const areFiltersSameAsQuery = (): boolean => {
+    const categoriesInQuery = parseQueryParam(searchParams.get("categories"));
+    const seasonsInQuery = parseQueryParam(searchParams.get("seasons"));
+    const genderInQuery = searchParams.get("gender");
+    const priceInQuery = searchParams.get("price")
+      ? searchParams.get("price")!.split(",").map(Number)
+      : defaultPriceRange;
+    const discountInQuery = searchParams.get("discount") === "true";
+
+    const categoriesMatch = compareArrays(categoriesInQuery, filters.categories);
+    const seasonsMatch = compareArrays(seasonsInQuery, filters.seasons);
+    const genderMatch = genderInQuery === filters.gender;
+    const priceMatch =
+      JSON.stringify(priceInQuery) === JSON.stringify(filters.price || defaultPriceRange);
+    const discountMatch = discountInQuery === filters.discount;
+
+    return (
+      categoriesMatch &&
+      seasonsMatch &&
+      genderMatch &&
+      priceMatch &&
+      discountMatch
+    );
+  };
+
+  // Update button state when filters or search parameters change
+  useEffect(() => {
+    const isSame = areFiltersSameAsQuery();
+    setIsButtonDisabled(isSame);
+  }, [filters, searchParams]);
 
   const applyFilters = () => {
     const query = new URLSearchParams();
@@ -28,7 +79,7 @@ export function FilterButton({ filters }: FilterButtonProps) {
     if (filters.gender) {
       query.append("gender", filters.gender);
     }
-    if (filters.price) {
+    if (filters.price && JSON.stringify(filters.price) !== JSON.stringify(defaultPriceRange)) {
       query.append("price", filters.price.join(","));
     }
     if (filters.discount) {
@@ -43,38 +94,10 @@ export function FilterButton({ filters }: FilterButtonProps) {
     <Button
       color="primary"
       variant="shadow"
-      isDisabled={
-        !(
-          filters.categories.length > 0 ||
-          filters.seasons.length > 0 ||
-          filters.gender ||
-          filters.price ||
-          filters.discount
-        )
-      }
+      isDisabled={isButtonDisabled}
       onPress={applyFilters}
     >
       Apply Filters
     </Button>
   );
 }
-
-
-
-
-// import { Button } from "@nextui-org/react";
-
-// export function FilterButton (anythingNew: any) {
-
-//     return (
-//         <div className="w-full">
-//             <Button
-//                 variant="shadow"
-//                 color="primary"
-//                 isDisabled={!anythingNew}
-//             >
-//                 Apply
-//             </Button>
-//         </div>
-//     )
-// }

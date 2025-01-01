@@ -21,6 +21,11 @@ export default function SingleSelect({ options, selected, setSelected }: SingleS
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+  // Sync selectedOptions with the selected prop from the parent
+  useEffect(() => {
+    setSelectedOption(selected);
+  }, [selected]); // This ensures selectedOptions is updated whenever the selected prop changes
+
   // Toggle dropdown visibility
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 

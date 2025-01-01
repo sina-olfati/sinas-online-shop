@@ -2,13 +2,6 @@ import { Checkbox } from "@nextui-org/react";
 import { ChevronDown, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
-// const options = [
-//   { key: "electronics", label: "Electronics" },
-//   { key: "clothing", label: "Clothing" },
-//   { key: "appliances", label: "Home Appliances" },
-//   { key: "books", label: "Books" },
-// ];
-
 interface Data {
     options: { key: string; label: string; }[],
     selected: string[],
@@ -17,14 +10,16 @@ interface Data {
 }
 
 
-
-
-
 export default function MultiSelect({options, selected, setSelected, name}: Data) {
   const [selectedOptions, setSelectedOptions] = useState<string[]>(selected);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  console.log(selectedOptions)
+
+  // Sync selectedOptions with the selected prop from the parent
+  useEffect(() => {
+    setSelectedOptions(selected);
+  }, [selected]); // This ensures selectedOptions is updated whenever the selected prop changes
+
   // Toggle dropdown visibility
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
 
