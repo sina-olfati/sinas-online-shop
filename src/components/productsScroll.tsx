@@ -24,11 +24,13 @@ interface Product {
     original_price: number;
     discounted_price: number;
     ratings: number;
-    reviews: Review;
+    reviews: any;
     sales_count: number;
     brand: string;
     fabric_type: string;
     color: string;
+    season: string; // New field for season
+    gender: string; // New field for gender
 }
 
 // Update the Data interface to match the structure of the products

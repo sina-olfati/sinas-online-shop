@@ -18,15 +18,15 @@ const categoryOptions = [
 ];
 
 const seasonOptions = [
-  { key: "spring", label: "Spring" },
-  { key: "summer", label: "Summer" },
-  { key: "fall", label: "Fall" },
-  { key: "winter", label: "Winter" },
+  { key: "Spring", label: "Spring" },
+  { key: "Summer", label: "Summer" },
+  { key: "Fall", label: "Fall" },
+  { key: "Winter", label: "Winter" },
 ];
 
 const singleOptions = [
-  { key: "men", label: "Men" },
-  { key: "women", label: "Women" },
+  { key: "Male", label: "Male" },
+  { key: "Female", label: "Female" },
 ];
 
 export function Filters() {

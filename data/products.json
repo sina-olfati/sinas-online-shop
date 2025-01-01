@@ -2,601 +2,1258 @@
     {
         "id": 1,
         "name": "Classic Denim Jacket",
+        "category": "Jackets",
+        "original_price": 89.99,
+        "discounted_price": 69.99,
+        "discount_percent": 22,
+        "ratings": 4.5,
+        "views": 320,
+        "sales_count": 250,
+        "brand": "Denim Master",
+        "fabric_type": "Denim",
+        "color": "Indigo",
+        "gender": "Unisex",
+        "season": "Fall",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Jackets",
-        "original_price": 79.99,
-        "discounted_price": 59.99,
-        "ratings": 4.5,
-        "reviews": {
-            "summary": "Great jacket for casual wear.",
-            "pros": [
-                "Stylish design",
-                "Durable fabric",
-                "Versatile for different outfits"
-            ],
-            "cons": [
-                "A bit tight around the shoulders",
-                "Color fades after several washes"
-            ]
-        },
-        "sales_count": 150,
-        "brand": "Denim Co.",
-        "fabric_type": "Cotton Blend",
-        "color": "Blue"
+        "reviews": [
+            {
+                "summary": "A timeless denim jacket for casual style.",
+                "pros": [
+                    "Durable",
+                    "Comfortable fit",
+                    "Versatile"
+                ],
+                "cons": [
+                    "Sleeves too long for shorter individuals",
+                    "Heavy"
+                ]
+            },
+            {
+                "summary": "Great jacket for layering during chilly weather.",
+                "pros": [
+                    "Stylish",
+                    "Well-constructed"
+                ],
+                "cons": [
+                    "Can feel stiff initially"
+                ]
+            }
+        ]
     },
     {
         "id": 2,
-        "name": "Summer Floral Dress",
+        "name": "Leather Biker Jacket",
+        "category": "Jackets",
+        "original_price": 149.99,
+        "discounted_price": 149.99,
+        "discount_percent": 0,
+        "ratings": 4.8,
+        "views": 480,
+        "sales_count": 180,
+        "brand": "MotoStyle",
+        "fabric_type": "Genuine Leather",
+        "color": "Black",
+        "gender": "Male",
+        "season": "Winter",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Dresses",
-        "original_price": 49.99,
-        "discounted_price": 35.99,
-        "ratings": 4.7,
-        "reviews": {
-            "summary": "Perfect for summer outings.",
-            "pros": [
-                "Lightweight and breathable",
-                "Beautiful floral pattern",
-                "Comfortable fit"
-            ],
-            "cons": [
-                "Runs slightly large",
-                "Needs ironing after washing"
-            ]
-        },
-        "sales_count": 200,
-        "brand": "Summer Vibes",
-        "fabric_type": "Polyester",
-        "color": "Pink"
+        "reviews": [
+            {
+                "summary": "Edgy leather jacket for a bold look.",
+                "pros": [
+                    "Stylish",
+                    "High-quality leather",
+                    "Perfect for layering"
+                ],
+                "cons": [
+                    "Expensive",
+                    "Can be stiff at first"
+                ]
+            }
+        ]
     },
     {
         "id": 3,
-        "name": "Sporty Jogger Pants",
+        "name": "Slim Fit Chinos",
+        "category": "Pants",
+        "original_price": 49.99,
+        "discounted_price": 49.99,
+        "discount_percent": 0,
+        "ratings": 4.3,
+        "views": 220,
+        "sales_count": 150,
+        "brand": "ChinoStyle",
+        "fabric_type": "Cotton Blend",
+        "color": "Beige",
+        "gender": "Male",
+        "season": "Spring",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Pants",
-        "original_price": 39.99,
-        "discounted_price": 39.99,
-        "ratings": 4.3,
-        "reviews": {
-            "summary": "Great for workouts and lounging.",
-            "pros": [
-                "Comfortable elastic waistband",
-                "Good for both gym and casual wear",
-                "Multiple pockets"
-            ],
-            "cons": [
-                "Fabric can pill after a few washes",
-                "Limited color options"
-            ]
-        },
-        "sales_count": 300,
-        "brand": "ActiveWear",
-        "fabric_type": "Cotton Blend",
-        "color": "Black"
+        "reviews": [
+            {
+                "summary": "Slim-fit chinos for everyday wear.",
+                "pros": [
+                    "Great fit",
+                    "Comfortable",
+                    "Easy to style"
+                ],
+                "cons": [
+                    "Wrinkles easily",
+                    "Can shrink after washing"
+                ]
+            }
+        ]
     },
     {
         "id": 4,
-        "name": "Elegant Evening Blouse",
+        "name": "Tropical Button-Down Shirt",
+        "category": "Shirts",
+        "original_price": 39.99,
+        "discounted_price": 29.99,
+        "discount_percent": 25,
+        "ratings": 4.6,
+        "views": 320,
+        "sales_count": 200,
+        "brand": "Island Wear",
+        "fabric_type": "Linen",
+        "color": "Blue Floral",
+        "gender": "Male",
+        "season": "Summer",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Tops",
-        "original_price": 69.99,
-        "discounted_price": 69.99,
-        "ratings": 4.8,
-        "reviews": {
-            "summary": "Perfect for formal occasions.",
-            "pros": [
-                "Sophisticated design",
-                "Soft and luxurious feel",
-                "Fits true to size"
-            ],
-            "cons": [
-                "Dry clean only",
-                "Sleeves can be a bit long"
-            ]
-        },
-        "sales_count": 100,
-        "brand": "Chic Fashion",
-        "fabric_type": "Silk",
-        "color": "Black"
+        "reviews": [
+            {
+                "summary": "Ideal shirt for beach days.",
+                "pros": [
+                    "Light and breathable",
+                    "Bright design",
+                    "Perfect for summer"
+                ],
+                "cons": [
+                    "Wrinkles quickly",
+                    "Runs small"
+                ]
+            },
+            {
+                "summary": "Great shirt for vacation!",
+                "pros": [
+                    "Comfortable",
+                    "Good quality material"
+                ],
+                "cons": [
+                    "Shrinks slightly after washing"
+                ]
+            }
+        ]
     },
     {
         "id": 5,
-        "name": "Casual Graphic T-Shirt",
+        "name": "Vintage Sweatshirt",
+        "category": "Sweaters",
+        "original_price": 59.99,
+        "discounted_price": 39.99,
+        "discount_percent": 33,
+        "ratings": 4.4,
+        "views": 410,
+        "sales_count": 230,
+        "brand": "Retro Apparel",
+        "fabric_type": "Fleece",
+        "color": "Gray",
+        "gender": "Unisex",
+        "season": "Fall",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "T-Shirts",
-        "original_price": 24.99,
-        "discounted_price": 19.99,
-        "ratings": 4.6,
-        "reviews": {
-            "summary": "Fun and comfortable.",
-            "pros": [
-                "Soft fabric",
-                "Unique designs",
-                "Great for casual outings"
-            ],
-            "cons": [
-                "Sizes run small",
-                "Print can fade over time"
-            ]
-        },
-        "sales_count": 250,
-        "brand": "Graphic Tees",
-        "fabric_type": "Cotton",
-        "color": "White"
+        "reviews": [
+            {
+                "summary": "A cozy vintage sweatshirt for chilly evenings.",
+                "pros": [
+                    "Soft fabric",
+                    "Good for layering",
+                    "Casual design"
+                ],
+                "cons": [
+                    "Shrinks after washing",
+                    "Not very stylish for formal wear"
+                ]
+            },
+            {
+                "summary": "Perfect for lazy weekends!",
+                "pros": [
+                    "Comfy",
+                    "Keeps you warm"
+                ],
+                "cons": [
+                    "Doesn't hold its shape after multiple washes"
+                ]
+            }
+        ]
     },
     {
         "id": 6,
-        "name": "Lightweight Hoodie",
+        "name": "Classic White Polo",
+        "category": "Shirts",
+        "original_price": 39.99,
+        "discounted_price": 29.99,
+        "discount_percent": 25,
+        "ratings": 4.7,
+        "views": 550,
+        "sales_count": 300,
+        "brand": "Polo Masters",
+        "fabric_type": "Cotton",
+        "color": "White",
+        "gender": "Male",
+        "season": "Spring",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Hoodies",
-        "original_price": 49.99,
-        "discounted_price": 39.99,
-        "ratings": 4.4,
-        "reviews": {
-            "summary": "Perfect for chilly evenings.",
-            "pros": [
-                "Lightweight and breathable",
-                "Stylish fit",
-                "Good for layering"
-            ],
-            "cons": [
-                "Not very warm",
-                "Limited color options"
-            ]
-        },
-        "sales_count": 180,
-        "brand": "CozyWear",
-        "fabric_type": "Polyester",
-        "color": "Gray"
+        "reviews": [
+            {
+                "summary": "A wardrobe staple for every man.",
+                "pros": [
+                    "Comfortable",
+                    "Can be dressed up or down",
+                    "Soft fabric"
+                ],
+                "cons": [
+                    "Needs ironing",
+                    "Fit may be a bit too slim for some"
+                ]
+            }
+        ]
     },
     {
         "id": 7,
-        "name": "Chic Midi Skirt",
-        "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"       
-        ],
-        "category": "Skirts",
-        "original_price": 39.99,
-        "discounted_price": 29.99,
-        "ratings": 4.5,
-        "reviews": {
-            "summary": "Stylish and versatile.",
-            "pros": [
-                "Great for both casual and formal wear",
-                "Comfortable fit",
-                "High-quality fabric"
-            ],
-            "cons": [
-                "Can be a bit long for shorter individuals",
-                "Wrinkles easily"
-            ]
-        },
-        "sales_count": 90,
-        "brand": "Fashionista",
-        "fabric_type": "Cotton Blend",
-        "color": "Navy"
-    },
-    {
-        "id": 8,
-        "name": "Classic White Sneakers",
-        "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
-        ],
-        "category": "Shoes",
-        "original_price": 59.99,
-        "discounted_price": 59.99,
-        "ratings": 4.7,
-        "reviews": {
-            "summary": "Comfortable and stylish.",
-            "pros": [
-                "Goes with everything",
-                "Comfortable for all-day wear",
-                "Easy to clean"
-            ],
-            "cons": [
-                "May scuff easily",
-                "Limited arch support"
-            ]
-        },
-        "sales_count": 300,
-        "brand": "Sneaker Co.",
-        "fabric_type": "Leather",
-        "color": "White"
-    },
-    {
-        "id": 9,
-        "name": "Trendy Oversized Sweater",
-        "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
-        ],
-        "category": "Sweaters",
-        "original_price": 69.99,
-        "discounted_price": 54.99,
-        "ratings": 4.8,
-        "reviews": {
-            "summary": "Super cozy for winter.",
-            "pros": [
-                "Very warm",
-                "Stylish oversized fit",
-                "Soft material"
-            ],
-            "cons": [
-                "Can be too bulky for some",
-                "Requires special care when washing"
-            ]
-        },
-        "sales_count": 150,
-        "brand": "WarmWear",
-        "fabric_type": "Acrylic",
-        "color": "Beige"
-    },
-    {
-        "id": 10,
-        "name": "High-Waisted Jeans",
-        "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
-        ],
+        "name": "Athletic Jogger Pants",
         "category": "Pants",
         "original_price": 49.99,
         "discounted_price": 49.99,
+        "discount_percent": 0,
         "ratings": 4.6,
-        "reviews": {
-            "summary": "Flattering fit for all body types.",
-            "pros": [
-                "Comfortable stretch",
-                "Stylish high-waisted design",
-                "Great for pairing with crop tops"
-            ],
-            "cons": [
-                "Can be tight around the waist",
-                "Limited color options"
-            ]
-        },
-        "sales_count": 220,
-        "brand": "Denim Co.",
-        "fabric_type": "Denim",
-        "color": "Dark Blue"
+        "views": 320,
+        "sales_count": 190,
+        "brand": "ActiveFit",
+        "fabric_type": "Polyester",
+        "color": "Black",
+        "gender": "Male",
+        "season": "Winter",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "Perfect for workouts or a day of lounging.",
+                "pros": [
+                    "Stretchy",
+                    "Comfortable waistband",
+                    "Breathable"
+                ],
+                "cons": [
+                    "Runs large",
+                    "Material may wear out quickly"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Cropped Hoodie",
+        "category": "Hoodies",
+        "original_price": 39.99,
+        "discounted_price": 29.99,
+        "discount_percent": 25,
+        "ratings": 4.5,
+        "views": 260,
+        "sales_count": 210,
+        "brand": "CozyLine",
+        "fabric_type": "Cotton Blend",
+        "color": "Pink",
+        "gender": "Female",
+        "season": "Fall",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "Casual and stylish cropped hoodie.",
+                "pros": [
+                    "Comfortable",
+                    "Stylish cut",
+                    "Breathable"
+                ],
+                "cons": [
+                    "Too short for some",
+                    "Not as warm"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Classic Crewneck Sweatshirt",
+        "category": "Sweaters",
+        "original_price": 59.99,
+        "discounted_price": 59.99,
+        "discount_percent": 0,
+        "ratings": 4.3,
+        "views": 410,
+        "sales_count": 230,
+        "brand": "Urban Gear",
+        "fabric_type": "Fleece",
+        "color": "Navy Blue",
+        "gender": "Unisex",
+        "season": "Winter",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "Cozy crewneck for casual days.",
+                "pros": [
+                    "Soft and warm",
+                    "Affordable",
+                    "Classic look"
+                ],
+                "cons": [
+                    "Can shrink after washing",
+                    "Not very fitted"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Stylish Bomber Jacket",
+        "category": "Jackets",
+        "original_price": 129.99,
+        "discounted_price": 109.99,
+        "discount_percent": 15,
+        "ratings": 4.7,
+        "views": 500,
+        "sales_count": 240,
+        "brand": "JetStream",
+        "fabric_type": "Polyester",
+        "color": "Army Green",
+        "gender": "Male",
+        "season": "Fall",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "Perfect for a trendy, sporty look.",
+                "pros": [
+                    "Versatile",
+                    "Warm",
+                    "Great for layering"
+                ],
+                "cons": [
+                    "Expensive",
+                    "Bulky"
+                ]
+            }
+        ]
     },
     {
         "id": 11,
-        "name": "Casual Slip-On Sandals",
+        "name": "Loose Fit Joggers",
+        "category": "Pants",
+        "original_price": 39.99,
+        "discounted_price": 34.99,
+        "discount_percent": 13,
+        "ratings": 4.4,
+        "views": 270,
+        "sales_count": 200,
+        "brand": "ChillZone",
+        "fabric_type": "Cotton Blend",
+        "color": "Charcoal Gray",
+        "gender": "Unisex",
+        "season": "Winter",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Footwear",
-        "original_price": 29.99,
-        "discounted_price": 29.99,
-        "ratings": 4.4,
-        "reviews": {
-            "summary": "Perfect for summer days.",
-            "pros": [
-                "Easy to wear",
-                "Comfortable sole",
-                "Lightweight"
-            ],
-            "cons": [
-                "Not suitable for long walks",
-                "Limited support"
-            ]
-        },
-        "sales_count": 180,
-        "brand": "Summer Feet",
-        "fabric_type": "Synthetic",
-        "color": "Tan"
+        "reviews": []
     },
     {
         "id": 12,
-        "name": "Sporty Tank Top",
+        "name": "Basic White T-Shirt",
+        "category": "T-Shirts",
+        "original_price": 19.99,
+        "discounted_price": 19.99,
+        "discount_percent": 0,
+        "ratings": 4.6,
+        "views": 600,
+        "sales_count": 350,
+        "brand": "CasualWear",
+        "fabric_type": "Cotton",
+        "color": "White",
+        "gender": "Unisex",
+        "season": "Spring",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Tops",
-        "original_price": 19.99,
-        "discounted_price": 14.99,
-        "ratings": 4.5,
-        "reviews": {
-            "summary": "Great for workouts.",
-            "pros": [
-                "Breathable fabric",
-                "Good fit",
-                "Affordable price"
-            ],
-            "cons": [
-                "Limited color options",
-                "Fabric can cling when wet"
-            ]
-        },
-        "sales_count": 300,
-        "brand": "ActiveWear",
-        "fabric_type": "Polyester",
-        "color": "Red"
+        "reviews": [
+            {
+                "summary": "A staple piece for any wardrobe.",
+                "pros": [
+                    "Soft fabric",
+                    "Affordable",
+                    "Great for layering"
+                ],
+                "cons": [
+                    "Can shrink after washing",
+                    "Fit might be too loose for some"
+                ]
+            }
+        ]
     },
     {
         "id": 13,
-        "name": "Stylish Blazer",
+        "name": "Plaid Button-Up Shirt",
+        "category": "Shirts",
+        "original_price": 39.99,
+        "discounted_price": 39.99,
+        "discount_percent": 0,
+        "ratings": 4.3,
+        "views": 400,
+        "sales_count": 250,
+        "brand": "Flannel Co.",
+        "fabric_type": "Flannel",
+        "color": "Red Plaid",
+        "gender": "Male",
+        "season": "Fall",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Blazers",
-        "original_price": 89.99,
-        "discounted_price": 69.99,
-        "ratings": 4.7,
-        "reviews": {
-            "summary": "Perfect for office wear.",
-            "pros": [
-                "Tailored fit",
-                "High-quality fabric",
-                "Versatile for different occasions"
-            ],
-            "cons": [
-                "Dry clean only",
-                "Can be too formal for casual settings"
-            ]
-        },
-        "sales_count": 75,
-        "brand": "Business Attire",
-        "fabric_type": "Wool Blend",
-        "color": "Charcoal"
+        "reviews": [
+            {
+                "summary": "A cozy shirt for casual days.",
+                "pros": [
+                    "Soft and warm",
+                    "Stylish plaid design"
+                ],
+                "cons": [
+                    "Fabric feels a bit heavy for some",
+                    "Wrinkles easily"
+                ]
+            }
+        ]
     },
     {
         "id": 14,
-        "name": "Comfortable Leggings",
+        "name": "Tech Hoodie",
+        "category": "Hoodies",
+        "original_price": 79.99,
+        "discounted_price": 59.99,
+        "discount_percent": 25,
+        "ratings": 4.8,
+        "views": 450,
+        "sales_count": 320,
+        "brand": "TechWear",
+        "fabric_type": "Polyester",
+        "color": "Black",
+        "gender": "Unisex",
+        "season": "Winter",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Leggings",
-        "original_price": 29.99,
-        "discounted_price": 19.99,
-        "ratings": 4.8,
-        "reviews": {
-            "summary": "Perfect for yoga and lounging.",
-            "pros": [
-                "Stretchy and comfortable",
-                "Good for layering",
-                "Available in multiple colors"
-            ],
-            "cons": [
-                "Can be see-through if not careful",
-                "May pill after several washes"
-            ]
-        },
-        "sales_count": 400,
-        "brand": "YogaWear",
-        "fabric_type": "Spandex",
-        "color": "Black"
+        "reviews": [
+            {
+                "summary": "Perfect hoodie for tech lovers.",
+                "pros": [
+                    "Stylish and modern",
+                    "Comfortable and warm",
+                    "Great for layering"
+                ],
+                "cons": [
+                    "A bit too heavy for mild weather",
+                    "Not breathable"
+                ]
+            },
+            {
+                "summary": "Great fit and functionality.",
+                "pros": [
+                    "High-quality fabric",
+                    "Lots of pockets"
+                ],
+                "cons": [
+                    "Can get too warm indoors"
+                ]
+            }
+        ]
     },
     {
         "id": 15,
-        "name": "Cozy Fleece Jacket",
+        "name": "Max Fit Sweatpants",
+        "category": "Pants",
+        "original_price": 39.99,
+        "discounted_price": 34.99,
+        "discount_percent": 13,
+        "ratings": 4.5,
+        "views": 330,
+        "sales_count": 180,
+        "brand": "MaxStyle",
+        "fabric_type": "Cotton Blend",
+        "color": "Dark Gray",
+        "gender": "Male",
+        "season": "Fall",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Jackets",
-        "original_price": 59.99,
-        "discounted_price": 59.99,
-        "ratings": 4.6,
-        "reviews": {
-            "summary": "Warm and soft for winter.",
-            "pros": [
-                "Very warm",
-                "Soft fleece material",
-                "Good for outdoor activities"
-            ],
-            "cons": [
-                "Can shed lint",
-                "Limited pockets"
-            ]
-        },
-        "sales_count": 130,
-        "brand": "Winter Gear",
-        "fabric_type": "Fleece",
-        "color": "Green"
+        "reviews": [
+            {
+                "summary": "Super comfortable for lounging or workouts.",
+                "pros": [
+                    "Soft and stretchy",
+                    "Perfect for cold days"
+                ],
+                "cons": [
+                    "A bit loose for slim builds"
+                ]
+            }
+        ]
     },
     {
         "id": 16,
-        "name": "Stylish Sunglasses",
+        "name": "Casual Fit Blazer",
+        "category": "Jackets",
+        "original_price": 129.99,
+        "discounted_price": 99.99,
+        "discount_percent": 23,
+        "ratings": 4.4,
+        "views": 250,
+        "sales_count": 130,
+        "brand": "City Mode",
+        "fabric_type": "Wool Blend",
+        "color": "Navy Blue",
+        "gender": "Male",
+        "season": "Winter",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Accessories",
-        "original_price": 29.99,
-        "discounted_price": 19.99,
-        "ratings": 4.5,
-        "reviews": {
-            "summary": "Great for sunny days.",
-            "pros": [
-                "UV protection",
-                "Stylish design",
-                "Lightweight"
-            ],
-            "cons": [
-                "Can scratch easily",
-                "Limited fit for larger heads"
-            ]
-        },
-        "sales_count": 200,
-        "brand": "Sunny Days",
-        "fabric_type": "Plastic",
-        "color": "Black"
+        "reviews": [
+            {
+                "summary": "Stylish and well-tailored blazer for casual occasions.",
+                "pros": [
+                    "Sharp look",
+                    "Great fabric quality"
+                ],
+                "cons": [
+                    "Not for formal occasions",
+                    "Slightly tight fit"
+                ]
+            }
+        ]
     },
     {
         "id": 17,
-        "name": "Classic Leather Belt",
+        "name": "Sporty Windbreaker",
+        "category": "Jackets",
+        "original_price": 59.99,
+        "discounted_price": 49.99,
+        "discount_percent": 17,
+        "ratings": 4.6,
+        "views": 420,
+        "sales_count": 310,
+        "brand": "ActiveWear",
+        "fabric_type": "Nylon",
+        "color": "Red",
+        "gender": "Unisex",
+        "season": "Spring",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Accessories",
-        "original_price": 34.99,
-        "discounted_price": 24.99,
-        "ratings": 4.6,
-        "reviews": {
-            "summary": "A must-have accessory.",
-            "pros": [
-                "High-quality leather",
-                "Durable",
-                "Classic design"
-            ],
-            "cons": [
-                "Can be stiff at first",
-                "Limited color options"
-            ]
-        },
-        "sales_count": 150,
-        "brand": "Belt Co.",
-        "fabric_type": "Leather",
-        "color": "Brown"
+        "reviews": [
+            {
+                "summary": "Great for outdoor activities.",
+                "pros": [
+                    "Lightweight",
+                    "Breathable",
+                    "Water-resistant"
+                ],
+                "cons": [
+                    "Runs large"
+                ]
+            }
+        ]
     },
     {
         "id": 18,
-        "name": "Lightweight Rain Jacket",
+        "name": "Cargo Pants",
+        "category": "Pants",
+        "original_price": 49.99,
+        "discounted_price": 39.99,
+        "discount_percent": 20,
+        "ratings": 4.5,
+        "views": 380,
+        "sales_count": 290,
+        "brand": "Utility Wear",
+        "fabric_type": "Cotton",
+        "color": "Olive Green",
+        "gender": "Male",
+        "season": "Fall",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Jackets",
-        "original_price": 49.99,
-        "discounted_price": 49.99,
-        "ratings": 4.5,
-        "reviews": {
-            "summary": "Perfect for unexpected showers.",
-            "pros": [
-                "Water-resistant",
-                "Lightweight",
-                "Packable design"
-            ],
-            "cons": [
-                "Not very warm",
-                "Limited pockets"
-            ]
-        },
-        "sales_count": 90,
-        "brand": "Rain Gear",
-        "fabric_type": "Nylon",
-        "color": "Yellow"
+        "reviews": [
+            {
+                "summary": "Perfect for a utilitarian look.",
+                "pros": [
+                    "Sturdy",
+                    "Comfortable fit",
+                    "Lots of pockets"
+                ],
+                "cons": [
+                    "Fabric can feel stiff"
+                ]
+            }
+        ]
     },
     {
         "id": 19,
-        "name": "Vintage High-Waisted Shorts",
+        "name": "Basic Tank Top",
+        "category": "T-Shirts",
+        "original_price": 14.99,
+        "discounted_price": 9.99,
+        "discount_percent": 33,
+        "ratings": 4.3,
+        "views": 240,
+        "sales_count": 180,
+        "brand": "Essentials",
+        "fabric_type": "Cotton",
+        "color": "White",
+        "gender": "Female",
+        "season": "Summer",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
-        "category": "Shorts",
-        "original_price": 34.99,
-        "discounted_price": 34.99,
-        "ratings": 4.6,
-        "reviews": {
-            "summary": "Stylish and comfortable for summer.",
-            "pros": [
-                "Great fit",
-                "Unique vintage style",
-                "Comfortable fabric"
-            ],
-            "cons": [
-                "Can be too short for some",
-                "Limited size options"
-            ]
-        },
-        "sales_count": 120,
-        "brand": "Vintage Style",
-        "fabric_type": "Cotton",
-        "color": "Light Blue"
+        "reviews": []
     },
     {
         "id": 20,
-        "name": "Elegant Evening Gown",
+        "name": "Sporty Running Shoes",
+        "category": "Footwear",
+        "original_price": 99.99,
+        "discounted_price": 99.99,
+        "discount_percent": 0,
+        "ratings": 4.7,
+        "views": 550,
+        "sales_count": 500,
+        "brand": "RunMax",
+        "fabric_type": "Mesh",
+        "color": "Black/Red",
+        "gender": "Unisex",
+        "season": "All Seasons",
         "images": [
             "/productImages/hoody1.webp",
             "/productImages/hoody2.webp",
             "/productImages/hoody3.webp",
             "/productImages/hoody4.webp"
         ],
+        "reviews": [
+            {
+                "summary": "Perfect for running or casual wear.",
+                "pros": [
+                    "Comfortable",
+                    "Good support",
+                    "Breathable"
+                ],
+                "cons": [
+                    "A bit narrow for wide feet"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "name": "Classic Leather Boots",
+        "category": "Footwear",
+        "original_price": 139.99,
+        "discounted_price": 119.99,
+        "discount_percent": 14,
+        "ratings": 4.8,
+        "views": 500,
+        "sales_count": 350,
+        "brand": "TimberCraft",
+        "fabric_type": "Genuine Leather",
+        "color": "Brown",
+        "gender": "Male",
+        "season": "Winter",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "Stylish and durable boots for winter.",
+                "pros": [
+                    "Strong build",
+                    "Warm",
+                    "Stylish"
+                ],
+                "cons": [
+                    "Heavy",
+                    "Expensive"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "name": "Running Shorts",
+        "category": "Shorts",
+        "original_price": 29.99,
+        "discounted_price": 29.99,
+        "discount_percent": 0,
+        "ratings": 4.5,
+        "views": 300,
+        "sales_count": 210,
+        "brand": "SpeedFit",
+        "fabric_type": "Polyester",
+        "color": "Black",
+        "gender": "Male",
+        "season": "Summer",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 23,
+        "name": "Graphic T-Shirt",
+        "category": "T-Shirts",
+        "original_price": 24.99,
+        "discounted_price": 19.99,
+        "discount_percent": 20,
+        "ratings": 4.3,
+        "views": 270,
+        "sales_count": 220,
+        "brand": "StreetArt",
+        "fabric_type": "Cotton",
+        "color": "Black",
+        "gender": "Unisex",
+        "season": "Summer",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "Great design, comfortable wear.",
+                "pros": [
+                    "Soft fabric",
+                    "Cool design"
+                ],
+                "cons": [
+                    "Colors fade after several washes"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "name": "Casual Sneakers",
+        "category": "Footwear",
+        "original_price": 69.99,
+        "discounted_price": 49.99,
+        "discount_percent": 29,
+        "ratings": 4.4,
+        "views": 350,
+        "sales_count": 200,
+        "brand": "ShoeZone",
+        "fabric_type": "Canvas",
+        "color": "White",
+        "gender": "Female",
+        "season": "Spring",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "Great sneakers for casual outings.",
+                "pros": [
+                    "Comfortable",
+                    "Stylish",
+                    "Versatile"
+                ],
+                "cons": [
+                    "Can get dirty easily"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "name": "Slim Fit Chinos",
+        "category": "Pants",
+        "original_price": 49.99,
+        "discounted_price": 49.99,
+        "discount_percent": 0,
+        "ratings": 4.5,
+        "views": 500,
+        "sales_count": 330,
+        "brand": "ChinoCo",
+        "fabric_type": "Cotton",
+        "color": "Beige",
+        "gender": "Male",
+        "season": "Spring",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "Nice, tailored fit.",
+                "pros": [
+                    "Comfortable",
+                    "Good for work or casual"
+                ],
+                "cons": [
+                    "Wrinkles after washing"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "name": "Denim Overalls",
+        "category": "Jumpsuits",
+        "original_price": 79.99,
+        "discounted_price": 64.99,
+        "discount_percent": 19,
+        "ratings": 4.6,
+        "views": 450,
+        "sales_count": 270,
+        "brand": "DenimStyle",
+        "fabric_type": "Denim",
+        "color": "Blue",
+        "gender": "Female",
+        "season": "Fall",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 27,
+        "name": "Breezy Summer Dress",
         "category": "Dresses",
+        "original_price": 59.99,
+        "discounted_price": 49.99,
+        "discount_percent": 17,
+        "ratings": 4.7,
+        "views": 520,
+        "sales_count": 300,
+        "brand": "DressUp",
+        "fabric_type": "Cotton",
+        "color": "Floral",
+        "gender": "Female",
+        "season": "Summer",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "Floral dress perfect for hot days.",
+                "pros": [
+                    "Breathable",
+                    "Comfortable",
+                    "Flattering design"
+                ],
+                "cons": [
+                    "A bit short for taller individuals"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "name": "Soft Knit Sweater",
+        "category": "Sweaters",
+        "original_price": 69.99,
+        "discounted_price": 59.99,
+        "discount_percent": 14,
+        "ratings": 4.8,
+        "views": 420,
+        "sales_count": 310,
+        "brand": "CozyKnits",
+        "fabric_type": "Wool Blend",
+        "color": "Light Gray",
+        "gender": "Unisex",
+        "season": "Winter",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 29,
+        "name": "Corduroy Pants",
+        "category": "Pants",
+        "original_price": 69.99,
+        "discounted_price": 69.99,
+        "discount_percent": 0,
+        "ratings": 4.3,
+        "views": 430,
+        "sales_count": 270,
+        "brand": "CordStyle",
+        "fabric_type": "Corduroy",
+        "color": "Brown",
+        "gender": "Male",
+        "season": "Fall",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "Great fit and warmth for the fall season.",
+                "pros": [
+                    "Durable fabric",
+                    "Great fit"
+                ],
+                "cons": [
+                    "Can feel too thick for warmer weather"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "name": "Chunky Sneakers",
+        "category": "Footwear",
+        "original_price": 89.99,
+        "discounted_price": 89.99,
+        "discount_percent": 0,
+        "ratings": 4.5,
+        "views": 510,
+        "sales_count": 390,
+        "brand": "ShoeKing",
+        "fabric_type": "Synthetic",
+        "color": "White",
+        "gender": "Unisex",
+        "season": "All Seasons",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 31,
+        "name": "Long Sleeve Polo Shirt",
+        "category": "T-Shirts",
+        "original_price": 39.99,
+        "discounted_price": 29.99,
+        "discount_percent": 25,
+        "ratings": 4.4,
+        "views": 460,
+        "sales_count": 280,
+        "brand": "PoloLife",
+        "fabric_type": "Cotton",
+        "color": "Blue",
+        "gender": "Male",
+        "season": "Fall",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 32,
+        "name": "Bootcut Jeans",
+        "category": "Pants",
+        "original_price": 49.99,
+        "discounted_price": 44.99,
+        "discount_percent": 10,
+        "ratings": 4.3,
+        "views": 400,
+        "sales_count": 330,
+        "brand": "DenimWear",
+        "fabric_type": "Denim",
+        "color": "Light Blue",
+        "gender": "Female",
+        "season": "All Seasons",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 33,
+        "name": "Floral Wrap Dress",
+        "category": "Dresses",
+        "original_price": 79.99,
+        "discounted_price": 79.99,
+        "discount_percent": 0,
+        "ratings": 4.7,
+        "views": 380,
+        "sales_count": 250,
+        "brand": "FloralStyle",
+        "fabric_type": "Polyester",
+        "color": "Floral Print",
+        "gender": "Female",
+        "season": "Spring",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 34,
+        "name": "Athletic Sweatpants",
+        "category": "Pants",
+        "original_price": 49.99,
+        "discounted_price": 49.99,
+        "discount_percent": 0,
+        "ratings": 4.6,
+        "views": 420,
+        "sales_count": 330,
+        "brand": "FitWear",
+        "fabric_type": "Polyester",
+        "color": "Gray",
+        "gender": "Male",
+        "season": "Winter",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 35,
+        "name": "Slim Fit Chinos",
+        "category": "Pants",
+        "original_price": 59.99,
+        "discounted_price": 49.99,
+        "discount_percent": 17,
+        "ratings": 4.4,
+        "views": 460,
+        "sales_count": 290,
+        "brand": "ChinoStyle",
+        "fabric_type": "Cotton",
+        "color": "Khaki",
+        "gender": "Male",
+        "season": "All Seasons",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 36,
+        "name": "Cashmere Sweater",
+        "category": "Sweaters",
         "original_price": 129.99,
-        "discounted_price": 99.99,
-        "ratings": 4.9,
-        "reviews": {
-            "summary": "Perfect for formal events.",
-            "pros": [
-                "Stunning design",
-                "High-quality fabric",
-                "Comfortable fit"
-            ],
-            "cons": [
-                "Dry clean only",
-                "Can be expensive"
-            ]
-        },
-        "sales_count": 50,
-        "brand": "Gown Co.",
-        "fabric_type": "Silk Blend",
-        "color": "Red"
+        "discounted_price": 109.99,
+        "discount_percent": 15,
+        "ratings": 4.8,
+        "views": 520,
+        "sales_count": 310,
+        "brand": "CashmereCo",
+        "fabric_type": "Cashmere",
+        "color": "Gray",
+        "gender": "Female",
+        "season": "Winter",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 37,
+        "name": "Luxe Silk Scarf",
+        "category": "Accessories",
+        "original_price": 59.99,
+        "discounted_price": 59.99,
+        "discount_percent": 0,
+        "ratings": 4.7,
+        "views": 430,
+        "sales_count": 250,
+        "brand": "SilkGrace",
+        "fabric_type": "Silk",
+        "color": "Red",
+        "gender": "Female",
+        "season": "All Seasons",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 38,
+        "name": "Suede Jacket",
+        "category": "Outerwear",
+        "original_price": 149.99,
+        "discounted_price": 129.99,
+        "discount_percent": 13,
+        "ratings": 4.6,
+        "views": 540,
+        "sales_count": 330,
+        "brand": "SuedeWear",
+        "fabric_type": "Suede",
+        "color": "Tan",
+        "gender": "Male",
+        "season": "Fall",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 39,
+        "name": "Classic Button-Up Shirt",
+        "category": "Shirts",
+        "original_price": 44.99,
+        "discounted_price": 39.99,
+        "discount_percent": 11,
+        "ratings": 4.5,
+        "views": 470,
+        "sales_count": 290,
+        "brand": "ShirtWorks",
+        "fabric_type": "Cotton",
+        "color": "White",
+        "gender": "Male",
+        "season": "All Seasons",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 40,
+        "name": "Leather Boots",
+        "category": "Footwear",
+        "original_price": 129.99,
+        "discounted_price": 109.99,
+        "discount_percent": 15,
+        "ratings": 4.7,
+        "views": 510,
+        "sales_count": 360,
+        "brand": "BootMasters",
+        "fabric_type": "Leather",
+        "color": "Brown",
+        "gender": "Unisex",
+        "season": "Fall/Winter",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
     }
 ]

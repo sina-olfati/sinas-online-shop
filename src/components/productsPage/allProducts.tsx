@@ -29,12 +29,12 @@ interface Product {
 
 export function AllProducts () {
     const [priceFilter, setPriceFilter] = useState<string>("")
-    const [categoryFilter, setCategoryFilter] = useState<string>("")
 
     // Lang
     const locale = useLocale()
 
-    const [hover, setHover] = useState<Product | null>(null)
+    // const [hover, setHover] = useState<Product | null>(null)
+    const [hover, setHover] = useState<Product | null>(null);
     const onMouseLeave = () => {
         setHover(null)
     };
@@ -71,7 +71,7 @@ export function AllProducts () {
         }
 
         // Gender filter
-        if (genderParam && item.gender !== genderParam) {
+        if (genderParam && item.gender !== genderParam && item.gender !== "Unisex") {
             return false; // Exclude products that don't match the selected gender
         }
 

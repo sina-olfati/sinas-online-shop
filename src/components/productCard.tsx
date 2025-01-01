@@ -18,6 +18,8 @@ interface Product {
   brand: string;
   fabric_type: string;
   color: string;
+  season: string; // New field for season
+  gender: string; // New field for gender
 }
 
 interface ProductCardProps {
