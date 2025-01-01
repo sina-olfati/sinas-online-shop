@@ -6,14 +6,22 @@ import MultiSelect from "./multiSelect";
 import SingleSelect from "./singleSelect";
 import { PriceSlider } from "./priceSlider";
 import { Button, Divider, Switch } from "@nextui-org/react";
+import { FilterButton } from "./filterButton";
 // icons
 // import { BadgePercent } from "lucide-react";
 
-const multiOptions = [
+const categoryOptions = [
   { key: "electronics", label: "Electronics" },
   { key: "clothing", label: "Clothing" },
   { key: "appliances", label: "Home Appliances" },
   { key: "books", label: "Books" },
+];
+
+const seasonOptions = [
+  { key: "spring", label: "Spring" },
+  { key: "summer", label: "Summer" },
+  { key: "fall", label: "Fall" },
+  { key: "winter", label: "Winter" },
 ];
 
 const singleOptions = [
@@ -22,7 +30,8 @@ const singleOptions = [
 ];
 
 export function Filters() {
-  const [multiSelected, setMultiSelected] = useState<string[]>([]);
+  const [categorySelected, setCategorySelected] = useState<string[]>([]);
+  const [seasonSelected, setSeasonSelected] = useState<string[]>([]);
   const [singleSelected, setSingleSelected] = useState<string>();
   const [sliderValue, setSliderValue] = useState<number[] | undefined>();
   const [discount, setDiscount] = useState<boolean>(false);
@@ -31,9 +40,9 @@ export function Filters() {
   const [anythingNew, setAnythingNew] = useState<boolean>(false); // Use state for anythingNew
 
   useEffect(() => {
-    const isNew = multiSelected.length > 0 || singleSelected || sliderValue || discount ? true : false;
+    const isNew = categorySelected.length > 0 || seasonSelected.length > 0 || singleSelected || sliderValue || discount ? true : false;
     setAnythingNew(isNew); // Update state
-  }, [multiSelected, singleSelected, sliderValue, discount]);
+  }, [categorySelected, seasonSelected, singleSelected, sliderValue, discount]);
 
   // console.log(anythingNew); // Logs updated state value
 
@@ -42,9 +51,17 @@ export function Filters() {
       <SectionHeading name="Filters" icon={<SlidersHorizontal />} />
 
       <MultiSelect
-        options={multiOptions}
-        selected={multiSelected}
-        setSelected={setMultiSelected}
+        options={categoryOptions}
+        selected={categorySelected}
+        setSelected={setCategorySelected}
+        name="Categories"
+      />
+
+      <MultiSelect
+        options={seasonOptions}
+        selected={seasonSelected}
+        setSelected={setSeasonSelected}
+        name="Seasons"
       />
 
       <SingleSelect
@@ -72,13 +89,15 @@ export function Filters() {
 
       <Divider />
 
-      <Button
-        variant="shadow"
-        color="primary"
-        isDisabled={!anythingNew}
-      >
-        Apply
-      </Button>
+      <FilterButton
+        filters={{
+          categories: categorySelected,
+          seasons: seasonSelected,
+          gender: singleSelected,
+          price: sliderValue,
+          discount: discount,
+        }}
+      />
 
     </div>
   );

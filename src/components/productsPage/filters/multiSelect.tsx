@@ -13,13 +13,14 @@ interface Data {
     options: { key: string; label: string; }[],
     selected: string[],
     setSelected: React.Dispatch<React.SetStateAction<string[]>>; // Type of setSelectedOptions
+    name: string;
 }
 
 
 
 
 
-export default function MultiSelect({options, selected, setSelected}: Data) {
+export default function MultiSelect({options, selected, setSelected, name}: Data) {
   const [selectedOptions, setSelectedOptions] = useState<string[]>(selected);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -67,7 +68,7 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
             ? selectedOptions
                 .map((key) => options.find((o) => o.key === key)?.label)
                 .join(", ")
-            : "Select Categories"}
+            : name}
         </div>
 
         <div 
