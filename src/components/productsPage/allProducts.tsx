@@ -7,7 +7,7 @@ import { useState } from "react";
 import { Select, SelectItem } from "@nextui-org/react";
 import { useSearchParams } from "next/navigation"; // to get query params
 // icons
-import { Filter, ArrowDownNarrowWide, ArrowDownWideNarrow, Eye, ChartNoAxesCombined } from "lucide-react";
+import { Filter, ArrowDownNarrowWide, ArrowDownWideNarrow, Eye, ChartNoAxesCombined, BadgePercent } from "lucide-react";
 
 interface Product {
   id: number;
@@ -83,6 +83,8 @@ export function AllProducts() {
         return b.sales_count - a.sales_count; // Most Selling (highest sales_count first)
       case "view":
         return b.ratings - a.ratings; // Most Views (or use any view-related metric if available)
+      case "discount":
+        return b.discount_percent - a.discount_percent; // Most Views (or use any view-related metric if available)
       case "cheap":
         return a.discounted_price - b.discounted_price; // Cheapest (lowest discounted_price first)
       case "expensive":
@@ -109,12 +111,14 @@ export function AllProducts() {
             reorderFilter === "" ? <Filter /> :
             reorderFilter === "sell" ? <ChartNoAxesCombined /> :
             reorderFilter === "view" ? <Eye /> :
+            reorderFilter === "discount" ? <BadgePercent /> :
             reorderFilter === "cheap" ? <ArrowDownNarrowWide /> : <ArrowDownWideNarrow />
           }
         >
           {[
             { key: "sell", label: "Most Selling" },
             { key: "view", label: "Most Views" },
+            { key: "discount", label: "Best Discount" },
             { key: "cheap", label: "Cheapest" },
             { key: "expensive", label: "Most Expensive" },
           ].map((filter) => (
