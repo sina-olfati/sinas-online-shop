@@ -1,3 +1,4 @@
+import { Checkbox } from "@nextui-org/react";
 import { X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
@@ -61,22 +62,30 @@ export default function SingleSelect({ options, selected, setSelected }: SingleS
 
       {/* Dropdown Menu */}
       {isDropdownOpen && (
-        <div className="absolute mt-2 bg-white border rounded shadow w-full z-10">
+        <div className="absolute mt-2 bg-background border rounded shadow w-full z-10">
           {options.map((option) => (
             <div
               key={option.key}
               onClick={() => handleSelection(option.key)}
-              className={`px-4 py-2 cursor-pointer hover:bg-gray-200 ${
-                selectedOption === option.key ? "bg-gray-100" : ""
+              className={`px-4 py-2 cursor-pointer hover:bg-secondary-foreground/10 ${
+                selectedOption === option.key ? "bg-secondary-foreground/5" : ""
               }`}
+              // className={`px-4 py-2 cursor-pointer hover:bg-gray-200 ${
+              //   selectedOption === option.key ? "bg-gray-100" : ""
+              // }`}
             >
-              <input
+              {/* <input
                 type="radio" // Radio button for single select
                 checked={selectedOption === option.key}
                 onChange={() => handleSelection(option.key)}
                 className="mr-2"
-              />
-              {option.label}
+              /> */}
+              <Checkbox
+                isSelected={selectedOption === option.key}
+                onChange={() => handleSelection(option.key)}
+              >
+                {option.label}
+              </Checkbox>
             </div>
           ))}
         </div>

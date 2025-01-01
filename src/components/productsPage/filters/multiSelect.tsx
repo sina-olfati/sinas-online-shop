@@ -81,7 +81,7 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
 
       {/* Dropdown Menu */}
       {isDropdownOpen && (
-        <div className="absolute mt-2 bg-background border rounded shadow w-full z-10 transition-all">
+        <div className="absolute mt-2 bg-background border rounded shadow w-full z-10">
           {options.map((option) => (
             <div
               key={option.key}
@@ -99,7 +99,6 @@ export default function MultiSelect({options, selected, setSelected}: Data) {
               >
                 {option.label}
               </Checkbox>
-              
             </div>
             //   <input
             //     type="checkbox"
