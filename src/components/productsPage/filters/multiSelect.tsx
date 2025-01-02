@@ -67,7 +67,14 @@ export default function MultiSelect({options, selected, setSelected, name}: Data
         </div>
 
         <div 
-          onClick={(e) => { e.stopPropagation(); setSelectedOptions([]); }}
+          onClick={(e) => {
+            e.stopPropagation(); 
+            if (selectedOptions.length === 0) {
+              setIsDropdownOpen(true); // Toggle dropdown if selectedOptions is not empty
+            } else {
+              setSelectedOptions([]); // Reset options when selectedOptions is empty
+            }
+          }}
         >
           {selectedOptions.length === 0 ? <ChevronDown size={20} /> : <X size={20} /> }
         </div>

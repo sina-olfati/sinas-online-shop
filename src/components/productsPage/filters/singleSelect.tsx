@@ -58,7 +58,16 @@ export default function SingleSelect({ options, selected, setSelected }: SingleS
         className={`bg-primary text-accent text-sm ${selectedOption === undefined ? "text-accent/70" : null } px-4 py-3 rounded w-full text-left truncate transition-all flex items-center justify-between`}
       >
         {selectedOption ? options.find((o) => o.key === selectedOption)?.label : "Gender"}
-        <div onClick={(e) => { e.stopPropagation(); setSelectedOption(undefined); setSelected(undefined); }}>
+        <div 
+          onClick={(e) => {
+            e.stopPropagation(); 
+            if (selectedOption) {
+              setSelected(undefined); // Reset options when selectedOptions is empty
+            } else {
+              setIsDropdownOpen(true); // Toggle dropdown if selectedOptions is not empty
+            }
+          }}
+        >
             {!selectedOption ? <ChevronDown size={20} /> : <X size={20} /> }
         </div>
       </button>
