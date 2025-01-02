@@ -78,27 +78,69 @@ export function FilterButton({ filters }: FilterButtonProps) {
   }, [filters, searchParams]);
 
   const applyFilters = () => {
-    const query = new URLSearchParams();
-
+    const query = new URLSearchParams(searchParams); // Start with current query params
+  
+    // Update filters in the query
     if (filters.categories.length > 0) {
-      query.append("categories", filters.categories.join(","));
+      query.set("categories", filters.categories.join(","));
+    } else {
+      query.delete("categories");
     }
+  
     if (filters.seasons.length > 0) {
-      query.append("seasons", filters.seasons.join(","));
+      query.set("seasons", filters.seasons.join(","));
+    } else {
+      query.delete("seasons");
     }
+  
     if (filters.gender) {
-      query.append("gender", filters.gender);
+      query.set("gender", filters.gender);
+    } else {
+      query.delete("gender");
     }
-    if (filters.price && JSON.stringify(filters.price) !== JSON.stringify(defaultPriceRange)) {
-      query.append("price", filters.price.join(","));
+  
+    if (
+      filters.price &&
+      JSON.stringify(filters.price) !== JSON.stringify(defaultPriceRange)
+    ) {
+      query.set("price", filters.price.join(","));
+    } else {
+      query.delete("price");
     }
+  
     if (filters.discount) {
-      query.append("discount", "true");
+      query.set("discount", "true");
+    } else {
+      query.delete("discount");
     }
-
-    // Redirect to the desired page with filters as query
+  
+    // Redirect to the updated query
     router.push(`/products?${query.toString()}`);
   };
+  
+
+  // const applyFilters = () => {
+  //   const query = new URLSearchParams();
+
+  //   if (filters.categories.length > 0) {
+  //     query.append("categories", filters.categories.join(","));
+  //   }
+  //   if (filters.seasons.length > 0) {
+  //     query.append("seasons", filters.seasons.join(","));
+  //   }
+  //   if (filters.gender) {
+  //     query.append("gender", filters.gender);
+  //   }
+  //   if (filters.price && JSON.stringify(filters.price) !== JSON.stringify(defaultPriceRange)) {
+  //     query.append("price", filters.price.join(","));
+  //   }
+  //   if (filters.discount) {
+  //     query.append("discount", "true");
+  //   }
+
+  //   // Redirect to the desired page with filters as query
+  //   router.push(`/products?${query.toString()}`);
+  // };
 
   return (
     <Button
