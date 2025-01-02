@@ -45,7 +45,7 @@ export function AllProducts() {
   const discountParam = searchParams.get("discount") === "true" || false;
   const seasonsParam = searchParams.get("seasons")?.split(",") || []; // Extract season from query
   const genderParam = searchParams.get("gender") || ""; // Extract gender from query
-  const searchParam = searchParams.get("search") || ""; // Extract searched items from query
+  const searchParam = searchParams.get("search")?.toLocaleLowerCase() || ""; // Extract searched items from query
 
   // Function to apply filters to the products array based on query params
   const filteredProducts = Products.filter((item) => {
@@ -75,12 +75,12 @@ export function AllProducts() {
     }
 
     // Search filter
-    if (searchParam && 
-      !item.name.toLocaleLowerCase().includes(searchParam) && 
-      !item.category.toLocaleLowerCase().includes(searchParam) &&
-      !item.brand.toLocaleLowerCase().includes(searchParam)
+    if (
+      searchParam &&
+      ![item.name, item.category, item.brand]
+        .some((field) => field.toLowerCase().includes(searchParam))
     ) {
-      return false; // Exclude products that don't match the selected gender
+      return false; // Exclude products that don't match the search term
     }
 
     return true; // Keep product if it passes all filters
