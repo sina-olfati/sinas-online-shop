@@ -10,11 +10,13 @@ const data = [
         id:1,
         name: "Gentlemens Wear",
         picture: "/banners/man3.png",
+        link: "/products?gender=Male",
     },
     {
         id:2,
         name: 'Ladies essentials',
         picture: "/banners/lady4.jpg",
+        link: "/products?gender=Female",
     }
 ]
 
@@ -39,7 +41,7 @@ export function BannerCard () {
                     </div>
                     <h2 className="font-bold text-xl text-white z-10">{card.name}</h2>
 
-                    <Link href={'./ss'}>
+                    <Link href={card.link}>
                         <Button variant="shadow" color="primary" className="font-bold px-6">Start Shopping</Button>
                     </Link>
 

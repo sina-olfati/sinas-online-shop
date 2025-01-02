@@ -2,27 +2,32 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import Link from "next/link";
 
 
 const cards = [
   {
     pic: '/banners/man4.jpg',
     text: "Unleash Your Inner Warrior",
+    link: "/products?gender=Male",
     buttonText: "Shop Gentlemen's Wear"
   },
   {
     pic: '/banners/lady5.jpg',
     text: "Elegance Meets Strength",
+    link: "/products?gender=Female",
     buttonText: "Shop Ladies' Wear"
   },
   {
     pic: '/banners/lady10.jpg',
     text: "Stay Stylish Every Season",
+    link: "/products?seasons=Spring%2CSummer%2CFall%2CWinter",
     buttonText: "Explore Seasonal Collections"
   },
   {
     pic: '/banners/man4.jpg',
     text: "Unleash Your Inner Warrior",
+    link: "/products?gender=Male",
     buttonText: "Shop Gentlemen's Wear"
   }
 ]
@@ -79,7 +84,9 @@ export function BannerScroller() {
             <div className="absolute left-10 flex flex-col gap-10 text-4xl p-10  bg-gradient-to-r from-primary/0">
               <div className="h-full w-1 bg-primary absolute left-0 top-0 rounded-full"></div>
               <h2 className="drop-shadow-md">{card.text}</h2>
-              <Button className="w-fit text-white">{card.buttonText}</Button>
+              <Link href={card.link}>
+                <Button className="w-fit text-white">{card.buttonText}</Button>
+              </Link>
             </div>
           </div>
         )}
