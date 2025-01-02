@@ -63,9 +63,11 @@ export function SearchInput() {
         </form>
       </div>
 
-      <div>
-        <SearchDropDown />
-      </div>
+      {!phrase ? null : 
+        <div>
+            <SearchDropDown searched={phrase} />
+        </div>
+      }
 
     </div>
   );

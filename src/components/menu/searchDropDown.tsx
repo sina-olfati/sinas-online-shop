@@ -1,16 +1,50 @@
+'use client'
 import Link from "next/link"
 import Products from "../../../data/products.json"
 import Image from "next/image"
-const items = [
-    1,2,3,4,5,6,7
-]
+import { useEffect, useState } from "react"
+// import { useSearchParams } from "next/navigation";
+
+interface Product {
+    id: number;
+    name: string;
+    images: string[];
+    category: string;
+    original_price: number;
+    discounted_price: number;
+    ratings: number;
+    reviews: any;
+    sales_count: number;
+    brand: string;
+    fabric_type: string;
+    color: string;
+    season: string; // New field for season
+    gender: string; // New field for gender
+  }
 
 
-export function SearchDropDown () {
+export function SearchDropDown ({searched}: any) {
+
+    const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+
+    useEffect(() => {
+        const lowerCaseSearch = searched.toLowerCase();
+        const filtered = Products.filter((item) =>
+            [item.name, item.category, item.brand].some((field) =>
+                field.toLowerCase().includes(lowerCaseSearch)
+            )
+        );
+        setFilteredProducts(filtered);
+    }, [searched]);
+    
+    useEffect (() => {
+        console.log(filteredProducts)
+
+    }, [searched])
 
     return (
-        <div className="absolute w-full mt-2 shadow overflow-auto rounded-2xl max-h-52 bg-primary-foreground z-50 flex flex-col transition-all">
-            {Products.map((product) => 
+        <div className="absolute w-full mt-2 shadow overflow-auto rounded-2xl max-h-52 bg-primary-foreground z-50 flex flex-col">
+            {filteredProducts.map((product) => 
                 <Link href={"./"}  key={product.id}  className="hover:bg-secondary-foreground/5 px-5">
                     <div className="flex flex-col">
 
