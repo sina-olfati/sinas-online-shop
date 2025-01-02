@@ -9,6 +9,7 @@ import { SearchDropDown } from "./searchDropDown";
 export function SearchInput() {
   const router = useRouter();
   const [phrase, setPhrase] = useState<string>("");
+  const [focused, setFocused] = useState<boolean>(false);
 
   // Get query parameters from the URL
   const searchParams = useSearchParams();
@@ -48,6 +49,8 @@ export function SearchInput() {
               onChange={(e) => setPhrase(e.target.value)}
               placeholder="Search..."
               className="!rounded-0"
+              onFocus={() => setFocused(true)}
+              onBlur={() => setFocused(false)}
             />
           </label>
           <Button
@@ -63,7 +66,7 @@ export function SearchInput() {
         </form>
       </div>
 
-      {!phrase ? null : 
+      {!focused ? null : 
         <div>
             <SearchDropDown searched={phrase} />
         </div>
