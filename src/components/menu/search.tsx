@@ -4,6 +4,7 @@ import { Button } from "@nextui-org/react";
 import { Input } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { SearchDropDown } from "./searchDropDown";
 
 export function SearchInput() {
   const router = useRouter();
@@ -33,7 +34,8 @@ export function SearchInput() {
   };
 
   return (
-    <div className="w-[100%]">
+    <div className="w-[100%] relative">
+
       <div className="w-[100%]">
         <form
           onSubmit={applySearch} // Correctly handle form submission
@@ -45,6 +47,7 @@ export function SearchInput() {
               value={phrase}
               onChange={(e) => setPhrase(e.target.value)}
               placeholder="Search..."
+              className="!rounded-0"
             />
           </label>
           <Button
@@ -53,12 +56,17 @@ export function SearchInput() {
             color="primary"
             variant="faded"
             type="submit"
-            className="absolute right-0 border-0 bg-transparent hover:bg-accent scale-[0.95]"
+            className="absolute right-0 border-0 !outline-0 bg-transparent hover:bg-accent scale-[0.95]"
           >
             <Search />
           </Button>
         </form>
       </div>
+
+      <div>
+        <SearchDropDown />
+      </div>
+
     </div>
   );
 }

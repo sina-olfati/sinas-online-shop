@@ -30,6 +30,7 @@ body {
   body::-webkit-scrollbar {
     width: 10px;
     height: 10px;
+    overflow: hidden;
   }
   body::-webkit-scrollbar-track {
     background: #ffffff50;
@@ -41,6 +42,9 @@ body {
   }
   body::-webkit-scrollbar-thumb:hover {
     background: #00000090;
+  }
+  div::-webkit-scrollbar {
+    display: none;
   }
 }
 

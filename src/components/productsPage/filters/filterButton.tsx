@@ -119,29 +119,6 @@ export function FilterButton({ filters }: FilterButtonProps) {
   };
   
 
-  // const applyFilters = () => {
-  //   const query = new URLSearchParams();
-
-  //   if (filters.categories.length > 0) {
-  //     query.append("categories", filters.categories.join(","));
-  //   }
-  //   if (filters.seasons.length > 0) {
-  //     query.append("seasons", filters.seasons.join(","));
-  //   }
-  //   if (filters.gender) {
-  //     query.append("gender", filters.gender);
-  //   }
-  //   if (filters.price && JSON.stringify(filters.price) !== JSON.stringify(defaultPriceRange)) {
-  //     query.append("price", filters.price.join(","));
-  //   }
-  //   if (filters.discount) {
-  //     query.append("discount", "true");
-  //   }
-
-  //   // Redirect to the desired page with filters as query
-  //   router.push(`/products?${query.toString()}`);
-  // };
-
   return (
     <Button
       color="primary"
