@@ -1,10 +1,10 @@
 import Link from "next/link";
 // components
 import Menu from "../components/menu/menu";
-import { BannerScroller } from "../components/bannerScroller";
+import { BannerScroller } from "../components/mainPage/bannerScroller";
 import { Categories } from "../components/mainPage/categories";
-import { ProductsScroll } from "../components/productsScroll";
-import { BannerCard } from "../components/bannerCard";
+import { ProductsScroll } from "../components/mainPage/productsScroll";
+import { BannerCard } from "../components/mainPage/bannerCard";
 import { Footer } from "../components/footer";
 // products (for ProductScroll) | icon
 import Products from "../../data/products.json";
