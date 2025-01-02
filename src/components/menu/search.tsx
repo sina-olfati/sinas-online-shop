@@ -10,6 +10,7 @@ export function SearchInput() {
   const router = useRouter();
   const [phrase, setPhrase] = useState<string>("");
   const [focused, setFocused] = useState<boolean>(false);
+  const [hovered, setHovered] = useState<boolean>(false);
 
   // Get query parameters from the URL
   const searchParams = useSearchParams();
@@ -66,10 +67,15 @@ export function SearchInput() {
         </form>
       </div>
 
-      {!focused ? null : 
-        <div>
+      {
+        !(phrase && focused || hovered) ? null : (
+            <div
+                onMouseOver={() => setHovered(true)}
+                onMouseLeave={() => setHovered(false)}
+            >
             <SearchDropDown searched={phrase} />
-        </div>
+            </div>
+        )
       }
 
     </div>
