@@ -65,7 +65,7 @@ export function ProductsScroll ({name, icon, products}: Data) {
 
     const onMouseUp = (item: Product) => {
         if (!isDragging && isDown === item) {
-            handleNavigate('./sss'); // Navigate only if not dragging
+            handleNavigate(`/products/${item.name.toLowerCase().replace(/\s+/g, '-')}`); // Navigate only if not dragging
         }
         setIsDown(null); // Reset state
     };

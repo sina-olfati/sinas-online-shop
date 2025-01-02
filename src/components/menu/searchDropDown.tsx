@@ -45,7 +45,7 @@ export function SearchDropDown ({searched}: any) {
     return (
         <div className="absolute w-full mt-2 shadow overflow-auto rounded-2xl max-h-56 bg-primary-foreground z-50 flex flex-col">
             {filteredProducts.map((product) => 
-                <Link href={"./"}  key={product.id}  className="hover:bg-secondary-foreground/5 px-5">
+                <Link href={`/products/${product.name.toLowerCase().replace(/\s+/g, '-')}`}  key={product.id}  className="hover:bg-secondary-foreground/5 px-5">
                     <div className="flex flex-col">
 
                         <div className="py-2 flex gap-3 items-center">

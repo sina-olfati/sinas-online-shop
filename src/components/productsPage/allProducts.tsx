@@ -143,7 +143,7 @@ export function AllProducts() {
       <div className="flex flex-wrap gap-4 items-start justify-start">
         {sortedProducts.length > 0 ? (
           sortedProducts.map((item) => (
-            <Link key={item.id} href={'/'} className="mb-">
+            <Link key={item.id} href={`/products/${item.name.toLowerCase().replace(/\s+/g, '-')}`} className="mb-">
               <ProductCard
                 item={item}
                 onMouseLeave={onMouseLeave}
