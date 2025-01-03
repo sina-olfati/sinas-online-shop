@@ -77,10 +77,9 @@ export function ImagesSticky ({product}: ImagesStickyProps) {
                 <ImagesModal
                     images={product.images} 
                     clickedIndex={clicked} 
-                    // close={setClicked} 
                     isOpen={isOpen}
                     onOpenChange={onOpenChange}
-            /> 
+                /> 
             : null
             }
 
