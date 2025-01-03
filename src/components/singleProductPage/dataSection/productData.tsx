@@ -1,6 +1,7 @@
 import { Button, Card, CardBody, Tab, Tabs } from "@nextui-org/react";
 import { DataHeader } from "./dataHeader";
 import { useState } from "react";
+import { Comments } from "./comments";
 
 interface Product {
     id: number;
@@ -60,9 +61,17 @@ export function ProductData ({product}: ProductDataProps) {
         <div className="flex flex-col">
             <DataHeader product={product} />
 
-            <div className="border border-primary flex w-full flex-col my-10">
+            <div className="flex w-full flex-col my-10">
 
                 <Tabs aria-label="Options">
+
+                    <Tab key="comments" title="Comments">
+                        <Card shadow="none" className="shadow rounded-md">
+                            <CardBody className="bg-secondary p3">
+                                <Comments reviews={product.reviews} />
+                            </CardBody>
+                        </Card>
+                    </Tab>
                     <Tab key="details" title="Details">
                         <Card shadow="none" className="shadow rounded-md">
                             <CardBody className="bg-secondary">
@@ -77,13 +86,8 @@ export function ProductData ({product}: ProductDataProps) {
                             </CardBody>
                         </Card>
                     </Tab>
-                    <Tab key="comments" title="Comments">
-                        <Card>
-                            <CardBody>
-                                comments
-                            </CardBody>
-                        </Card>
-                    </Tab>
+
+
                 </Tabs>
                
             </div>

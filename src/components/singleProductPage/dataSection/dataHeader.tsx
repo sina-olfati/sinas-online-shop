@@ -64,21 +64,8 @@ export function DataHeader ({product}: ProductDataProps) {
                     </div>
                 </div>
 
-                <div className="relative">
-                    <AddToCartButton discount_percent={product.discount_percent} />
-                    
-                    {/* {product.discount_percent && (
-                        <Chip
-                            color="danger"
-                            variant="shadow"
-                            endContent={<Percent width={24} />}
-                            className="absolute top-0 right-[0px] scale- px-2 py-4 font-bold text-2xl z-50"
-                        >
-                            {product.discount_percent}
-                        </Chip>
-                    )} */}
-                </div>
-
+                <AddToCartButton discount_percent={product.discount_percent} />
+                
             </div>
             
         </div>
