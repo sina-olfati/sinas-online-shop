@@ -14,13 +14,13 @@ import { X } from "lucide-react";
 interface ImagesProps {
     images: string[];
     clickedIndex: number;
-    close: React.Dispatch<React.SetStateAction<number | undefined>>;
+    // close: React.Dispatch<React.SetStateAction<number | undefined>>;
     isOpen: any;
     onOpenChange: any;
 }
 
 
-export function ImagesModal ({images, clickedIndex, close, isOpen, onOpenChange}: ImagesProps) {
+export function ImagesModal ({images, clickedIndex, isOpen, onOpenChange}: ImagesProps) {
 
     const [showedImage, setShowedImage] = useState(clickedIndex)
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import { ImagesFixed } from "./ImagesModal";
+import { ImagesModal } from "./ImagesModal";
 import { useDisclosure } from "@nextui-org/react";
 
 
@@ -46,7 +46,7 @@ export function ImagesSticky ({product}: ImagesStickyProps) {
                         width={1000} 
                         height={1000} 
                         alt="product image" 
-                        onClick={() => setClicked(0)}
+                        onClick={() => {setClicked(0); onOpen()}}
                     />
                 </div>
 
@@ -57,6 +57,8 @@ export function ImagesSticky ({product}: ImagesStickyProps) {
                             className="px-2 cursor-pointer"
                             onMouseOver={() => setHoveredImage(index)}
                             onMouseLeave={() => setHoveredImage(0)}
+                            onTouchEndCapture={() => setHoveredImage(index)}
+                            // onClick={() => {setClicked(index);}}
                             onClick={() => {setClicked(index); onOpen()}}
                         >
                             <Image 
@@ -72,10 +74,10 @@ export function ImagesSticky ({product}: ImagesStickyProps) {
             </div>
 
             {clicked !== undefined ?
-                <ImagesFixed 
+                <ImagesModal
                     images={product.images} 
                     clickedIndex={clicked} 
-                    close={setClicked} 
+                    // close={setClicked} 
                     isOpen={isOpen}
                     onOpenChange={onOpenChange}
             /> 
