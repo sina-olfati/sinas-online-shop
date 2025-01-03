@@ -1,7 +1,7 @@
 'use client';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { ImagesSticky } from '@/src/components/singleProductPage/imagesSticky';
+import { ImagesSticky } from '@/src/components/singleProductPage/imagesSection/imagesSticky';
 import { ProductData } from '@/src/components/singleProductPage/productData';
 import Products from '../../../../data/products.json';
 
