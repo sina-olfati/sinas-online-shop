@@ -6,7 +6,7 @@ export function Logo() {
     const t = useTranslations('Menu');
 
     return (
-        <Link href={"./"}>
+        <Link href={"../"}>
             <div className="h-full flex flex-col items-center justify-center relative pt-1 mx-5 text-primary hover:text-accent-foreground">
                 <h1 className="font-bold text-lg italic relative bottom-2 transition-all">
                     SINA'S

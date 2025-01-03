@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
-import { ImagesFixed } from "./ImagesFixed";
+import { ImagesFixed } from "./ImagesModal";
+import { useDisclosure } from "@nextui-org/react";
 
 
 interface Product {
@@ -28,7 +29,10 @@ interface Product {
 export function ImagesSticky ({product}: ImagesStickyProps) {
 
     const [hoveredImage, setHoveredImage] = useState(0)
-    const [clicked, setClicked] = useState<number | undefined>()
+    const [clicked, setClicked] = useState<number | undefined>(1)
+    // Modal
+    const {isOpen, onOpen, onOpenChange} = useDisclosure();
+
 
     return (
         <div className="bg-secondary shadow-md p-5 flex flex-col gap-5 rounded-2xl w-full">
@@ -53,7 +57,7 @@ export function ImagesSticky ({product}: ImagesStickyProps) {
                             className="px-2 cursor-pointer"
                             onMouseOver={() => setHoveredImage(index)}
                             onMouseLeave={() => setHoveredImage(0)}
-                            onClick={() => setClicked(index)}
+                            onClick={() => {setClicked(index); onOpen()}}
                         >
                             <Image 
                                 src={image} 
@@ -68,7 +72,14 @@ export function ImagesSticky ({product}: ImagesStickyProps) {
             </div>
 
             {clicked !== undefined ?
-                <ImagesFixed images={product.images} clickedIndex={clicked} close={setClicked} /> : null
+                <ImagesFixed 
+                    images={product.images} 
+                    clickedIndex={clicked} 
+                    close={setClicked} 
+                    isOpen={isOpen}
+                    onOpenChange={onOpenChange}
+            /> 
+            : null
             }
 
         </div>
