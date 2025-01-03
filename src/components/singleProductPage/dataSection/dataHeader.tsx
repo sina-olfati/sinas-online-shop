@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Package, Star } from "lucide-react";
 import { AddToCartButton } from "../../addToCartButton";
 import StarRating from "./starRating";
 
@@ -32,7 +32,11 @@ export function DataHeader ({product}: ProductDataProps) {
 
             <div className="flex flex-col gap-5 p-5 bg-secondary rounded-lg shadow">
                 <h1 className="font-semibold text-2xl">{product.name}</h1>    
-                <StarRating rating={2.5} />
+                <StarRating rating={product.ratings} />
+                <div className="flex items-center gap-3 p-3 pr-5 bg-primary/10 rounded-md w-fit">
+                    <Package size={40} className="relative top-[2px]" />
+                    <h2 className="font-thin text-xs">Provider of this product <br/> guaranties the quality</h2>
+                </div>
                 <div about="addToCartButton">
                     <AddToCartButton />
                 </div>
