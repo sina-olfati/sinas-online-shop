@@ -19,7 +19,7 @@ export function Comments ({reviews}: ProductWithReviews) {
             {reviews.map((review) => 
                 <div key={review.summary}>
 
-                    <div about="profile" className="flex items-center gap-3 bg-background w-fit p-2 rounded-xl mb-5">
+                    <div about="profile" className="flex items-center gap-3 bg-background/90 w-fit p-2 px-3 rounded-xl mb-5">
                         <User />
                         <p>User_4212405</p>
                     </div>
@@ -44,6 +44,10 @@ export function Comments ({reviews}: ProductWithReviews) {
                     </div>
                 </div>
             )}
+
+            {reviews.length === 0 ?
+                <div className="font-semibold text-lg w-full text-center p-10">No comments found for this product!</div>
+            : null}
         </div>
     )
 }

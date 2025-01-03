@@ -47,7 +47,7 @@ export function ImagesModal({images, clickedIndex, isOpen, onOpenChange }: Image
             >
               <Image
                 src={images[showedImage]}
-                className="w-[100%] rounded-xl"
+                className="w-[100%] rounded-xl select-none"
                 width={1000}
                 height={1000}
                 alt="product image"

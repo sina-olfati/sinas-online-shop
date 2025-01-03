@@ -65,13 +65,6 @@ export function ProductData ({product}: ProductDataProps) {
 
                 <Tabs aria-label="Options">
 
-                    <Tab key="comments" title="Comments">
-                        <Card shadow="none" className="shadow rounded-md">
-                            <CardBody className="bg-secondary p3">
-                                <Comments reviews={product.reviews} />
-                            </CardBody>
-                        </Card>
-                    </Tab>
                     <Tab key="details" title="Details">
                         <Card shadow="none" className="shadow rounded-md">
                             <CardBody className="bg-secondary">
@@ -79,7 +72,7 @@ export function ProductData ({product}: ProductDataProps) {
                                     {details.map((data) => 
                                         <li key={data.name} className="flex gap-2 p-3">
                                             <h3 className="font-semibold">{data.name}:</h3>
-                                            <p>{data.answer}</p>
+                                            <p className="opacity-75">{data.answer}</p>
                                         </li>
                                     )}
                                 </ul>
@@ -87,6 +80,13 @@ export function ProductData ({product}: ProductDataProps) {
                         </Card>
                     </Tab>
 
+                    <Tab key="comments" title="Comments">
+                        <Card shadow="none" className="shadow rounded-md">
+                            <CardBody className="bg-secondary p3">
+                                <Comments reviews={product.reviews} />
+                            </CardBody>
+                        </Card>
+                    </Tab>
 
                 </Tabs>
                
