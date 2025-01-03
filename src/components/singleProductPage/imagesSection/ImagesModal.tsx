@@ -7,7 +7,7 @@ import {
   ModalBody,
 } from "@nextui-org/modal";
 import { Button } from "@nextui-org/react";
-import { X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 interface ImagesProps {
   images: string[];
@@ -16,13 +16,16 @@ interface ImagesProps {
   onOpenChange: (isOpen: boolean) => void;
 }
 
-export function ImagesModal({
-  images,
-  clickedIndex,
-  isOpen,
-  onOpenChange,
-}: ImagesProps) {
+export function ImagesModal({images, clickedIndex, isOpen, onOpenChange }: ImagesProps) {
 
+  const changeImage = (operation: string) => {
+    if (operation === "i") {
+      setShowedImage(showedImage+1)
+    }
+    if (operation === "d") {
+      setShowedImage(showedImage-1)
+    }
+  }
 
   const [showedImage, setShowedImage] = useState(clickedIndex);
 
@@ -49,6 +52,9 @@ export function ImagesModal({
                 height={1000}
                 alt="product image"
               />
+
+              <Button isIconOnly className="absolute left-0" onPress={() => changeImage("d")} isDisabled={showedImage === 0}><ChevronLeft /></Button>
+              <Button isIconOnly className="absolute right-0" onPress={() => changeImage("i")} isDisabled={showedImage === images.length-1}><ChevronRight /></Button>
             </ModalHeader>
 
             <ModalBody
