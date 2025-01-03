@@ -1,3 +1,4 @@
+import { DataHeader } from "./dataHeader";
 
 interface Product {
     id: number;
@@ -23,8 +24,8 @@ interface ProductDataProps {
 export function ProductData ({product}: ProductDataProps) {
 
     return (
-        <div>
-            ProductData
+        <div className="">
+            <DataHeader product={product} />
         </div>
     )
 }

@@ -2,7 +2,7 @@
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { ImagesSticky } from '@/src/components/singleProductPage/imagesSection/imagesSticky';
-import { ProductData } from '@/src/components/singleProductPage/productData';
+import { ProductData } from '@/src/components/singleProductPage/dataSection/productData';
 import Products from '../../../../data/products.json';
 
 interface Product {
