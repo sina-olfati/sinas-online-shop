@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Button, useDisclosure } from "@nextui-org/react";
 import Banner from "/banners/man4.jpg";
-import { CircleUser, Pencil, UserRound } from "lucide-react";
+import { CircleUser, DollarSignIcon, JapaneseYen, Pencil, UserRound } from "lucide-react";
 import { useCartStore } from "@/src/hooks/useCartStore";
 import { useLocale } from "next-intl";
 
@@ -82,27 +82,28 @@ interface Product {
                         <Pencil size={15} className="text-primary hover:rotate-45 transition-all cursor-pointer" />
                     </div>
 
-                    <div className="flex gap-7">
-                        <ul>
-                            {prices.map((item) => 
-                                <li key={item.name}>{item.name}:</li>
+                    <div className="flex gap-7 mb-5">
+                        <ul className="flex flex-col gap-2">
+                            {prices.map((item, index) => 
+                                <li key={item.name} className={`${index === 2 ? "text-primary" : null}`}>{item.name}:</li>
+                                // <li key={item.name} className={index === 2 ? "text-primary" : null}>{item.name}:</li>
                             )}
                         </ul>
-                        <ul>
-                            {prices.map((item) => 
+                        <ul className="flex flex-col gap-2">
+                            {prices.map((item, index) => 
                                 <li key={item.name}
+                                    className={`font-semibold ${index === 2 ? "text-primary" : null} flex items-center  gap-1`}
                                 >
-                                    {/* {Math.round(item.function * 100) {locale === "en" ? '/ 100' : null} }  */}
-                                    {item.function} 
-                                    {item.discountPercent ? `- ${item.discountPercent}% OFF` : null} 
-                                    {/* {item.discountPercent ? `- ${Math.round(item.discountPercent * 1000) /10}% OFF` : null}  */}
+                                    {locale === "en" ? <DollarSignIcon size={15} /> : <JapaneseYen size={15} /> }
+                                    {locale === "en" ? item.function : item.function*100}
+                                    {item.discountPercent ? ` (${item.discountPercent}%)` : null} 
                                 </li>
                             )}
                         </ul>
 
                     </div>
 
-                    <Button>
+                    <Button color="primary" variant="shadow" fullWidth className="font-semibold py-6">
                         Confirm and Buy
                     </Button>
 
