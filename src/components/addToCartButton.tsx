@@ -27,7 +27,6 @@ interface ProductDataProps {
 
 export function AddToCartButton({ product }: ProductDataProps) {
   const addItem = useCartStore((state) => state.addItem);
-  const removeItem = useCartStore((state) => state.removeItem);
   const decrementItem = useCartStore((state) => state.decrementItem);
   const cart = useCartStore((state) => state.cart);
 
