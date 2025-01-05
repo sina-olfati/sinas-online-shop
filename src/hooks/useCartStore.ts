@@ -14,10 +14,12 @@ export type CartItem = {
 type CartState = {
   cart: CartItem[];
   addItem: (item: CartItem) => void;
+  decrementItem: (id: number) => void;
   removeItem: (id: number) => void;
   clearCart: () => void;
   totalItems: () => number;
   totalPrice: () => number;
+  getItemQuantity: (id: number) => number;
 };
 
 // Create Zustand store
@@ -44,6 +46,28 @@ export const useCartStore = create<CartState>((set, get) => ({
     set({ cart: updatedCart });
   },
 
+  // Decrement the quantity of an item in the cart by 1
+  decrementItem: (id: number) => {
+    const existingCart = get().cart;
+    const itemIndex = existingCart.findIndex((cartItem) => cartItem.id === id);
+
+    if (itemIndex !== -1) {
+      const updatedCart = [...existingCart];
+      const item = updatedCart[itemIndex];
+
+      // Reduce quantity or remove item if quantity is 1
+      if (item.quantity > 1) {
+        updatedCart[itemIndex].quantity -= 1;
+      } else {
+        updatedCart.splice(itemIndex, 1);
+      }
+
+      // Save updated cart to cookies and state
+      Cookies.set('cart', JSON.stringify(updatedCart), { expires: 7, secure: true });
+      set({ cart: updatedCart });
+    }
+  },
+
   // Remove an item from the cart
   removeItem: (id: number) => {
     const updatedCart = get().cart.filter((item) => item.id !== id);
@@ -66,4 +90,10 @@ export const useCartStore = create<CartState>((set, get) => ({
   // Calculate total price of items in the cart
   totalPrice: (): number =>
     get().cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
+
+  // Get the quantity of a specific item in the cart
+  getItemQuantity: (id: number): number => {
+    const item = get().cart.find((cartItem) => cartItem.id === id);
+    return item ? item.quantity : 0;
+  },
 }));
