@@ -50,6 +50,7 @@ export function AddToCartButton({ product }: ProductDataProps) {
                 id: product.id,
                 name: product.name,
                 price: product.discounted_price,
+                originalPrice: product.original_price,
                 quantity: 1,
                 image: product.images[0],
               })

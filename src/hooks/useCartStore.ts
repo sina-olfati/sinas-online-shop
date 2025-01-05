@@ -5,7 +5,8 @@ import Cookies from 'js-cookie'; // Fix import (use the default export, not `{ c
 export type CartItem = {
   id: number;
   name: string;
-  price: number;
+  price: number; // Discounted price
+  originalPrice: number; // New field for the original price
   quantity: number;
   image: string;
 };
@@ -18,7 +19,8 @@ type CartState = {
   removeItem: (id: number) => void;
   clearCart: () => void;
   totalItems: () => number;
-  totalPrice: () => number;
+  totalPrice: () => number; // Total discounted price
+  totalOriginalPrice: () => number; // Total original price
   getItemQuantity: (id: number) => number;
 };
 
@@ -87,9 +89,13 @@ export const useCartStore = create<CartState>((set, get) => ({
   totalItems: (): number =>
     get().cart.reduce((sum, item) => sum + item.quantity, 0),
 
-  // Calculate total price of items in the cart
+  // Calculate total discounted price of items in the cart
   totalPrice: (): number =>
     get().cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
+
+  // Calculate total original price of items in the cart
+  totalOriginalPrice: (): number =>
+    get().cart.reduce((sum, item) => sum + item.originalPrice * item.quantity, 0),
 
   // Get the quantity of a specific item in the cart
   getItemQuantity: (id: number): number => {
