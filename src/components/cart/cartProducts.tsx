@@ -46,7 +46,7 @@ export function CartProducts() {
               {/* Product Link */}
               <Link
                 href={`/products/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
-                className="flex items-center gap-5"
+                className="flex items-center gap-5 shrink-0"
               >
                 <Image src={item.image} className="w-24 rounded-lg" width={1000} height={1000} alt="product image" />
 
@@ -57,9 +57,12 @@ export function CartProducts() {
               </Link>
 
               {/* Add to Cart Button */}
-              <div>
-                <AddToCartButton productId={item.id} />
+              <div className="w-[30%] scale-100 flex items-center justify-end">
+                <div className="w-full scale-100">
+                    <AddToCartButton productId={item.id} />
+                </div>
               </div>
+
             </div>
           ))
         ) : (

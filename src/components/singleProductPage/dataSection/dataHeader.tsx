@@ -63,8 +63,10 @@ export function DataHeader ({product}: ProductDataProps) {
                         </div>
                     </div>
                 </div>
-
-                <AddToCartButton product={product} />
+                
+                <div className="w-[60%] mx-auto">
+                    <AddToCartButton productId={product.id} />
+                </div>
                 
             </div>
             

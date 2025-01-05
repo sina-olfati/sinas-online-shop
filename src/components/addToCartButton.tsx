@@ -51,7 +51,7 @@ export function AddToCartButton({ productId }: ProductDataProps) {
   return (
     <div className="relative flex items-center justify-center">
       {quantity === 0 ? (
-        <div className="w-[60%] flex items-center my-5 justify-center relative">
+        <div className="w-[100%] flex items-center my-5 justify-center relative">
           <Button
             color="primary"
             variant="shadow"
@@ -82,7 +82,7 @@ export function AddToCartButton({ productId }: ProductDataProps) {
           )}
         </div>
       ) : (
-        <div className="transition-all w-[60%] my-5 bg-secondary-foreground/10 rounded-xl flex items-center justify-between">
+        <div className="transition-all w-[100%] my-5 bg-secondary-foreground/10 rounded-xl flex items-center justify-between">
           <Button
             isIconOnly
             color={quantity === 1 ? "danger" : "primary"}
@@ -92,7 +92,7 @@ export function AddToCartButton({ productId }: ProductDataProps) {
           >
             {quantity === 1 ? <Trash2 /> : <Minus />}
           </Button>
-          <p className="text-2xl font-semibold">{quantity}</p>
+          <p className="text-2xl font-semibold mx-3">{quantity}</p>
           <Button
             isIconOnly
             color="primary"
