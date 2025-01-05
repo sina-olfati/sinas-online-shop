@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+// @ts-ignore
 import Cookies from 'js-cookie'; // Fix import (use the default export, not `{ cookies }`)
 
 // Define CartItem type

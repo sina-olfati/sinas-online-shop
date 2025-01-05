@@ -1,4 +1,5 @@
 import { Button, Chip } from "@nextui-org/react";
+import Products from "../../data/products.json";
 // icons
 import { Minus, Percent, Plus, ShoppingCart, Trash2 } from "lucide-react";
 import { useCartStore } from "../hooks/useCartStore";
@@ -22,10 +23,12 @@ interface Product {
 }
 
 interface ProductDataProps {
-  product: Product;
+  productId: number;
 }
 
-export function AddToCartButton({ product }: ProductDataProps) {
+export function AddToCartButton({ productId }: ProductDataProps) {
+  const product: Product | undefined = Products.find((item) => item.id === productId);
+
   const addItem = useCartStore((state) => state.addItem);
   const decrementItem = useCartStore((state) => state.decrementItem);
   const cart = useCartStore((state) => state.cart);
@@ -34,6 +37,14 @@ export function AddToCartButton({ product }: ProductDataProps) {
   const getItemQuantity = (itemId: number): number => {
     return cart.filter((item) => item.id === itemId).reduce((sum, item) => sum + item.quantity, 0);
   };
+
+  if (!product) {
+    return (
+      <div className="relative flex items-center justify-center">
+        <p>Product not found</p>
+      </div>
+    );
+  }
 
   const quantity = getItemQuantity(product.id);
 
@@ -66,7 +77,7 @@ export function AddToCartButton({ product }: ProductDataProps) {
               endContent={<Percent size={25} className="relative top-[0.5px]" />}
               className="absolute top-[-15px] right-[-25px] scale-75 px-2 py-4 font-bold text-2xl z-50"
             >
-              {product.discount_percent}
+              {product.discount_percent}%
             </Chip>
           )}
         </div>
@@ -92,6 +103,7 @@ export function AddToCartButton({ product }: ProductDataProps) {
                 id: product.id,
                 name: product.name,
                 price: product.discounted_price,
+                originalPrice: product.original_price,
                 quantity: 1,
                 image: product.images[0],
               })
