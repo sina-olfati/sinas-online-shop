@@ -20,6 +20,7 @@ interface Product {
   color: string;
   season: string; // New field for season
   gender: string; // New field for gender
+  discount_percent: number;
 }
 
 export default function Product() {

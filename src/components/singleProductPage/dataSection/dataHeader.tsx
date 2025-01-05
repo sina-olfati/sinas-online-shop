@@ -64,7 +64,7 @@ export function DataHeader ({product}: ProductDataProps) {
                     </div>
                 </div>
 
-                <AddToCartButton discount_percent={product.discount_percent} />
+                <AddToCartButton product={product} />
                 
             </div>
             
