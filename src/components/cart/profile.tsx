@@ -40,6 +40,7 @@ interface Product {
         {
             name: "Total",
             function: Math.round(totalOriginalPrice() * 100) / 100,
+            // function: totalOriginalPrice(),
         },
         {
             name: "Your Cart",
@@ -103,7 +104,7 @@ interface Product {
 
                     </div>
 
-                    <Button color="primary" variant="shadow" fullWidth className="font-semibold py-6">
+                    <Button color="primary" variant="shadow" fullWidth isDisabled={totalPrice() ? false : true} className="font-semibold py-6">
                         Confirm and Buy
                     </Button>
 

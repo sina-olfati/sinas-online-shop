@@ -5,6 +5,7 @@ import { useState } from "react";
 import { useCartStore } from "@/src/hooks/useCartStore";
 import Image from "next/image";
 import { AddToCartButton } from "../addToCartButton";
+import { DollarSign, JapaneseYen } from "lucide-react";
 
 interface Product {
   id: number;
@@ -26,6 +27,7 @@ interface Product {
 export function CartProducts() {
 
   const locale = useLocale();
+  const isEn = useLocale() === "en"
 
   const cart = useCartStore();
 
@@ -52,12 +54,23 @@ export function CartProducts() {
 
                 <div className="flex flex-col gap-2">
                   <h2 className="font-semibold">{item.name}</h2>
-                  <p className="text-primary">{item.price * item.quantity}</p>
+
+                  <p className="font-semibold flex items-center">
+                    {isEn ? <DollarSign size={15} /> : <JapaneseYen size={15} />}
+                    {isEn ? Math.round(item.price*item.quantity*100)/100 : Math.round(item.price*item.quantity*100)}
+
+                    {item.originalPrice !== item.price ?
+                        <i className="flex items-center text-primary text-xs ml-2 relative top-[1px]">
+                            {isEn ? <DollarSign size={12} /> : <JapaneseYen size={12} />}
+                            {isEn ? Math.round((item.originalPrice - item.price)*item.quantity*100)/100 : Math.round((item.originalPrice - item.price)*item.quantity*100)} OFF!
+                        </i>   : null 
+                    }
+                  </p>
                 </div>
               </Link>
 
               {/* Add to Cart Button */}
-              <div className="w-[30%] scale-100 flex items-center justify-end">
+              <div className="w-[35%] scale-100 flex items-center justify-end pr-5">
                 <div className="w-full scale-100">
                     <AddToCartButton productId={item.id} />
                 </div>
