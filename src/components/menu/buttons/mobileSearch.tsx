@@ -9,7 +9,7 @@ import {
   ModalBody,
   useDisclosure,
 } from "@nextui-org/modal";
-import { Search } from "lucide-react";
+import { Search, X } from "lucide-react";
 import { SearchInput } from "../searchInput";
 
 
@@ -32,34 +32,35 @@ export function MobileSearch() {
             />
         </Button>
 
-        <Modal size="md" placement="top" isOpen={isOpen} onOpenChange={onOpenChange} hideCloseButton>
+        <Modal size="md" placement="top" isOpen={isOpen} onOpenChange={onOpenChange} backdrop="blur" hideCloseButton>
             <ModalContent
                 about="images"
-                className="w-[100%] bg-transparent flex flex-col items-center justify-center gap-5 shadow-sm"
+                className="w-[100%] h-72 bg-transparent items-center justify-start shadow-sm"
             >
                 {(onClose) => (
                 <>
                     <ModalHeader
-                    about="main image"
-                    className="w-full flex items-center justify-center"
+                        about="main image"
+                        className="w-full flex items-center justify-center"
                     >
-                       <SearchInput />
+                        <SearchInput />
                     </ModalHeader>
 
-                    <ModalBody
+                    {/* <ModalBody
                     about="other images"
                     className="w-full flex flex-row items-center justify-center flex-wrap gap-0"
-                    >
+                    > */}
                         
-                        <Button
-                            className="absolute top-1 right-3 opacity-50"
+                        {/* <Button
+                            className="absolute top-1 right-0 opacity-50"
                             color="danger"
-                            variant="ghost"
+                            variant="destructive"
                             onClick={onClose}
                         >
-                            ss
-                        </Button>
-                    </ModalBody>
+                            <X />
+                        </Button> */}
+                        
+                    {/* </ModalBody> */}
                 </>
                 )}
             </ModalContent>
