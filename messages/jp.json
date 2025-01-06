@@ -97,9 +97,16 @@
   },
   "Product": {
     "guarantee": "この商品の提供者は品質を保証します",
-    "bottom": {
+    "buttons": {
       "details": "詳細",
       "comments": "コメント"
+    },
+    "details": {
+      "category": "カテゴリー",
+      "brand": "ブランド",
+      "fabric": "生地の種類",
+      "season": "季節",
+      "audience": "対象者"
     }
   },
   "Cart": {

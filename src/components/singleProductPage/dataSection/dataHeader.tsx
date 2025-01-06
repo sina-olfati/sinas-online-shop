@@ -1,7 +1,7 @@
 import { DollarSign, JapaneseYen, Package } from "lucide-react";
 import { AddToCartButton } from "../../addToCartButton";
 import StarRating from "./starRating";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { ProductType } from "@/src/types/product";
 
 interface ProductDataProps {
@@ -9,6 +9,9 @@ interface ProductDataProps {
 }
 
 export function DataHeader ({product}: ProductDataProps) {
+
+    // Next-intl
+    const t = useTranslations('Product');
 
     const locale = useLocale()
 
@@ -23,7 +26,7 @@ export function DataHeader ({product}: ProductDataProps) {
 
                 <div className="flex items-center gap-3 p-3 pr-5 bg-primary/10 rounded-md w-fit">
                     <Package size={40} className="relative top-[2px]" />
-                    <h2 className="font-thin text-xs">Provider of this product <br/> guaranties the quality</h2>
+                    <h2 className="font-thin text-xs">{t('guarantee')}</h2>
                 </div>
 
                 <div className="mt-7">

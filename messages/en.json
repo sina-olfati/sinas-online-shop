@@ -97,9 +97,16 @@
   },
   "Product": {
     "guarantee": "Provider of this product guarantees the quality",
-    "bottom": {
+    "buttons": {
       "details": "Details",
       "comments": "Comments"
+    },
+    "details": {
+      "category": "Category",
+      "brand": "Brand",
+      "fabric": "Fabric Type",
+      "season": "Season",
+      "audience": "Target Audience"
     }
   },
   "Cart": {
