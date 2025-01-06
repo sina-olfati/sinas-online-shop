@@ -56,7 +56,8 @@
     "headers": {
       "categories": "カテゴリー",
       "mostSelling": "売れ筋商品",
-      "discounts": "お得な割引"
+      "discounts": "お得な割引",
+      "filters": "フィルター"
     },
     "staticBanners": {
       "banner1": "紳士服",
@@ -66,14 +67,18 @@
   },
   "Products": {
     "filters": {
-      "header": "フィルター",
+      "categories": {
+        "name": "カテゴリー"
+      },
       "seasons": {
+        "name": "季節",
         "spring": "春",
         "summer": "夏",
         "fall": "秋",
         "winter": "冬"
       },
       "gender": {
+        "name": "性別",
         "men": "男性",
         "women": "女性"
       },

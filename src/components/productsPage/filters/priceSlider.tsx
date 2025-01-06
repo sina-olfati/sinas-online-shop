@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from "react";
 import { Slider } from "@nextui-org/react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 
 interface Data { 
@@ -31,6 +31,10 @@ export function PriceSlider({sliderValue, setSliderValue}: Data) {
     }
   };
 
+
+  // Next-intl
+  const t = useTranslations('Products.filters');
+
   return (
     <Slider
       // className={`${!used ? "opacity-75" : null } transition-all`}
@@ -38,7 +42,7 @@ export function PriceSlider({sliderValue, setSliderValue}: Data) {
       value={priceRange} // Controlled value of the slider
       onChange={handleSliderChange} // Update state when the slider value changes
       formatOptions={{ style: "currency", currency: lang === "en" ? "USD" : "JPY" }}
-      label="Price Range"
+      label={t('range')}
       maxValue={200}
       minValue={0}
       step={5}

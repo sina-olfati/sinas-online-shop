@@ -9,6 +9,7 @@ import { PriceSlider } from "./priceSlider";
 import { Divider, Switch } from "@nextui-org/react";
 import { useSearchParams } from "next/navigation"; // Access the query parameters
 import { FilterButton } from "./filterButton";
+import { useTranslations } from "next-intl";
 
 const categoryOptions = [
   { key: "electronics", label: "Electronics" },
@@ -18,15 +19,15 @@ const categoryOptions = [
 ];
 
 const seasonOptions = [
-  { key: "Spring", label: "Spring" },
-  { key: "Summer", label: "Summer" },
-  { key: "Fall", label: "Fall" },
-  { key: "Winter", label: "Winter" },
+  { key: "Spring", label: "spring" },
+  { key: "Summer", label: "summer" },
+  { key: "Fall", label: "fall" },
+  { key: "Winter", label: "winter" },
 ];
 
 const singleOptions = [
-  { key: "Male", label: "Male" },
-  { key: "Female", label: "Female" },
+  { key: "Male", label: "men" },
+  { key: "Female", label: "women" },
 ];
 
 export function Filters() {
@@ -54,22 +55,27 @@ export function Filters() {
   }, [searchParams]); // Dependency on searchParams ensures this runs on refresh and initial load
 
 
+  // Next-intl
+  const t = useTranslations('Products.filters');
+
+
   return (
     <div className="bg-secondary shadow-md p-5 pt-0 mt-5 flex flex-col gap-5 rounded-2xl w-full">
-      <SectionHeading name="Filters" icon={<SlidersHorizontal />} />
+
+      <SectionHeading name="filters" icon={<SlidersHorizontal />} />
 
       <MultiSelect
         options={categoryOptions}
         selected={categorySelected}
         setSelected={setCategorySelected}
-        name="Categories"
+        name="categories"
       />
 
       <MultiSelect
         options={seasonOptions}
         selected={seasonSelected}
         setSelected={setSeasonSelected}
-        name="Seasons"
+        name="seasons"
       />
 
       <SingleSelect
@@ -83,7 +89,7 @@ export function Filters() {
       <Divider />
 
       <div className="flex items-center gap-3">
-        <p>Only Discounted</p>
+        <p>{t('discount')}</p>
         <Switch
           isSelected={discount}
           onChange={(e) => setDiscount(e.target.checked)}

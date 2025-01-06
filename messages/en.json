@@ -56,7 +56,8 @@
     "headers": {
       "categories": "Categories",
       "mostSelling": "Most Selling",
-      "discounts": "Lovely Discounts"
+      "discounts": "Lovely Discounts",
+      "filters": "Filters"
     },
     "staticBanners": {
       "banner1": "Gentlemen's Wear",
@@ -66,14 +67,18 @@
   },
   "Products": {
     "filters": {
-      "header": "Filters",
+      "categories": {
+        "name": "Categories"
+      },
       "seasons": {
+        "name": "Seasons",
         "spring": "Spring",
         "summer": "Summer",
         "fall": "Fall",
         "winter": "Winter"
       },
       "gender": {
+        "name": "Gender",
         "men": "Men",
         "women": "Women"
       },

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Products from "../../../data/products.json";
 import { ProductCard } from "../productCard";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
 import { Select, SelectItem } from "@nextui-org/react";
 import { useSearchParams } from "next/navigation"; // to get query params
@@ -89,6 +89,10 @@ export function AllProducts() {
     }
   });
 
+
+  // Next-intl
+  const t = useTranslations('Products.reorder');
+
   return (
     <div className="flex flex-col gap-5 p-5">
       {/* Price Filter */}
@@ -101,7 +105,7 @@ export function AllProducts() {
           label=""
           aria-label="price filter"
           labelPlacement="outside"
-          placeholder="Default"
+          placeholder={t('default')}
           selectorIcon={
             reorderFilter === "" ? <Filter /> :
             reorderFilter === "sell" ? <ChartNoAxesCombined /> :
@@ -111,14 +115,14 @@ export function AllProducts() {
           }
         >
           {[
-            { key: "sell", label: "Most Selling" },
-            { key: "view", label: "Most Views" },
-            { key: "discount", label: "Best Discount" },
-            { key: "cheap", label: "Cheapest" },
-            { key: "expensive", label: "Most Expensive" },
+            { key: "sell", label: "sale" },
+            { key: "view", label: "view" },
+            { key: "discount", label: "discount" },
+            { key: "cheap", label: "cheap" },
+            { key: "expensive", label: "expensive" },
           ].map((filter) => (
             <SelectItem key={filter.key} value={filter.key}>
-              {filter.label}
+              {t(filter.label)}
             </SelectItem>
           ))}
         </Select>

@@ -1,5 +1,6 @@
 import { Checkbox } from "@nextui-org/react";
 import { ChevronDown, X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useState, useEffect, useRef } from "react";
 
 interface Option {
@@ -49,6 +50,10 @@ export default function SingleSelect({ options, selected, setSelected }: SingleS
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+
+  // Next-intl
+  const t = useTranslations('Products.filters.gender');
+
   return (
     <div className="relative" ref={dropdownRef}>
       {/* Trigger Button */}
@@ -57,7 +62,7 @@ export default function SingleSelect({ options, selected, setSelected }: SingleS
         // className={`bg-primary text-accent ${selectedOption === undefined ? " bg-primary/75" : null } px-4 py-2 rounded w-full text-left truncate transition-all`}
         className={`bg-primary text-accent text-sm ${selectedOption === undefined ? "text-accent/70" : null } px-4 py-3 rounded w-full text-left truncate transition-all flex items-center justify-between`}
       >
-        {selectedOption ? options.find((o) => o.key === selectedOption)?.label : "Gender"}
+        {selectedOption ? t(options.find((o) => o.key === selectedOption)?.label) : t('name')}
         <div 
           onClick={(e) => {
             e.stopPropagation(); 
@@ -88,7 +93,7 @@ export default function SingleSelect({ options, selected, setSelected }: SingleS
                 isSelected={selectedOption === option.key}
                 onChange={() => handleSelection(option.key)}
               >
-                {option.label}
+                {t(option.label)}{}
               </Checkbox>
             </div>
           ))}

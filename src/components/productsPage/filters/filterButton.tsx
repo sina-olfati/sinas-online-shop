@@ -1,5 +1,6 @@
 'use client';
 import { Button } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
@@ -116,6 +117,10 @@ export function FilterButton({ filters }: FilterButtonProps) {
     // Redirect to the updated query
     router.push(`/products?${query.toString()}`);
   };
+
+
+  // Next-intl
+  const t = useTranslations('Products.filters');
   
 
   return (
@@ -125,7 +130,7 @@ export function FilterButton({ filters }: FilterButtonProps) {
       isDisabled={isButtonDisabled}
       onPress={applyFilters}
     >
-      Apply Filters
+      {t('button')}
     </Button>
   );
 }
