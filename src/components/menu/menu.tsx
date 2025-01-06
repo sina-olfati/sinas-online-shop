@@ -55,7 +55,7 @@ const Menu = () => {
       </div>
 
       {/* mysm */}
-      <div className="h-16 w-full flex items-center justify-around px-[20%] mymd:hidden">
+      <div className="h-16 w-full mysm:flex items-center justify-around px-[20%] hidden">
         <ButtonWrapper name="Language">
           <LangToggle />
         </ButtonWrapper>
