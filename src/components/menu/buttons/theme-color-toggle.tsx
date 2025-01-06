@@ -31,7 +31,7 @@ export function ThemeColorToggle() {
 
   const createSelectItems = () => {
     return availableThemeColors.map(({ name, value, light, dark }) => (
-      <SelectItem key={value} value={value}>
+      <SelectItem key={name} value={value}>
         <div className="flex flex-shrink-0 item-center space-x-3">
           <div
             className={cn(
