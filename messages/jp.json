@@ -1,8 +1,109 @@
 {
-    "Menu": {
-      "logo": "ショップ"
+  "Menu": {
+    "logo": "ショップ",
+    "searchBar": "検索...",
+    "colors": {
+      "zink": "ジンク",
+      "rose": "ローズ",
+      "blue": "ブルー",
+      "green": "グリーン",
+      "orange": "オレンジ"
     },
-    "HomePage": {
-      "title": "Ohayou Sekai!"
+    "mobile": {
+      "language": "言語",
+      "theme": "テーマ",
+      "cart": "カート",
+      "Search": "検索"
     }
+  },
+  "Footer": {
+    "offer": {
+      "title": "専門的なスタイリングアドバイス – あなたのシグネチャールックを見つけよう！",
+      "explanation": "プロのスタイリストが、あなたを引き立てるコーディネートをアドバイスします。迅速かつ個別のスタイリングヒントで、自信を持ってショッピングし、あなたのスタイルを反映したワードローブを作りましょう。完璧な選択のお手伝いをします！",
+      "button": "スタイリングアドバイスを受ける"
+    },
+    "buttons": {
+      "shop": "ショップ",
+      "aboutUs": "私たちについて",
+      "Contact": "お問い合わせ",
+      "FAQs": "よくある質問",
+      "return": "返品と返金",
+      "shipping": "配送情報",
+      "size": "サイズガイド",
+      "track": "注文追跡",
+      "privacy": "プライバシーポリシー",
+      "terms": "利用規約",
+      "careers": "採用情報",
+      "blog": "ブログ"
+    },
+    "shoptext": "メンズ・レディースのファッションでスタイルを格上げしましょう。ワードローブを引き立て、印象的な一着を見つけてください。"
+  },
+  "HomePage": {
+    "scrollerBanners": {
+      "banner1": {
+        "name": "内なる戦士を解き放て",
+        "button": "紳士服をショッピング"
+      },
+      "banner2": {
+        "name": "エレガンスと強さの融合",
+        "button": "レディースウェアをショッピング"
+      },
+      "banner3": {
+        "name": "毎シーズンスタイリッシュでいよう",
+        "button": "シーズンコレクションを見る"
+      }
+    },
+    "headers": {
+      "categories": "カテゴリー",
+      "mostSelling": "売れ筋商品",
+      "discounts": "お得な割引"
+    },
+    "staticBanners": {
+      "banner1": "紳士服",
+      "banner2": "レディース必需品",
+      "button": "ショッピングを始める"
+    }
+  },
+  "products": {
+    "filters": {
+      "header": "フィルター",
+      "seasons": {
+        "spring": "春",
+        "summer": "夏",
+        "fall": "秋",
+        "winter": "冬"
+      },
+      "gender": {
+        "men": "男性",
+        "women": "女性"
+      },
+      "range": "価格帯",
+      "discount": "割引商品だけ",
+      "button": "フィルターを適用"
+    },
+    "reorder": {
+      "default": "デフォルト",
+      "sale": "売れ筋",
+      "view": "閲覧数が多い",
+      "discount": "最高の割引",
+      "cheap": "最安値",
+      "expensive": "最高値"
+    }
+  },
+  "Product": {
+    "guarantie": "この商品の提供者は品質を保証します",
+    "bottom": {
+      "details": "詳細",
+      "comments": "コメント"
+    }
+  },
+  "Cart": {
+    "name": "ハリー・ポッター",
+    "prices": {
+      "total": "合計",
+      "cart": "カートの中身",
+      "profit": "あなたの利益"
+    },
+    "button": "確認して購入"
+  }
 }
