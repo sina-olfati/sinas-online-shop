@@ -1,32 +1,12 @@
-import { Button, Card, CardBody, Tab, Tabs } from "@nextui-org/react";
+import { Card, CardBody, Tab, Tabs } from "@nextui-org/react";
 import { DataHeader } from "./dataHeader";
 import { useState } from "react";
 import { Comments } from "./comments";
+import { ProductType } from "@/src/types/product";
 
-interface Product {
-    id: number;
-    name: string;
-    images: string[];
-    category: string;
-    original_price: number;
-    discounted_price: number;
-    ratings: number;
-    reviews: any;
-    sales_count: number;
-    brand: string;
-    fabric_type: string;
-    color: string;
-    season: string; // New field for season
-    gender: string; // New field for gender
-    discount_percent: number
-}
-  
 interface ProductDataProps {
-    product: Product;
+    product: ProductType;
 }
-
-
-
 
 
 export function ProductData ({product}: ProductDataProps) {

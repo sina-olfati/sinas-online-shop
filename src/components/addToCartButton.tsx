@@ -3,31 +3,15 @@ import Products from "../../data/products.json";
 // icons
 import { Minus, Percent, Plus, ShoppingCart, Trash2 } from "lucide-react";
 import { useCartStore } from "../hooks/useCartStore";
+import { ProductType } from "../types/product";
 
-interface Product {
-  id: number;
-  name: string;
-  images: string[];
-  category: string;
-  original_price: number;
-  discounted_price: number;
-  ratings: number;
-  reviews: any;
-  sales_count: number;
-  brand: string;
-  fabric_type: string;
-  color: string;
-  season: string;
-  gender: string;
-  discount_percent: number;
-}
 
 interface ProductDataProps {
   productId: number;
 }
 
 export function AddToCartButton({ productId }: ProductDataProps) {
-  const product: Product | undefined = Products.find((item) => item.id === productId);
+  const product: ProductType | undefined = Products.find((item) => item.id === productId);
 
   const addItem = useCartStore((state) => state.addItem);
   const decrementItem = useCartStore((state) => state.decrementItem);

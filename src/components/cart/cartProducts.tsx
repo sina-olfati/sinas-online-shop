@@ -1,32 +1,15 @@
 'use client'
 import Link from "next/link";
 import { useLocale } from "next-intl";
-import { useState } from "react";
+// import { useState } from "react";
 import { useCartStore } from "@/src/hooks/useCartStore";
 import Image from "next/image";
 import { AddToCartButton } from "../addToCartButton";
 import { DollarSign, JapaneseYen } from "lucide-react";
 
-interface Product {
-  id: number;
-  name: string;
-  images: string[];
-  category: string;
-  original_price: number;
-  discounted_price: number;
-  ratings: number;
-  reviews: any;
-  sales_count: number;
-  brand: string;
-  fabric_type: string;
-  color: string;
-  season: string; // New field for season
-  gender: string; // New field for gender
-}
-
 export function CartProducts() {
 
-  const locale = useLocale();
+  // const locale = useLocale();
   const isEn = useLocale() === "en"
 
   const cart = useCartStore();

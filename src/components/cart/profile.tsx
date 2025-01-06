@@ -1,32 +1,9 @@
 import Image from "next/image";
-import { useState } from "react";
-import { Button, useDisclosure } from "@nextui-org/react";
-import Banner from "/banners/man4.jpg";
-import { CircleUser, DollarSignIcon, JapaneseYen, Pencil, UserRound } from "lucide-react";
+import { Button } from "@nextui-org/react";
+import { DollarSignIcon, JapaneseYen, Pencil, UserRound } from "lucide-react";
 import { useCartStore } from "@/src/hooks/useCartStore";
 import { useLocale } from "next-intl";
 
-
-interface Product {
-    id: number;
-    name: string;
-    images: string[];
-    category: string;
-    original_price: number;
-    discounted_price: number;
-    ratings: number;
-    reviews: any;
-    sales_count: number;
-    brand: string;
-    fabric_type: string;
-    color: string;
-    season: string; // New field for season
-    gender: string; // New field for gender
-  }
-  
-  interface ImagesStickyProps {
-    product: Product | null;
-  }
 
   
   export function Profile () {

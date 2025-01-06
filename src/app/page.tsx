@@ -1,4 +1,3 @@
-import Link from "next/link";
 // components
 import Menu from "../components/menu/menu";
 import { BannerScroller } from "../components/mainPage/bannerScroller";

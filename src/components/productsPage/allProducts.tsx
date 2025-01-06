@@ -8,23 +8,8 @@ import { Select, SelectItem } from "@nextui-org/react";
 import { useSearchParams } from "next/navigation"; // to get query params
 // icons
 import { Filter, ArrowDownNarrowWide, ArrowDownWideNarrow, Eye, ChartNoAxesCombined, BadgePercent } from "lucide-react";
+import { ProductType } from "@/src/types/product";
 
-interface Product {
-  id: number;
-  name: string;
-  images: string[];
-  category: string;
-  original_price: number;
-  discounted_price: number;
-  ratings: number;
-  reviews: any;
-  sales_count: number;
-  brand: string;
-  fabric_type: string;
-  color: string;
-  season: string; // New field for season
-  gender: string; // New field for gender
-}
 
 export function AllProducts() {
   const [reorderFilter, setReorderFilter] = useState<string>("");
@@ -32,7 +17,7 @@ export function AllProducts() {
   // Lang
   const locale = useLocale();
 
-  const [hover, setHover] = useState<Product | null>(null);
+  const [hover, setHover] = useState<ProductType | null>(null);
   const onMouseLeave = () => {
     setHover(null);
   };

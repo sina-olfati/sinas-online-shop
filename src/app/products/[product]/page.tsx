@@ -4,28 +4,12 @@ import { useEffect, useState } from 'react';
 import { ImagesSticky } from '@/src/components/singleProductPage/imagesSection/imagesSticky';
 import { ProductData } from '@/src/components/singleProductPage/dataSection/productData';
 import Products from '../../../../data/products.json';
+import { ProductType } from '@/src/types/product';
 
-interface Product {
-  id: number;
-  name: string;
-  images: string[];
-  category: string;
-  original_price: number;
-  discounted_price: number;
-  ratings: number;
-  reviews: any;
-  sales_count: number;
-  brand: string;
-  fabric_type: string;
-  color: string;
-  season: string; // New field for season
-  gender: string; // New field for gender
-  discount_percent: number;
-}
 
 export default function Product() {
   const pathname = usePathname(); // Get the full pathname
-  const [product, setProduct] = useState<Product | null>(null);
+  const [product, setProduct] = useState<ProductType | null>(null);
 
   useEffect(() => {
     const segments = pathname.split('/'); // Split the pathname

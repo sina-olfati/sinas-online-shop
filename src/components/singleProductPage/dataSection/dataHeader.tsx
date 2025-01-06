@@ -1,29 +1,11 @@
-import { DollarSign, JapaneseYen, Package, Percent, Star } from "lucide-react";
+import { DollarSign, JapaneseYen, Package } from "lucide-react";
 import { AddToCartButton } from "../../addToCartButton";
 import StarRating from "./starRating";
 import { useLocale } from "next-intl";
-import { Chip } from "@nextui-org/react";
+import { ProductType } from "@/src/types/product";
 
-interface Product {
-    id: number;
-    name: string;
-    images: string[];
-    category: string;
-    original_price: number;
-    discounted_price: number;
-    ratings: number;
-    reviews: any;
-    sales_count: number;
-    brand: string;
-    fabric_type: string;
-    color: string;
-    season: string; // New field for season
-    gender: string; // New field for gender
-    discount_percent: number
-}
-  
 interface ProductDataProps {
-    product: Product;
+    product: ProductType;
 }
 
 export function DataHeader ({product}: ProductDataProps) {

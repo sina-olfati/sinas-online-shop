@@ -3,29 +3,12 @@ import Link from "next/link"
 import Products from "../../../data/products.json"
 import Image from "next/image"
 import { useEffect, useState } from "react"
-// import { useSearchParams } from "next/navigation";
-
-interface Product {
-    id: number;
-    name: string;
-    images: string[];
-    category: string;
-    original_price: number;
-    discounted_price: number;
-    ratings: number;
-    reviews: any;
-    sales_count: number;
-    brand: string;
-    fabric_type: string;
-    color: string;
-    season: string; // New field for season
-    gender: string; // New field for gender
-  }
+import { ProductType } from "@/src/types/product"
 
 
 export function SearchDropDown ({searched}: any) {
 
-    const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+    const [filteredProducts, setFilteredProducts] = useState<ProductType[]>([]);
 
     useEffect(() => {
         const lowerCaseSearch = searched.toLowerCase();

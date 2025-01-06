@@ -4,33 +4,17 @@ import Image from "next/image";
 import { DollarSign, Percent, Star } from "lucide-react";
 import { JapaneseYen } from "lucide-react";
 import { useState } from "react";
-import Link from "next/link";
+import { ProductType } from "../types/product";
 
-interface Product {
-  id: number;
-  name: string;
-  images: string[];
-  category: string;
-  original_price: number;
-  discounted_price: number;
-  ratings: number;
-  reviews: any;
-  sales_count: number;
-  brand: string;
-  fabric_type: string;
-  color: string;
-  season: string; // New field for season
-  gender: string; // New field for gender
-}
 
 interface ProductCardProps {
-  item: Product;
-  onMouseDown?: (item: Product, e: React.MouseEvent) => void;
-  onMouseUp?: (item: Product) => void;
+  item: ProductType;
+  onMouseDown?: (item: ProductType, e: React.MouseEvent) => void;
+  onMouseUp?: (item: ProductType) => void;
   onMouseLeave?: () => void;
   onMouseMove?: (e: React.MouseEvent) => void;
-  setHover?: (item: Product | null) => void;
-  hover?: Product | null;
+  setHover?: (item: ProductType | null) => void;
+  hover?: ProductType | null;
   locale?: string;
 }
 
