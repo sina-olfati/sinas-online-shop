@@ -4,15 +4,14 @@ import * as React from "react";
 import {
   Select,
   SelectContent,
-  SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/src/components/ui/select";
 import { useThemeContext } from "@/src/context/theme-data-provider";
 import { useTheme } from "next-themes";
 import { cn } from "@/src/lib/utils";
+import { ThemeColors } from "@/src/types/theme-types";
 
 const availableThemeColors = [
   { name: "Zinc", light: "bg-zinc-900", dark: "bg-zinc-700" },

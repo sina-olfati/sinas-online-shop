@@ -71,7 +71,7 @@ export function Footer () {
                 </div>
                 <div className="w-[60%] flex flex-col items-start justify-center gap-3 pl-20 text-secondary-foreground">
                     <h2 className="font-bold text-primary">Expert Styling Advice – Find Your Signature Look!</h2>
-                    <p className="text-sm pb-5">Let our professional stylists guide you to outfits that bring out your best. With quick and personalized styling tips, shop confidently and create a wardrobe that truly reflects your style. We're here to help you make the perfect choice!</p>
+                    <p className="text-sm pb-5">Let our professional stylists guide you to outfits that bring out your best. With quick and personalized styling tips, shop confidently and create a wardrobe that truly reflects your style. We&apos;re here to help you make the perfect choice!</p>
                     <Button variant="shadow" color="primary" className="font-bold">
                         <Sparkles />
                         {/* Book Your Consultation */}
@@ -89,7 +89,7 @@ export function Footer () {
                     <div className="scale-150 h-10 relative r-5">
                         <Logo />
                     </div>
-                    <p className="mt-4 text-sm">Elevate your style with our exclusive collection of men's and women's fashion. Discover the perfect pieces to complement your wardrobe and make a lasting impression.</p>
+                    <p className="mt-4 text-sm">Elevate your style with our exclusive collection of men&apos;s and women&apos;s fashion. Discover the perfect pieces to complement your wardrobe and make a lasting impression.</p>
 
                     <div about="social" className="mt-4 flex gap-4">
 

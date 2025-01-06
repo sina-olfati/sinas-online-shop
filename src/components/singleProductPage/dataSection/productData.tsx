@@ -1,6 +1,5 @@
 import { Card, CardBody, Tab, Tabs } from "@nextui-org/react";
 import { DataHeader } from "./dataHeader";
-import { useState } from "react";
 import { Comments } from "./comments";
 import { ProductType } from "@/src/types/product";
 
@@ -10,9 +9,7 @@ interface ProductDataProps {
 
 
 export function ProductData ({product}: ProductDataProps) {
-    
-    const [show, setShow] = useState("details")
-    
+        
     const details = [
         {
             name: "Category",

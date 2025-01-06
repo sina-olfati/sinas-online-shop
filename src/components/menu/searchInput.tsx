@@ -1,31 +1,30 @@
 'use client';
 import { Search } from "lucide-react";
-import { Button } from "@nextui-org/react";
-import { Input } from "@nextui-org/react";
+import { Button, Input } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { SearchDropDown } from "./searchDropDown";
 
 export function SearchInput() {
   const router = useRouter();
-  const [phrase, setPhrase] = useState<string>("");
-  const [focused, setFocused] = useState<boolean>(false);
-  const [hovered, setHovered] = useState<boolean>(false);
+  const [phrase, setPhrase] = useState<string>(""); // State to hold the search phrase
+  const [focused, setFocused] = useState<boolean>(false); // State to track if input is focused
+  const [hovered, setHovered] = useState<boolean>(false); // State to track hover state
 
   // Get query parameters from the URL
   const searchParams = useSearchParams();
 
-  // Sync search input with the current query
+  // Sync search input with the current query parameter on load
   useEffect(() => {
     const searchParam = searchParams.get("search") || "";
     setPhrase(searchParam);
   }, [searchParams]);
 
-  // Apply search and update query parameters
+  // Apply search and update the query parameters
   const applySearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // Prevent default form submission behavior
 
-    const query = new URLSearchParams(searchParams as any); // Maintain other query params
+    const query = new URLSearchParams(searchParams as URLSearchParams); // Maintain other query params
     if (phrase) {
       query.set("search", phrase);
     } else {
@@ -37,7 +36,6 @@ export function SearchInput() {
 
   return (
     <div className="w-[100%] relative">
-
       <div className="w-[100%]">
         <form
           onSubmit={applySearch} // Correctly handle form submission
@@ -67,18 +65,14 @@ export function SearchInput() {
         </form>
       </div>
 
-      {
-        !(phrase && focused || hovered) ? null : (
-            <div
-                onMouseOver={() => setHovered(true)}
-                onMouseLeave={() => setHovered(false)}
-            >
-            <SearchDropDown searched={phrase} />
-            </div>
-        )
-      }
-
+      {(phrase && focused || hovered) && (
+        <div
+          onMouseOver={() => setHovered(true)}
+          onMouseLeave={() => setHovered(false)}
+        >
+          <SearchDropDown searched={phrase} />
+        </div>
+      )}
     </div>
   );
 }
-

@@ -1,7 +1,6 @@
 'use client'
 import Link from "next/link";
 import { useLocale } from "next-intl";
-// import { useState } from "react";
 import { useCartStore } from "@/src/hooks/useCartStore";
 import Image from "next/image";
 import { AddToCartButton } from "../addToCartButton";
@@ -9,7 +8,6 @@ import { DollarSign, JapaneseYen } from "lucide-react";
 
 export function CartProducts() {
 
-  // const locale = useLocale();
   const isEn = useLocale() === "en"
 
   const cart = useCartStore();

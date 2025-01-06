@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
-import { DollarSignIcon, JapaneseYen, Pencil, UserRound } from "lucide-react";
+import { DollarSignIcon, JapaneseYen, Pencil } from "lucide-react";
 import { useCartStore } from "@/src/hooks/useCartStore";
 import { useLocale } from "next-intl";
 
@@ -85,28 +85,6 @@ import { useLocale } from "next-intl";
                         Confirm and Buy
                     </Button>
 
-
-
-
-                    {/* {product.images.map((image, index) => 
-                        <div 
-                            key={index} 
-                            className="px-2 cursor-pointer"
-                            onMouseOver={() => setHoveredImage(index)}
-                            onMouseLeave={() => setHoveredImage(0)}
-                            onTouchEndCapture={() => setHoveredImage(index)}
-                            // onClick={() => {setClicked(index);}}
-                            onClick={() => {setClicked(index); onOpen()}}
-                        >
-                            <Image 
-                                src={image} 
-                                className="w-16 rounded-md shadow" 
-                                width={1000} 
-                                height={1000} 
-                                alt="product image"
-                            />
-                        </div>
-                    )} */}
                 </div>
             </div>
 

@@ -1,16 +1,25 @@
 'use client';
 import { useRef, useState, useEffect } from "react";
 
-export function GrabScroll({ children }: any) {
-    const scrollRef = useRef<any>(null);
-    const [isDragging, setIsDragging] = useState(false);
-    const [startX, setStartX] = useState(0);
-    const [scrollLeft, setScrollLeft] = useState(0);
+// Define types for the component props
+interface GrabScrollProps {
+    children: React.ReactNode;
+}
 
-    const onMouseDown = (e: any) => {
+export function GrabScroll({ children }: GrabScrollProps) {
+    // Ref to the scroll container (HTMLDivElement)
+    const scrollRef = useRef<HTMLDivElement | null>(null);
+
+    // State to track dragging status and positions
+    const [isDragging, setIsDragging] = useState<boolean>(false);
+    const [startX, setStartX] = useState<number>(0);
+    const [scrollLeft, setScrollLeft] = useState<number>(0);
+
+    // Mouse event handlers
+    const onMouseDown = (e: MouseEvent) => {
         setIsDragging(true);
-        setStartX(e.pageX - scrollRef.current?.offsetLeft);
-        setScrollLeft(scrollRef.current?.scrollLeft);
+        setStartX(e.pageX - (scrollRef.current?.offsetLeft || 0));
+        setScrollLeft(scrollRef.current?.scrollLeft || 0);
     };
 
     const onMouseLeave = () => {
@@ -21,35 +30,37 @@ export function GrabScroll({ children }: any) {
         setIsDragging(false);
     };
 
-    const onMouseMove = (e: any) => {
+    const onMouseMove = (e: MouseEvent) => {
         if (!isDragging) return;
         e.preventDefault();
-        const x = e.pageX - scrollRef.current?.offsetLeft;
-        // const walk = (x - startX) * 2; // Adjust scroll speed here
-        const walk = (x - startX); // Adjust scroll speed here
-        scrollRef.current.scrollLeft = scrollLeft - walk;
+        const x = e.pageX - (scrollRef.current?.offsetLeft || 0);
+        const walk = x - startX;
+        if (scrollRef.current) {
+            scrollRef.current.scrollLeft = scrollLeft - walk;
+        }
     };
 
     // Touch event handlers
-    const onTouchStart = (e: any) => {
+    const onTouchStart = (e: TouchEvent) => {
         setIsDragging(true);
         const touch = e.touches[0]; // Get the first touch point
-        setStartX(touch.pageX - scrollRef.current?.offsetLeft);
-        setScrollLeft(scrollRef.current?.scrollLeft);
+        setStartX(touch.pageX - (scrollRef.current?.offsetLeft || 0));
+        setScrollLeft(scrollRef.current?.scrollLeft || 0);
     };
 
     const onTouchEnd = () => {
         setIsDragging(false);
     };
 
-    const onTouchMove = (e: any) => {
+    const onTouchMove = (e: TouchEvent) => {
         if (!isDragging) return;
-        e.preventDefault(); // Prevent default to avoid scrolling
+        e.preventDefault();
         const touch = e.touches[0]; // Get the first touch point
-        const x = touch.pageX - scrollRef.current?.offsetLeft;
-        // const walk = (x - startX) * 2; // Adjust scroll speed here
+        const x = touch.pageX - (scrollRef.current?.offsetLeft || 0);
         const walk = (x - startX) * 1.5; // Adjust scroll speed here
-        scrollRef.current.scrollLeft = scrollLeft - walk;
+        if (scrollRef.current) {
+            scrollRef.current.scrollLeft = scrollLeft - walk;
+        }
     };
 
     useEffect(() => {
@@ -84,16 +95,9 @@ export function GrabScroll({ children }: any) {
             ref={scrollRef}
             className={`relative bg-transparent select-none w-full overflow-hidden whitespace-nowrap ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
         >
-
             <div className="w-fit bg-transparent flex gap-2 scroll-smooth snap-mandatory py-3 px-8">
                 {children}
             </div>
-
-            {/* scroll shadow - failed */}
-            {/* <div className="fixed w-[100vw] h-full left-0 top-0 z-10 flex justify-between items-center">
-              <div className="border border-primary w-10 h-full bg-gradient-to-r from-primary to-transparent"></div>
-            </div> */}
-
         </div>
     );
 }

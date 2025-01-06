@@ -2,8 +2,6 @@ import React from "react";
 
 // personal
 import { ShoppingCartButton } from "./buttons/shoppingCartButton";
-import { ProfileButton } from "./buttons/profileButton";
-import { LikedButton } from "./buttons/likedButton";
 // toggles
 import { LangToggle } from "./buttons/lang-toggle";
 import { ThemeColorToggle } from "./buttons/theme-color-toggle";

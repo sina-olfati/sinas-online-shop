@@ -6,10 +6,9 @@ import {
   Modal,
   ModalContent,
   ModalHeader,
-  ModalBody,
   useDisclosure,
 } from "@nextui-org/modal";
-import { Search, X } from "lucide-react";
+import { Search } from "lucide-react";
 import { SearchInput } from "../../searchInput";
 
 export function MobileSearch() {
@@ -39,7 +38,7 @@ export function MobileSearch() {
           about="images"
           className="w-[100%] h-72 bg-transparent items-center justify-start shadow-sm"
         >
-          {(onClose) => (
+          {() => (
             <>
               <ModalHeader
                 about="main image"

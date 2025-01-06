@@ -1,5 +1,4 @@
 'use server'
-import React from 'react'
 import { cookies } from 'next/headers'
 
 export async function SaveLocale(data: string) {
