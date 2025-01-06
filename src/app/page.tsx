@@ -5,15 +5,14 @@ import { Categories } from "../components/mainPage/categories";
 import { ProductsScroll } from "../components/mainPage/productsScroll";
 import { BannerCard } from "../components/mainPage/bannerCard";
 import { Footer } from "../components/footer";
-// products (for ProductScroll) | icon
 import Products from "../../data/products.json";
 import { Sparkles, BadgePercent } from "lucide-react";
-// Next-intl
-// import { useTranslations } from "next-intl";
+
 
 export default function Home() {
+
   // Next-intl
-  // const t = useTranslations('HomePage');
+  // const t = useTranslations('HomePage.headers');
 
   return (
     <div className="w-full overflow-hidden">
@@ -27,7 +26,7 @@ export default function Home() {
         <Categories />
 
         <ProductsScroll
-          name="Most Selling"
+          name="mostSelling"
           icon={<Sparkles />}
           products={Products}
           />
@@ -37,7 +36,7 @@ export default function Home() {
         </div>
 
         <ProductsScroll
-          name="Discounts"
+          name="discounts"
           icon={<BadgePercent />}
           products={Products}
         />

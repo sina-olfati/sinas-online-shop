@@ -67,6 +67,7 @@ export function ProductsScroll({ name, icon, products }: Data) {
 
   return (
     <div className="w-full flex flex-col mt-5 py-3 overflow-hidden">
+      
       <SectionHeading name={name} icon={icon} />
 
       <Edge>

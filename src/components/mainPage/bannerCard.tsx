@@ -2,25 +2,29 @@
 import Image from "next/image"
 import { Button } from "@nextui-org/react"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 // import { Logo } from "./menu/logo"
 
 
 const data = [
     {
         id:1,
-        name: "Gentlemens Wear",
+        name: "banner1",
         picture: "/banners/man3.png",
         link: "/products?gender=Male",
     },
     {
         id:2,
-        name: 'Ladies essentials',
+        name: 'banner2',
         picture: "/banners/lady4.jpg",
         link: "/products?gender=Female",
     }
 ]
 
 export function BannerCard () {
+
+    // Next-intl
+    const t = useTranslations('HomePage.staticBanners');
 
     return (
         <div className="w-full my-20 flex gap-5 flex-row justify-between items-center">
@@ -39,10 +43,10 @@ export function BannerCard () {
                             className="w-[100%] h-auto"
                         />
                     </div>
-                    <h2 className="font-bold text-xl text-white z-10">{card.name}</h2>
+                    <h2 className="font-bold text-xl text-white z-10">{t(card.name)}</h2>
 
                     <Link href={card.link}>
-                        <Button variant="shadow" color="primary" className="font-bold px-6">Start Shopping</Button>
+                        <Button variant="shadow" color="primary" className="font-bold px-6">{t('button')}</Button>
                     </Link>
 
                     {/* <div className="absolute right-8 bottom-6">

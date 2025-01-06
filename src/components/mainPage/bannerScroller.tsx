@@ -3,38 +3,40 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 
 const cards = [
   {
     pic: '/banners/man4.jpg',
-    text: "Unleash Your Inner Warrior",
+    text: "banner1.name",
     link: "/products?gender=Male",
-    buttonText: "Shop Gentlemen's Wear"
+    buttonText: "banner1.button"
   },
   {
     pic: '/banners/lady5.jpg',
-    text: "Elegance Meets Strength",
+    text: "banner2.name",
     link: "/products?gender=Female",
-    buttonText: "Shop Ladies' Wear"
+    buttonText: "banner2.button"
   },
   {
     pic: '/banners/lady10.jpg',
-    text: "Stay Stylish Every Season",
+    text: "banner3.name",
     link: "/products?seasons=Spring%2CSummer%2CFall%2CWinter",
-    buttonText: "Explore Seasonal Collections"
+    buttonText: "banner3.button"
   },
   {
     pic: '/banners/man4.jpg',
-    text: "Unleash Your Inner Warrior",
+    text: "banner1.name",
     link: "/products?gender=Male",
-    buttonText: "Shop Gentlemen's Wear"
+    buttonText: "banner1.button"
   }
 ]
 
 const buttons = [1, 2, 3]
 
 export function BannerScroller() {
+
   const [turn, setTurn] = useState(1);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null); // Ref to store the timeout ID
 
@@ -58,6 +60,10 @@ export function BannerScroller() {
       }
     };
   }, [turn]);
+
+
+  // Next-intl
+  const t = useTranslations('HomePage.scrollerBanners');
 
   return (
     <div className="w-full overflow-x-hidden relative shadow-md">
@@ -83,9 +89,9 @@ export function BannerScroller() {
 
             <div className="absolute left-10 flex flex-col gap-10 text-4xl p-10  bg-gradient-to-r from-primary/0">
               <div className="h-full w-1 bg-primary absolute left-0 top-0 rounded-full"></div>
-              <h2 className="drop-shadow-md">{card.text}</h2>
+              <h2 className="drop-shadow-md">{t(card.text)}</h2>
               <Link href={card.link}>
-                <Button className="w-fit text-white">{card.buttonText}</Button>
+                <Button className="w-fit text-white">{t(card.buttonText)}</Button>
               </Link>
             </div>
           </div>
