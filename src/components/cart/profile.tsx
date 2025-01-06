@@ -2,12 +2,15 @@ import Image from "next/image";
 import { Button } from "@nextui-org/react";
 import { DollarSignIcon, JapaneseYen, Pencil } from "lucide-react";
 import { useCartStore } from "@/src/hooks/useCartStore";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 
   
   export function Profile () {
     
+    // Next-intl
+    const t = useTranslations('Cart');
+
     const locale = useLocale()
 
     const { totalOriginalPrice, totalPrice } = useCartStore() 
@@ -15,16 +18,16 @@ import { useLocale } from "next-intl";
 
     const prices = [
         {
-            name: "Total",
+            name: "prices.total",
             function: Math.round(totalOriginalPrice() * 100) / 100,
             // function: totalOriginalPrice(),
         },
         {
-            name: "Your Cart",
+            name: "prices.cart",
             function: Math.round(totalPrice() * 100) / 100,
         },
         {
-            name: "Your Profit",
+            name: "prices.profit",
             function: Math.round((totalOriginalPrice() - totalPrice()) * 100) /100,
             // discountPercent: Math.round((totalOriginalPrice() - totalPrice())/totalOriginalPrice())
             discountPercent: Math.round(((totalOriginalPrice() - totalPrice())/totalOriginalPrice()) * 1000) / 10
@@ -56,14 +59,14 @@ import { useLocale } from "next-intl";
                 <div about="other images" className="w-full flex flex-col items-start gap-10 p-5">
 
                     <div className="flex gap-2 items-center justify-center">
-                        <h2 className="font-semibold text-lg">Harry Potter</h2>
+                        <h2 className="font-semibold text-lg">{t('name')}</h2>
                         <Pencil size={15} className="hover:text-primary transition-all cursor-pointer" />
                     </div>
 
                     <div className="flex gap-7 mb-5">
                         <ul className="flex flex-col gap-2">
                             {prices.map((item, index) => 
-                                <li key={item.name} className={`${index === 2 ? "text-primary" : null}`}>{item.name}:</li>
+                                <li key={item.name} className={`${index === 2 ? "text-primary" : null}`}>{t(item.name)}:</li>
                                 // <li key={item.name} className={index === 2 ? "text-primary" : null}>{item.name}:</li>
                             )}
                         </ul>
@@ -82,7 +85,7 @@ import { useLocale } from "next-intl";
                     </div>
 
                     <Button color="primary" variant="shadow" fullWidth isDisabled={totalPrice() ? false : true} className="font-semibold py-6">
-                        Confirm and Buy
+                        {t('button')}
                     </Button>
 
                 </div>
