@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import setGlobalColorTheme from "@/src/lib/theme-colors";
 import { ThemeProviderProps, useTheme } from "next-themes";
 // import { ThemeProviderProps } from "next-themes/dist/types";
