@@ -58,6 +58,13 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      screens: {
+        'mysm': { max: '639px' },  // Matches screens smaller than 640px
+        'mymd': { max: '767px', min: '639px' },  // Matches screens smaller than 768px
+        'mylg': { max: '1023px', min: '767px' }, // Matches screens smaller than 1024px
+        'myxl': { max: '1279px', min: '1023px' }, // Matches screens smaller than 1280px
+        'my2xl': { max: '1535px', min: '1279px' }, // Matches screens smaller than 1536px
+      },
     },
   },
   plugins: [require("tailwindcss-animate"), nextui()],

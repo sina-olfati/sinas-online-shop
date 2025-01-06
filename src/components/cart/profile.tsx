@@ -80,7 +80,7 @@ interface Product {
 
                     <div className="flex gap-2 items-center justify-center">
                         <h2 className="font-semibold text-lg">Harry Potter</h2>
-                        <Pencil size={15} className="text-primary hover:rotate-45 transition-all cursor-pointer" />
+                        <Pencil size={15} className="hover:text-primary transition-all cursor-pointer" />
                     </div>
 
                     <div className="flex gap-7 mb-5">
