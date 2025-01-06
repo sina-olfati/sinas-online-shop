@@ -65,7 +65,7 @@ const Menu = () => {
       <div className="h-16 w-full mysm:flex items-center justify-around px-[20%] hidden">
 
         {mobileMode.map((button) => 
-          <ButtonWrapper name={button.name}>
+          <ButtonWrapper key={button.name} name={button.name}>
             {button.button}
           </ButtonWrapper>
         )}

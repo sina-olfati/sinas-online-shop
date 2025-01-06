@@ -8,7 +8,7 @@ import { SectionHeading } from "../sectionHeading";
 // icon
 import { ScanLine } from "lucide-react";
 import { Edge } from "./edge";
-import { useTranslations } from "next-intl";
+
 
 const category = [
   "1",
@@ -74,8 +74,6 @@ export function Categories() {
     }
   };
 
-  // Next-intl
-  const t = useTranslations('HomePage');
 
   return (
     <div className="w-full overflow-hidden relative">

@@ -12,6 +12,10 @@ interface ProductDataProps {
 }
 
 export function AddToCartButton({ productId }: ProductDataProps) {
+
+  // Next-intl
+  const t = useTranslations();
+
   const product: ProductType | undefined = Products.find((item) => item.id === productId);
 
   const addItem = useCartStore((state) => state.addItem);
@@ -30,12 +34,9 @@ export function AddToCartButton({ productId }: ProductDataProps) {
       </div>
     );
   }
-
+  
   const quantity = getItemQuantity(product.id);
 
-
-  // Next-intl
-  const t = useTranslations();
 
   return (
     <div className="relative flex items-center justify-center">
