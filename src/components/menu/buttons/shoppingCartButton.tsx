@@ -17,7 +17,7 @@ export function ShoppingCartButton() {
           variant="ghost"
           size="icon"
         //   onClick={() => null}
-        className="hover:bg-[#00000010] dark:hover:bg-[#ffffff10] hover:shadow-sm transition-all text-secondary-foreground mysm:text-red-500"
+        className="hover:bg-[#00000010] dark:hover:bg-[#ffffff10] hover:shadow-sm transition-all"
         >
           <ShoppingCart
             className="h-[1.2rem] w-[1.2rem] scale-100 transition-all"
