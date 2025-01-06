@@ -13,11 +13,11 @@
       "language": "Language",
       "theme": "Theme",
       "cart": "Cart",
-      "Search": "Search"
+      "search": "Search"
     }
   },
   "Footer": {
-    "offer" : {
+    "offer": {
       "title": "Expert Styling Advice – Find Your Signature Look!",
       "explanation": "Let our professional stylists guide you to outfits that bring out your best. With quick and personalized styling tips, shop confidently and create a wardrobe that truly reflects your style. We're here to help you make the perfect choice!",
       "button": "Get Styling Tips"
@@ -25,53 +25,53 @@
     "buttons": {
       "shop": "Shop",
       "aboutUs": "About Us",
-      "Contact": "Contact",
-      "FAQs": "FAQs",
+      "contact": "Contact",
+      "faqs": "FAQs",
       "return": "Returns & Refunds",
       "shipping": "Shipping Information",
       "size": "Size Guide",
       "track": "Track Order",
       "privacy": "Privacy Policy",
-      "terms": "Privacy Policy",
+      "terms": "Terms & Conditions",
       "careers": "Careers",
       "blog": "Blog"
     },
-    "shoptext": "Elevate your style with our exclusive collection of men's and women's fashion. Discover the perfect pieces to complement your wardrobe and make a lasting impression."
+    "shopText": "Elevate your style with our exclusive collection of men's and women's fashion. Discover the perfect pieces to complement your wardrobe and make a lasting impression."
   },
-    "HomePage": {
-      "scrollerBanners": {
-        "banner1":{
-          "name": "Unleash Your Inner Warrior",
-          "button": "Shop Gentlemen's Wear"
-        },
-        "banner2":{
-          "name": "Elegance Meets Strength",
-          "button": "Shop Ladies' Wear"
-        },
-        "banner3":{
-          "name": "Stay Stylish Every Season",
-          "button": "Explore Seasonal Collections"
-        }
+  "HomePage": {
+    "scrollerBanners": {
+      "banner1": {
+        "name": "Unleash Your Inner Warrior",
+        "button": "Shop Gentlemen's Wear"
       },
-      "headers": {
-        "categories": "Categories",
-        "mostSelling": "Most Selling",
-        "discounts": "Lovely Discounts"
+      "banner2": {
+        "name": "Elegance Meets Strength",
+        "button": "Shop Ladies' Wear"
       },
-      "staticBanners": {
-        "banner1": "Gentlemens Wear",
-        "banner2": "Ladies essentials",
-        "button": "Start Shopping"
+      "banner3": {
+        "name": "Stay Stylish Every Season",
+        "button": "Explore Seasonal Collections"
       }
     },
-  "products": {
+    "headers": {
+      "categories": "Categories",
+      "mostSelling": "Most Selling",
+      "discounts": "Lovely Discounts"
+    },
+    "staticBanners": {
+      "banner1": "Gentlemen's Wear",
+      "banner2": "Ladies' Essentials",
+      "button": "Start Shopping"
+    }
+  },
+  "Products": {
     "filters": {
       "header": "Filters",
       "seasons": {
-        "spring": "spring",
+        "spring": "Spring",
         "summer": "Summer",
-        "fall": "fall",
-        "winter": "winter"
+        "fall": "Fall",
+        "winter": "Winter"
       },
       "gender": {
         "men": "Men",
@@ -84,14 +84,14 @@
     "reorder": {
       "default": "Default",
       "sale": "Most Selling",
-      "view": "Most Views",
+      "view": "Most Viewed",
       "discount": "Best Discounts",
       "cheap": "Cheapest",
       "expensive": "Most Expensive"
     }
   },
   "Product": {
-    "guarantie": "Provider of this product guaranties the quality",
+    "guarantee": "Provider of this product guarantees the quality",
     "bottom": {
       "details": "Details",
       "comments": "Comments"

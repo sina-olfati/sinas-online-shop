@@ -13,7 +13,7 @@
       "language": "言語",
       "theme": "テーマ",
       "cart": "カート",
-      "Search": "検索"
+      "search": "検索"
     }
   },
   "Footer": {
@@ -25,8 +25,8 @@
     "buttons": {
       "shop": "ショップ",
       "aboutUs": "私たちについて",
-      "Contact": "お問い合わせ",
-      "FAQs": "よくある質問",
+      "contact": "お問い合わせ",
+      "faqs": "よくある質問",
       "return": "返品と返金",
       "shipping": "配送情報",
       "size": "サイズガイド",
@@ -36,7 +36,7 @@
       "careers": "採用情報",
       "blog": "ブログ"
     },
-    "shoptext": "メンズ・レディースのファッションでスタイルを格上げしましょう。ワードローブを引き立て、印象的な一着を見つけてください。"
+    "shopText": "メンズ・レディースのファッションでスタイルを格上げしましょう。ワードローブを引き立て、印象的な一着を見つけてください。"
   },
   "HomePage": {
     "scrollerBanners": {
@@ -64,7 +64,7 @@
       "button": "ショッピングを始める"
     }
   },
-  "products": {
+  "Products": {
     "filters": {
       "header": "フィルター",
       "seasons": {
@@ -91,7 +91,7 @@
     }
   },
   "Product": {
-    "guarantie": "この商品の提供者は品質を保証します",
+    "guarantee": "この商品の提供者は品質を保証します",
     "bottom": {
       "details": "詳細",
       "comments": "コメント"

@@ -6,6 +6,7 @@ import { Diamond, Sparkles } from "lucide-react";
 import { Send, Phone, Linkedin, Mail, Github } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
+import { useTranslations } from "next-intl";
 
 
 const socials = [
@@ -39,26 +40,29 @@ const socials = [
 
 const lists = [
     [
-        { name: "Shop", href: "/shop" },
-        { name: "About Us", href: "/about-us" },
-        { name: "Contact", href: "/contact" },
-        { name: "FAQs", href: "/faq" },
+        { name: "buttons.shop", href: "/shop" },
+        { name: "buttons.aboutUs", href: "/about-us" },
+        { name: "buttons.contact", href: "/contact" },
+        { name: "buttons.faqs", href: "/faq" },
     ],
     [
-        { name: "Returns & Refunds", href: "/returns" },
-        { name: "Shipping Information", href: "/shipping" },
-        { name: "Size Guide", href: "/size-guide" },
-        { name: "Track Order", href: "/track-order" },
+        { name: "buttons.return", href: "/returns" },
+        { name: "buttons.shipping", href: "/shipping" },
+        { name: "buttons.size", href: "/size-guide" },
+        { name: "buttons.track", href: "/track-order" },
     ],
     [
-        { name: "Privacy Policy", href: "/privacy-policy" },
-        { name: "Terms of Service", href: "/terms" },
-        { name: "Careers", href: "/careers" },
-        { name: "Blog", href: "/blog" },
+        { name: "buttons.privacy", href: "/privacy-policy" },
+        { name: "buttons.terms", href: "/terms" },
+        { name: "buttons.careers", href: "/careers" },
+        { name: "buttons.blog", href: "/blog" },
     ],
 ];
 
 export function Footer () {
+
+    // Next-intl
+    const t = useTranslations('Footer');
 
     return (
         // <div className="bg-secondary-foreground/90">
@@ -70,12 +74,11 @@ export function Footer () {
                     <Image src={'/footer/clothes.png'} className="w-full scale-125 relative bottom-[50%] drop-shadow-[-10px_10px_5px_rgba(0,0,0,0.25)]" alt="footer" width={0}  height={0} sizes="100vw" />
                 </div>
                 <div className="w-[60%] flex flex-col items-start justify-center gap-3 pl-20 text-secondary-foreground">
-                    <h2 className="font-bold text-primary">Expert Styling Advice – Find Your Signature Look!</h2>
-                    <p className="text-sm pb-5">Let our professional stylists guide you to outfits that bring out your best. With quick and personalized styling tips, shop confidently and create a wardrobe that truly reflects your style. We&apos;re here to help you make the perfect choice!</p>
+                    <h2 className="font-bold text-primary">{t('offer.title')}</h2>
+                    <p className="text-sm pb-5">{t('offer.explanation')}</p>
                     <Button variant="shadow" color="primary" className="font-bold">
                         <Sparkles />
-                        {/* Book Your Consultation */}
-                        Get Styling Tips
+                        {t('offer.button')}
                     </Button>
                 </div>
             </div>
@@ -89,7 +92,7 @@ export function Footer () {
                     <div className="scale-150 h-10 relative r-5">
                         <Logo />
                     </div>
-                    <p className="mt-4 text-sm">Elevate your style with our exclusive collection of men&apos;s and women&apos;s fashion. Discover the perfect pieces to complement your wardrobe and make a lasting impression.</p>
+                    <p className="mt-4 text-sm">{t('shopText')}</p>
 
                     <div about="social" className="mt-4 flex gap-4">
 
@@ -110,7 +113,7 @@ export function Footer () {
                                 <Link  key={index} href={link.href}>
                                     <li className="flex gap-2 items-center group transition-all">
                                         <Diamond strokeWidth={4} width={13} fill="transparent" className="text-primary group-hover:fill-primary transition-all" />
-                                        {link.name}
+                                        {t(link.name)}
                                     </li>
                                 </Link>
                             ))}
