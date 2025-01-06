@@ -3,7 +3,7 @@
     "logo": "ショップ",
     "searchBar": "検索...",
     "colors": {
-      "zink": "ジンク",
+      "zinc": "ジンク",
       "rose": "ローズ",
       "blue": "ブルー",
       "green": "グリーン",
@@ -105,5 +105,6 @@
       "profit": "あなたの利益"
     },
     "button": "確認して購入"
-  }
+  },
+  "AddToCartButton": "カートに追加"
 }

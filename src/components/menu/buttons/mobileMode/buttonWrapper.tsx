@@ -1,4 +1,5 @@
 'use client'
+import { useTranslations } from "next-intl";
 import { useState, useRef, useEffect } from "react";
 
 interface ButtonWrapperProps {
@@ -32,6 +33,10 @@ export function ButtonWrapper({ children, name }: ButtonWrapperProps) {
     };
   }, []);
 
+
+  // Next-intl
+  const t = useTranslations('Menu.mobile');
+
   return (
     <div className="rounded relative group transition-all flex items-center justify-center">
       <div
@@ -44,7 +49,7 @@ export function ButtonWrapper({ children, name }: ButtonWrapperProps) {
       <p
         className={`absolute bottom-[-50px] ${tapped ? "bottom-[-7px]" : ""} transition-all duration-300 text-xs font-thin`}
       >
-        {name}
+        {t(name)}
       </p>
     </div>
   );

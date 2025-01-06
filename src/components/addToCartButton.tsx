@@ -4,6 +4,7 @@ import Products from "../../data/products.json";
 import { Minus, Percent, Plus, ShoppingCart, Trash2 } from "lucide-react";
 import { useCartStore } from "../hooks/useCartStore";
 import { ProductType } from "../types/product";
+import { useTranslations } from "next-intl";
 
 
 interface ProductDataProps {
@@ -32,6 +33,10 @@ export function AddToCartButton({ productId }: ProductDataProps) {
 
   const quantity = getItemQuantity(product.id);
 
+
+  // Next-intl
+  const t = useTranslations();
+
   return (
     <div className="relative flex items-center justify-center">
       {quantity === 0 ? (
@@ -52,7 +57,7 @@ export function AddToCartButton({ productId }: ProductDataProps) {
             }
           >
             <ShoppingCart />
-            Add To Cart
+            {t("AddToCartButton")}
           </Button>
           {product.discount_percent > 0 && (
             <Chip

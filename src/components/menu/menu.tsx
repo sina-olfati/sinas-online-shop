@@ -17,6 +17,15 @@ import { MobileSearch } from "./buttons/mobileMode/mobileSearch";
 import { ButtonWrapper } from "./buttons/mobileMode/buttonWrapper";
 
 const Menu = () => {
+
+  const mobileMode = [
+    {name: "language", button: <LangToggle />},
+    {name: "theme", button: <ThemeModeToggle />},
+    {name: "cart", button: <ShoppingCartButton />},
+    {name: "search", button: <MobileSearch />}
+  ]
+
+
   return (
     <div
       className="w-[100vw] flex flex-col bg-accent/90 fixed top-0 mysm:top-auto mysm:bottom-0
@@ -54,15 +63,15 @@ const Menu = () => {
 
       {/* mysm */}
       <div className="h-16 w-full mysm:flex items-center justify-around px-[20%] hidden">
-        <ButtonWrapper name="Language">
-          <LangToggle />
-        </ButtonWrapper>
-        <ThemeModeToggle />
-        <ShoppingCartButton />
-        <MobileSearch />
+
+        {mobileMode.map((button) => 
+          <ButtonWrapper name={button.name}>
+            {button.button}
+          </ButtonWrapper>
+        )}
+  
         <ThemeColorToggle />
-        {/* <SearchInput /> */}
-        {/* <Logo /> */}
+
       </div>
     </div>
   );

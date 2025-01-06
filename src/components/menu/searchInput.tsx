@@ -4,6 +4,7 @@ import { Button, Input } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { SearchDropDown } from "./searchDropDown";
+import { useTranslations } from "next-intl";
 
 export function SearchInput() {
   const router = useRouter();
@@ -34,6 +35,10 @@ export function SearchInput() {
     router.push(`/products?${query.toString()}`);
   };
 
+
+  // Next-intl
+  const t = useTranslations('Menu');
+
   return (
     <div className="w-[100%] relative">
       <div className="w-[100%]">
@@ -46,7 +51,7 @@ export function SearchInput() {
               variant="faded"
               value={phrase}
               onChange={(e) => setPhrase(e.target.value)}
-              placeholder="Search..."
+              placeholder={t('searchBar')}
               className="!rounded-0"
               onFocus={() => setFocused(true)}
               onBlur={() => setFocused(false)}

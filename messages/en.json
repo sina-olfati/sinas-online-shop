@@ -3,7 +3,7 @@
     "logo": "Online Shop",
     "searchBar": "Search...",
     "colors": {
-      "zink": "Zink",
+      "zinc": "Zink",
       "rose": "Rose",
       "blue": "Blue",
       "green": "Green",
@@ -105,5 +105,6 @@
       "profit": "Your Profit"
     },
     "button": "Confirm and Buy"
-  }
+  },
+  "AddToCartButton": "Add To Cart"
 }
