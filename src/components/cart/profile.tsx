@@ -96,7 +96,7 @@ interface Product {
                                     className={`font-semibold ${index === 2 ? "text-primary" : null} flex items-center  gap-1`}
                                 >
                                     {locale === "en" ? <DollarSignIcon size={15} /> : <JapaneseYen size={15} /> }
-                                    {locale === "en" ? item.function : item.function*100}
+                                    {locale === "en" ? item.function : Math.round(item.function*100)}
                                     {item.discountPercent ? ` (${item.discountPercent}%)` : null} 
                                 </li>
                             )}
