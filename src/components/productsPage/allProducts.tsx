@@ -10,7 +10,6 @@ import { useSearchParams } from "next/navigation"; // to get query params
 import { Filter, ArrowDownNarrowWide, ArrowDownWideNarrow, Eye, ChartNoAxesCombined, BadgePercent, SlidersHorizontal } from "lucide-react";
 import { ProductType } from "@/src/types/product";
 import { ModalFilters } from "./filters/modalFilters";
-import { Logo } from "../menu/logo";
 
 
 export function AllProducts() {

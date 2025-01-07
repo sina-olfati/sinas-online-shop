@@ -1,7 +1,7 @@
 import { Button, Chip } from "@nextui-org/react";
 import Products from "../../data/products.json";
 // icons
-import { Minus, Percent, Plus, ShoppingCart, Trash2 } from "lucide-react";
+import { Minus, Plus, ShoppingCart, Trash2 } from "lucide-react";
 import { useCartStore } from "../hooks/useCartStore";
 import { ProductType } from "../types/product";
 import { useTranslations } from "next-intl";

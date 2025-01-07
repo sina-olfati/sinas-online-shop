@@ -1,15 +1,8 @@
 'use client'
 import { AllProducts } from "@/src/components/productsPage/allProducts";
 import { Filters } from "@/src/components/productsPage/filters/filters";
-import { ModalFilters } from "@/src/components/productsPage/filters/modalFilters";
-import { Button, useDisclosure } from "@nextui-org/react";
-import { SlidersHorizontal } from "lucide-react";
 
 export default function Products() {
-
-  // Modal
-  const {isOpen, onOpen, onOpenChange} = useDisclosure();
-
 
   return (
     <div className="mt-24 mysm:mt-10 flex items-start justify-center gap-10 p-10 mymd:p-0 mymd:px-5 mysm:px-0">
