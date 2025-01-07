@@ -52,7 +52,7 @@ export function ProductData ({product}: ProductDataProps) {
                             <CardBody className="bg-secondary">
                                 <ul>
                                     {details.map((data) => 
-                                        <li key={data.name} className="flex gap-2 p-3">
+                                        <li key={data.name} className="flex gap-2 p-3 mysm:text-sm">
                                             <h3 className="font-semibold">{t(data.name)}:</h3>
                                             <p className="opacity-75">{data.answer}</p>
                                         </li>

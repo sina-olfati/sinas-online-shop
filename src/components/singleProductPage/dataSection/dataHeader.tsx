@@ -51,7 +51,7 @@ export function DataHeader ({product}: ProductDataProps) {
                     </div>
                 </div>
                 
-                <div className="w-[60%] mysm:w-full mx-auto">
+                <div className="w-[60%] mysm:w-full mx-auto mysm:scale-80">
                     <AddToCartButton productId={product.id} />
                 </div>
                 
