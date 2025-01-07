@@ -36,7 +36,7 @@ export function MobileSearch() {
       >
         <ModalContent
           about="images"
-          className="w-[100%] h-72 bg-transparent items-center justify-start shadow-sm"
+          className="w-[100%] mt-16 h-72 bg-transparent items-center justify-start shadow-sm"
         >
           {() => (
             <>

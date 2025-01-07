@@ -64,7 +64,7 @@ export function AddToCartButton({ productId }: ProductDataProps) {
             <Chip
               color="danger"
               variant="shadow"
-              endContent={<Percent size={25} className="relative top-[0.5px]" />}
+              // endContent={<Percent size={25} className="relative top-[0.5px]" />}
               className="absolute top-[-15px] right-[-25px] scale-75 px-2 py-4 font-bold text-2xl z-50"
             >
               {product.discount_percent}%

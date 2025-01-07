@@ -87,9 +87,9 @@ export function BannerScroller() {
           <div key={index} className="w-[100vw] h-full overflow-hidden flex items-center justify-center relative">
             <Image width={0} height={0} sizes="100vw" src={card.pic} alt="banner card" className="w-[100vw] h-auto brightness-90"/>
 
-            <div className="absolute left-10 flex flex-col gap-10 text-4xl p-10  bg-gradient-to-r from-primary/0">
+            <div className="absolute left-10 mysm:left-[-50px] flex flex-col gap-10 text-4xl p-10 mysm:scale-[0.6]">
               <div className="h-full w-1 bg-primary absolute left-0 top-0 rounded-full"></div>
-              <h2 className="drop-shadow-md">{t(card.text)}</h2>
+              <h2 className="drop-shadow-md mysm:text-[1.5rem]">{t(card.text)}</h2>
               <Link href={card.link}>
                 <Button className="w-fit text-white">{t(card.buttonText)}</Button>
               </Link>

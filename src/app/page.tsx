@@ -1,5 +1,4 @@
 // components
-import Menu from "../components/menu/menu";
 import { BannerScroller } from "../components/mainPage/bannerScroller";
 import { Categories } from "../components/mainPage/categories";
 import { ProductsScroll } from "../components/mainPage/productsScroll";
@@ -15,13 +14,12 @@ export default function Home() {
   // const t = useTranslations('HomePage.headers');
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden mylg:mt-24 mysm:mt-0">
         {/* {t('title')} */}
 
-      <Menu />
       <BannerScroller />
 
-      <div className="px-32">
+      <div className="px-32 mysm:px-0">
 
         <Categories />
 
