@@ -64,6 +64,7 @@ export default {
         'mylg': { max: '1023px' },
         'mymd': { max: '767px' },
         'mysm': { max: '639px' },
+        'myxs': { max: '450px' },
         // 'mysm': { max: '639px' },  // Matches screens smaller than 640px
         // 'mymd': { max: '767px', min: '639px' },  // Matches screens smaller than 768px
         // 'mylg': { max: '1023px', min: '767px' }, // Matches screens smaller than 1024px
