@@ -30,7 +30,10 @@ const singleOptions = [
   { key: "Female", label: "women" },
 ];
 
+
 export function Filters() {
+
+
   const searchParams = useSearchParams(); // Access the query parameters
 
   const [categorySelected, setCategorySelected] = useState<string[]>([]);

@@ -4,14 +4,16 @@ import { useTranslations } from "next-intl";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
+interface Filters {
+  categories: string[];
+  seasons: string[];
+  gender?: string;
+  price?: number[];
+  discount: boolean;
+}
+
 interface FilterButtonProps {
-  filters: {
-    categories: string[];
-    seasons: string[];
-    gender?: string;
-    price?: number[];
-    discount: boolean;
-  };
+  filters: Filters;
 }
 
 export function FilterButton({ filters }: FilterButtonProps) {
@@ -116,6 +118,7 @@ export function FilterButton({ filters }: FilterButtonProps) {
   
     // Redirect to the updated query
     router.push(`/products?${query.toString()}`);
+
   };
 
 
