@@ -129,7 +129,7 @@ export function AllProducts() {
       </div>
 
       {/* Products List */}
-      <div className="flex flex-wrap gap-4 items-start justify-start">
+      <div className="flex flex-wrap gap-4 mysm:gap-2 items-start justify-start mymd:justify-center">
         {sortedProducts.length > 0 ? (
           sortedProducts.map((item) => (
             <Link key={item.id} href={`/products/${item.name.toLowerCase().replace(/\s+/g, '-')}`} className="mb-">
