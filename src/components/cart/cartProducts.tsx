@@ -13,10 +13,7 @@ export function CartProducts() {
   const cart = useCartStore();
 
   return (
-    <div className="flex flex-col gap-5 p-5">
-      {/* Price Filter */}
-      <div>
-      </div>
+    <div className="flex flex-col gap-5 p-5 w-full">
 
       {/* Products List */}
       <div className="flex flex-col gap-4 items-start justify-start">
@@ -24,12 +21,12 @@ export function CartProducts() {
           cart.cart.map((item) => (
             <div
               key={item.id}
-              className="h-28 w-full bg-secondary p-2 flex items-center justify-between rounded-lg"
+              className="h-28 mysm:h-auto w-full bg-secondary p-2 mysm:p-3 flex mysm:flex-col items-center mysm:items-start justify-between rounded-lg"
             >
               {/* Product Link */}
               <Link
                 href={`/products/${item.name.toLowerCase().replace(/\s+/g, '-')}`}
-                className="flex items-center gap-5 shrink-0"
+                className="mysm:h-24 flex items-center mysm:justify-start gap-5 shrink-0"
               >
                 <Image src={item.image} className="w-24 rounded-lg" width={1000} height={1000} alt="product image" />
 
@@ -51,8 +48,8 @@ export function CartProducts() {
               </Link>
 
               {/* Add to Cart Button */}
-              <div className="w-[35%] scale-100 flex items-center justify-end pr-5">
-                <div className="w-full scale-100">
+              <div className="w-[35%] mysm:w-[80%] mysm:h-16 mysm:mt-5 mysm:mx-auto flex items-center pr-5 mysm:pr-0 mysm:scale-75">
+                <div className="w-full">
                     <AddToCartButton productId={item.id} />
                 </div>
               </div>
