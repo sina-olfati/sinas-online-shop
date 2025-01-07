@@ -6,6 +6,7 @@ import {
 } from "@nextui-org/modal";
 import { Button } from "@nextui-org/react";
 import { X } from "lucide-react";
+import { Filters } from "./filters";
 
 interface ModalProps {
   isOpen: boolean;
@@ -24,9 +25,9 @@ export function ModalFilters({isOpen, onOpenChange }: ModalProps) {
           <>
             <ModalHeader
               about="main image"
-              className="w-full flex items-center justify-center"
+              className="w-full flex items-center justify-center px-5"
             >
-              
+              <Filters />
             </ModalHeader>
 
             <ModalBody
@@ -35,7 +36,7 @@ export function ModalFilters({isOpen, onOpenChange }: ModalProps) {
             >
 
               <Button
-                className="absolute top-1 right-3 opacity-50"
+                className="absolute top-14 right-10 opacity-50"
                 color="danger"
                 variant="shadow"
                 isIconOnly
