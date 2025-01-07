@@ -14,11 +14,7 @@ import {
   }
   
   export function ModalFilters({ isOpen, onOpenChange }: ModalProps) {
-  
-    const closeHandler = (onClose: () => void) => {
-      console.log("Modal is closing...");
-      onClose();
-    };
+
   
     return (
       <Modal size="lg" placement="center" isOpen={isOpen} onOpenChange={onOpenChange} hideCloseButton>

@@ -92,7 +92,7 @@ export function Filters() {
       <Divider />
 
       <div className="flex items-center gap-3">
-        <p>{t('discount')}</p>
+        <p className="mysm:text-sm">{t('discount')}</p>
         <Switch
           isSelected={discount}
           onChange={(e) => setDiscount(e.target.checked)}
