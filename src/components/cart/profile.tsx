@@ -35,7 +35,7 @@ import { useLocale, useTranslations } from "next-intl";
     ]
 
     return (
-        <div className="bg-secondary shadow-md flex flex-col gap-5 rounded-2xl w-full">
+        <div className="bg-secondary shadow-md flex flex-col gap-5 rounded-2xl w-full mysm:mb-16">
 
             <div about="images" className="flex flex-col gap-5">
 

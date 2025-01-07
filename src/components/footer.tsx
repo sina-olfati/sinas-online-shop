@@ -67,7 +67,7 @@ export function Footer () {
     return (
         // <div className="bg-secondary-foreground/90">
         // <div className="bg-primary/30 relative mt-96 flex flex-col items-center">
-        <div className="bg-secondary-foreground/90 mysm:bg-transparent dark:bg-secondary/70 mysm:dark:bg-transparent text-white relative mt-96 flex flex-col items-center">
+        <div className="bg-secondary-foreground/90 mysm:bg-transparent dark:bg-secondary/70 mysm:dark:bg-transparent text-white relative mt-96 mysm:mt-72 flex flex-col items-center">
 
             <div about="top" className="rounded-3xl flex mysm:flex-col mysm:items-center mysm:justify-center px-10 mysm:pb-10 w-[80%] mysm:w-[90%] aspect-[40/10] mysm:aspect-auto absolute mysm:relative bottom-[80%] mysm:bottom-24 sm bg-secondary shadow-lg">
                 <div className="w-[40%] mysm:w-[80%] h-full relative mysm:absolute mysm:top-[-60%] myxs:top-[-42%]">

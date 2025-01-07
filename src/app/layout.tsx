@@ -8,6 +8,7 @@ import ThemeDataProvider from "@/src/context/theme-data-provider";
 import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages} from 'next-intl/server';
 import Menu from "../components/menu/menu";
+import { Footer } from "../components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,6 +50,7 @@ export default async function RootLayout({
 
               <Menu />
               {children}
+              <Footer />
               
             </ThemeDataProvider>
           </NextThemesProvider>

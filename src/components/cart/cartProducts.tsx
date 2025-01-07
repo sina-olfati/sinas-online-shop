@@ -13,7 +13,7 @@ export function CartProducts() {
   const cart = useCartStore();
 
   return (
-    <div className="flex flex-col gap-5 p-5 w-full">
+    <div className="flex flex-col gap-5 p-5 mysm:p-0 w-full">
 
       {/* Products List */}
       <div className="flex flex-col gap-4 items-start justify-start">
