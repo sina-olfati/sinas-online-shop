@@ -76,7 +76,7 @@ export function Categories() {
 
 
   return (
-    <div className="w-full overflow-hidden relative">
+    <div className="w-full overflow-hidden relative mysm:mt-10">
 
       <SectionHeading name="categories" icon={<ScanLine />} />
 

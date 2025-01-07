@@ -19,7 +19,7 @@ export default function Home() {
 
       <BannerScroller />
 
-      <div className="px-32 mysm:px-0">
+      <div className="px-32 mylg:px-0">
 
         <Categories />
 
