@@ -1,5 +1,8 @@
+'use client'
 import { AllProducts } from "@/src/components/productsPage/allProducts";
 import { Filters } from "@/src/components/productsPage/filters/filters";
+import { Button } from "@nextui-org/react";
+import { SlidersHorizontal } from "lucide-react";
 
 export default function Products() {
   return (
@@ -11,6 +14,14 @@ export default function Products() {
 
       <div about="products" className="w-full h-full mysm:mb-24">
         <AllProducts />
+      </div>
+
+      <div className="hidden mymd:flex fixed top-10 right-5">
+        <Button variant="solid" color="primary" isIconOnly size="lg" className="">
+          <SlidersHorizontal />
+        </Button>
+
+        
       </div>
 
     </div>
