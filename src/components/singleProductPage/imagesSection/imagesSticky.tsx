@@ -18,11 +18,11 @@ export function ImagesSticky ({product}: ImagesStickyProps) {
 
 
     return (
-        <div className="bg-secondary shadow-md p-5 flex flex-col gap-5 rounded-2xl w-full">
+        <div className="bg-secondary shadow-md mymd:shadow p-5 mylg:p-3 flex rounded-2xl w-full">
 
-            <div about="images" className="flex flex-col gap-5">
+            <div about="images" className="flex flex-col mymd:flex-row mysm:flex-col gap-5">
 
-                <div about="main image">
+                <div about="main image" className="mymd:w-[50%] mysm:w-full">
                     <Image 
                         src={product.images[hoveredImage]} 
                         className="w-full cursor-pointer rounded-xl shadow-sm" 
@@ -33,11 +33,11 @@ export function ImagesSticky ({product}: ImagesStickyProps) {
                     />
                 </div>
 
-                <div about="other images" className="w-full flex items-center justify-center flex-wrap">
+                <div about="other images" className="w-full mymd:w-[50%] mysm:w-full flex items-center justify-center mymd:justify-around mysm:justify-center flex-wrap">
                     {product.images.map((image, index) => 
                         <div 
                             key={index} 
-                            className="px-2 cursor-pointer"
+                            className="px-2 mymd:p-0 mysm:p-1 cursor-pointer mymd:w-[45%] mysm:w-auto aspect-[1/1]"
                             onMouseOver={() => setHoveredImage(index)}
                             onMouseLeave={() => setHoveredImage(0)}
                             onTouchEndCapture={() => setHoveredImage(index)}
@@ -46,7 +46,7 @@ export function ImagesSticky ({product}: ImagesStickyProps) {
                         >
                             <Image 
                                 src={image} 
-                                className="w-16 rounded-md shadow" 
+                                className="w-16 mymd:w-full mysm:w-16 rounded-md shadow" 
                                 width={1000} 
                                 height={1000} 
                                 alt="product image"
