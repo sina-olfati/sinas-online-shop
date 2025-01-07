@@ -66,7 +66,7 @@ export function ProductsScroll({ name, icon, products }: Data) {
   const locale = useLocale();
 
   return (
-    <div className="w-full flex flex-col mt-5 py-3 overflow-hidden">
+    <div className="w-full flex flex-col mt-5 mysm:mt-0 mysm:mb-6 py-3 overflow-hidden">
       
       <SectionHeading name={name} icon={icon} />
 
