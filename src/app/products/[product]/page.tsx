@@ -28,7 +28,7 @@ export default function Product() {
   }
 
   return (
-    <div className="mt-24 mysm:mt-0 flex mymd:flex-col items-start mymd:items-center justify-center gap-10 mylg:gap-5 p-10">
+    <div className="mt-24 mysm:mt-0 flex mymd:flex-col items-start mymd:items-center justify-center gap-10 mylg:gap-5 p-10 mysm:px-5">
       {/* <div about="filters" className="sticky top-24 w-[30%] h-full flex shring-0"> */}
       <div about="filters" className="sticky mymd:relative top-28 mymd:top-0 w-96 mylg:w-60 mymd:w-fit h-full flex shrink-0">
         <ImagesSticky product={product} />
