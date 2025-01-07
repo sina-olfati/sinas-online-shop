@@ -22,7 +22,7 @@ export default function Products() {
         <AllProducts />
       </div>
 
-      <div className="hidden mymd:flex fixed top-32 mysm:top-6 right-6">
+      {/* <div className="hidden mymd:flex fixed top-32 mysm:top-6 right-6">
         <Button 
           isIconOnly 
           variant="solid" 
@@ -37,7 +37,7 @@ export default function Products() {
           isOpen={isOpen}
           onOpenChange={onOpenChange}
         />
-      </div>
+      </div> */}
 
     </div>
   );

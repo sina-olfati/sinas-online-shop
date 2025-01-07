@@ -4,14 +4,17 @@ import Products from "../../../data/products.json";
 import { ProductCard } from "../productCard";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
-import { Select, SelectItem } from "@nextui-org/react";
+import { Button, Select, SelectItem, useDisclosure } from "@nextui-org/react";
 import { useSearchParams } from "next/navigation"; // to get query params
 // icons
-import { Filter, ArrowDownNarrowWide, ArrowDownWideNarrow, Eye, ChartNoAxesCombined, BadgePercent } from "lucide-react";
+import { Filter, ArrowDownNarrowWide, ArrowDownWideNarrow, Eye, ChartNoAxesCombined, BadgePercent, SlidersHorizontal } from "lucide-react";
 import { ProductType } from "@/src/types/product";
+import { ModalFilters } from "./filters/modalFilters";
+import { Logo } from "../menu/logo";
 
 
 export function AllProducts() {
+
   const [reorderFilter, setReorderFilter] = useState<string>("");
 
   // Lang
@@ -21,6 +24,9 @@ export function AllProducts() {
   const onMouseLeave = () => {
     setHover(null);
   };
+
+  // Modal
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
   // Get query parameters from the URL
   const searchParams = useSearchParams();
@@ -94,39 +100,65 @@ export function AllProducts() {
   const t = useTranslations('Products.reorder');
 
   return (
-    <div className="flex flex-col gap-5 p-5">
+    <div className="flex flex-col gap-5 p-5 mysm:p-0 mysm:mt-12">
+
+
       {/* Price Filter */}
-      <div>
-        <Select
-          disableSelectorIconRotation
-          value={reorderFilter}
-          onChange={(e) => setReorderFilter(e.target.value)}
-          className="w-36"
-          label=""
-          aria-label="price filter"
-          labelPlacement="outside"
-          placeholder={t('default')}
-          selectorIcon={
-            reorderFilter === "" ? <Filter /> :
-            reorderFilter === "sell" ? <ChartNoAxesCombined /> :
-            reorderFilter === "view" ? <Eye /> :
-            reorderFilter === "discount" ? <BadgePercent /> :
-            reorderFilter === "cheap" ? <ArrowDownNarrowWide /> : <ArrowDownWideNarrow />
-          }
-        >
-          {[
-            { key: "sell", label: "sale" },
-            { key: "view", label: "view" },
-            { key: "discount", label: "discount" },
-            { key: "cheap", label: "cheap" },
-            { key: "expensive", label: "expensive" },
-          ].map((filter) => (
-            <SelectItem key={filter.key} value={filter.key}>
-              {t(filter.label)}
-            </SelectItem>
-          ))}
-        </Select>
+      <div className="mysm:fixed top-0 mysm:w-full mysm:bg-primary flex justify-between mysm:p-1.5 mysm:px-5 z-50 mysm:shadow-md">
+
+        <div>
+          <Select
+            disableSelectorIconRotation
+            value={reorderFilter}
+            onChange={(e) => setReorderFilter(e.target.value)}
+            className="w-36 text-primary"
+            label=""
+            aria-label="price filter"
+            labelPlacement="outside"
+            placeholder={t('default')}
+            selectorIcon={
+              reorderFilter === "" ? <Filter /> :
+              reorderFilter === "sell" ? <ChartNoAxesCombined /> :
+              reorderFilter === "view" ? <Eye /> :
+              reorderFilter === "discount" ? <BadgePercent /> :
+              reorderFilter === "cheap" ? <ArrowDownNarrowWide /> : <ArrowDownWideNarrow />
+            }
+          >
+            {[
+              { key: "sell", label: "sale" },
+              { key: "view", label: "view" },
+              { key: "discount", label: "discount" },
+              { key: "cheap", label: "cheap" },
+              { key: "expensive", label: "expensive" },
+            ].map((filter) => (
+              <SelectItem key={filter.key} value={filter.key}>
+                {t(filter.label)}
+              </SelectItem>
+            ))}
+          </Select>
+        </div>
+        
+        <div className="hidden mymd:flex fixed top-30 right-10 mysm:relative mysm:top-0 mysm:right-0">
+          <Button 
+            isIconOnly 
+            variant="solid" 
+            color="secondary" 
+            size="md" 
+            onPress={onOpen}
+          >
+            <SlidersHorizontal />
+          </Button>
+
+          <ModalFilters 
+            isOpen={isOpen}
+            onOpenChange={onOpenChange}
+          />
+        </div>
+
       </div>
+
+
+
 
       {/* Products List */}
       <div className="flex flex-wrap gap-4 mysm:gap-2 items-start justify-start mymd:justify-center">
