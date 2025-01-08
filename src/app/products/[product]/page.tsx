@@ -5,11 +5,30 @@ import { ImagesSticky } from '@/src/components/singleProductPage/imagesSection/i
 import { ProductData } from '@/src/components/singleProductPage/dataSection/productData';
 import Products from '../../../../data/products.json';
 import { ProductType } from '@/src/types/product';
+import { useLocale } from 'next-intl';
+// import ProductsJp from "../../../../data/productsJp.json"
+import ProductsJp from "@/data/productsJp.json"
 
 
 export default function Product() {
   const pathname = usePathname(); // Get the full pathname
   const [product, setProduct] = useState<ProductType | null>(null);
+
+  // Japanese version
+  const [jpItem, setJpItem] = useState<ProductType>()
+  const isEn = useLocale() === "en"
+
+  useEffect(() => {
+    if (!isEn && product) {
+      const jpVersion = ProductsJp?.find((i: ProductType) => i.id === product.id); // Use find() instead of filter()
+      setJpItem(jpVersion);
+      console.log(ProductsJp)
+    } else {
+      setJpItem(undefined)
+    }
+  });
+
+
 
   useEffect(() => {
     const segments = pathname.split('/'); // Split the pathname
@@ -35,7 +54,7 @@ export default function Product() {
       </div>
 
       <div about="products" className="w-[60%] mymd:w-full h-full">
-        <ProductData product={product} />
+        <ProductData product={jpItem ? jpItem : product} />
       </div>
     </div>
   );

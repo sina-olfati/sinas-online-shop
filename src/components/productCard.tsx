@@ -3,8 +3,10 @@ import { Card, CardBody, CardHeader, Chip } from "@nextui-org/react";
 import Image from "next/image";
 import { DollarSign, Percent, Star } from "lucide-react";
 import { JapaneseYen } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ProductType } from "../types/product";
+import ProductsJp from "../../data/productsJp.json"
+import { useLocale } from "next-intl";
 
 
 interface ProductCardProps {
@@ -20,6 +22,22 @@ interface ProductCardProps {
 
 export function ProductCard({ item, onMouseDown, onMouseUp, onMouseLeave, onMouseMove, setHover, hover, locale }: ProductCardProps) {
   const [isDown, setIsDown] = useState<boolean>(false);
+
+  // Japanese version
+  const [jpItem, setJpItem] = useState<ProductType>()
+  const isEn = useLocale() === "en"
+
+  useEffect(() => {
+    if (!isEn && item) {
+      const jpVersion = ProductsJp?.find((i: ProductType) => i.id === item.id); // Use find() instead of filter()
+      setJpItem(jpVersion);
+      console.log(ProductsJp)
+    } else {
+      setJpItem(undefined)
+    }
+  });
+
+
 
   const handleMouseDown = (e: React.MouseEvent) => {
     setIsDown(true);
@@ -47,6 +65,7 @@ export function ProductCard({ item, onMouseDown, onMouseUp, onMouseLeave, onMous
       onMouseMove(e); // Call only if onMouseMove is defined
     }
   };
+  
 
   return (
     <Card
@@ -74,7 +93,7 @@ export function ProductCard({ item, onMouseDown, onMouseUp, onMouseLeave, onMous
         </CardHeader>
 
         <CardBody className="overflow-visible pt-0 pb-0">
-          <h3 className="text-xs font-semibold truncate">{item.name}</h3>
+          <h3 className="text-xs font-semibold truncate">{jpItem ? jpItem.name : item.name}</h3>
           <div className="flex gap-1 justify-start items-center mt-0 mb-2 mysm:mb-1 text-xs">
             <Star fill="#F4BB44" className="text-[#F4BB44] w-3" />
             <p>{item.ratings}</p>
