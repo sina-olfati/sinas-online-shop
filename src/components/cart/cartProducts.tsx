@@ -5,8 +5,6 @@ import { useCartStore } from "@/src/hooks/useCartStore";
 import Image from "next/image";
 import { AddToCartButton } from "../addToCartButton";
 import { DollarSign, JapaneseYen } from "lucide-react";
-import { useEffect, useState } from "react";
-import { ProductType } from "@/src/types/product";
 import ProductsJp from "@/data/productsJp.json"
 
 
@@ -14,39 +12,7 @@ export function CartProducts() {
 
   const cart = useCartStore();
 
-
-
-  // Japanese version
-  // const [jpItem, setJpItem] = useState<ProductType | undefined>(undefined);
   const isEn = useLocale() === "en";
-
-  // console.log(jpItem);
-
-  // useEffect(() => {
-  //   if (!isEn && cart) {
-  //     const jpVersion = ProductsJp?.find((i: ProductType) =>
-  //       cart.cart.some((single) => i.id === single.id) // Use .some() instead of .map()
-  //     );
-  //     setJpItem(jpVersion); // Set the first matching item from jpVersion
-  //   } else {
-  //     setJpItem(undefined); // Clear jpItem when locale is English
-  //   }
-  // }, [isEn, cart]); // Add dependencies to the effect
-
-
-  // // Japanese version
-  // const [jpItem, setJpItem] = useState<ProductType[]>()
-  // const isEn = useLocale() === "en"
-  // console.log(jpItem)
-
-  // useEffect(() => {
-  //   if (!isEn && cart) {
-  //     const jpVersion = ProductsJp?.find((i: ProductType) => cart.cart.map((single) => i.id === single.id)); // Use find() instead of filter()
-  //     setJpItem(jpVersion);
-  //   } else {
-  //     setJpItem(undefined)
-  //   }
-  // });
 
 
 
@@ -56,10 +22,9 @@ export function CartProducts() {
       {/* Products List */}
       <div className="flex flex-col gap-4 items-start justify-start">
         {cart.cart.length > 0 ? (
-          cart.cart.map((item, index) => {
+          cart.cart.map((item) => {
             
             // Find the corresponding jpItem for this product
-            // const matchingJpItem = jpItem?.find((jp) => jp.id === item.id);
             const jpItem = ProductsJp?.find((jp) => jp.id === item.id);
 
             return (
