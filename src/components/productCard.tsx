@@ -5,7 +5,7 @@ import { DollarSign, Percent, Star } from "lucide-react";
 import { JapaneseYen } from "lucide-react";
 import { useEffect, useState } from "react";
 import { ProductType } from "../types/product";
-import ProductsJp from "../../data/productsJp.json"
+import ProductsJp from "@/data/productsJp.json"
 import { useLocale } from "next-intl";
 
 
@@ -31,7 +31,6 @@ export function ProductCard({ item, onMouseDown, onMouseUp, onMouseLeave, onMous
     if (!isEn && item) {
       const jpVersion = ProductsJp?.find((i: ProductType) => i.id === item.id); // Use find() instead of filter()
       setJpItem(jpVersion);
-      console.log(ProductsJp)
     } else {
       setJpItem(undefined)
     }

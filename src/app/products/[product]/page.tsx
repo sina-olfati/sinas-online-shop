@@ -6,7 +6,6 @@ import { ProductData } from '@/src/components/singleProductPage/dataSection/prod
 import Products from '../../../../data/products.json';
 import { ProductType } from '@/src/types/product';
 import { useLocale } from 'next-intl';
-// import ProductsJp from "../../../../data/productsJp.json"
 import ProductsJp from "@/data/productsJp.json"
 
 
@@ -22,7 +21,6 @@ export default function Product() {
     if (!isEn && product) {
       const jpVersion = ProductsJp?.find((i: ProductType) => i.id === product.id); // Use find() instead of filter()
       setJpItem(jpVersion);
-      console.log(ProductsJp)
     } else {
       setJpItem(undefined)
     }

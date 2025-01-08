@@ -5,12 +5,50 @@ import { useCartStore } from "@/src/hooks/useCartStore";
 import Image from "next/image";
 import { AddToCartButton } from "../addToCartButton";
 import { DollarSign, JapaneseYen } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ProductType } from "@/src/types/product";
+import ProductsJp from "@/data/productsJp.json"
+
 
 export function CartProducts() {
 
-  const isEn = useLocale() === "en"
-
   const cart = useCartStore();
+
+
+
+  // Japanese version
+  // const [jpItem, setJpItem] = useState<ProductType | undefined>(undefined);
+  const isEn = useLocale() === "en";
+
+  // console.log(jpItem);
+
+  // useEffect(() => {
+  //   if (!isEn && cart) {
+  //     const jpVersion = ProductsJp?.find((i: ProductType) =>
+  //       cart.cart.some((single) => i.id === single.id) // Use .some() instead of .map()
+  //     );
+  //     setJpItem(jpVersion); // Set the first matching item from jpVersion
+  //   } else {
+  //     setJpItem(undefined); // Clear jpItem when locale is English
+  //   }
+  // }, [isEn, cart]); // Add dependencies to the effect
+
+
+  // // Japanese version
+  // const [jpItem, setJpItem] = useState<ProductType[]>()
+  // const isEn = useLocale() === "en"
+  // console.log(jpItem)
+
+  // useEffect(() => {
+  //   if (!isEn && cart) {
+  //     const jpVersion = ProductsJp?.find((i: ProductType) => cart.cart.map((single) => i.id === single.id)); // Use find() instead of filter()
+  //     setJpItem(jpVersion);
+  //   } else {
+  //     setJpItem(undefined)
+  //   }
+  // });
+
+
 
   return (
     <div className="flex flex-col gap-5 p-5 mysm:p-0 w-full">
@@ -18,7 +56,13 @@ export function CartProducts() {
       {/* Products List */}
       <div className="flex flex-col gap-4 items-start justify-start">
         {cart.cart.length > 0 ? (
-          cart.cart.map((item) => (
+          cart.cart.map((item, index) => {
+            
+            // Find the corresponding jpItem for this product
+            // const matchingJpItem = jpItem?.find((jp) => jp.id === item.id);
+            const jpItem = ProductsJp?.find((jp) => jp.id === item.id);
+
+            return (
             <div
               key={item.id}
               className="h-28 mysm:h-auto w-full bg-secondary p-2 mysm:p-3 flex mysm:flex-col items-center mysm:items-start justify-between rounded-lg"
@@ -31,7 +75,7 @@ export function CartProducts() {
                 <Image src={item.image} className="w-24 rounded-lg" width={1000} height={1000} alt="product image" />
 
                 <div className="flex flex-col gap-2">
-                  <h2 className="font-semibold">{item.name}</h2>
+                  <h2 className="font-semibold">{!isEn ? jpItem?.name : item.name}</h2>
 
                   <p className="font-semibold flex items-center">
                     {isEn ? <DollarSign size={15} /> : <JapaneseYen size={15} />}
@@ -40,7 +84,7 @@ export function CartProducts() {
                     {item.originalPrice !== item.price ?
                         <i className="flex items-center text-primary text-xs ml-2 relative top-[1px]">
                             {isEn ? <DollarSign size={12} /> : <JapaneseYen size={12} />}
-                            {isEn ? Math.round((item.originalPrice - item.price)*item.quantity*100)/100 : Math.round((item.originalPrice - item.price)*item.quantity*100)} OFF!
+                            {isEn ? Math.round((item.originalPrice - item.price)*item.quantity*100)/100 : Math.round((item.originalPrice - item.price)*item.quantity*100)} {isEn ? "OFF" : "割引"}!
                         </i>   : null 
                     }
                   </p>
@@ -55,7 +99,7 @@ export function CartProducts() {
               </div>
 
             </div>
-          ))
+          )})
         ) : (
           <p>No products found</p>
         )}
