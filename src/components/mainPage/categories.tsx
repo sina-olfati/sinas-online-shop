@@ -14,81 +14,55 @@ import Image from "next/image";
 
 const category = [
   {
-    name: "Jackets",
-    japaneseName: "ジャケット",
-    key: "jacket",
+    key: "Jackets",
     down: true,
   },
   {
-    name: "Pants",
-    japaneseName: "パンツ",
-    key: "pants"
+    key: "Pants",
   },
   {
-    name: "Shirts",
-    japaneseName: "シャツ",
-    key: "shirt",
+    key: "Shirts",
     big: true,
   },
   {
-    name: "Sweaters",
-    japaneseName: "セーター",
-    key: "sweater",
+    key: "Sweaters",
     big: true,
   },
   {
-    name: "Hoodies",
-    japaneseName: "フーディ",
-    key: "hoodie"
+    key: "Hoodies",
   },
   {
-    name: "T-Shirts",
-    japaneseName: "Tシャツ",
-    key: "t-shirt"
+    key: "T-Shirts",
   },
   {
-    name: "Footwear",
-    japaneseName: "靴",
-    key: "footwear",
+    key: "Footwear",
     big: true,
   },
   {
-    name: "Shorts",
-    japaneseName: "ショーツ",
-    key: "shorts"
+    key: "Shorts",
   },
   {
-    name: "Jumpsuits",
-    japaneseName: "ジャンプスーツ",
-    key: "jumpsuit",
+    key: "Jumpsuits",
     big: true,
     // down: true,
   },
   {
-    name: "Dresses",
-    japaneseName: "ドレス",
-    key: "dress",
+    key: "Dresses",
     big: true,
   },
   {
-    name: "Accessories",
-    japaneseName: "アクセサリー",
-    key: "accessory",
+    key: "Accessories",
     big: true,
     // down: true,
   },
   {
-    name: "Outerwear",
-    japaneseName: "アウターウェア",
-    key: "outerwear",
+    key: "Outerwear",
     small: true
   }
 ];
 
 
 interface ClothingItem {
-  name: string;
-  japaneseName: string;
   key: string;
 };
 
@@ -152,7 +126,7 @@ export function Categories() {
         <GrabScroll>
           {category.map((item) => (
             <div
-              key={item.name}
+              key={item.key}
               onMouseDown={(e) => onMouseDown(item, e)}
               onMouseUp={() => onMouseUp(item)}
               onMouseLeave={onMouseLeave}

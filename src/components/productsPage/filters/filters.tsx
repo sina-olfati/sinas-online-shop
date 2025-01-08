@@ -17,7 +17,7 @@ const categoryOptions = [
   { key: "Shirts", label: "Shirts" },
   { key: "Sweaters", label: "Sweaters" },
   { key: "Hoodies", label: "Hoodies" },
-  { key: "T-shirts", label: "T-shirts" },
+  { key: "T-Shirts", label: "T-Shirts" },
   { key: "Footwear", label: "Footwear" },
   { key: "Shorts", label: "Shorts" },
   { key: "Jumpsuits", label: "Jumpsuits" },
