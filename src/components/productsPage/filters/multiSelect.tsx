@@ -80,13 +80,13 @@ export default function MultiSelect({options, selected, setSelected, name}: Data
             }
           }}
         >
-          {selectedOptions.length === 0 ? <ChevronDown size={20} /> : <X size={20} /> }
+          {selectedOptions.length === 0 ? <ChevronDown size={20} /> : <X size={20} onClick={() => setIsDropdownOpen(false)} /> }
         </div>
       </button>
 
       {/* Dropdown Menu */}
       {isDropdownOpen && (
-        <div className="absolute mt-2 bg-background border rounded shadow w-full z-10">
+        <div className="absolute mt-2 bg-background border rounded shadow w-full z-50  max-h-[600%] overflow-auto">
           {options.map((option) => (
             <div
               key={option.key}
