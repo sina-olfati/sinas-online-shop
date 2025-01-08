@@ -12,10 +12,18 @@ import { FilterButton } from "./filterButton";
 import { useTranslations } from "next-intl";
 
 const categoryOptions = [
-  { key: "electronics", label: "Electronics" },
-  { key: "clothing", label: "Clothing" },
-  { key: "appliances", label: "Home Appliances" },
-  { key: "books", label: "Books" },
+  { key: "Jackets", label: "Jackets" },
+  { key: "Pants", label: "Pants" },
+  { key: "Shirts", label: "Shirts" },
+  { key: "Sweaters", label: "Sweaters" },
+  { key: "Hoodies", label: "Hoodies" },
+  { key: "T-shirts", label: "T-shirts" },
+  { key: "Footwear", label: "Footwear" },
+  { key: "Shorts", label: "Shorts" },
+  { key: "Jumpsuits", label: "Jumpsuits" },
+  { key: "Dresses", label: "Dresses" },
+  { key: "Accessories", label: "Accessories" },
+  { key: "Outerwear", label: "Outerwear" }
 ];
 
 const seasonOptions = [

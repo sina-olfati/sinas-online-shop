@@ -69,18 +69,18 @@
     "filters": {
       "categories": {
         "name": "カテゴリ",
-        "jacket": "ジャケット",
-        "pants": "パンツ",
-        "shirt": "シャツ",
-        "sweater": "セーター",
-        "hoodie": "フーディ",
-        "t-shirt": "Tシャツ",
-        "footwear": "靴",
-        "shorts": "ショートパンツ",
-        "jumpsuit": "ジャンプスーツ",
-        "dress": "ドレス",
-        "accessory": "アクセサリー",
-        "outerwear": "アウターウェア"
+        "Jackets": "ジャケット",
+        "Pants": "パンツ",
+        "Shirts": "シャツ",
+        "Sweaters": "セーター",
+        "Hoodies": "フーディ",
+        "T-shirts": "Tシャツ",
+        "Footwear": "靴",
+        "Shorts": "ショートパンツ",
+        "Jumpsuits": "ジャンプスーツ",
+        "Dresses": "ドレス",
+        "Accessories": "アクセサリー",
+        "Outerwear": "アウターウェア"
       },
       "seasons": {
         "name": "季節",
