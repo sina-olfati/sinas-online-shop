@@ -1,0 +1,1259 @@
+[
+    {
+        "id": 1,
+        "name": "クラシックデニムジャケット",
+        "category": "ジャケット",
+        "original_price": 89.99,
+        "discounted_price": 69.99,
+        "discount_percent": 22,
+        "ratings": 4.5,
+        "views": 320,
+        "sales_count": 250,
+        "brand": "デニムマスター",
+        "fabric_type": "デニム",
+        "color": "インディゴ",
+        "gender": "ユニセックス",
+        "season": "秋",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "カジュアルスタイルにぴったりの時代を超えたデニムジャケット。",
+                "pros": [
+                    "耐久性がある",
+                    "快適なフィット感",
+                    "多用途"
+                ],
+                "cons": [
+                    "短い人には袖が長い",
+                    "重い"
+                ]
+            },
+            {
+                "summary": "寒い天気に重ね着に最適なジャケット。",
+                "pros": [
+                    "スタイリッシュ",
+                    "しっかりした作り"
+                ],
+                "cons": [
+                    "最初は固く感じる"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "レザー バイカージャケット",
+        "category": "ジャケット",
+        "original_price": 149.99,
+        "discounted_price": 149.99,
+        "discount_percent": 0,
+        "ratings": 4.8,
+        "views": 480,
+        "sales_count": 180,
+        "brand": "モトスタイル",
+        "fabric_type": "本革",
+        "color": "ブラック",
+        "gender": "男性",
+        "season": "冬",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "大胆なルックスのエッジの効いたレザージャケット。",
+                "pros": [
+                    "スタイリッシュ",
+                    "高品質なレザー",
+                    "重ね着に最適"
+                ],
+                "cons": [
+                    "高価",
+                    "最初は固く感じる"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "スリムフィット チノパンツ",
+        "category": "パンツ",
+        "original_price": 49.99,
+        "discounted_price": 49.99,
+        "discount_percent": 0,
+        "ratings": 4.3,
+        "views": 220,
+        "sales_count": 150,
+        "brand": "チノスタイル",
+        "fabric_type": "コットンブレンド",
+        "color": "ベージュ",
+        "gender": "男性",
+        "season": "春",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "毎日の着用にぴったりのスリムフィットチノ。",
+                "pros": [
+                    "素晴らしいフィット感",
+                    "快適",
+                    "スタイリングが簡単"
+                ],
+                "cons": [
+                    "すぐにシワになる",
+                    "洗濯後に縮むことがある"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "トロピカル ボタンダウンシャツ",
+        "category": "シャツ",
+        "original_price": 39.99,
+        "discounted_price": 29.99,
+        "discount_percent": 25,
+        "ratings": 4.6,
+        "views": 320,
+        "sales_count": 200,
+        "brand": "アイランドウェア",
+        "fabric_type": "リネン",
+        "color": "ブルーフローラル",
+        "gender": "男性",
+        "season": "夏",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "ビーチデイに最適なシャツ。",
+                "pros": [
+                    "軽くて通気性が良い",
+                    "鮮やかなデザイン",
+                    "夏に最適"
+                ],
+                "cons": [
+                    "すぐにシワができる",
+                    "小さめの作り"
+                ]
+            },
+            {
+                "summary": "バケーションにぴったりのシャツ！",
+                "pros": [
+                    "快適",
+                    "良質な素材"
+                ],
+                "cons": [
+                    "洗濯後に少し縮む"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "ヴィンテージ スウェットシャツ",
+        "category": "セーター",
+        "original_price": 59.99,
+        "discounted_price": 39.99,
+        "discount_percent": 33,
+        "ratings": 4.4,
+        "views": 410,
+        "sales_count": 230,
+        "brand": "レトロアパレル",
+        "fabric_type": "フリース",
+        "color": "グレー",
+        "gender": "ユニセックス",
+        "season": "秋",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "寒い夜にぴったりのコージーなヴィンテージスウェット。",
+                "pros": [
+                    "柔らかい生地",
+                    "重ね着に最適",
+                    "カジュアルデザイン"
+                ],
+                "cons": [
+                    "洗濯後に縮む",
+                    "フォーマルな場には不向き"
+                ]
+            },
+            {
+                "summary": "のんびりした週末に最適！",
+                "pros": [
+                    "快適",
+                    "暖かい"
+                ],
+                "cons": [
+                    "何度も洗うと形が崩れる"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "クラシックホワイトポロシャツ",
+        "category": "シャツ",
+        "original_price": 39.99,
+        "discounted_price": 29.99,
+        "discount_percent": 25,
+        "ratings": 4.7,
+        "views": 550,
+        "sales_count": 300,
+        "brand": "ポロマスターズ",
+        "fabric_type": "コットン",
+        "color": "ホワイト",
+        "gender": "男性",
+        "season": "春",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "すべての男性に欠かせないワードローブの定番。",
+                "pros": [
+                    "快適",
+                    "カジュアルにもフォーマルにも合わせやすい",
+                    "柔らかい生地"
+                ],
+                "cons": [
+                    "アイロンがけが必要",
+                    "フィット感がスリムすぎる場合がある"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "アスレチックジョガーパンツ",
+        "category": "パンツ",
+        "original_price": 49.99,
+        "discounted_price": 49.99,
+        "discount_percent": 0,
+        "ratings": 4.6,
+        "views": 320,
+        "sales_count": 190,
+        "brand": "アクティブフィット",
+        "fabric_type": "ポリエステル",
+        "color": "ブラック",
+        "gender": "男性",
+        "season": "冬",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "ワークアウトにも、リラックスした一日にもぴったり。",
+                "pros": [
+                    "伸縮性がある",
+                    "快適なウエストバンド",
+                    "通気性が良い"
+                ],
+                "cons": [
+                    "大きめの作り",
+                    "生地がすぐに傷む可能性がある"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "クロップドフーディー",
+        "category": "フーディー",
+        "original_price": 39.99,
+        "discounted_price": 29.99,
+        "discount_percent": 25,
+        "ratings": 4.5,
+        "views": 260,
+        "sales_count": 210,
+        "brand": "コージーライン",
+        "fabric_type": "コットンブレンド",
+        "color": "ピンク",
+        "gender": "女性",
+        "season": "秋",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "カジュアルでスタイリッシュなクロップドフーディー。",
+                "pros": [
+                    "快適",
+                    "スタイリッシュなカット",
+                    "通気性が良い"
+                ],
+                "cons": [
+                    "短すぎる場合がある",
+                    "暖かさが足りない"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "クラシッククルーネックセーター",
+        "category": "セーター",
+        "original_price": 59.99,
+        "discounted_price": 59.99,
+        "discount_percent": 0,
+        "ratings": 4.3,
+        "views": 410,
+        "sales_count": 230,
+        "brand": "アーバンギア",
+        "fabric_type": "フリース",
+        "color": "ネイビーブルー",
+        "gender": "ユニセックス",
+        "season": "冬",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "カジュアルな日々にぴったりのクルーネック。",
+                "pros": [
+                    "柔らかく暖かい",
+                    "手頃な価格",
+                    "クラシックな外観"
+                ],
+                "cons": [
+                    "洗濯後に縮むことがある",
+                    "あまりフィット感がない"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "スタイリッシュボンバージャケット",
+        "category": "ジャケット",
+        "original_price": 129.99,
+        "discounted_price": 109.99,
+        "discount_percent": 15,
+        "ratings": 4.7,
+        "views": 500,
+        "sales_count": 240,
+        "brand": "ジェットストリーム",
+        "fabric_type": "ポリエステル",
+        "color": "アーミーグリーン",
+        "gender": "男性",
+        "season": "秋",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "トレンディでスポーティなルックにぴったり。",
+                "pros": [
+                    "多用途",
+                    "暖かい",
+                    "レイヤリングに最適"
+                ],
+                "cons": [
+                    "高価",
+                    "かさばる"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "ルーズフィットジョガー",
+        "category": "パンツ",
+        "original_price": 39.99,
+        "discounted_price": 34.99,
+        "discount_percent": 13,
+        "ratings": 4.4,
+        "views": 270,
+        "sales_count": 200,
+        "brand": "ChillZone",
+        "fabric_type": "コットンブレンド",
+        "color": "チャコールグレー",
+        "gender": "ユニセックス",
+        "season": "冬",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 12,
+        "name": "ベーシックホワイトTシャツ",
+        "category": "Tシャツ",
+        "original_price": 19.99,
+        "discounted_price": 19.99,
+        "discount_percent": 0,
+        "ratings": 4.6,
+        "views": 600,
+        "sales_count": 350,
+        "brand": "CasualWear",
+        "fabric_type": "コットン",
+        "color": "ホワイト",
+        "gender": "ユニセックス",
+        "season": "春",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "どんなワードローブにも必須のアイテム。",
+                "pros": [
+                    "柔らかい生地",
+                    "手頃な価格",
+                    "レイヤリングに最適"
+                ],
+                "cons": [
+                    "洗濯後に縮むことがある",
+                    "フィット感がゆるすぎる場合がある"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "チェック柄ボタンアップシャツ",
+        "category": "シャツ",
+        "original_price": 39.99,
+        "discounted_price": 39.99,
+        "discount_percent": 0,
+        "ratings": 4.3,
+        "views": 400,
+        "sales_count": 250,
+        "brand": "Flannel Co.",
+        "fabric_type": "フランネル",
+        "color": "レッドチェック",
+        "gender": "男性",
+        "season": "秋",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "カジュアルな日常にぴったりな暖かいシャツ。",
+                "pros": [
+                    "柔らかくて暖かい",
+                    "スタイリッシュなチェックデザイン"
+                ],
+                "cons": [
+                    "生地が少し重いと感じることがある",
+                    "しわになりやすい"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "テックフーディ",
+        "category": "フーディ",
+        "original_price": 79.99,
+        "discounted_price": 59.99,
+        "discount_percent": 25,
+        "ratings": 4.8,
+        "views": 450,
+        "sales_count": 320,
+        "brand": "TechWear",
+        "fabric_type": "ポリエステル",
+        "color": "ブラック",
+        "gender": "ユニセックス",
+        "season": "冬",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "テック好きにぴったりのフーディ。",
+                "pros": [
+                    "スタイリッシュで現代的",
+                    "快適で暖かい",
+                    "レイヤリングに最適"
+                ],
+                "cons": [
+                    "穏やかな天気では少し重い",
+                    "通気性がない"
+                ]
+            },
+            {
+                "summary": "フィット感と機能性が抜群。",
+                "pros": [
+                    "高品質な生地",
+                    "ポケットが豊富"
+                ],
+                "cons": [
+                    "屋内では少し暑すぎることがある"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "マックスフィットスウェットパンツ",
+        "category": "パンツ",
+        "original_price": 39.99,
+        "discounted_price": 34.99,
+        "discount_percent": 13,
+        "ratings": 4.5,
+        "views": 330,
+        "sales_count": 180,
+        "brand": "MaxStyle",
+        "fabric_type": "コットンブレンド",
+        "color": "ダークグレー",
+        "gender": "男性",
+        "season": "秋",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "リラックスやワークアウトに最適な快適なパンツ。",
+                "pros": [
+                    "柔らかくて伸縮性がある",
+                    "寒い日にもぴったり"
+                ],
+                "cons": [
+                    "スリムな体型には少し大きい"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "name": "カジュアルフィットブレザー",
+        "category": "ジャケット",
+        "original_price": 129.99,
+        "discounted_price": 99.99,
+        "discount_percent": 23,
+        "ratings": 4.4,
+        "views": 250,
+        "sales_count": 130,
+        "brand": "シティモード",
+        "fabric_type": "ウールブレンド",
+        "color": "ネイビーブルー",
+        "gender": "男性",
+        "season": "冬",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "カジュアルなシーンにぴったりなスタイリッシュなブレザー。",
+                "pros": [
+                    "シャープな見た目",
+                    "素晴らしい生地の品質"
+                ],
+                "cons": [
+                    "フォーマルな場には不向き",
+                    "少しタイトなフィット感"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "name": "スポーティーウィンドブレーカー",
+        "category": "ジャケット",
+        "original_price": 59.99,
+        "discounted_price": 49.99,
+        "discount_percent": 17,
+        "ratings": 4.6,
+        "views": 420,
+        "sales_count": 310,
+        "brand": "アクティブウェア",
+        "fabric_type": "ナイロン",
+        "color": "レッド",
+        "gender": "ユニセックス",
+        "season": "春",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "アウトドア活動に最適。",
+                "pros": [
+                    "軽量",
+                    "通気性が良い",
+                    "防水"
+                ],
+                "cons": [
+                    "大きめに作られている"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "name": "カーゴパンツ",
+        "category": "パンツ",
+        "original_price": 49.99,
+        "discounted_price": 39.99,
+        "discount_percent": 20,
+        "ratings": 4.5,
+        "views": 380,
+        "sales_count": 290,
+        "brand": "ユーティリティウェア",
+        "fabric_type": "コットン",
+        "color": "オリーブグリーン",
+        "gender": "男性",
+        "season": "秋",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "実用的なスタイルに最適。",
+                "pros": [
+                    "丈夫",
+                    "快適なフィット感",
+                    "たくさんのポケット"
+                ],
+                "cons": [
+                    "生地が少し硬い"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "name": "ベーシックタンクトップ",
+        "category": "Tシャツ",
+        "original_price": 14.99,
+        "discounted_price": 9.99,
+        "discount_percent": 33,
+        "ratings": 4.3,
+        "views": 240,
+        "sales_count": 180,
+        "brand": "エッセンシャルズ",
+        "fabric_type": "コットン",
+        "color": "ホワイト",
+        "gender": "女性",
+        "season": "夏",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 20,
+        "name": "スポーティーランニングシューズ",
+        "category": "フットウェア",
+        "original_price": 99.99,
+        "discounted_price": 99.99,
+        "discount_percent": 0,
+        "ratings": 4.7,
+        "views": 550,
+        "sales_count": 500,
+        "brand": "ランマックス",
+        "fabric_type": "メッシュ",
+        "color": "ブラック/レッド",
+        "gender": "ユニセックス",
+        "season": "オールシーズン",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "ランニングやカジュアルな着用に最適。",
+                "pros": [
+                    "快適",
+                    "良いサポート",
+                    "通気性が良い"
+                ],
+                "cons": [
+                    "足幅が広い人には少し狭い"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "name": "クラシックレザーブーツ",
+        "category": "フットウェア",
+        "original_price": 139.99,
+        "discounted_price": 119.99,
+        "discount_percent": 14,
+        "ratings": 4.8,
+        "views": 500,
+        "sales_count": 350,
+        "brand": "ティンバークラフト",
+        "fabric_type": "本革",
+        "color": "ブラウン",
+        "gender": "男性",
+        "season": "冬",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "冬にぴったりなスタイリッシュで耐久性のあるブーツ。",
+                "pros": [
+                    "丈夫",
+                    "暖かい",
+                    "スタイリッシュ"
+                ],
+                "cons": [
+                    "重い",
+                    "高価"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "name": "ランニングショーツ",
+        "category": "ショーツ",
+        "original_price": 29.99,
+        "discounted_price": 29.99,
+        "discount_percent": 0,
+        "ratings": 4.5,
+        "views": 300,
+        "sales_count": 210,
+        "brand": "スピードフィット",
+        "fabric_type": "ポリエステル",
+        "color": "ブラック",
+        "gender": "男性",
+        "season": "夏",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 23,
+        "name": "グラフィックTシャツ",
+        "category": "Tシャツ",
+        "original_price": 24.99,
+        "discounted_price": 19.99,
+        "discount_percent": 20,
+        "ratings": 4.3,
+        "views": 270,
+        "sales_count": 220,
+        "brand": "ストリートアート",
+        "fabric_type": "コットン",
+        "color": "ブラック",
+        "gender": "ユニセックス",
+        "season": "夏",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "素晴らしいデザイン、快適な着心地。",
+                "pros": [
+                    "柔らかい生地",
+                    "クールなデザイン"
+                ],
+                "cons": [
+                    "洗濯後に色が褪せる"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "name": "カジュアルスニーカー",
+        "category": "フットウェア",
+        "original_price": 69.99,
+        "discounted_price": 49.99,
+        "discount_percent": 29,
+        "ratings": 4.4,
+        "views": 350,
+        "sales_count": 200,
+        "brand": "シュゾーン",
+        "fabric_type": "キャンバス",
+        "color": "ホワイト",
+        "gender": "女性",
+        "season": "春",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "カジュアルな外出に最適なスニーカー。",
+                "pros": [
+                    "快適",
+                    "スタイリッシュ",
+                    "多用途"
+                ],
+                "cons": [
+                    "すぐに汚れが付く"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "name": "スリムフィットチノパンツ",
+        "category": "パンツ",
+        "original_price": 49.99,
+        "discounted_price": 49.99,
+        "discount_percent": 0,
+        "ratings": 4.5,
+        "views": 500,
+        "sales_count": 330,
+        "brand": "チノコ",
+        "fabric_type": "コットン",
+        "color": "ベージュ",
+        "gender": "男性",
+        "season": "春",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "素晴らしいフィット感。",
+                "pros": [
+                    "快適",
+                    "仕事やカジュアルに最適"
+                ],
+                "cons": [
+                    "洗濯後にシワができる"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 26,
+        "name": "デニムオーバーオール",
+        "category": "ジャンプスーツ",
+        "original_price": 79.99,
+        "discounted_price": 64.99,
+        "discount_percent": 19,
+        "ratings": 4.6,
+        "views": 450,
+        "sales_count": 270,
+        "brand": "デニムスタイル",
+        "fabric_type": "デニム",
+        "color": "ブルー",
+        "gender": "女性",
+        "season": "秋",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 27,
+        "name": "涼しいサマードレス",
+        "category": "ドレス",
+        "original_price": 59.99,
+        "discounted_price": 49.99,
+        "discount_percent": 17,
+        "ratings": 4.7,
+        "views": 520,
+        "sales_count": 300,
+        "brand": "ドレスアップ",
+        "fabric_type": "コットン",
+        "color": "花柄",
+        "gender": "女性",
+        "season": "夏",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "暑い日にもぴったりな花柄ドレス。",
+                "pros": [
+                    "通気性が良い",
+                    "快適",
+                    "体型を引き立てるデザイン"
+                ],
+                "cons": [
+                    "背の高い人には少し短い"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 28,
+        "name": "ソフトニットセーター",
+        "category": "セーター",
+        "original_price": 69.99,
+        "discounted_price": 59.99,
+        "discount_percent": 14,
+        "ratings": 4.8,
+        "views": 420,
+        "sales_count": 310,
+        "brand": "コージーニット",
+        "fabric_type": "ウールブレンド",
+        "color": "ライトグレー",
+        "gender": "ユニセックス",
+        "season": "冬",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 29,
+        "name": "コーデュロイパンツ",
+        "category": "パンツ",
+        "original_price": 69.99,
+        "discounted_price": 69.99,
+        "discount_percent": 0,
+        "ratings": 4.3,
+        "views": 430,
+        "sales_count": 270,
+        "brand": "コーデュロイスタイル",
+        "fabric_type": "コーデュロイ",
+        "color": "ブラウン",
+        "gender": "男性",
+        "season": "秋",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": [
+            {
+                "summary": "秋の季節にぴったりなフィット感と暖かさ。",
+                "pros": [
+                    "耐久性のある生地",
+                    "ぴったりのフィット感"
+                ],
+                "cons": [
+                    "暖かい気候では厚すぎる場合がある"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "name": "チャンクスニーカー",
+        "category": "フットウェア",
+        "original_price": 89.99,
+        "discounted_price": 89.99,
+        "discount_percent": 0,
+        "ratings": 4.5,
+        "views": 510,
+        "sales_count": 390,
+        "brand": "シュキング",
+        "fabric_type": "合成繊維",
+        "color": "ホワイト",
+        "gender": "ユニセックス",
+        "season": "オールシーズン",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 31,
+        "name": "長袖ポロシャツ",
+        "category": "Tシャツ",
+        "original_price": 39.99,
+        "discounted_price": 29.99,
+        "discount_percent": 25,
+        "ratings": 4.4,
+        "views": 460,
+        "sales_count": 280,
+        "brand": "ポロライフ",
+        "fabric_type": "コットン",
+        "color": "ブルー",
+        "gender": "男性",
+        "season": "秋",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 32,
+        "name": "ブーツカットジーンズ",
+        "category": "パンツ",
+        "original_price": 49.99,
+        "discounted_price": 44.99,
+        "discount_percent": 10,
+        "ratings": 4.3,
+        "views": 400,
+        "sales_count": 330,
+        "brand": "デニムウェア",
+        "fabric_type": "デニム",
+        "color": "ライトブルー",
+        "gender": "女性",
+        "season": "オールシーズン",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 33,
+        "name": "フローラルラップドレス",
+        "category": "ドレス",
+        "original_price": 79.99,
+        "discounted_price": 79.99,
+        "discount_percent": 0,
+        "ratings": 4.7,
+        "views": 380,
+        "sales_count": 250,
+        "brand": "フローラルスタイル",
+        "fabric_type": "ポリエステル",
+        "color": "花柄プリント",
+        "gender": "女性",
+        "season": "春",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 34,
+        "name": "アスレチックスウェットパンツ",
+        "category": "パンツ",
+        "original_price": 49.99,
+        "discounted_price": 49.99,
+        "discount_percent": 0,
+        "ratings": 4.6,
+        "views": 420,
+        "sales_count": 330,
+        "brand": "フィットウェア",
+        "fabric_type": "ポリエステル",
+        "color": "グレー",
+        "gender": "男性",
+        "season": "冬",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 35,
+        "name": "スリムフィットチノパンツ",
+        "category": "パンツ",
+        "original_price": 59.99,
+        "discounted_price": 49.99,
+        "discount_percent": 17,
+        "ratings": 4.4,
+        "views": 460,
+        "sales_count": 290,
+        "brand": "チノスタイル",
+        "fabric_type": "コットン",
+        "color": "カーキ",
+        "gender": "男性",
+        "season": "オールシーズン",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },    
+    {
+        "id": 36,
+        "name": "カシミアセーター",
+        "category": "セーター",
+        "original_price": 129.99,
+        "discounted_price": 109.99,
+        "discount_percent": 15,
+        "ratings": 4.8,
+        "views": 520,
+        "sales_count": 310,
+        "brand": "CashmereCo",
+        "fabric_type": "カシミア",
+        "color": "グレー",
+        "gender": "女性",
+        "season": "冬",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 37,
+        "name": "ラグジュアリーシルクスカーフ",
+        "category": "アクセサリー",
+        "original_price": 59.99,
+        "discounted_price": 59.99,
+        "discount_percent": 0,
+        "ratings": 4.7,
+        "views": 430,
+        "sales_count": 250,
+        "brand": "SilkGrace",
+        "fabric_type": "シルク",
+        "color": "レッド",
+        "gender": "女性",
+        "season": "オールシーズン",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 38,
+        "name": "スエードジャケット",
+        "category": "アウター",
+        "original_price": 149.99,
+        "discounted_price": 129.99,
+        "discount_percent": 13,
+        "ratings": 4.6,
+        "views": 540,
+        "sales_count": 330,
+        "brand": "SuedeWear",
+        "fabric_type": "スエード",
+        "color": "タン",
+        "gender": "男性",
+        "season": "秋",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 39,
+        "name": "クラシックボタンアップシャツ",
+        "category": "シャツ",
+        "original_price": 44.99,
+        "discounted_price": 39.99,
+        "discount_percent": 11,
+        "ratings": 4.5,
+        "views": 470,
+        "sales_count": 290,
+        "brand": "ShirtWorks",
+        "fabric_type": "コットン",
+        "color": "ホワイト",
+        "gender": "男性",
+        "season": "オールシーズン",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    },
+    {
+        "id": 40,
+        "name": "レザーブーツ",
+        "category": "フットウェア",
+        "original_price": 129.99,
+        "discounted_price": 109.99,
+        "discount_percent": 15,
+        "ratings": 4.7,
+        "views": 510,
+        "sales_count": 360,
+        "brand": "BootMasters",
+        "fabric_type": "レザー",
+        "color": "ブラウン",
+        "gender": "ユニセックス",
+        "season": "秋/冬",
+        "images": [
+            "/productImages/hoody1.webp",
+            "/productImages/hoody2.webp",
+            "/productImages/hoody3.webp",
+            "/productImages/hoody4.webp"
+        ],
+        "reviews": []
+    }    
+]
