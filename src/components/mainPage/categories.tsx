@@ -8,7 +8,7 @@ import { SectionHeading } from "../sectionHeading";
 // icon
 import { ScanLine } from "lucide-react";
 import { Edge } from "./edge";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 
 
@@ -44,7 +44,7 @@ const category = [
   {
     name: "T-Shirts",
     japaneseName: "Tシャツ",
-    key: "tshirt"
+    key: "t-shirt"
   },
   {
     name: "Footwear",
@@ -100,6 +100,10 @@ export function Categories() {
   const [clickThreshold] = useState(5); // Distance to determine a drag
 
   const isEn = useLocale() === "en"
+
+  // Next-intl
+  const t = useTranslations('Products.filters.categories');
+
 
   const handleNavigate = (path: string) => {
     // Navigate only if not dragging
@@ -172,7 +176,8 @@ export function Categories() {
                 />
               </Button>
               <p className="font-semibold text-sm group-hover:text-primary transition-all">
-                {isEn ? item.name : item.japaneseName}
+                {/* {t(isEn ? item.name : item.japaneseName)} */}
+                {t(item.key)}
               </p>
             </div>
           ))}
