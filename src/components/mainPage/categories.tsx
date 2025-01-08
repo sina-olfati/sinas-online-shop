@@ -8,37 +8,88 @@ import { SectionHeading } from "../sectionHeading";
 // icon
 import { ScanLine } from "lucide-react";
 import { Edge } from "./edge";
+import { useLocale } from "next-intl";
+import Image from "next/image";
 
 
 const category = [
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
-  "10",
-  "11",
-  "12",
-  "13",
-  "14",
-  "15",
-  "16",
-  "17",
-  "18",
-  "19",
-  "20",
+  {
+    name: "Jackets",
+    japaneseName: "ジャケット",
+    image: "jacket"
+  },
+  {
+    name: "Pants",
+    japaneseName: "パンツ",
+    image: "pants"
+  },
+  {
+    name: "Shirts",
+    japaneseName: "シャツ",
+    image: "shirt"
+  },
+  {
+    name: "Sweaters",
+    japaneseName: "セーター",
+    image: "sweater"
+  },
+  {
+    name: "Hoodies",
+    japaneseName: "フーディ",
+    image: "hoodie"
+  },
+  {
+    name: "T-Shirts",
+    japaneseName: "Tシャツ",
+    image: "tshirt"
+  },
+  {
+    name: "Footwear",
+    japaneseName: "靴",
+    image: "footwear"
+  },
+  {
+    name: "Shorts",
+    japaneseName: "ショーツ",
+    image: "shorts"
+  },
+  {
+    name: "Jumpsuits",
+    japaneseName: "ジャンプスーツ",
+    image: "jumpsuit"
+  },
+  {
+    name: "Dresses",
+    japaneseName: "ドレス",
+    image: "dress"
+  },
+  {
+    name: "Accessories",
+    japaneseName: "アクセサリー",
+    image: "accessory"
+  },
+  {
+    name: "Outerwear",
+    japaneseName: "アウターウェア",
+    image: "outerwear"
+  }
 ];
+
+
+interface ClothingItem {
+  name: string;
+  japaneseName: string;
+  image: string;
+};
 
 export function Categories() {
   const router = useRouter();
-  const [isDown, setIsDown] = useState<string | null>(null);
+  const [isDown, setIsDown] = useState<ClothingItem | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [clickThreshold] = useState(5); // Distance to determine a drag
+
+  const isEn = useLocale() === "en"
 
   const handleNavigate = (path: string) => {
     // Navigate only if not dragging
@@ -47,13 +98,13 @@ export function Categories() {
     }
   };
 
-  const onMouseDown = (item: string, e: React.MouseEvent) => {
+  const onMouseDown = (item: ClothingItem, e: React.MouseEvent) => {
     setIsDown(item);
     setIsDragging(false); // Reset dragging state
     setStartX(e.clientX); // Store the initial position
   };
 
-  const onMouseUp = (item: string) => {
+  const onMouseUp = (item: ClothingItem) => {
     if (!isDragging && isDown === item) {
       handleNavigate("./sss"); // Navigate only if not dragging
     }
@@ -87,7 +138,7 @@ export function Categories() {
         <GrabScroll>
           {category.map((item) => (
             <div
-              key={item}
+              key={item.name}
               onMouseDown={(e) => onMouseDown(item, e)}
               onMouseUp={() => onMouseUp(item)}
               onMouseLeave={onMouseLeave}
@@ -99,10 +150,11 @@ export function Categories() {
                 className={`${isDown === item ? "scale-90" : "scale-100"} w-20 h-20 rounded-full shadow-md
                 mt-3 transition-all`}
               >
-                {item}
+                {/* {isEn ? item.name : item.japaneseName} */}
+                <Image src={`/categories/${item.image}.png`} width={1000} height={1000} alt="category image"/>
               </Button>
-              <p className="font-bold group-hover:text-primary transition-all">
-                {item}
+              <p className="font-semibold text-sm group-hover:text-primary transition-all">
+                {isEn ? item.name : item.japaneseName}
               </p>
             </div>
           ))}
