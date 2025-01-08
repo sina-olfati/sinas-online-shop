@@ -16,7 +16,8 @@ const category = [
   {
     name: "Jackets",
     japaneseName: "ジャケット",
-    image: "jacket"
+    image: "jacket",
+    down: true,
   },
   {
     name: "Pants",
@@ -26,12 +27,14 @@ const category = [
   {
     name: "Shirts",
     japaneseName: "シャツ",
-    image: "shirt"
+    image: "shirt",
+    big: true,
   },
   {
     name: "Sweaters",
     japaneseName: "セーター",
-    image: "sweater"
+    image: "sweater",
+    big: true,
   },
   {
     name: "Hoodies",
@@ -46,7 +49,8 @@ const category = [
   {
     name: "Footwear",
     japaneseName: "靴",
-    image: "footwear"
+    image: "footwear",
+    big: true,
   },
   {
     name: "Shorts",
@@ -56,22 +60,28 @@ const category = [
   {
     name: "Jumpsuits",
     japaneseName: "ジャンプスーツ",
-    image: "jumpsuit"
+    image: "jumpsuit",
+    big: true,
+    // down: true,
   },
   {
     name: "Dresses",
     japaneseName: "ドレス",
-    image: "dress"
+    image: "dress",
+    big: true,
   },
   {
     name: "Accessories",
     japaneseName: "アクセサリー",
-    image: "accessory"
+    image: "accessory",
+    big: true,
+    // down: true,
   },
   {
     name: "Outerwear",
     japaneseName: "アウターウェア",
-    image: "outerwear"
+    image: "outerwear",
+    small: true
   }
 ];
 
@@ -148,10 +158,18 @@ export function Categories() {
               <Button
                 variant={"default"}
                 className={`${isDown === item ? "scale-90" : "scale-100"} w-20 h-20 rounded-full shadow-md
-                mt-3 transition-all`}
+                mt-3 transition-all relative`}
               >
                 {/* {isEn ? item.name : item.japaneseName} */}
-                <Image src={`/categories/${item.image}.png`} width={1000} height={1000} alt="category image"/>
+                <Image 
+                  className={`absolute bottom-2 
+                    ${item.down ? "bottom-[-5px]" : null} 
+                    ${item.big ? "scale-[1.15]" : null}
+                    ${item.small ? "scale-90" : null}
+                  `} 
+                  src={`/categories/${item.image}.png`} 
+                  width={1000} height={1000} alt="category image"
+                />
               </Button>
               <p className="font-semibold text-sm group-hover:text-primary transition-all">
                 {isEn ? item.name : item.japaneseName}
