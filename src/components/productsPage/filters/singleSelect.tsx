@@ -73,7 +73,7 @@ export default function SingleSelect({ options, selected, setSelected }: SingleS
             }
           }}
         >
-            {!selectedOption ? <ChevronDown size={20} /> : <X size={20} onClick={() => setIsDropdownOpen(false)} /> }
+            {!selectedOption ? <ChevronDown size={20} onClick={(e) => isDropdownOpen ? (setIsDropdownOpen(false), e.stopPropagation()) : null} /> : <X size={20} onClick={() => setIsDropdownOpen(false)} /> }
         </div>
       </button>
 
