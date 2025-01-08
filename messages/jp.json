@@ -68,7 +68,19 @@
   "Products": {
     "filters": {
       "categories": {
-        "name": "カテゴリー"
+        "name": "カテゴリ",
+        "jacket": "ジャケット",
+        "pants": "パンツ",
+        "shirt": "シャツ",
+        "sweater": "セーター",
+        "hoodie": "フーディ",
+        "t-shirt": "Tシャツ",
+        "footwear": "靴",
+        "shorts": "ショートパンツ",
+        "jumpsuit": "ジャンプスーツ",
+        "dress": "ドレス",
+        "accessory": "アクセサリー",
+        "outerwear": "アウターウェア"
       },
       "seasons": {
         "name": "季節",

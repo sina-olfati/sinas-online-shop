@@ -16,71 +16,71 @@ const category = [
   {
     name: "Jackets",
     japaneseName: "ジャケット",
-    image: "jacket",
+    key: "jacket",
     down: true,
   },
   {
     name: "Pants",
     japaneseName: "パンツ",
-    image: "pants"
+    key: "pants"
   },
   {
     name: "Shirts",
     japaneseName: "シャツ",
-    image: "shirt",
+    key: "shirt",
     big: true,
   },
   {
     name: "Sweaters",
     japaneseName: "セーター",
-    image: "sweater",
+    key: "sweater",
     big: true,
   },
   {
     name: "Hoodies",
     japaneseName: "フーディ",
-    image: "hoodie"
+    key: "hoodie"
   },
   {
     name: "T-Shirts",
     japaneseName: "Tシャツ",
-    image: "tshirt"
+    key: "tshirt"
   },
   {
     name: "Footwear",
     japaneseName: "靴",
-    image: "footwear",
+    key: "footwear",
     big: true,
   },
   {
     name: "Shorts",
     japaneseName: "ショーツ",
-    image: "shorts"
+    key: "shorts"
   },
   {
     name: "Jumpsuits",
     japaneseName: "ジャンプスーツ",
-    image: "jumpsuit",
+    key: "jumpsuit",
     big: true,
     // down: true,
   },
   {
     name: "Dresses",
     japaneseName: "ドレス",
-    image: "dress",
+    key: "dress",
     big: true,
   },
   {
     name: "Accessories",
     japaneseName: "アクセサリー",
-    image: "accessory",
+    key: "accessory",
     big: true,
     // down: true,
   },
   {
     name: "Outerwear",
     japaneseName: "アウターウェア",
-    image: "outerwear",
+    key: "outerwear",
     small: true
   }
 ];
@@ -89,7 +89,7 @@ const category = [
 interface ClothingItem {
   name: string;
   japaneseName: string;
-  image: string;
+  key: string;
 };
 
 export function Categories() {
@@ -116,7 +116,7 @@ export function Categories() {
 
   const onMouseUp = (item: ClothingItem) => {
     if (!isDragging && isDown === item) {
-      handleNavigate("./sss"); // Navigate only if not dragging
+      handleNavigate(`/products?categories=${item.key}`); // Navigate only if not dragging
     }
     setIsDown(null); // Reset state
   };
@@ -162,12 +162,12 @@ export function Categories() {
               >
                 {/* {isEn ? item.name : item.japaneseName} */}
                 <Image 
-                  className={`absolute bottom-2 
+                  className={`absolute bottom-2 dark:brightness-90 pointer-events-none
                     ${item.down ? "bottom-[-5px]" : null} 
                     ${item.big ? "scale-[1.15]" : null}
                     ${item.small ? "scale-90" : null}
                   `} 
-                  src={`/categories/${item.image}.png`} 
+                  src={`/categories/${item.key}.png`} 
                   width={1000} height={1000} alt="category image"
                 />
               </Button>

@@ -68,7 +68,19 @@
   "Products": {
     "filters": {
       "categories": {
-        "name": "Categories"
+        "name": "Categories",
+        "jacket": "jacket",
+        "pants": "pant",
+        "shirt": "shirt",
+        "sweater": "sweater",
+        "hoodie": "hoodie",
+        "t-shirt": "t-shirt",
+        "footwear": "footwear",
+        "shorts": "short",
+        "jumpsuit": "jumpsuit",
+        "dress": "dress",
+        "accessory": "accessory",
+        "outerwear": "outerwear"
       },
       "seasons": {
         "name": "Seasons",
