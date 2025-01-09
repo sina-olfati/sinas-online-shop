@@ -73,8 +73,7 @@ export function Categories() {
   const [startX, setStartX] = useState(0);
   const [clickThreshold] = useState(5); // Distance to determine a drag
 
-  const isEn = useLocale() === "en"
-
+  
   // Next-intl
   const t = useTranslations('Products.filters.categories');
 
