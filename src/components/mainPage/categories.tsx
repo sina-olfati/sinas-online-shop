@@ -8,7 +8,7 @@ import { SectionHeading } from "../sectionHeading";
 // icon
 import { ScanLine } from "lucide-react";
 import { Edge } from "./edge";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 
@@ -73,7 +73,7 @@ export function Categories() {
   const [startX, setStartX] = useState(0);
   const [clickThreshold] = useState(5); // Distance to determine a drag
 
-  
+
   // Next-intl
   const t = useTranslations('Products.filters.categories');
 
