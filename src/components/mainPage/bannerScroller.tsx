@@ -71,7 +71,7 @@ export function BannerScroller() {
   const t = useTranslations('HomePage.scrollerBanners');
 
   return (
-    <div className="w-full overflow-x-hidden relative shadow-md">
+    <div className="w-full overflow-x-hidden relative shadow-md mysm:shadow-none">
 
       {/* scroller */}
       <div className="flex flex-shrink-0 aspect-[88/10] mysm:aspect-auto w-[400vw]">
@@ -92,14 +92,17 @@ export function BannerScroller() {
           <div key={index} className="w-[100vw] h-full mysm:h-[100vh] overflow-hidden flex items-center justify-center relative">
             
             <Image width={0} height={0} sizes="100vw" src={PageWidth() > 639 ? card.pic : card.mobilePic} alt="banner card" className="w-[100vw] h-auto brightness-90"/>
-
-            <div className="mysm:hidden absolute left-10 mysm:left-[-50px] flex flex-col gap-10 text-4xl p-10 mysm:scale-[0.6]">
-              <div className="h-full w-1 bg-primary absolute left-0 top-0 rounded-full"></div>
-              <h2 className="drop-shadow-md mysm:text-[1.5rem]">{t(card.text)}</h2>
+              
+            <div className="hidden mysm:flex absolute bottom-0 w-full h-1/3 bg-gradient-to-t from-background z-0"></div>
+          
+            <div className="absolute left-10 mysm:left-auto mysm:bottom-10 flex flex-col mysm:items-center gap-10 text-4xl p-10 mysm:scale-[0.8] mysm:!z-90">
+              <div className="h-full w-1 bg-primary absolute left-0 top-0 rounded-full mysm:hidden"></div>
+              <h2 className="drop-shadow-md mysm:text-[1.5rem] mysm:font-semibold mysm:text-white">{t(card.text)}</h2>
               <Link href={card.link}>
-                <Button className="w-fit text-white">{t(card.buttonText)}</Button>
+                <Button className="w-fit text-white mysm:text-lg">{t(card.buttonText)}</Button>
               </Link>
             </div>
+
 
           </div>
         )}
@@ -115,10 +118,10 @@ export function BannerScroller() {
             key={button}
             variant="ghost"
             onClick={() => setTurn(button)}
-            className={`w-2 h-2 p-0 rounded-full transition-all bg-accent hover:bg-primary
+            className={`w-2 h-2 p-0 rounded-full transition-all bg-accent mysm:bg-secondary-foreground hover:bg-primary
               ${button === 1 
-                ? (turn === 1 || turn === 4 ? "bg-primary w-7" : "") 
-                : (turn === button ? "bg-primary w-7" : "")}
+                ? (turn === 1 || turn === 4 ? "!bg-primary w-7" : "") 
+                : (turn === button ? "!bg-primary w-7" : "")}
               `}
           ></Button>
         )}
