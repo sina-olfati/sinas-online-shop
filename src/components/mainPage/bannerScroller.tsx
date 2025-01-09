@@ -17,14 +17,14 @@ const cards = [
   },
   {
     pic: '/banners/lady5.jpg',
-    mobilePic: '/banners/mobileLady1.jpg',
+    mobilePic: '/banners/mobileLady3.jpg',
     text: "banner2.name",
     link: "/products?gender=Female",
     buttonText: "banner2.button"
   },
   {
     pic: '/banners/lady10.jpg',
-    mobilePic: '/banners/mobileSeason1.jpg',
+    mobilePic: '/banners/mobileLady1.jpg',
     text: "banner3.name",
     link: "/products?seasons=Spring%2CSummer%2CFall%2CWinter",
     buttonText: "banner3.button"
