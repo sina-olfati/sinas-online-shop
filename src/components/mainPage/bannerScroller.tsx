@@ -4,29 +4,34 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import PageWidth from "@/src/lib/pageWidth";
 
 
 const cards = [
   {
     pic: '/banners/man4.jpg',
+    mobilePic: '/banners/mobileMan1.jpg',
     text: "banner1.name",
     link: "/products?gender=Male",
     buttonText: "banner1.button"
   },
   {
     pic: '/banners/lady5.jpg',
+    mobilePic: '/banners/mobileLady1.jpg',
     text: "banner2.name",
     link: "/products?gender=Female",
     buttonText: "banner2.button"
   },
   {
     pic: '/banners/lady10.jpg',
+    mobilePic: '/banners/mobileSeason1.jpg',
     text: "banner3.name",
     link: "/products?seasons=Spring%2CSummer%2CFall%2CWinter",
     buttonText: "banner3.button"
   },
   {
     pic: '/banners/man4.jpg',
+    mobilePic: '/banners/mobileMan1.jpg',
     text: "banner1.name",
     link: "/products?gender=Male",
     buttonText: "banner1.button"
@@ -36,7 +41,7 @@ const cards = [
 const buttons = [1, 2, 3]
 
 export function BannerScroller() {
-
+  console.log(PageWidth())
   const [turn, setTurn] = useState(1);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null); // Ref to store the timeout ID
 
@@ -69,7 +74,7 @@ export function BannerScroller() {
     <div className="w-full overflow-x-hidden relative shadow-md">
 
       {/* scroller */}
-      <div className="flex flex-shrink-0 aspect-[88/10] w-[400vw]">
+      <div className="flex flex-shrink-0 aspect-[88/10] mysm:aspect-auto w-[400vw]">
         <div
           className={`${
             turn === 1
@@ -84,16 +89,18 @@ export function BannerScroller() {
 
         {/* card */}
         {cards.map((card, index) => 
-          <div key={index} className="w-[100vw] h-full overflow-hidden flex items-center justify-center relative">
-            <Image width={0} height={0} sizes="100vw" src={card.pic} alt="banner card" className="w-[100vw] h-auto brightness-90"/>
+          <div key={index} className="w-[100vw] h-full mysm:h-[100vh] overflow-hidden flex items-center justify-center relative">
+            
+            <Image width={0} height={0} sizes="100vw" src={PageWidth() > 639 ? card.pic : card.mobilePic} alt="banner card" className="w-[100vw] h-auto brightness-90"/>
 
-            <div className="absolute left-10 mysm:left-[-50px] flex flex-col gap-10 text-4xl p-10 mysm:scale-[0.6]">
+            <div className="mysm:hidden absolute left-10 mysm:left-[-50px] flex flex-col gap-10 text-4xl p-10 mysm:scale-[0.6]">
               <div className="h-full w-1 bg-primary absolute left-0 top-0 rounded-full"></div>
               <h2 className="drop-shadow-md mysm:text-[1.5rem]">{t(card.text)}</h2>
               <Link href={card.link}>
                 <Button className="w-fit text-white">{t(card.buttonText)}</Button>
               </Link>
             </div>
+
           </div>
         )}
 
