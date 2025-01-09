@@ -89,9 +89,10 @@ export function BannerScroller() {
 
         {/* card */}
         {cards.map((card, index) => 
-          <div key={index} className="w-[100vw] h-full mysm:w-[100vw] overflow-hidden flex items-center justify-center relative">
+          <div key={index} className="w-[100vw] h-full mysm:w-[100vw] mysm:h-[100vh] overflow-hidden flex items-center justify-center relative">
             
-            <Image width={0} height={0} sizes="100vw" src={PageWidth() > 639 ? card.pic : card.mobilePic} alt="banner card" className="w-[100vw] h-auto brightness-90"/>
+            {/* <Image width={0} height={0} sizes="100vw" src={PageWidth() > 639 ? card.pic : card.mobilePic} alt="banner card" className="w-[100vw] h-auto object-cover brightness-90"/> */}
+            <Image src={PageWidth() > 639 ? card.pic : card.mobilePic} alt="banner card" className="object-cover brightness-90" fill />
               
             <div className="hidden mysm:flex absolute bottom-0 w-full h-1/3 bg-gradient-to-t from-background z-0"></div>
           
