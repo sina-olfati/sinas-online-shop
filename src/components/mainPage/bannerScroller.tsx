@@ -41,7 +41,7 @@ const cards = [
 const buttons = [1, 2, 3]
 
 export function BannerScroller() {
-  console.log(PageWidth())
+  
   const [turn, setTurn] = useState(1);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null); // Ref to store the timeout ID
 
@@ -89,7 +89,7 @@ export function BannerScroller() {
 
         {/* card */}
         {cards.map((card, index) => 
-          <div key={index} className="w-[100vw] h-full mysm:h-[100vh] overflow-hidden flex items-center justify-center relative">
+          <div key={index} className="w-[100vw] h-full mysm:w-[100vw] overflow-hidden flex items-center justify-center relative">
             
             <Image width={0} height={0} sizes="100vw" src={PageWidth() > 639 ? card.pic : card.mobilePic} alt="banner card" className="w-[100vw] h-auto brightness-90"/>
               
