@@ -29,8 +29,12 @@ export default function Home() {
           filter="sell"
         />
 
-        <div className="rounded-3xl overflow-hidden shadow-md scale-[0.9]">
-          <BannerScroller/>
+        <div className="relative scale-[0.9]">
+          <div className="rounded-3xl overflow-hidden">
+            <BannerScroller/>
+          </div>
+
+          <div className="bg-background w-full h-1 absolute bottom-[-2px]"></div>
         </div>
 
         <ProductsScroll

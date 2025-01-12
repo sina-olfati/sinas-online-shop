@@ -130,7 +130,7 @@ export function ProductsScroll({ name, icon, products, filter }: Data) {
   return (
     <div className="w-full flex flex-col mt-5 mysm:mt-0 mysm:mb-6 py-3 overflow-hidden">
       
-      <SectionHeading name={name} icon={icon} />
+      <SectionHeading name={name} icon={icon} link={filter} />
 
       <Edge>
         <GrabScroll>

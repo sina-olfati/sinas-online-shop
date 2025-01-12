@@ -73,7 +73,7 @@ export function Filters() {
   return (
     <div className="bg-secondary shadow-md p-5 pt-0 mt-5 flex flex-col gap-5 rounded-2xl w-full">
 
-      <SectionHeading name="filters" icon={<SlidersHorizontal />} />
+      <SectionHeading name="filters" icon={<SlidersHorizontal />}/>
 
       <MultiSelect
         options={categoryOptions}
