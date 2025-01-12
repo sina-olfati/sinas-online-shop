@@ -96,9 +96,9 @@ export function BannerScroller() {
               
             <div className="hidden mysm:flex absolute bottom-0 w-full h-1/3 bg-gradient-to-t from-background z-0"></div>
           
-            <div className="absolute left-10 mysm:left-auto mysm:bottom-10 flex flex-col mysm:items-center gap-10 text-4xl p-10 mysm:scale-[0.8] mysm:!z-90">
+            <div className="absolute left-10 mysm:left-auto mysm:bottom-16 flex flex-col mysm:items-center gap-10 text-4xl p-10 mysm:scale-[0.8] mysm:!z-90">
               <div className="h-full w-1 bg-primary absolute left-0 top-0 rounded-full mysm:hidden"></div>
-              <h2 className="drop-shadow-md mysm:text-[1.5rem] mysm:font-semibold mysm:text-white">{t(card.text)}</h2>
+              <h2 className="drop-shadow-md mylg:text-3xl mysm:text-[1.5rem] mysm:font-semibold mysm:text-white">{t(card.text)}</h2>
               <Link href={card.link}>
                 <Button className="w-fit text-white mysm:text-lg">{t(card.buttonText)}</Button>
               </Link>
