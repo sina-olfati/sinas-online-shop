@@ -26,7 +26,8 @@ export default function Home() {
           name="mostSelling"
           icon={<Sparkles />}
           products={Products}
-          />
+          filter="sell"
+        />
 
         <div className="rounded-3xl overflow-hidden shadow-md scale-[0.9]">
           <BannerScroller/>
@@ -36,6 +37,7 @@ export default function Home() {
           name="discounts"
           icon={<BadgePercent />}
           products={Products}
+          filter="discount"
         />
 
         <BannerCard />
