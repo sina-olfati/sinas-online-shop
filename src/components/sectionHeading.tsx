@@ -25,7 +25,7 @@ interface HeadingData {
         </div>
 
         <Link href={theLink} className={`${link ? null : "hidden"} flex items-center gap-1 group transition-all p-2 pr-0 text-secondary-foreground`}>
-          <p>See More</p>
+          <p>{t('seeMore')}</p>
           <ArrowRight size={25} className="relative left-0 group-hover:left-1 group-hover:text-primary transition-all" />
         </Link>
 

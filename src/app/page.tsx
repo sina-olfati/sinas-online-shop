@@ -33,7 +33,6 @@ export default function Home() {
           <div className="rounded-3xl overflow-hidden">
             <BannerScroller/>
           </div>
-
           <div className="bg-background w-full h-1 absolute bottom-[-2px]"></div>
         </div>
 

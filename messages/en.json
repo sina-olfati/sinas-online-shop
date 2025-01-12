@@ -54,6 +54,7 @@
       }
     },
     "headers": {
+      "seeMore": "See More",
       "categories": "Categories",
       "mostSelling": "Most Selling",
       "discounts": "Lovely Discounts",

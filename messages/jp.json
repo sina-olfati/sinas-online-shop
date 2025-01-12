@@ -54,6 +54,7 @@
       }
     },
     "headers": {
+      "seeMore": "さらに見る",
       "categories": "カテゴリー",
       "mostSelling": "売れ筋商品",
       "discounts": "お得な割引",
