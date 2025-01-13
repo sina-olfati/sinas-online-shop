@@ -15,10 +15,10 @@
         "gender": "Unisex",
         "season": "Fall",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/classicDenimJacket1.webp",
+            "/productImages/classicDenimJacket2.webp",
+            "/productImages/classicDenimJacket3.webp",
+            "/productImages/classicDenimJacket4.webp"
         ],
         "reviews": [
             {
@@ -61,10 +61,10 @@
         "gender": "Male",
         "season": "Winter",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/leatherBikerJacket1.webp",
+            "/productImages/leatherBikerJacket2.webp",
+            "/productImages/leatherBikerJacket3.webp",
+            "/productImages/leatherBikerJacket4.webp"
         ],
         "reviews": [
             {
@@ -97,10 +97,9 @@
         "gender": "Male",
         "season": "Spring",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/slimFitChinos1.webp",
+            "/productImages/slimFitChinos2.webp",
+            "/productImages/slimFitChinos3.webp"
         ],
         "reviews": [
             {
@@ -133,10 +132,8 @@
         "gender": "Male",
         "season": "Summer",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/tropicalButtonDownShirt1.webp",
+            "/productImages/tropicalButtonDownShirt2.jpg"
         ],
         "reviews": [
             {
@@ -179,10 +176,9 @@
         "gender": "Unisex",
         "season": "Fall",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/vintageSweater1.webp",
+            "/productImages/vintageSweater3.webp",
+            "/productImages/vintageSweater2.webp"
         ],
         "reviews": [
             {
@@ -225,10 +221,10 @@
         "gender": "Male",
         "season": "Spring",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/classicWhitePolo1.webp",
+            "/productImages/classicWhitePolo2.webp",
+            "/productImages/classicWhitePolo3.webp",
+            "/productImages/classicWhitePolo4.webp"
         ],
         "reviews": [
             {
@@ -261,10 +257,9 @@
         "gender": "Male",
         "season": "Winter",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/athleticJoggerPants1.webp",
+            "/productImages/athleticJoggerPants2.webp",
+            "/productImages/athleticJoggerPants3.webp"
         ],
         "reviews": [
             {
@@ -297,10 +292,9 @@
         "gender": "Female",
         "season": "Fall",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/croppedHoodie1.webp",
+            "/productImages/croppedHoodie2.webp",
+            "/productImages/croppedHoodie3.webp"
         ],
         "reviews": [
             {
@@ -333,10 +327,10 @@
         "gender": "Unisex",
         "season": "Winter",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/classicCrewneckSweatshirt1.webp",
+            "/productImages/classicCrewneckSweatshirt2.webp",
+            "/productImages/classicCrewneckSweatshirt3.webp",
+            "/productImages/classicCrewneckSweatshirt4.webp"
         ],
         "reviews": [
             {
@@ -369,10 +363,10 @@
         "gender": "Male",
         "season": "Fall",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/stylishBomberJacket1.webp",
+            "/productImages/stylishBomberJacket2.webp",
+            "/productImages/stylishBomberJacket3.webp",
+            "/productImages/stylishBomberJacket4.webp"
         ],
         "reviews": [
             {
@@ -405,10 +399,9 @@
         "gender": "Unisex",
         "season": "Winter",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/looseFitJoggers1.webp",
+            "/productImages/looseFitJoggers2.webp",
+            "/productImages/looseFitJoggers3.webp"
         ],
         "reviews": []
     },
