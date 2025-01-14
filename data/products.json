@@ -421,10 +421,10 @@
         "gender": "Unisex",
         "season": "Spring",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/basicWhiteT-Shirt1.webp",
+            "/productImages/basicWhiteT-Shirt2.webp",
+            "/productImages/basicWhiteT-Shirt3.webp",
+            "/productImages/basicWhiteT-Shirt4.webp"
         ],
         "reviews": [
             {
@@ -457,10 +457,8 @@
         "gender": "Male",
         "season": "Fall",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/plaidButton-UpShirt1.webp",
+            "/productImages/plaidButton-UpShirt2.webp"
         ],
         "reviews": [
             {
@@ -492,10 +490,10 @@
         "gender": "Unisex",
         "season": "Winter",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/techHoodie1.webp",
+            "/productImages/techHoodie2.webp",
+            "/productImages/techHoodie3.webp",
+            "/productImages/techHoodie4.webp"
         ],
         "reviews": [
             {
@@ -538,10 +536,9 @@
         "gender": "Male",
         "season": "Fall",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/maxFitSweatpants1.webp",
+            "/productImages/maxFitSweatpants2.webp",
+            "/productImages/maxFitSweatpants3.webp"
         ],
         "reviews": [
             {
@@ -572,10 +569,10 @@
         "gender": "Male",
         "season": "Winter",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/casualFitBlazer1.webp",
+            "/productImages/casualFitBlazer2.webp",
+            "/productImages/casualFitBlazer3.webp",
+            "/productImages/casualFitBlazer4.webp"
         ],
         "reviews": [
             {
@@ -607,10 +604,10 @@
         "gender": "Unisex",
         "season": "Spring",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/sportyWindbreaker1.webp",
+            "/productImages/sportyWindbreaker2.webp",
+            "/productImages/sportyWindbreaker3.webp",
+            "/productImages/sportyWindbreaker4.webp"
         ],
         "reviews": [
             {
@@ -642,10 +639,9 @@
         "gender": "Male",
         "season": "Fall",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/cargoPants1.webp",
+            "/productImages/cargoPants2.webp",
+            "/productImages/cargoPants3.webp"
         ],
         "reviews": [
             {
@@ -677,10 +673,9 @@
         "gender": "Female",
         "season": "Summer",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/basicTankTop1.webp",
+            "/productImages/basicTankTop2.webp",
+            "/productImages/basicTankTop3.webp"
         ],
         "reviews": []
     },
@@ -700,10 +695,10 @@
         "gender": "Unisex",
         "season": "All Seasons",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/sportyRunningShoes1.webp",
+            "/productImages/sportyRunningShoes2.webp",
+            "/productImages/sportyRunningShoes3.webp",
+            "/productImages/sportyRunningShoes4.webp"
         ],
         "reviews": [
             {
@@ -735,10 +730,10 @@
         "gender": "Male",
         "season": "Winter",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/classicLeatherBoots1.webp",
+            "/productImages/classicLeatherBoots2.webp",
+            "/productImages/classicLeatherBoots3.webp",
+            "/productImages/classicLeatherBoots4.webp"
         ],
         "reviews": [
             {
@@ -771,10 +766,8 @@
         "gender": "Male",
         "season": "Summer",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/runningShorts1.webp",
+            "/productImages/runningShorts2.webp"
         ],
         "reviews": []
     },
@@ -794,10 +787,9 @@
         "gender": "Unisex",
         "season": "Summer",
         "images": [
-            "/productImages/hoody1.webp",
-            "/productImages/hoody2.webp",
-            "/productImages/hoody3.webp",
-            "/productImages/hoody4.webp"
+            "/productImages/graphicT-Shirt1.webp",
+            "/productImages/graphicT-Shirt2.webp",
+            "/productImages/graphicT-Shirt3.webp"
         ],
         "reviews": [
             {
