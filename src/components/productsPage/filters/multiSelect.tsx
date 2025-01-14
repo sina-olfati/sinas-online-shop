@@ -14,7 +14,6 @@ interface Data {
 export default function MultiSelect({options, selected, setSelected, name}: Data) {
   const [selectedOptions, setSelectedOptions] = useState<string[]>(selected);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  console.log(isDropdownOpen)
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Sync selectedOptions with the selected prop from the parent
