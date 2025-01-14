@@ -19,7 +19,8 @@ export function ProductNotFound({ text }: Text) {
         <div className="w-full flex flex-col gap-5 items-center justify-center py-10">
 
             <Image
-                src={`/notFound/empty${randomImage1to4}.png`}
+                // src={`/notFound/empty${randomImage1to4}.png`}
+                src={`/notFound/emptyBox.png`}
                 className="w-[25rem] p-5 flex"
                 width={1000}
                 height={1000}

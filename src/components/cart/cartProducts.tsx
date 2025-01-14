@@ -6,6 +6,7 @@ import Image from "next/image";
 import { AddToCartButton } from "../addToCartButton";
 import { DollarSign, JapaneseYen } from "lucide-react";
 import ProductsJp from "@/data/productsJp.json"
+import { ProductNotFound } from "../productNotFound";
 
 
 export function CartProducts() {
@@ -66,7 +67,7 @@ export function CartProducts() {
             </div>
           )})
         ) : (
-          <p>No products found</p>
+          <ProductNotFound text="noCarts" />
         )}
       </div>
     </div>
