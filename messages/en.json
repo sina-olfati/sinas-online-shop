@@ -131,5 +131,10 @@
     },
     "button": "Confirm and Buy"
   },
+  "NotFound": {
+    "noProducts": "No results found. Please refine your search.",
+    "noCarts": "Your cart is empty. Start shopping!",
+    "noComments": "No comments yet. Share your thoughts!"
+  },
   "AddToCartButton": "Add To Cart"
 }

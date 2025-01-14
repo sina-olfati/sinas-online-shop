@@ -10,6 +10,7 @@ import { useSearchParams } from "next/navigation"; // to get query params
 import { Filter, ArrowDownNarrowWide, ArrowDownWideNarrow, Eye, ChartNoAxesCombined, BadgePercent, SlidersHorizontal } from "lucide-react";
 import { ProductType } from "@/src/types/product";
 import { ModalFilters } from "./filters/modalFilters";
+import { ProductNotFound } from "../productNotFound";
 
 
 export function AllProducts() {
@@ -174,7 +175,7 @@ export function AllProducts() {
             </Link>
           ))
         ) : (
-          <p>No products found</p>
+          <ProductNotFound text="noProducts" />
         )}
       </div>
     </div>
