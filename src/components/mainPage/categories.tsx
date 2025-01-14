@@ -130,7 +130,7 @@ export function Categories() {
               onMouseUp={() => onMouseUp(item)}
               onMouseLeave={onMouseLeave}
               onMouseMove={onMouseMove}
-              className="flex flex-col items-center justify-center gap-3 group"
+              className="lg:mx-[1%] lg:last:pr-8 flex flex-col items-center justify-center gap-3 group"
             >
               <Button
                 variant={"default"}
@@ -139,8 +139,8 @@ export function Categories() {
               >
                 {/* {isEn ? item.name : item.japaneseName} */}
                 <Image 
-                  className={`absolute bottom-2 dark:brightness-90 pointer-events-none
-                    ${item.down ? "bottom-[-5px]" : null} 
+                  className={`absolute bottom-2 dark:brightness-90 pointer-events-none group-hover:bottom-3.5 grayscale group-hover:grayscale-0 transition-all
+                    ${item.down ? "bottom-[-5px] group-hover:bottom-0.5" : null} 
                     ${item.big ? "scale-[1.15]" : null}
                     ${item.small ? "scale-90" : null}
                   `} 
