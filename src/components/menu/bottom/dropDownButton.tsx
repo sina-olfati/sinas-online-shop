@@ -1,8 +1,8 @@
 'use client'
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "../../ui/button";
 
-import { ChevronDown, ChevronRight } from "lucide-react";
+import { ArrowLeft, ChevronDown, ChevronRight, Pointer, Telescope } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import Products from "@/data/products.json";
@@ -30,6 +30,9 @@ export function DropDownButton({ data }: Data) {
 
     const isEn = useLocale() === "en"
 
+    useEffect(() => {
+        setSelected("")
+    }, [isOver])
 
     const filteredProducts = Products.filter((item) => {
         // Category filter
@@ -44,7 +47,7 @@ export function DropDownButton({ data }: Data) {
         <div>
             <div className="relative transition-all"
             onMouseOver={() => setIsOver(true)}
-            onMouseLeave={() => setIsOver(true)}
+            onMouseLeave={() => setIsOver(false)}
             >
 
                 <Button variant="ghost" className="hover:bg-[#00000010] dark:hover:bg-[#ffffff10] hover:shadow-sm transition-all text-xs">
@@ -62,6 +65,7 @@ export function DropDownButton({ data }: Data) {
                             <div className="flex flex-col shrink-0 h-64 overflow-auto w-24 border border-y-0 border-l-0 border-r-secondary-foreground/30">
                                 {group.items.map((item) => 
                                     <Link 
+                                        key={item}
                                         href={`/products?categories=${item}`} 
                                         className={`font-semibold hover:bg-[#00000010] dark:hover:bg-[#ffffff10] transition-all text-sm w-full p-2 flex items-center relative ${selected === item ? "text-" : null}`}
                                         onMouseOver={() => setSelected(item)}
@@ -95,9 +99,10 @@ export function DropDownButton({ data }: Data) {
                             )})}
                         </div>
                     ) : (
-                        <div>
+                        <div className="w-full h-full flex flex-col gap-5 items-center justify-center">
                             {/* Render fallback content */}
-                            <p>No products found.</p>
+                            <Telescope size={60} />
+                            <p className="font-semibold">{t("hover")}</p>
                         </div>
                     )}
 

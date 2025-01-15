@@ -70,6 +70,7 @@
     "filters": {
       "categories": {
         "name": "Categories",
+        "hover": "Hover your cursor over a category to explore",
         "Jackets": "Jackets",
         "Pants": "Pants",
         "Shirts": "Shirts",

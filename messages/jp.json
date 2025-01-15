@@ -70,6 +70,7 @@
     "filters": {
       "categories": {
         "name": "カテゴリ",
+        "hover": "カテゴリの上にカーソルを置いて探索してください",
         "Jackets": "ジャケット",
         "Pants": "パンツ",
         "Shirts": "シャツ",
