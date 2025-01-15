@@ -8,7 +8,6 @@ interface Text {
 export function ProductNotFound({ text }: Text) {
 
 
-    const randomImage1to4 = Math.floor(Math.random() * 4) + 1;
 
     console.log(Math.floor(Math.random() * 5) + 1)
 

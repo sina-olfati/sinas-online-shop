@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "../../ui/button";
 
-import { ArrowLeft, ChevronDown, ChevronRight, Pointer, Telescope } from "lucide-react";
+import { ChevronDown, ChevronRight, Telescope } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import Products from "@/data/products.json";
@@ -75,8 +75,6 @@ export function DropDownButton({ data }: Data) {
                                             {t(item)}
                                         </p>
                                     </Link>
-                                    // <Button key={item} variant={"ghost"} className="hover:bg-[#00000010] dark:hover:bg-[#ffffff10] hover:shadow-sm transition-all text-xs w-fit">
-                                    // </Button>
                                 )}
                             </div>        
                         </div>
