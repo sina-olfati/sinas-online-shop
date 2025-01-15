@@ -5,6 +5,7 @@ import { Button } from "../../ui/button";
 import { ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
+import Products from "@/data/products.json";
 
 interface DataType {
     name: string;
@@ -20,12 +21,23 @@ interface Data {
 
 export function DropDownButton({ data }: Data) {
 
+    const [isOver, setIsOver] = useState(true)
     const [selected, setSelected] = useState<string>("")
 
     // Next-intl
     const t = useTranslations('Products.filters.categories');
 
-    const [isOver, setIsOver] = useState(true)
+
+    const filteredProducts = Products.filter((item) => {
+        // Category filter
+        if (selected && selected !== item.category) {
+          return false; // Exclude products that don't match the selected categories
+        }
+
+        return true
+    })
+    console.log(filteredProducts)
+
 
     return (
         <div>
@@ -40,12 +52,13 @@ export function DropDownButton({ data }: Data) {
                 </Button>
 
 
-                <div className={`absolute left-2 top-[110%] bg-primary-foreground shadow-md rounded-md text-xs h-64 w-[500px] ${isOver ? "flex" : "hidden"} flex-col`}>
+                <div className={`absolute left-2 top-[110%] bg-primary-foreground shadow-md rounded-md text-xs h-64 w-[500px] ${isOver ? "flex" : "hidden"} `}>
+
                     {data.groups.map((group, index) => 
                         <div className="flex flex-col" key={index}>
-                            <h1 className={`flex text-primary font-bold mt-4 ${!group.header ? "hidden" : null}`}>{group.header}</h1>
+                            {/* <h1 className={`flex text-primary font-bold mt-4 ${!group.header ? "hidden" : null}`}>{group.header}</h1> */}
 
-                            <div className="flex flex-col h-64 overflow-auto w-24 border border-primary">
+                            <div className="flex flex-col shrink-0 h-64 overflow-auto w-24 border border-y-0 border-l-0 border-r-secondary-foreground/30">
                                 {group.items.map((item) => 
                                     <Link 
                                         href={`/products?categories=${item}`} 
@@ -57,9 +70,24 @@ export function DropDownButton({ data }: Data) {
                                     // <Button key={item} variant={"ghost"} className="hover:bg-[#00000010] dark:hover:bg-[#ffffff10] hover:shadow-sm transition-all text-xs w-fit">
                                     // </Button>
                                 )}
-                            </div>
+                            </div>        
                         </div>
                     )}
+
+                    {selected && filteredProducts.length > 0 ? (
+                        <div>
+                            {/* Render filtered products */}
+                            {filteredProducts.map((product) => (
+                                <div key={product.id}>{product.name}</div>
+                            ))}
+                        </div>
+                    ) : (
+                        <div>
+                            {/* Render fallback content */}
+                            <p>No products found.</p>
+                        </div>
+                    )}
+
                 </div>
 
                 <div className="w-full h-2 absolute"></div>
