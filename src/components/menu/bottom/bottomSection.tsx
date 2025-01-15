@@ -4,78 +4,109 @@ import { Button } from "../../ui/button";
 import { DropDownButton } from "./dropDownButton";
 import { Phone } from "lucide-react";
 
-const normalButtons = ["Questions", "Articles", "About Us"];
+const normalButtons = ["Articles", "Questions", "About Us"];
 
-const seasonsData = {
-    name: "Seasons",
-    headers: ["Spring", "Summer", "Fall", "Winter"],
-    items: [
-        ["Shorts", "Swim suits", "T-shirts", "Light jackets", "onetwo"], // Spring items
-        ["Hats", "Sunglasses", "Flip flops", "Beach towels", "othreene"], // Summer items
-        ["Sweaters", "Scarves", "Boots", "Pumpkin spice lattes", "onwhate"], // Fall items
-        ["Coats", "Gloves", "Beanies", "Hot chocolate", "onheehawe"] // Winter items
-    ],
+const categories = {
+    name: "Categories",
+    groups: [
+        {
+            header: "",
+            items: [
+                "Jackets",
+                "Pants",
+                "Shirts",
+                "Sweaters",
+                "Hoodies",
+                "T-Shirts",
+                "Footwear",
+                "Shorts",
+                "Jumpsuits",
+                "Dresses",
+                "Accessories",
+                "Outerwear"
+            ]
+        },
+    ]
 }
 
 const moreData = {
     name: "Seasonal Categories",
-    headers: [
-        "Spring Essentials", 
-        "Summer Essentials", 
-        "Fall Essentials", 
-        "Winter Essentials", 
-    ],
-    items: [
-        // Spring Essentials
-        [
-            "Shorts",
-            "Swim suits",
-            "T-shirts",
-            "Light jackets",
-            "Raincoats",
-            "Floral dresses",
-            "Sneakers",
-            "Lightweight scarves",
-            "Gardening gloves",
-        ],
-        // Summer Essentials
-        [
-            "Hats",
-            "Sunglasses",
-            "Flip flops",
-            "Beach towels",
-            "Tank tops",
-            "Board shorts",
-            "Swim goggles",
-            "Sunscreen",
-            "Beach umbrellas",
-        ],
-        // Fall Essentials
-        [
-            "Sweaters",
-            "Scarves",
-            "Boots",
-            "Pumpkin spice lattes",
-            "Cardigans",
-            "Jeans",
-            "Fall jackets",
-            "Beanies",
-            "Mittens",
-        ],
-        // Winter Essentials
-        [
-            "Coats",
-            "Gloves",
-            "Beanies",
-            "Hot chocolate",
-            "Snow boots",
-            "Thermal underwear",
-            "Fleece jackets",
-            "Scarves",
-            "Winter hats",
-        ],
+    groups: [
+        {
+            header: "Spring",
+            items: []
+        },
+        {
+            header: "Summer",
+            items: []
+        },
+        {
+            header: "Fall",
+            items: []
+        },
+        {
+            header: "Winter",
+            items: []
+        }
     ]
-};
+}
+    // headers: [
+    //     "Spring Essentials", 
+    //     "Summer Essentials", 
+    //     "Fall Essentials", 
+    //     "Winter Essentials", 
+    // ],
+    // items: [
+    //     // Spring Essentials
+    //     [
+    //         "Shorts",
+    //         "Swim suits",
+    //         "T-shirts",
+    //         "Light jackets",
+    //         "Raincoats",
+    //         "Floral dresses",
+    //         "Sneakers",
+    //         "Lightweight scarves",
+    //         "Gardening gloves",
+    //     ],
+    //     // Summer Essentials
+    //     [
+    //         "Hats",
+    //         "Sunglasses",
+    //         "Flip flops",
+    //         "Beach towels",
+    //         "Tank tops",
+    //         "Board shorts",
+    //         "Swim goggles",
+    //         "Sunscreen",
+    //         "Beach umbrellas",
+    //     ],
+    //     // Fall Essentials
+    //     [
+    //         "Sweaters",
+    //         "Scarves",
+    //         "Boots",
+    //         "Pumpkin spice lattes",
+    //         "Cardigans",
+    //         "Jeans",
+    //         "Fall jackets",
+    //         "Beanies",
+    //         "Mittens",
+    //     ],
+    //     // Winter Essentials
+    //     [
+    //         "Coats",
+    //         "Gloves",
+    //         "Beanies",
+    //         "Hot chocolate",
+    //         "Snow boots",
+    //         "Thermal underwear",
+    //         "Fleece jackets",
+    //         "Scarves",
+    //         "Winter hats",
+    //     ],
+    // ]
+// };
 
 export function BottomSection() {
   return (
@@ -84,7 +115,7 @@ export function BottomSection() {
 
         <div about="buttons" className="flex items-center justify-start gap-2 flex-shrink-0 h-full">
 
-            <DropDownButton name={seasonsData.name} headers={seasonsData.headers} items={seasonsData.items}/>
+            <DropDownButton name={categories.name} headers={categories.headers} items={categories.items}/>
             <DropDownButton name={moreData.name} headers={moreData.headers} items={moreData.items}/>
 
             {normalButtons.map((name) => (
