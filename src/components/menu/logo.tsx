@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 
 export function Logo() {
 
+    // Next-intl
     const t = useTranslations('Menu');
 
     return (
