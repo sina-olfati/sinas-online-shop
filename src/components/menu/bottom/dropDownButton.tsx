@@ -2,10 +2,11 @@
 import React, { useState } from "react";
 import { Button } from "../../ui/button";
 
-import { ChevronDown } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { ChevronDown, ChevronRight } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import Products from "@/data/products.json";
+import ProductsJp from "@/data/productsJp.json";
 
 interface DataType {
     name: string;
@@ -27,6 +28,8 @@ export function DropDownButton({ data }: Data) {
     // Next-intl
     const t = useTranslations('Products.filters.categories');
 
+    const isEn = useLocale() === "en"
+
 
     const filteredProducts = Products.filter((item) => {
         // Category filter
@@ -36,8 +39,6 @@ export function DropDownButton({ data }: Data) {
 
         return true
     })
-    console.log(filteredProducts)
-
 
     return (
         <div>
@@ -52,7 +53,7 @@ export function DropDownButton({ data }: Data) {
                 </Button>
 
 
-                <div className={`absolute left-2 top-[110%] bg-primary-foreground shadow-md rounded-md text-xs h-64 w-[500px] ${isOver ? "flex" : "hidden"} `}>
+                <div className={`absolute left-2 top-[110%] bg-primary-foreground shadow-md rounded-md text-xs h-64 w-[550px] ${isOver ? "flex" : "hidden"} `}>
 
                     {data.groups.map((group, index) => 
                         <div className="flex flex-col" key={index}>
@@ -62,10 +63,13 @@ export function DropDownButton({ data }: Data) {
                                 {group.items.map((item) => 
                                     <Link 
                                         href={`/products?categories=${item}`} 
-                                        className={`font-semibold hover:bg-[#00000010] dark:hover:bg-[#ffffff10] transition-all text-sm w-full p-2 ${selected === item ? "text-primary" : null}`}
+                                        className={`font-semibold hover:bg-[#00000010] dark:hover:bg-[#ffffff10] transition-all text-sm w-full p-2 flex items-center relative ${selected === item ? "text-" : null}`}
                                         onMouseOver={() => setSelected(item)}
                                     >
-                                        {t(item)}
+                                        <ChevronRight size={20} className={`absolute left-[-20px] transition-all text- ${selected === item ? "left-[0px]" : null}`} />
+                                        <p className={`truncate transition-all ${selected === item ? "pl-3 text-primary" : null }`}>
+                                            {t(item)}
+                                        </p>
                                     </Link>
                                     // <Button key={item} variant={"ghost"} className="hover:bg-[#00000010] dark:hover:bg-[#ffffff10] hover:shadow-sm transition-all text-xs w-fit">
                                     // </Button>
@@ -75,11 +79,20 @@ export function DropDownButton({ data }: Data) {
                     )}
 
                     {selected && filteredProducts.length > 0 ? (
-                        <div>
+                        <div className="w-full h-full p-2 flex flex-col flex-wrap">
                             {/* Render filtered products */}
-                            {filteredProducts.map((product) => (
-                                <div key={product.id}>{product.name}</div>
-                            ))}
+                            {filteredProducts.map((product) => { 
+                                
+                                // Find the corresponding jpItem for this product
+                                const jpProduct = ProductsJp?.find((jp) => jp.id === product.id);
+
+                                return (
+                                    <Link href={`/products/${product.name.toLowerCase().replace(/\s+/g, '-')}`} key={product.id}>
+                                        <Button variant={"ghost"} className="hover:bg-[#00000010] dark:hover:bg-[#ffffff10] hover:shadow-sm transition-all text-xs w-fit">
+                                            {isEn ? product.name : jpProduct?.name}
+                                        </Button>
+                                    </Link>
+                            )})}
                         </div>
                     ) : (
                         <div>

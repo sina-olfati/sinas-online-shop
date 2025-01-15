@@ -29,27 +29,65 @@ const categories = {
     ]
 }
 
-const moreData = {
-    name: "Seasonal Categories",
-    groups: [
-        {
-            header: "Spring",
-            items: []
-        },
-        {
-            header: "Summer",
-            items: []
-        },
-        {
-            header: "Fall",
-            items: []
-        },
-        {
-            header: "Winter",
-            items: []
-        }
-    ]
+// const moreData = {
+//     name: "Seasonal Categories",
+//     groups: [
+//         {
+//             header: "Spring",
+//             items: []
+//         },
+//         {
+//             header: "Summer",
+//             items: []
+//         },
+//         {
+//             header: "Fall",
+//             items: []
+//         },
+//         {
+//             header: "Winter",
+//             items: []
+//         }
+//     ]
+// }
+
+
+export function BottomSection() {
+
+
+  return (
+    <div className="h-full w-full">
+      <div className="flex flex-shrink-0 justify-between h-full w-full px-8">
+
+        <div about="buttons" className="flex items-center justify-start gap-2 flex-shrink-0 h-full">
+
+            <DropDownButton data={categories}/>
+            {/* <DropDownButton name={moreData.name} headers={moreData.headers} items={moreData.items}/> */}
+
+            {normalButtons.map((name) => (
+                <Button key={name} variant="ghost" className="hover:bg-[#00000010] dark:hover:bg-[#ffffff10] hover:shadow-sm transition-all text-xs">
+                {name}
+                </Button>
+            ))}
+
+        </div>
+
+        <div about="phone">
+            <Link href="tel:+98 994 166 9736">
+                <Button variant={"ghost"} className="group hover:bg-[#00000010] dark:hover:bg-[#ffffff10] hover:shadow-sm transition-all text-xs">
+                    <Phone className="group-hover:text-primary" />
+                    <p>+98-9941669736</p>
+                </Button>
+            </Link>
+        </div>
+
+      </div>
+    </div>
+  );
 }
+
+
+
     // headers: [
     //     "Spring Essentials", 
     //     "Summer Essentials", 
@@ -107,37 +145,3 @@ const moreData = {
     //     ],
     // ]
 // };
-
-export function BottomSection() {
-
-
-  return (
-    <div className="h-full w-full">
-      <div className="flex flex-shrink-0 justify-between h-full w-full px-8">
-
-        <div about="buttons" className="flex items-center justify-start gap-2 flex-shrink-0 h-full">
-
-            <DropDownButton data={categories}/>
-            {/* <DropDownButton name={moreData.name} headers={moreData.headers} items={moreData.items}/> */}
-
-            {normalButtons.map((name) => (
-                <Button key={name} variant="ghost" className="hover:bg-[#00000010] dark:hover:bg-[#ffffff10] hover:shadow-sm transition-all text-xs">
-                {name}
-                </Button>
-            ))}
-
-        </div>
-
-        <div about="phone">
-            <Link href="tel:+98 994 166 9736">
-                <Button variant={"ghost"} className="group hover:bg-[#00000010] dark:hover:bg-[#ffffff10] hover:shadow-sm transition-all text-xs">
-                    <Phone className="group-hover:text-primary" />
-                    <p>+98-9941669736</p>
-                </Button>
-            </Link>
-        </div>
-
-      </div>
-    </div>
-  );
-}
