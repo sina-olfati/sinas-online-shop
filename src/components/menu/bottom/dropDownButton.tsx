@@ -56,13 +56,14 @@ export function DropDownButton({ data }: Data) {
                 </Button>
 
 
-                <div className={`absolute left-2 top-[110%] bg-primary-foreground shadow-md rounded-md text-xs h-64 w-[550px] ${isOver ? "flex" : "hidden"} `}>
+                {/* <div className={`absolute left-2 top-[110%] bg-primary-foreground shadow-md rounded-md text-xs h-64 w-[550px] ${isOver ? "flex" : "hidden"} `}> */}
+                <div className={`absolute left-2 top-[110%] bg-primary-foreground shadow-md rounded-md text-xs h-[310px] w-[650px] ${isOver ? "flex" : "hidden"} `}>
 
                     {data.groups.map((group, index) => 
                         <div className="flex flex-col" key={index}>
                             {/* <h1 className={`flex text-primary font-bold mt-4 ${!group.header ? "hidden" : null}`}>{group.header}</h1> */}
 
-                            <div className="flex flex-col shrink-0 h-64 overflow-auto w-24 border border-y-0 border-l-0 border-r-secondary-foreground/30">
+                            <div className="flex flex-col shrink-0 h-full overflow-auto w-24 border border-y-0 border-l-0 border-r-secondary-foreground/30">
                                 {group.items.map((item) => 
                                     <Link 
                                         key={item}
