@@ -22,7 +22,7 @@ interface Data {
 
 export function DropDownButton({ data }: Data) {
 
-    const [isOver, setIsOver] = useState(true)
+    const [isOver, setIsOver] = useState(false)
     const [selected, setSelected] = useState<string>("")
 
     // Next-intl

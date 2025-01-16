@@ -9,7 +9,7 @@ interface ProductDataProps {
 }
 
 export function DataHeader ({product}: ProductDataProps) {
-    // console.log(product)
+
     // Next-intl
     const t = useTranslations('Product');
 

@@ -1,4 +1,5 @@
 import { Minus, Plus, User } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface Review {
     summary: string;
@@ -13,6 +14,8 @@ interface ProductWithReviews {
 
 export function Comments ({reviews}: ProductWithReviews) {
 
+    // Next-intl
+    const t = useTranslations('NotFound');
 
     return (
         <div className="p-2 flex flex-col gap-10 mysm:gap-7">
@@ -46,7 +49,11 @@ export function Comments ({reviews}: ProductWithReviews) {
             )}
 
             {reviews.length === 0 ?
-                <div className="font-semibold text-lg w-full text-center p-10">No comments found for this product!</div>
+                // <div className="font-semibold text-lg w-full text-center p-10">No comments found for this product!</div>
+                <div className="w-full h-full p-16 flex flex-col gap-10 items-center justify-center">
+                    <h1 className="font-bold text-7xl">!</h1>
+                    <p className="font-semibold text-center">{t("noComments")}</p>
+                </div>
             : null}
         </div>
     )
