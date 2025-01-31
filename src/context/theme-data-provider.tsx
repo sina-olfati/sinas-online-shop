@@ -13,7 +13,13 @@ export default function ThemeDataProvider({ children }: ThemeProviderProps) {
   const getSavedThemeColor = () => {
     try {
       // if (typeof window !== 'undefined') {
-        return (localStorage.getItem("themeColor") as ThemeColors) || "Blue";
+        const [item, setItem] = useState<any>()
+        useEffect(() => {
+          const color = localStorage.getItem("themeColor") || "Blue";
+          setItem(color)
+        })
+        // return (localStorage.getItem("themeColor") as ThemeColors) || "Blue";
+        return (item as ThemeColors) || "Blue";
       // }
     } catch {
       "Blue" as ThemeColors;
